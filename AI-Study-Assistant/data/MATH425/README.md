@@ -1,1 +1,1 @@
-contains math 425 course materials
+This folder contains strictly math 425 course materials

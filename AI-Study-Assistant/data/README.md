@@ -1,1 +1,1 @@
-This folder will contain raw PDFs from course slides/assignments
+This folder contains all raw data
