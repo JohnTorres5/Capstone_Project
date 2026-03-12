@@ -1,0 +1,17 @@
+# Core
+torch
+transformers
+accelerate
+
+# Embeddings
+sentence-transformers
+faiss-cpu
+
+# PDF + PPTX processing
+pymupdf
+python-pptx
+
+# Utilities
+numpy
+scikit-learn
+tqdm
