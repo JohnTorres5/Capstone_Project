@@ -1,1 +1,0 @@
-This folder contains strictly csc 648 course materials

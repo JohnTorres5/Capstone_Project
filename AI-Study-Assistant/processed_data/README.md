@@ -1,1 +1,0 @@
-This folder will contain cleaned text output from our raw data

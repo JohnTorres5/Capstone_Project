@@ -1,1 +1,0 @@
-This folder contains strictly csc 603 course materials
