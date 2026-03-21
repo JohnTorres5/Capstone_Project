@@ -6,7 +6,7 @@ RAW_DATA_DIR = Path("data/raw")
 PROCESSED_DATA_DIR = Path("data/processed")
 
 
-def run_pipeline():
+def run_pdf_to_json():
     # Convert documents to JSON format
     if not RAW_DATA_DIR.exists():
         print("Raw data directory does not exist.")
@@ -36,4 +36,4 @@ def run_pipeline():
     
 
 if __name__ == "__main__":
-    run_pipeline()
+    run_pdf_to_json()
