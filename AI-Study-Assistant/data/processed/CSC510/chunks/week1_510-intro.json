@@ -1,0 +1,29 @@
+{
+  "course": "CSC510",
+  "source_file": "week1_510-intro.pdf",
+  "chunk_size": 550,
+  "overlap": 80,
+  "chunk_count": 2,
+  "chunks": [
+    {
+      "chunk_id": "week1_510-intro-0",
+      "course": "CSC510",
+      "source_file": "week1_510-intro.pdf",
+      "chunk_index": 0,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "CSC 510 - Analysis of Algorithms Prof. Timothy Sun Insertion Sort “At every step, look at the next object and insert it into its correct spot in the sorted sequence you’ve got so far.” Insertion Sort “At every step, look at the next object and insert it into its correct spot in the sorted sequence you’ve got so far.” Is this an algorithm? Insertion Sort “At every step, look at the next object and insert it into its correct spot in the sorted sequence you’ve got so far.” Is this an algorithm? Maybe a little too vague... Insertion Sort Is this an algorithm? Insertion Sort Is this an algorithm? More accurately a program. Insertion Sort We can describe algorithms using pseudocode. Insertion Sort We can describe algorithms using pseudocode, i.e. a mix of: ● structure of some programming languages, ● natural languages, ● mathematical notation Insertion Sort Design and Analysis Given a problem (e.g. sorting), design an algorithm for solving that problem. Design and Analysis Given a problem (e.g. sorting), design an algorithm for solving that problem. ● Prove that it produces the right answer always. ● Describe its worst case runtime. Correctness? Formally showing correctness of recursive algorithms uses proof by induction. Runtime? How long does this algorithm take? Runtime? How long does this algorithm take? ● The while loop might need up to n iterations ● The for loop goes for ≈ n iterations Runtime? How long does this algorithm take? ● The while loop might need up to n iterations ● The for loop goes for ≈ n iterations Answer: O(n2) Runtime? How long does this algorithm take? ● The while loop might need up to n iterations ● The for loop goes for ≈ n iterations Answer: O(n2), but is this the “tightest” analysis? Runtime? Runtime? Where does O(n log n) come from for mergesort? Course Overview Instructor: Prof. Timothy Sun (timothysun@sfsu.edu) Oﬃce Hours: WF 5-6PM on Zoom (starting next week), or by appointment Course Materials: on Canvas Textbooks Jeff Erickson, Algorithms, 1st Edition. http://jeffe.cs.illinois.edu/teaching/algorithms/ (it’s free!) Other Textbook Sources Handouts to be posted on Canvas (http://canvas.sfsu.edu) Grading Breakdown Homework: 35% Midterm: 25% Final: 35% Participation: 5% Course Overview (cont’d) Homework (35%): ● Problem sets every two weeks (no programming) ○ Can work with others, but own writing Course Overview (cont’d) Midterm (25%): ● In-class Final (35%): ● During exam period, strong emphasis on later topics Course Overview (cont’d) Participation (5%): ● Both in and outside (e.g. Discord) of class Recursion / Divide and conquer Many problems have a “recursive structure”: big solution from smaller solutions. Recursion / Divide and conquer Many problems have a “recursive structure”: big solution from smaller solutions. How to design and analyze recursive algorithms? Backtracking Building up a solution incrementally by guessing and checking. The Eight Queens Puzzle asks whether or not you can place 8 non-attacking queens on a chessboard. Dynamic Programming 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … What number comes next? Dynamic Programming 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … What number comes next? Answer: 144 Dynamic Programming 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … What number comes next? Answer: 144 This is the Fibonacci sequence Fn, deﬁned in the following way: F1"
+    },
+    {
+      "chunk_id": "week1_510-intro-1",
+      "course": "CSC510",
+      "source_file": "week1_510-intro.pdf",
+      "chunk_index": 1,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "not you can place 8 non-attacking queens on a chessboard. Dynamic Programming 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … What number comes next? Dynamic Programming 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … What number comes next? Answer: 144 Dynamic Programming 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … What number comes next? Answer: 144 This is the Fibonacci sequence Fn, deﬁned in the following way: F1 = 1, F2 = 1 Fn = Fn-1 + Fn-2, for n > 2. Should you use this algorithm? Dynamic Programming Should you use this algorithm? No, very slow for big n Dynamic Programming Dynamic programming involves saving intermediate solutions to avoid redundant work. Dynamic Programming Greedy Algorithms If you wanted to make change for a certain amount of money, how would you do it to produce the fewest number of coins? Greedy Algorithms If you wanted to make change for a certain amount of money, how would you do it to produce the fewest number of coins? Take the biggest coin possible. Greedy Algorithms “Cashier’s algorithm” for making change: ● Take quarters until change is < 25¢ ● Take dimes until change is < 10¢ ● Take nickels until change is < 5¢ ● Take pennies for the rest. Greedy Algorithms “Cashier’s algorithm” for making change: ● Take quarters until change is < 25¢ ● Take dimes until change is < 10¢ ● Take nickels until change is < 5¢ ● Take pennies for the rest. Always the least number of coins! Cashier’s algorithm Why is the cashier’s algorithm not optimal for 1¢, 5¢, 7¢? Cashier’s algorithm Why is the cashier’s algorithm not optimal for 1¢, 5¢, 7¢? 10 = 5 + 5 (optimal) = 7 + 1 + 1 + 1 (greedy) Graph Algorithms Graphs are a fundamental data structure in computer science. Using aforementioned methods for problems involving graphs. Minimum Spanning Trees Shortest Paths"
+    }
+  ]
+}

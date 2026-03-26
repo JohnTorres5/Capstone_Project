@@ -1,0 +1,29 @@
+{
+  "course": "CSC648",
+  "source_file": "Search_Form_Best_Practices_Explained.pdf",
+  "chunk_size": 550,
+  "overlap": 80,
+  "chunk_count": 2,
+  "chunks": [
+    {
+      "chunk_id": "Search_Form_Best_Practices_Explained-0",
+      "course": "CSC648",
+      "source_file": "Search_Form_Best_Practices_Explained.pdf",
+      "chunk_index": 0,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "Best Coding Practices for a Search Form In Python and JavaScript By Jaideep Why Are Search Forms Important? - Search forms help users find information quickly. - A well-coded search form should be? ✅Fast (Users don't wait too long for results) ✅Efficient (Handles large amounts of data smoothly) ✅Secure (Protects against hacking attempts like SQL Injection) JavaScript: Efficient DOM Manipulation - The DOM (Document Object Model) is the structure of a webpage. - JavaScript can interact with elements to modify them. - Best practice: Use 'document.querySelector()' to find elements efficiently rather than getElementById(). Example: '''js const searchInput = document.querySelector('#search'); ''' Advantages of querySelector() Works with any CSS selector (.class, #id, tag, etc.). •More flexible than getElementById(). •Allows selecting nested elements (e.g., .container input). JavaScript: Debouncing for Performance - Problem: Every keystroke triggers a search request, slowing the site. - Solution: Debouncing waits until the user stops typing. Example: '''js function debounce(func, delay) { let timer; return function (...args) { clearTimeout(timer); timer = setTimeout(() => func.apply(this, args), delay); }; } ''' - Benefit: Reduces unnecessary searches, making the app faster! JavaScript: Fetch API for Search - Fetch API allows JavaScript to retrieve data from a server without refreshing the page. - Example: function search(query) { fetch(`https://api.example.com/search?q=${query}`) .then(response => response.json()) .then(data => console.log(\"Search Results:\", data)); } search(\"apple\"); - Benefit: Provides instant search results, improving user experience! JavaScript: Security Best Practices - Prevent XSS (Cross-Site Scripting) by escaping user input. - Always use HTTPS for secure data transfer. - Limit the number of search requests per second to prevent attacks. - Sanitizing input before using it in search queries. Python: Simple Flask Search API - Flask is a Python framework used to create APIs. - Example: A search API that returns a JSON response. '''python from flask import Flask, request, jsonify app = Flask(__name__) @app.route('/search', methods=['GET']) def search(): query = request.args.get('q', '') return jsonify({'message': f'Searching for {query}'}) ''' - Benefit: Provides a backend for search functionality! Python: Optimize Search with List Comprehensions - Instead of slow loops, use list comprehensions for fast filtering. - Example: '''python data = ['apple', 'banana', 'cherry', 'date'] query = 'a' results = [item for item in data if query in item] print(results) # Output: ['apple', 'banana', 'date'] ''' - Benefit: Faster search operations in small datasets. Python: Secure SQL Queries - Never insert user input directly into SQL queries. Hackers can delete data! - Use parameterized queries to prevent SQL injection. - Example: '''python from sqlalchemy import create_engine, text engine = create_engine('sqlite:///database.db') query = 'apple' with engine.connect() as conn: result = conn.execute(text('SELECT * FROM products WHERE name LIKE :query'), {'query': f'%{query}%'}) print(result.fetchall()) ''' - Benefit: Prevents SQL attacks and keeps data safe! Python: Security Best Practices - Use parameterized queries to prevent SQL injection attacks. - Always validate and sanitize user input. - Log search queries to monitor suspicious activity. - Benefit: Prevents hackers from stealing or deleting data! Common coding Practices for developers Versioning –Whenever you make changes to the code, whether in the database (DB) or UI, always maintain version control and document the reason for each change. This ensures traceability and helps in debugging or rolling back changes when needed. Commenting – Add clear, concise comments explaining the purpose of each function. This makes it easier to understand the code at a glance in the"
+    },
+    {
+      "chunk_id": "Search_Form_Best_Practices_Explained-1",
+      "course": "CSC648",
+      "source_file": "Search_Form_Best_Practices_Explained.pdf",
+      "chunk_index": 1,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "suspicious activity. - Benefit: Prevents hackers from stealing or deleting data! Common coding Practices for developers Versioning –Whenever you make changes to the code, whether in the database (DB) or UI, always maintain version control and document the reason for each change. This ensures traceability and helps in debugging or rolling back changes when needed. Commenting – Add clear, concise comments explaining the purpose of each function. This makes it easier to understand the code at a glance in the future, improving maintainability and collaboration. Final Takeaways - Performance: Use debouncing (JS) and list comprehensions (Python) to optimize speed. - Security: Prevent SQL Injection (Python) and XSS (JS) by validating inputs. - Efficiency: Use Fetch API (JS) and Flask (Python) for smooth, real-time search experiences. - Best Practice: Always think about speed, security, and user experience! 🚀"
+    }
+  ]
+}

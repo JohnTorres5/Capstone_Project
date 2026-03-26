@@ -1,0 +1,19 @@
+{
+  "course": "CSC510",
+  "source_file": "week4_recmath510.pdf",
+  "chunk_size": 550,
+  "overlap": 80,
+  "chunk_count": 1,
+  "chunks": [
+    {
+      "chunk_id": "week4_recmath510-0",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 0,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "Recursive Arithmetic Prof. Timothy Sun Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Runtime: O(n2) Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Runtime: O(n2) repeated work Horner scheme Horner scheme Horner scheme Horner scheme Horner scheme Horner scheme Runtime: O(n) How about a recursive formulation?: Recursive Horner How about a recursive formulation?: Recursive Horner Horner’s scheme is optimal for polynomials: Fast exponentiation Horner’s scheme is optimal for polynomials: … but what about just a single large power? Fast exponentiation Horner’s scheme is optimal for polynomials: … but what about just a single large power? Big exponents used in public-key cryptography. Fast exponentiation Fast exponentiation Θ(N) is too slow: ●N ≈ 10600 Fast exponentiation Θ(N) is too slow: ●N ≈ 10600, log10 N = 600. Θ(log N) is the number of digits (space) needed to write down N. Several algorithms based on repeated squaring: Fast exponentiation An iterative approach might look like: ● Decompose N into binary ● Multiply the “1” powers Fast exponentiation Fast exponentiation How would we do this recursively? Fast exponentiation How would we do this recursively? Fast exponentiation How would we do this recursively? fails for odd numbers How would we do this recursively? Fast exponentiation Fast exponentiation How would we do this recursively? Still O(N) time: T(N) = 2T(N/2) + O(1) = Θ(N) Fast exponentiation One recursive call: Fast exponentiation One recursive call: By master theorem, runtime is T(N) = T(N/2) + O(1) = Θ(log N) Fast exponentiation Addition How long does it take to add two n digit numbers together? Addition How long does it take to add two n digit numbers together? Θ(n) operations Multiplication? How long does it take to multiply two n digit numbers together? Multiplication? How long does it take to multiply two n digit numbers together? Multiplication? How long does it take to multiply two n digit numbers together? Θ(n2) operations Karatsuba’s algorithm It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits Karatsuba’s algorithm Karatsuba’s algorithm It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits A ﬁrst attempt… A ﬁrst attempt… A ﬁrst attempt… Some helper functions A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) = Θ(n2) by master theorem. A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) = Θ(n2) by master theorem. No improvement??? Karatsuba’s algorithm Karatsuba’s brilliant idea: BC + AD = AC + BD - (A - B)(C - D) Karatsuba’s algorithm How many recursive calls now? How many recursive calls now? Looks like 5, but only 3 (2 repeated) Karatsuba’s algorithm Karatsuba’s algorithm Runtime would be: T(n) = 3T(n/2) + Θ(n) Karatsuba’s algorithm Runtime would be: T(n) = 3T(n/2) + Θ(n) = by master theorem."
+    }
+  ]
+}

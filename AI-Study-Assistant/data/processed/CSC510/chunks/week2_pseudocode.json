@@ -1,0 +1,29 @@
+{
+  "course": "CSC510",
+  "source_file": "week2_pseudocode.pdf",
+  "chunk_size": 550,
+  "overlap": 80,
+  "chunk_count": 2,
+  "chunks": [
+    {
+      "chunk_id": "week2_pseudocode-0",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 0,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "Pseudocode and Analyzing Runtime Prof. Timothy Sun A personal take on pseudocode For homework and exams, all algorithms must be described in pseudocode: ● structure of some programming languages (blocks, loops, arrays, etc.) ● natural languages (e.g. “and” instead of “&&”) ● mathematical notation (sets, arithmetic operators, etc.) Don’t submit actual code (even Python)! A personal take on pseudocode Assignment Assignment is written as… to distinguish it from “equals”. No need to declare types Declare arrays in the following way: A[1] and A[n] are deﬁned (sorry…) (It saves a line!) Arrays Loops and blocks For loops will be “for-each” loops: No need for parentheses, etc. Blocks denoted by indentation alone. Boolean operators replaced with words: Use of math symbols when appropriate. Boolean and arithmetic operators Function declarations Once again, no types, just the name and parameters A personal take on pseudocode Real algorithms have many different kinds of operations, so let’s look at some toy examples that use a “count” variable that plays the role of time: Runtime of iterative algorithms No loops Give a big-O estimate for the return value of “count”: No loops Answer: O(1) Give a big-O estimate for the return value of “count”: A single loop Give a big-O estimate for the return value of “count”: A single loop Answer: O(n), because the loop does n iterations Give a big-O estimate for the return value of “count”: Different number of iterations Give a big-O estimate for the return value of “count”: Different number of iterations Answer: O(n), again Give a big-O estimate for the return value of “count”: Different number of iterations Give a big-O estimate for the return value of “count”: Different number of iterations Answer: O(n3) Give a big-O estimate for the return value of “count”: Exponentially growing variables Give a big-O estimate for the return value of “count”: Exponentially growing variables Answer: O(log n) Give a big-O estimate for the return value of “count”: Consecutive loops Give a big-O estimate for the return value of “count”: Consecutive loops Answer: O(n)+O(n) = O(n) Give a big-O estimate for the return value of “count”: Nested loops Give a big-O estimate for the return value of “count”: Nested loops Answer: O(n)O(n) = O(n2), since each loop runs for n iterations Give a big-O estimate for the return value of “count”: Give a big-O estimate for the return value of “count”: Nested loops Give a big-O estimate for the return value of “count”: Nested loops Answer: O(n3) consecutive loops = add nested loops = multiply Two kinds of loops Answer: O(n) Answer: O(n2) Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Answer: O(n)[O(n)O(n)+O(n)] = O(n3) Varying number of iterations? Give a big-O estimate for the return value of “count”: Varying number of iterations? Answer: still O(n2) Give a big-O estimate for the return value of “count”: n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … + n ≤ n + n + n + n + … + n = n2 Estimating diﬃcult sums n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 +"
+    },
+    {
+      "chunk_id": "week2_pseudocode-1",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 1,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "still O(n2) Give a big-O estimate for the return value of “count”: n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … + n ≤ n + n + n + n + … + n = n2 Estimating diﬃcult sums n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … n/2 + … + n ≥ n/2 + … + n ≥ n/2 + … + n/2 ≈ (n/2)2 Estimating diﬃcult sums A useful estimation trick Function calls Give a big-O estimate for the runtime of “Function”: Give a big-O estimate for the runtime of “Function”: Function calls Answer: O(n2), since “Subroutine” is called O(n) times Analyzing iterative algorithms Give a big-O estimate for the return value of “count”: Analyzing iterative algorithms Answer: two variables now, O(mn) Give a big-O estimate for the return value of “count”: Give a big-O estimate for the runtime of “Function”: Putting it all together Give a big-O estimate for the runtime of “Function”: Putting it all together O(n) Give a big-O estimate for the runtime of “Function”: Putting it all together O(m) O(n) O(n) Give a big-O estimate for the runtime of “Function”: Putting it all together O(m) O(n) O(n) Answer: O(m)O(m)O(n)+O(n)O(m) = O(m2n) Different kinds of operations Treat each primitive operation (assignment, comparison, math operations, etc.) as O(1) time. O(1) Different kinds of operations Treat each primitive operation (assignment, comparison, math operations, etc.) as O(1) time. Can use previous rules to combine into one simple expression. O(1) Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Answer: O(n)[O(1)+O(n)O(1)+O(1)] Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Answer: O(n)[O(1)+O(n)O(1)+O(1)] = O(n2) worst case runtime Different kinds of operations Don’t forget to include the cost of any function calls, if any."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "course": "CSC510",
+  "source_file": "week3_rectree-510.pdf",
+  "chunk_size": 550,
+  "overlap": 80,
+  "chunk_count": 1,
+  "chunks": [
+    {
+      "chunk_id": "week3_rectree-510-0",
+      "course": "CSC510",
+      "source_file": "week3_rectree-510.pdf",
+      "chunk_index": 0,
+      "chunk_in_page": null,
+      "page": null,
+      "slide": null,
+      "text": "Recursion Trees and the Master Theorem Prof. Timothy Sun Recursion Recursive algorithms have recursive descriptions of their runtimes: Recursion Recursive algorithms have recursive descriptions of their runtimes: ● Mergesort makes two recursive calls on arrays of size ≈ n/2 ● The rest of the alg. is O(n) Recursion Recursive algorithms have recursive descriptions of their runtimes: ● Mergesort makes two recursive calls on arrays of size ≈ n/2 ● The rest of the alg. is Θ(n) We need to solve the recurrence T(n) = 2T(n/2) + Θ(n). Recursion Substitution is kind of hard to understand… T(n) = 2T(n/2) + cn Recursion Substitution is kind of hard to understand… T(n) = 2T(n/2) + cn = 2(2T(n/4)+cn/2) + cn = 2(2(2T(n/8)+cn/4)+cn/2) + cn … = … T(1) ... Recursion trees Recursion trees Total time: T(n) = sum of all the nodes Recursion trees Total time: T(n) = sum of all the nodes ● What’s the sum at each level? Recursion trees Total time: T(n) = sum of all the nodes ● What’s the sum at each level? ● How many levels are there? Recursion trees Θ(n) work per level, Θ(log n) levels T(n) = Θ(n log n) Another example Consider the following (useless) algorithm: Another example Consider the following (useless) algorithm: 3 recursive calls Another example Consider the following (useless) algorithm: 3 recursive calls everything else Θ(n2) Another example Consider the following (useless) algorithm: 3 recursive calls everything else Θ(n2) Solving the recursion tree I like to use a new variable so I know exactly what to substitute Solving the recursion tree Since the function has 3 recursive calls, each node has 3 children Solving the recursion tree Get next input size by plugging in current input size Solving the recursion tree Get node labels by plugging in the input size Solving the recursion tree Compute “level sums” by adding up nodes in each layer Solving the recursion tree Solving the recursion tree A root-heavy tree, so T(n) = Θ(n2) Other types of trees A leaf-heavy tree Counting leaf nodes for leaf-heavy trees The number of leaves is determined by number of children per node and depth A balanced tree Other types of trees Recursion trees General themes: ● Level sums form geometric series ● Biggest term dominates ○ First term? O(root) ○ Last term? O(# leaves) ● Balanced: # levels * root Recursion trees If r < 1, then: Geometric series Let b = logc r. Then one of these three cases holds: Master theorem When possible, use the master theorem! based on a meme by Arielle R.-T. (F’22) Non-master recurrences Can sometimes still use recursion trees, but might need other methods."
+    }
+  ]
+}
