@@ -56,7 +56,7 @@ def run_pipeline(
     run_images: bool = True,
     run_chunking: bool = True,
     run_embeddings: bool = True,
-    run_rag: bool = True,
+    run_rag: bool = False,
     course: str = None,
     chunk_size: int = 550,
     overlap: int = 80,
