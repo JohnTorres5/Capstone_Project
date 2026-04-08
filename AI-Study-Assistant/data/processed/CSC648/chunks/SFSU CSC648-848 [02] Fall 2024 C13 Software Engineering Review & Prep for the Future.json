@@ -3,37 +3,167 @@
   "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 3,
+  "chunk_count": 16,
   "chunks": [
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-0",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Software Engineering CSC648/848 Class Plan • Team 6 Takeaways Week 12 SE Methodology and Process Part 2 • M4 Feedback. Preparing for the Future. Resume and LinkedIn Best Practices & What makes a great Software Engineer? SE Tooling. • Team Collaboration M4 Feedback Images Source: Internet (Software Testing Material & Qualitylogic.com) Henry VILLAR SE REVIEW Preparation for the Future What makes a great Software Engineer? What makes a great Software Engineer? • Take Away #1: The ability to learn is more important than any individual technical skill • Take Away #2: Making good decisions is rarely discussed in the software engineering literature, but it is critical to being a great software engineer • Take Away #3: Software engineering is a sociotechnical undertaking • Take Away #4: Delivering the code is often insufficient; complex contextual technical considerations abound. Resume Best Practices https://medium.com/@steve_jones/7-software-engineer-resume-best-practices-7598636bdf3f LinkedIn Best Practices https://www.linkedin.com/pulse/software-engineers-what-makes-your-linkedin-profile-1010-daan-smit/ Know before you…Interview • Listen “Gayle Laakmann McDowell Talks about 'Interview Like Google (or not)-But Better!'” video • Be familiar with some of the testing tools some companies use: • https://karat.com/candidates/how-it-works/ • Karat Breakdown in terms of time. It is exactly 60 minutes (they will cut you off) • SWE Knowledge Questions (10 Minutes) • Coding Exercise (45 minutes) Emails and Prep SDET Hello <name> , • Great News! We would like to move forward in the process and have you speak to two of our engineers - <engineer 1 & engineer 2> via zoom for up to 90 mins. • This will be a technical interview that involves a pair coding session to develop an actual code of automated tests for a simple set of APIs/front-end application. To prepare, please set up your environment - IDE and starter testing framework of choice (e.g. Selenium, REST Assured, etc), and the other tools you find necessary. Please, prepare it before an actual call as the time for an interview will be limited. You will also be asked to share your screen via zoom so that the interviewer can review the code as you build in your choice of IDE. Front end Hello <name> , • Great News! We would like to move forward in the process and have you speak to two of our engineers - <engineer 1 & engineer 2> via zoom for up to 90 mins. • This will be a technical interview that involves a pair coding session to develop a simple two-page application. To prepare, please set up your environment (IDE and starter framework of choice (e.g. React, Angular, etc), and the other tools you find necessary. Please, prepare before the interview since time will be limited. You will also be asked to share your screen via zoom so that the interviewer can review the code as you build in your choice of IDE. Back-end Hello <name> , • Great News! We would like to move forward in the process and have you speak to two of our engineers - <engineer 1 & engineer 2> via zoom for up to 90 mins. • This will be a technical interview that involves a pair coding session to develop an actual code to build a small workable server component. To successfully pass this interview, you will need to have a fully operational development environment that includes IDE of your choice and the other tools"
+      "text": "Software Engineering CSC648/848"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-1",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "would like to move forward in the process and have you speak to two of our engineers - <engineer 1 & engineer 2> via zoom for up to 90 mins. • This will be a technical interview that involves a pair coding session to develop an actual code to build a small workable server component. To successfully pass this interview, you will need to have a fully operational development environment that includes IDE of your choice and the other tools you find necessary. Please, prepare it before an actual call as the time for an interview will be limited. You will also be asked to share your screen via zoom so that the interviewer can review the code as you build in the setup, which you feel most comfortable in. Questions (Modern JavaScript) Plans for next 3 classes • Week of Nov 25-29 – Fall Recess • W14 – Dec 3rd 2024: Prep for Demo and Final Exam | Team Collaboration for M5 • W15 – Dec 10th 2024 | Milestone 5 Demo and Documentation • W16 – Dec 17th 2024 FINAL EXAM @6PM-7:30PM (1.5h) Milestone 5 • Final Demo and Documents for Grading (Due date: December 10th – by 5PM). NOT EXCEPTIONS! • Delivery 1: Demo the Application (15 min). • Delivery 2: Folder with complete project documentation – “M5 folder” • e-mail subject line: Must be “CSC648-848 Fall 2024 Section 2 Milestone5 Folder Team N” in the subject line (N is a team number). • e-mail body contains direct link to Milestone 5 folder in team github 1. Cover Page 2. Product Summary 3. Milestone Documents (M1-M4) 4. Screenshots of actual final product as shown in the demo 5. Screenshots of key DB tables 6. Google analytics plot for your WWW site 7. Screenshots of your task management system (like Trello) showing a snapshot of your project Management 8. Team Members contributions 9. Post analysis – lessons learned • Schedule (Tuesday Dec 10th): • 06:10-06:25PM – Team #2 • 06:30-06:45PM – Team #5 • 06:50-07:05PM – Team #1 • 07:10-07:25PM – Team #6 • 07:30-07:45PM – Team #4 • 07:50-08:05PM – Team #3 Individual Class Reflection Paper 1. Analysis of the entire Software Engineering class 2. Experience working with the team project 3. Innovation Space 4. Resume 5. Preferred Job and Plan to enter the High Tech and Job Market as Computer Scientist or any other position. Due Date: Dec 10th by 5PM NOT EXCEPTIONS! Measured Team Outcomes for SE process Measured Team Outcomes for SE product 1. Fraction of the team participating at the meetings with the instructor 2. Quality and timing of follow-up on outstanding issues 3. Ability to deal with feedback constructively 4. Producing the non-SW and SW deliverables on time; following submission guidelines 5. Quality and completeness of non-SW deliverables (requirements, use cases, UI mockups, design documents, test plans etc.) as in M5 folder 6. Number of teamwork issues that instructor had to deal with (whether resolved or not) 7. Ability to apply best SE process and teamwork practices 8. Adherence to continuous and collaborative development practices 9. Ability to effectively use the SE tools (e.g. collaborative tools, version control, issue trackers) 1. Correctness and reliability of operation 2. Functionality of the product vs. desired requirements and use cases 3. Ease of use, user"
+      "text": "Class Plan • Team 6 Takeaways Week 12 SE Methodology and Process Part 2 • M4 Feedback. Preparing for the Future. Resume and LinkedIn Best Practices & What makes a great Software Engineer? SE Tooling. • Team Collaboration"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-2",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "mockups, design documents, test plans etc.) as in M5 folder 6. Number of teamwork issues that instructor had to deal with (whether resolved or not) 7. Ability to apply best SE process and teamwork practices 8. Adherence to continuous and collaborative development practices 9. Ability to effectively use the SE tools (e.g. collaborative tools, version control, issue trackers) 1. Correctness and reliability of operation 2. Functionality of the product vs. desired requirements and use cases 3. Ease of use, user interface 4. Architecture of the developed system 5. Database design 6. Basic security, field validation 7. Performance 8. Code quality and “smell” (coding principles, style, documentation) 9. Proper usage of collaborative tools e.g. repository 10. Presentation style and effectiveness of final product demonstration (content, delivery, adherence to time, dealing with Q/A) Rubrics for team project grading 25 % 25 % Thank You"
+      "text": "M4 Feedback Images Source: Internet (Software Testing Material & Qualitylogic.com)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-3",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Henry VILLAR SE REVIEW Preparation for the Future"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-4",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "What makes a great Software Engineer?"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-5",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "What makes a great Software Engineer? • Take Away #1: The ability to learn is more important than any individual technical skill • Take Away #2: Making good decisions is rarely discussed in the software engineering literature, but it is critical to being a great software engineer • Take Away #3: Software engineering is a sociotechnical undertaking • Take Away #4: Delivering the code is often insufficient; complex contextual technical considerations abound."
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-6",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Resume Best Practices https://medium.com/@steve_jones/7-software-engineer-resume-best-practices-7598636bdf3f"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-7",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "LinkedIn Best Practices https://www.linkedin.com/pulse/software-engineers-what-makes-your-linkedin-profile-1010-daan-smit/"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-8",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Know before you…Interview • Listen “Gayle Laakmann McDowell Talks about 'Interview Like Google (or not)-But Better!'” video • Be familiar with some of the testing tools some companies use: • https://karat.com/candidates/how-it-works/ • Karat Breakdown in terms of time. It is exactly 60 minutes (they will cut you off) • SWE Knowledge Questions (10 Minutes) • Coding Exercise (45 minutes)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-9",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Emails and Prep SDET Hello <name> , • Great News! We would like to move forward in the process and have you speak to two of our engineers - <engineer 1 & engineer 2> via zoom for up to 90 mins. • This will be a technical interview that involves a pair coding session to develop an actual code of automated tests for a simple set of APIs/front-end application. To prepare, please set up your environment - IDE and starter testing framework of choice (e.g. Selenium, REST Assured, etc), and the other tools you find necessary. Please, prepare it before an actual call as the time for an interview will be limited. You will also be asked to share your screen via zoom so that the interviewer can review the code as you build in your choice of IDE. Front end Hello <name> , • Great News! We would like to move forward in the process and have you speak to two of our engineers - <engineer 1 & engineer 2> via zoom for up to 90 mins. • This will be a technical interview that involves a pair coding session to develop a simple two-page application. To prepare, please set up your environment (IDE and starter framework of choice (e.g. React, Angular, etc), and the other tools you find necessary. Please, prepare before the interview since time will be limited. You will also be asked to share your screen via zoom so that the interviewer can review the code as you build in your choice of IDE. Back-end Hello <name> , • Great News! We would like to move forward in the process and have you speak to two of our engineers - <engineer 1 & engineer 2> via zoom for up to 90 mins. • This will be a technical interview that involves a pair coding session to develop an actual code to build a small workable server component. To successfully pass this interview, you will need to have a fully operational development environment that includes IDE of your choice and the other tools you find necessary. Please, prepare it before an actual call as the time for an interview will be limited. You will also be asked to share your screen via zoom so that the interviewer can review the code as you build in the setup, which you feel most comfortable in."
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-10",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Questions (Modern JavaScript)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-11",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Plans for next 3 classes • Week of Nov 25-29 – Fall Recess • W14 – Dec 3rd 2024: Prep for Demo and Final Exam | Team Collaboration for M5 • W15 – Dec 10th 2024 | Milestone 5 Demo and Documentation • W16 – Dec 17th 2024 FINAL EXAM @6PM-7:30PM (1.5h)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-12",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Milestone 5 • Final Demo and Documents for Grading (Due date: December 10th – by 5PM). NOT EXCEPTIONS! • Delivery 1: Demo the Application (15 min). • Delivery 2: Folder with complete project documentation – “M5 folder” • e-mail subject line: Must be “CSC648-848 Fall 2024 Section 2 Milestone5 Folder Team N” in the subject line (N is a team number). • e-mail body contains direct link to Milestone 5 folder in team github 1. Cover Page 2. Product Summary 3. Milestone Documents (M1-M4) 4. Screenshots of actual final product as shown in the demo 5. Screenshots of key DB tables 6. Google analytics plot for your WWW site 7. Screenshots of your task management system (like Trello) showing a snapshot of your project Management 8. Team Members contributions 9. Post analysis – lessons learned • Schedule (Tuesday Dec 10th): • 06:10-06:25PM – Team #2 • 06:30-06:45PM – Team #5 • 06:50-07:05PM – Team #1 • 07:10-07:25PM – Team #6 • 07:30-07:45PM – Team #4 • 07:50-08:05PM – Team #3"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-13",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Individual Class Reflection Paper 1. Analysis of the entire Software Engineering class 2. Experience working with the team project 3. Innovation Space 4. Resume 5. Preferred Job and Plan to enter the High Tech and Job Market as Computer Scientist or any other position. Due Date: Dec 10th by 5PM NOT EXCEPTIONS!"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-14",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Measured Team Outcomes for SE process Measured Team Outcomes for SE product 1. Fraction of the team participating at the meetings with the instructor 2. Quality and timing of follow-up on outstanding issues 3. Ability to deal with feedback constructively 4. Producing the non-SW and SW deliverables on time; following submission guidelines 5. Quality and completeness of non-SW deliverables (requirements, use cases, UI mockups, design documents, test plans etc.) as in M5 folder 6. Number of teamwork issues that instructor had to deal with (whether resolved or not) 7. Ability to apply best SE process and teamwork practices 8. Adherence to continuous and collaborative development practices 9. Ability to effectively use the SE tools (e.g. collaborative tools, version control, issue trackers) 1. Correctness and reliability of operation 2. Functionality of the product vs. desired requirements and use cases 3. Ease of use, user interface 4. Architecture of the developed system 5. Database design 6. Basic security, field validation 7. Performance 8. Code quality and “smell” (coding principles, style, documentation) 9. Proper usage of collaborative tools e.g. repository 10. Presentation style and effectiveness of final product demonstration (content, delivery, adherence to time, dealing with Q/A) Rubrics for team project grading 25 % 25 %"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future-15",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Thank You"
     }
   ]
 }

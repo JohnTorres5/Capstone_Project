@@ -3,27 +3,217 @@
   "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 2,
+  "chunk_count": 21,
   "chunks": [
     {
       "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-0",
       "course": "CSC340",
       "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Week 6 Algorithm Efficiency Chapter 10 © 2017 Pearson Education, Hoboken, NJ. All rights reserved What Is a Good Solution? • A program incurs a real and tangible cost. – Computing time – Memory required – Difficulties encountered by users – Consequences of incorrect actions by program • A solution is good if … – The total cost incurs … – Over all phases of its life … is minimal © 2017 Pearson Education, Hoboken, NJ. All rights reserved What Is a Good Solution? • Important elements of the solution – Good structure – Good documentation – Efficiency • Be concerned with efficiency when – Developing underlying algorithm – Choice of objects and design of interaction between those objects © 2017 Pearson Education, Hoboken, NJ. All rights reserved Measuring Efficiency of Algorithms • Important because – Choice of algorithm has significant impact • Examples – Responsive word processors – Grocery checkout systems – Automatic teller machines – Video machines – Life support systems © 2017 Pearson Education, Hoboken, NJ. All rights reserved Measuring Efficiency of Algorithms • Analysis of algorithms – The area of computer science that provides tools for contrasting efficiency of different algorithms – Comparison of algorithms should focus on significant differences in efficiency – We consider comparisons of algorithms, not programs © 2017 Pearson Education, Hoboken, NJ. All rights reserved Measuring Efficiency of Algorithms • Difficulties with comparing programs (instead of algorithms) – How are the algorithms coded – What computer will be used – What data should the program use • Algorithm analysis should be independent of – Specific implementations, computers, and data © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Execution Time of Algorithms • An algorithm’s execution time is related to number of operations it requires. – Algorithm’s execution time is related to number of operations it requires. • Example: Towers of Hanoi – Solution for n disks required 2n – 1 moves – If each move requires time m – Solution requires (2n – 1) × m time units © 2017 Pearson Education, Hoboken, NJ. All rights reserved Execution Time Evolution • In RDBMS, access times are critical – RAM is in nanoseconds – In 1980s-1990s, hard disk access times ~20 millis – Modern SSDs access times ~9 microseconds • Query optimizers had to be rewritten – All access times are now parameterized/metadata – No more hardcoding of values © 2017 Pearson Education, Hoboken, NJ. All rights reserved Algorithm Growth Rates • Measure an algorithm’s time requirement as function of problem size • Most important thing to learn – How quickly algorithm’s time requirement grows as a function of problem size – Demonstrates contrast in growth rates © 2017 Pearson Education, Hoboken, NJ. All rights reserved Algorithm Growth Rates FIGURE 10-1 Time requirements as a function of problem size n © 2017 Pearson Education, Hoboken, NJ. All rights reserved Analysis and Big O Notation • Algorithm A is said to be order f (n), – Denoted as O( f (n)) – Function f(n) called algorithm’s growth rate function – Notation with capital O denotes order • Algorithm A of order denoted O(f(n)) – Constants k and n0 exist such that – A requires no more than k × f(n) time units – For problem of size n ≥ n0 © 2017"
+      "text": "Week 6 Algorithm Efficiency Chapter 10 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-1",
       "course": "CSC340",
       "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "2017 Pearson Education, Hoboken, NJ. All rights reserved Analysis and Big O Notation • Algorithm A is said to be order f (n), – Denoted as O( f (n)) – Function f(n) called algorithm’s growth rate function – Notation with capital O denotes order • Algorithm A of order denoted O(f(n)) – Constants k and n0 exist such that – A requires no more than k × f(n) time units – For problem of size n ≥ n0 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Analysis and Big O Notation FIGURE 10-2 The graphs of 3 × n2 and n2 - 3 × n + 10 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Analysis and Big O Notation Order of growth of some common functions © 2017 Pearson Education, Hoboken, NJ. All rights reserved Analysis and Big O Notation FIGURE 10-3 A comparison of growth-rate functions © 2017 Pearson Education, Hoboken, NJ. All rights reserved Analysis and Big O Notation FIGURE 10-4 A comparison of growth-rate functions © 2017 Pearson Education, Hoboken, NJ. All rights reserved RDBMS - Small Amounts of Data • In RDBMS, indexes are used for performance – Indexes are Balanced Trees stored on disk – Presorted data structures • For large amounts of data, indexes are critical • For small amounts of data, indexes are not needed – MySQL default page size is 16K (can be changed) – Data under 2-3 dozen pages is “small” © 2017 Pearson Education, Hoboken, NJ. All rights reserved Analysis and Big O Notation • Worst-case analysis – Worst case analysis usually considered – Easier to calculate, thus more common • Average-case analysis – More difficult to perform – Must determine relative probabilities of encountering problems of given size © 2017 Pearson Education, Hoboken, NJ. All rights reserved Keeping Your Perspective • ADT used makes a difference – Array-based getEntry is O(1) – Link-based getEntry is O(n) • Choosing implementation of ADT – Consider how frequently certain operations will occur – Seldom used but critical operations must also be efficient © 2017 Pearson Education, Hoboken, NJ. All rights reserved Keeping Your Perspective • If problem size is always small – Possible to ignore algorithm’s efficiency • Weigh trade-offs between – Algorithm’s time and memory requirements • Compare algorithms for style and efficiency © 2017 Pearson Education, Hoboken, NJ. All rights reserved Efficiency of Searching Algorithms • Sequential search – Worst case: O(n) – Average case: O(n) – Best case: O(1) • Binary search – O(log2n) in worst case – At same time, maintaining array in sorted order requires overhead cost … can be substantial © 2017 Pearson Education, Hoboken, NJ. All rights reserved End Chapter 10 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+      "text": "What Is a Good Solution? • A program incurs a real and tangible cost. – Computing time – Memory required – Difficulties encountered by users – Consequences of incorrect actions by program • A solution is good if … – The total cost incurs … – Over all phases of its life … is minimal © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-2",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 2,
+      "chunk_in_page": 0,
+      "page": 3,
+      "slide": null,
+      "text": "What Is a Good Solution? • Important elements of the solution – Good structure – Good documentation – Efficiency • Be concerned with efficiency when – Developing underlying algorithm – Choice of objects and design of interaction between those objects © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-3",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Measuring Efficiency of Algorithms • Important because – Choice of algorithm has significant impact • Examples – Responsive word processors – Grocery checkout systems – Automatic teller machines – Video machines – Life support systems © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-4",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Measuring Efficiency of Algorithms • Analysis of algorithms – The area of computer science that provides tools for contrasting efficiency of different algorithms – Comparison of algorithms should focus on significant differences in efficiency – We consider comparisons of algorithms, not programs © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-5",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Measuring Efficiency of Algorithms • Difficulties with comparing programs (instead of algorithms) – How are the algorithms coded – What computer will be used – What data should the program use • Algorithm analysis should be independent of – Specific implementations, computers, and data © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-6",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "The Execution Time of Algorithms • An algorithm’s execution time is related to number of operations it requires. – Algorithm’s execution time is related to number of operations it requires. • Example: Towers of Hanoi – Solution for n disks required 2n – 1 moves – If each move requires time m – Solution requires (2n – 1) × m time units © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-7",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Execution Time Evolution • In RDBMS, access times are critical – RAM is in nanoseconds – In 1980s-1990s, hard disk access times ~20 millis – Modern SSDs access times ~9 microseconds • Query optimizers had to be rewritten – All access times are now parameterized/metadata – No more hardcoding of values © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-8",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Algorithm Growth Rates • Measure an algorithm’s time requirement as function of problem size • Most important thing to learn – How quickly algorithm’s time requirement grows as a function of problem size – Demonstrates contrast in growth rates © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-9",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Algorithm Growth Rates FIGURE 10-1 Time requirements as a function of problem size n © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-10",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Analysis and Big O Notation • Algorithm A is said to be order f (n), – Denoted as O( f (n)) – Function f(n) called algorithm’s growth rate function – Notation with capital O denotes order • Algorithm A of order denoted O(f(n)) – Constants k and n0 exist such that – A requires no more than k × f(n) time units – For problem of size n ≥ n0 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-11",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Analysis and Big O Notation FIGURE 10-2 The graphs of 3 × n2 and n2 - 3 × n + 10 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-12",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Analysis and Big O Notation Order of growth of some common functions © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-13",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Analysis and Big O Notation FIGURE 10-3 A comparison of growth-rate functions © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-14",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Analysis and Big O Notation FIGURE 10-4 A comparison of growth-rate functions © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-15",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "RDBMS - Small Amounts of Data • In RDBMS, indexes are used for performance – Indexes are Balanced Trees stored on disk – Presorted data structures • For large amounts of data, indexes are critical • For small amounts of data, indexes are not needed – MySQL default page size is 16K (can be changed) – Data under 2-3 dozen pages is “small” © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-16",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Analysis and Big O Notation • Worst-case analysis – Worst case analysis usually considered – Easier to calculate, thus more common • Average-case analysis – More difficult to perform – Must determine relative probabilities of encountering problems of given size © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-17",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Keeping Your Perspective • ADT used makes a difference – Array-based getEntry is O(1) – Link-based getEntry is O(n) • Choosing implementation of ADT – Consider how frequently certain operations will occur – Seldom used but critical operations must also be efficient © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-18",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Keeping Your Perspective • If problem size is always small – Possible to ignore algorithm’s efficiency • Weigh trade-offs between – Algorithm’s time and memory requirements • Compare algorithms for style and efficiency © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-19",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Efficiency of Searching Algorithms • Sequential search – Worst case: O(n) – Average case: O(n) – Best case: O(1) • Binary search – O(log2n) in worst case – At same time, maintaining array in sorted order requires overhead cost … can be substantial © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency-20",
+      "course": "CSC340",
+      "source_file": "Week 6 - WallsMirrors7ed-Ch10 - Algorithm Efficiency.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "End Chapter 10 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     }
   ]
 }

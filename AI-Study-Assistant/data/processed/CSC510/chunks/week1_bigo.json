@@ -3,47 +3,597 @@
   "source_file": "week1_bigo.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 4,
+  "chunk_count": 59,
   "chunks": [
     {
       "chunk_id": "week1_bigo-0",
       "course": "CSC510",
       "source_file": "week1_bigo.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Big-O Notation Prof. Timothy Sun Big-O Notation “Insertion sort runs in O(n2) time.” Why use Big-O notation? ● Language/machine/unit-independent ● Isolating the “bottleneck” ● Captures long-term behavior ● Easier to analyze Why use Big-O notation? ● Language/machine/unit-independent ● Isolating the “bottleneck” ● Captures long-term behavior ● Easier to analyze Big-O notation is about scalability, not speed! Asymptotes Big-O notation O(f(n)): class of functions whose “order is at most f(n).” O(f(n)): class of functions whose “order is at most f(n).” Big-O notation Big-O notation O(f(n)): class of functions whose “order is at most f(n).” More often you’ll see it (technically, incorrectly) written as: Deﬁnition: f(x) = O(g(x)), i.e., “f(x) is order at most g(x)”, if: There exist numbers C, K > 0 so that f(x) ≤ C·g(x), for every x ≥ K. Big-O notation Deﬁnition: f(x) = O(g(x)), i.e., “f(x) is order at most g(x)”, if: There exist numbers C, K > 0 so that f(x) ≤ C·g(x), for every x ≥ K. Big-O notation C: use it to hide the coeﬃcient K: only care about “big enough” x Some examples: ● 3x + 4 = O(x) ● 4x2 + 10x - 21 = O(x2) ● 81x = O(x3) ● x2 ≠ O(x) ● log2 x = O(ln x) [base doesn’t matter] ● x100 = O(2x) ● 2n = O(n!) Big-O notation One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) A linear example One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) 1. “Guess” a C bigger than 3: try C = 4 A linear example One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) 1. “Guess” a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 ≤ 4x → x ≥ 4, so K can be 4. A linear example One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) 1. “Guess” a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 ≤ 4x → x ≥ 4, so K can be 4. In general, many pairs of C and K can work. A linear example 4x2 +10x - 21 = O(x2) A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 ≤ 5x2 → 0 ≤ x2 - 10x + 21 = (x - 3)(x - 7) A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 ≤ 5x2 → 0 ≤ x2 - 10x + 21 = (x - 3)(x - 7) K = 7 works, but not K = 3 (why?) A quadratic example Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Logarithms Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log"
+      "text": "Big-O Notation Prof. Timothy Sun"
     },
     {
       "chunk_id": "week1_bigo-1",
       "course": "CSC510",
       "source_file": "week1_bigo.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "- 3)(x - 7) K = 7 works, but not K = 3 (why?) A quadratic example Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Logarithms Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) Logarithms Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) (unless it appears as an exponent) Logarithms For polynomials, look at the highest power, drop the coeﬃcient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 General themes For polynomials, look at the highest power, drop the coeﬃcient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 = O(x5) General themes Simple approach for polynomials 3x5 + 6x4 - 10x3 + x2 - 15x + 11 Simple approach for polynomials 1. Remove negative terms 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 true for x ≥ 0 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 ≤ 3x5 + 6x5 + x5 + 11x5 true for x ≥ 0 true for x ≥ 1 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 ≤ 3x5 + 6x5 + x5 + 11x5 = 21x5 true for x ≥ 0 true for x ≥ 1 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 ≤ 3x5 + 6x5 + x5 + 11x5 = 21x5 C true for x ≥ 0 true for x ≥ 1 K = 1 Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) ≤ C, for every x ≥ K. Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) ≤ C, for every x ≥ K. Can use calculus to help evaluate things like x100 = O(ex). Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) ≤ C, for every x ≥ K. Can use calculus to help evaluate things like x100 = O(ex). For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) General themes For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential General themes For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential"
+      "text": "Big-O Notation “Insertion sort runs in O(n2) time.”"
     },
     {
       "chunk_id": "week1_bigo-2",
       "course": "CSC510",
       "source_file": "week1_bigo.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) General themes For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential General themes For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 General themes For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 nd = O(cn) for any d > 0, c > 1. General themes na = O(nb), if a ≤ b Useful properties na = O(nb), if a ≤ b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) Useful properties na = O(nb), if a ≤ b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) n = O(n log n), n log n = O(n2), O(n2) = O(n3), etc. Useful properties “O(f(n))+O(g(n)) = O(f(n)+g(n))” Useful properties “O(f(n))+O(g(n)) = O(f(n)+g(n))” ● If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n) + b(n) = O(f(n) + g(n)) Useful properties “O(f(n))O(g(n)) = O(f(n)g(n))” ● If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n)b(n) = O(f(n)g(n)) Useful when considering the complexity of two distinct steps in an algorithm. Useful properties ● O(f(n)) + O(g(n)) = O(f(n) + g(n)) ● O(f(n))O(g(n)) = O(f(n)g(n)) ● O(a·f(n)) = O(f(n)), for constant a > 0. ● f(n) = O(g(n)), g(n) = O(h(n)) → f(n) = O(h(n)). ● O(f(n)+g(n)) = O(max(f(n), g(n))) Useful properties Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) Simplifying expressions Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) = O(n2 log n)O(n) + O(log n)O(n2)O(log n) = O(n3 log n) + O(n2(log n)2) = O(n3 log n) Simplifying expressions f(x) = Ω(g(x)) if there are numbers C, K > 0 so that f(x) ≥ C·g(x), whenever x ≥ K. It’s all Greek to me f(x) = Ω(g(x)) if there are numbers C, K > 0 so that f(x) ≥ C·g(x), whenever x ≥ K. x3 - 3x + 10 = Ω(x2) It’s all Greek to me f(x) = Ω(g(x)) if there are numbers C, K > 0 so that f(x) ≥ C·g(x), whenever x ≥ K. x3 - 3x + 10 = Ω(x2) (could also think of as g = O(f)) It’s all Greek to me f(x) = ϴ(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) ≤ f(x) ≤ C2g(x), whenever x ≥ K. It’s all Greek to me f(x) = ϴ(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) ≤ f(x) ≤ C2g(x), whenever x ≥ K. (can also think of as"
+      "text": "Why use Big-O notation? ● Language/machine/unit-independent ● Isolating the “bottleneck” ● Captures long-term behavior ● Easier to analyze"
     },
     {
       "chunk_id": "week1_bigo-3",
       "course": "CSC510",
       "source_file": "week1_bigo.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "whenever x ≥ K. x3 - 3x + 10 = Ω(x2) (could also think of as g = O(f)) It’s all Greek to me f(x) = ϴ(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) ≤ f(x) ≤ C2g(x), whenever x ≥ K. It’s all Greek to me f(x) = ϴ(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) ≤ f(x) ≤ C2g(x), whenever x ≥ K. (can also think of as f = O(g) and f = Ω(g)) It’s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 It’s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 ● f(x) = O(x2), g(x) = O(x2), h(x) ≠ O(x2) ● f(x) ≠ Ω(x2), g(x) = Ω(x2), h(x) = Ω(x2) It’s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 ● f(x) = O(x2), g(x) = O(x2), h(x) ≠ O(x2) ● f(x) ≠ Ω(x2), g(x) = Ω(x2), h(x) = Ω(x2) Putting these together, we get: ● f(x) ≠ ϴ(x2), g(x) = ϴ(x2), h(x) ≠ ϴ(x2) Only g(x) has quadratic growth. It’s all Greek to me O: “≤” Ω: “≥” ϴ: “=” It’s all Greek to me O: “≤” Ω: “≥” ϴ: “=” o: “<” ω: “>” It’s all Greek to me Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation… Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation… ...but it doesn’t always tell the whole story because of the hidden constant. ● e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation… ...but it doesn’t always tell the whole story because of the hidden constant. ● e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Not a substitute for benchmarking! Concluding Remarks “Unfortunately, for any instance [graph] that one could ﬁt into the known universe, one would easily prefer n70 to even constant time, if that constant had to be one of Robertson and Seymour’s.” -David Johnson, The NP-Completeness Column: An Ongoing Guide (1987)."
+      "text": "Why use Big-O notation? ● Language/machine/unit-independent ● Isolating the “bottleneck” ● Captures long-term behavior ● Easier to analyze Big-O notation is about scalability, not speed!"
+    },
+    {
+      "chunk_id": "week1_bigo-4",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Asymptotes"
+    },
+    {
+      "chunk_id": "week1_bigo-5",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Big-O notation O(f(n)): class of functions whose “order is at most f(n).”"
+    },
+    {
+      "chunk_id": "week1_bigo-6",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "O(f(n)): class of functions whose “order is at most f(n).” Big-O notation"
+    },
+    {
+      "chunk_id": "week1_bigo-7",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Big-O notation O(f(n)): class of functions whose “order is at most f(n).” More often you’ll see it (technically, incorrectly) written as:"
+    },
+    {
+      "chunk_id": "week1_bigo-8",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Deﬁnition: f(x) = O(g(x)), i.e., “f(x) is order at most g(x)”, if: There exist numbers C, K > 0 so that f(x) ≤ C·g(x), for every x ≥ K. Big-O notation"
+    },
+    {
+      "chunk_id": "week1_bigo-9",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Deﬁnition: f(x) = O(g(x)), i.e., “f(x) is order at most g(x)”, if: There exist numbers C, K > 0 so that f(x) ≤ C·g(x), for every x ≥ K. Big-O notation C: use it to hide the coeﬃcient K: only care about “big enough” x"
+    },
+    {
+      "chunk_id": "week1_bigo-10",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Some examples: ● 3x + 4 = O(x) ● 4x2 + 10x - 21 = O(x2) ● 81x = O(x3) ● x2 ≠ O(x) ● log2 x = O(ln x) [base doesn’t matter] ● x100 = O(2x) ● 2n = O(n!) Big-O notation"
+    },
+    {
+      "chunk_id": "week1_bigo-11",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) A linear example"
+    },
+    {
+      "chunk_id": "week1_bigo-12",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) 1. “Guess” a C bigger than 3: try C = 4 A linear example"
+    },
+    {
+      "chunk_id": "week1_bigo-13",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) 1. “Guess” a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 ≤ 4x → x ≥ 4, so K can be 4. A linear example"
+    },
+    {
+      "chunk_id": "week1_bigo-14",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "One approach is to “guess” C, then ﬁnd K algebraically: e.g. 3x + 4 = O(x) 1. “Guess” a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 ≤ 4x → x ≥ 4, so K can be 4. In general, many pairs of C and K can work. A linear example"
+    },
+    {
+      "chunk_id": "week1_bigo-15",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "4x2 +10x - 21 = O(x2) A quadratic example"
+    },
+    {
+      "chunk_id": "week1_bigo-16",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "4x2 +10x - 21 = O(x2) 1. Guess C = 5. A quadratic example"
+    },
+    {
+      "chunk_id": "week1_bigo-17",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 ≤ 5x2 → 0 ≤ x2 - 10x + 21 = (x - 3)(x - 7) A quadratic example"
+    },
+    {
+      "chunk_id": "week1_bigo-18",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 ≤ 5x2 → 0 ≤ x2 - 10x + 21 = (x - 3)(x - 7) K = 7 works, but not K = 3 (why?) A quadratic example"
+    },
+    {
+      "chunk_id": "week1_bigo-19",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Logarithms"
+    },
+    {
+      "chunk_id": "week1_bigo-20",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) Logarithms"
+    },
+    {
+      "chunk_id": "week1_bigo-21",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) (unless it appears as an exponent) Logarithms"
+    },
+    {
+      "chunk_id": "week1_bigo-22",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "For polynomials, look at the highest power, drop the coeﬃcient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 General themes"
+    },
+    {
+      "chunk_id": "week1_bigo-23",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "For polynomials, look at the highest power, drop the coeﬃcient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 = O(x5) General themes"
+    },
+    {
+      "chunk_id": "week1_bigo-24",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Simple approach for polynomials 3x5 + 6x4 - 10x3 + x2 - 15x + 11"
+    },
+    {
+      "chunk_id": "week1_bigo-25",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Simple approach for polynomials 1. Remove negative terms 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 true for x ≥ 0"
+    },
+    {
+      "chunk_id": "week1_bigo-26",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 ≤ 3x5 + 6x5 + x5 + 11x5 true for x ≥ 0 true for x ≥ 1"
+    },
+    {
+      "chunk_id": "week1_bigo-27",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 ≤ 3x5 + 6x5 + x5 + 11x5 = 21x5 true for x ≥ 0 true for x ≥ 1"
+    },
+    {
+      "chunk_id": "week1_bigo-28",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 ≤ 3x5 + 6x4 + x2 + 11 ≤ 3x5 + 6x5 + x5 + 11x5 = 21x5 C true for x ≥ 0 true for x ≥ 1 K = 1"
+    },
+    {
+      "chunk_id": "week1_bigo-29",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) ≤ C, for every x ≥ K."
+    },
+    {
+      "chunk_id": "week1_bigo-30",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) ≤ C, for every x ≥ K. Can use calculus to help evaluate things like x100 = O(ex)."
+    },
+    {
+      "chunk_id": "week1_bigo-31",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) ≤ C, for every x ≥ K. Can use calculus to help evaluate things like x100 = O(ex)."
+    },
+    {
+      "chunk_id": "week1_bigo-32",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) General themes"
+    },
+    {
+      "chunk_id": "week1_bigo-33",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential General themes"
+    },
+    {
+      "chunk_id": "week1_bigo-34",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 General themes"
+    },
+    {
+      "chunk_id": "week1_bigo-35",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "For polynomials, look at the highest power, drop the coeﬃcient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 nd = O(cn) for any d > 0, c > 1. General themes"
+    },
+    {
+      "chunk_id": "week1_bigo-36",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "na = O(nb), if a ≤ b Useful properties"
+    },
+    {
+      "chunk_id": "week1_bigo-37",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "na = O(nb), if a ≤ b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) Useful properties"
+    },
+    {
+      "chunk_id": "week1_bigo-38",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "na = O(nb), if a ≤ b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) n = O(n log n), n log n = O(n2), O(n2) = O(n3), etc. Useful properties"
+    },
+    {
+      "chunk_id": "week1_bigo-39",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "“O(f(n))+O(g(n)) = O(f(n)+g(n))” Useful properties"
+    },
+    {
+      "chunk_id": "week1_bigo-40",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "“O(f(n))+O(g(n)) = O(f(n)+g(n))” ● If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n) + b(n) = O(f(n) + g(n)) Useful properties"
+    },
+    {
+      "chunk_id": "week1_bigo-41",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "“O(f(n))O(g(n)) = O(f(n)g(n))” ● If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n)b(n) = O(f(n)g(n)) Useful when considering the complexity of two distinct steps in an algorithm. Useful properties"
+    },
+    {
+      "chunk_id": "week1_bigo-42",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "● O(f(n)) + O(g(n)) = O(f(n) + g(n)) ● O(f(n))O(g(n)) = O(f(n)g(n)) ● O(a·f(n)) = O(f(n)), for constant a > 0. ● f(n) = O(g(n)), g(n) = O(h(n)) → f(n) = O(h(n)). ● O(f(n)+g(n)) = O(max(f(n), g(n))) Useful properties"
+    },
+    {
+      "chunk_id": "week1_bigo-43",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) Simplifying expressions"
+    },
+    {
+      "chunk_id": "week1_bigo-44",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) = O(n2 log n)O(n) + O(log n)O(n2)O(log n) = O(n3 log n) + O(n2(log n)2) = O(n3 log n) Simplifying expressions"
+    },
+    {
+      "chunk_id": "week1_bigo-45",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "f(x) = Ω(g(x)) if there are numbers C, K > 0 so that f(x) ≥ C·g(x), whenever x ≥ K. It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-46",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "f(x) = Ω(g(x)) if there are numbers C, K > 0 so that f(x) ≥ C·g(x), whenever x ≥ K. x3 - 3x + 10 = Ω(x2) It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-47",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "f(x) = Ω(g(x)) if there are numbers C, K > 0 so that f(x) ≥ C·g(x), whenever x ≥ K. x3 - 3x + 10 = Ω(x2) (could also think of as g = O(f)) It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-48",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "f(x) = ϴ(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) ≤ f(x) ≤ C2g(x), whenever x ≥ K. It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-49",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "f(x) = ϴ(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) ≤ f(x) ≤ C2g(x), whenever x ≥ K. (can also think of as f = O(g) and f = Ω(g)) It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-50",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-51",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 ● f(x) = O(x2), g(x) = O(x2), h(x) ≠ O(x2) ● f(x) ≠ Ω(x2), g(x) = Ω(x2), h(x) = Ω(x2) It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-52",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 ● f(x) = O(x2), g(x) = O(x2), h(x) ≠ O(x2) ● f(x) ≠ Ω(x2), g(x) = Ω(x2), h(x) = Ω(x2) Putting these together, we get: ● f(x) ≠ ϴ(x2), g(x) = ϴ(x2), h(x) ≠ ϴ(x2) Only g(x) has quadratic growth. It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-53",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "O: “≤” Ω: “≥” ϴ: “=” It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-54",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "O: “≤” Ω: “≥” ϴ: “=” o: “<” ω: “>” It’s all Greek to me"
+    },
+    {
+      "chunk_id": "week1_bigo-55",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation…"
+    },
+    {
+      "chunk_id": "week1_bigo-56",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation… ...but it doesn’t always tell the whole story because of the hidden constant. ● e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values."
+    },
+    {
+      "chunk_id": "week1_bigo-57",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation… ...but it doesn’t always tell the whole story because of the hidden constant. ● e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Not a substitute for benchmarking!"
+    },
+    {
+      "chunk_id": "week1_bigo-58",
+      "course": "CSC510",
+      "source_file": "week1_bigo.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "Concluding Remarks “Unfortunately, for any instance [graph] that one could ﬁt into the known universe, one would easily prefer n70 to even constant time, if that constant had to be one of Robertson and Seymour’s.” -David Johnson, The NP-Completeness Column: An Ongoing Guide (1987)."
     }
   ]
 }

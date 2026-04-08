@@ -3,17 +3,107 @@
   "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 1,
+  "chunk_count": 10,
   "chunks": [
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-0",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Software Engineering CSC648/848 Class Plan • Software Engineering Class Review. • M5 Q&A • Demo & Final Exam Preparation. • 1:1 Meeting with Team Lead. I will spend 5min with each team lead to review final team collaboration report. • Team Collaboration Henry VILLAR SE REVIEW Preparation for Milestone 5 and FINAL Exam 4 What are the four important attributes that all professional software should have? Four important attributes are: 1. Maintainability, 2. Dependability, 3. Performance and 4. Usability. Review Time Question Answer What is software? Computer programs and associated documentation. Software products may be developed for a particular customer or may be developed for a general market. What are the attributes of good software? Good software should deliver the required functionality and performance to the user and should be maintainable, dependable and usable. What is software engineering? Software engineering is an engineering discipline that is concerned with all aspects of software production. What are the fundamental software engineering activities? Software specification, software development, software validation and software evolution. What is the difference between software engineering and computer science? Computer science focuses on theory and fundamentals; software engineering is concerned with the practicalities of developing and delivering useful software. What is the difference between software engineering and system engineering? System engineering is concerned with all aspects of computer- based systems development including hardware, software and process engineering. Software engineering is part of this more general process. Methodologies Waterfall Evolutionary Iterative Incremental Open Source Development Extreme Programing User Centered Design (UCD) Continuous Development AGILE & SCRUM GitHub M5 Latest Code Revised Docs in M5 folder Original Docs Presentations Best Practices • Content • Structure • Packaging • Human Element • The Voice • The Body http://www.nwlink.com/~donclark/leader/leadpres.html#intro https://www.youtube.com/watch?v=_Mm_q0X-R1c Henry VILLAR SOFTWARE ENGINEERING REVIEW FINAL Exam Prep Practical recommendations applying SE to real life • Critical to know what users and management expect from the product, what are the resources and deadlines ➔ high-level specs, requirements, plan and priorities are important to be developed and agreed upon • Be ready to change and evolve req. and specs, with proper approvals • For overall SE process and project organization apply SCRUM with periodic reviews review, or XP for smaller systems and demos • For user intensive subsystems and APIs and docs apply UCD • Budget adequate QA, usability testing, documentation • Take care of legalese, permissions, licensing, copyright early • Pay attention to getting/creating the best team, and maintain high team spirit and motivation as a developer or manager. Provide coffee and food and take care of the teamwork • Have a team lead who helps in technical decisions • Assess and resolve risks early (technical, resource, skills, legal, schedule..) • Establish coding style and basic documentation standards or adopt the mandated ones • Establish collaborative and SE development tools or adopt the mandated ones • Use frequent build and test • Use coding reviews • Ensure code is documented for easy maintenance • Think of the user all the time Thank You"
+      "text": "Software Engineering CSC648/848"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-1",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 1,
+      "chunk_in_page": 0,
+      "page": 2,
+      "slide": null,
+      "text": "Class Plan • Software Engineering Class Review. • M5 Q&A • Demo & Final Exam Preparation. • 1:1 Meeting with Team Lead. I will spend 5min with each team lead to review final team collaboration report. • Team Collaboration"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-2",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 2,
+      "chunk_in_page": 0,
+      "page": 3,
+      "slide": null,
+      "text": "Henry VILLAR SE REVIEW Preparation for Milestone 5 and FINAL Exam"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-3",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "4 What are the four important attributes that all professional software should have? Four important attributes are: 1. Maintainability, 2. Dependability, 3. Performance and 4. Usability. Review Time Question Answer What is software? Computer programs and associated documentation. Software products may be developed for a particular customer or may be developed for a general market. What are the attributes of good software? Good software should deliver the required functionality and performance to the user and should be maintainable, dependable and usable. What is software engineering? Software engineering is an engineering discipline that is concerned with all aspects of software production. What are the fundamental software engineering activities? Software specification, software development, software validation and software evolution. What is the difference between software engineering and computer science? Computer science focuses on theory and fundamentals; software engineering is concerned with the practicalities of developing and delivering useful software. What is the difference between software engineering and system engineering? System engineering is concerned with all aspects of computer- based systems development including hardware, software and process engineering. Software engineering is part of this more general process."
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-4",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Methodologies Waterfall Evolutionary Iterative Incremental Open Source Development Extreme Programing User Centered Design (UCD) Continuous Development AGILE & SCRUM"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-5",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "GitHub M5 Latest Code Revised Docs in M5 folder Original Docs"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-6",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Presentations Best Practices • Content • Structure • Packaging • Human Element • The Voice • The Body http://www.nwlink.com/~donclark/leader/leadpres.html#intro https://www.youtube.com/watch?v=_Mm_q0X-R1c"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-7",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Henry VILLAR SOFTWARE ENGINEERING REVIEW FINAL Exam Prep"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-8",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Practical recommendations applying SE to real life • Critical to know what users and management expect from the product, what are the resources and deadlines ➔ high-level specs, requirements, plan and priorities are important to be developed and agreed upon • Be ready to change and evolve req. and specs, with proper approvals • For overall SE process and project organization apply SCRUM with periodic reviews review, or XP for smaller systems and demos • For user intensive subsystems and APIs and docs apply UCD • Budget adequate QA, usability testing, documentation • Take care of legalese, permissions, licensing, copyright early • Pay attention to getting/creating the best team, and maintain high team spirit and motivation as a developer or manager. Provide coffee and food and take care of the teamwork • Have a team lead who helps in technical decisions • Assess and resolve risks early (technical, resource, skills, legal, schedule..) • Establish coding style and basic documentation standards or adopt the mandated ones • Establish collaborative and SE development tools or adopt the mandated ones • Use frequent build and test • Use coding reviews • Ensure code is documented for easy maintenance • Think of the user all the time"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s)-9",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Thank You"
     }
   ]
 }

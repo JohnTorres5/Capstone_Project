@@ -3,37 +3,417 @@
   "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 3,
+  "chunk_count": 41,
   "chunks": [
     {
       "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-0",
       "course": "CSC340",
       "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Link-Based Implementations Chapter 4 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Preliminaries • Another way to organize data items – Place them within objects—usually called nodes – Linked together into a “chain,” one after the other © 2017 Pearson Education, Hoboken, NJ. All rights reserved Figure 4-1 A freight train Preliminaries © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 4-2 A node FIGURE 4-3 Several nodes linked together • Components that can link to one another, are usually called a node. • Each component contains both a data item and a “pointer” to the next item. • Since each node must contain two pieces of information, the data item and a pointer to the next node, it is natural to conclude that each node should be an object. Preliminaries © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 4-4 A head pointer to the first of several linked nodes Although all of the pointers shown in Figure 4-4 point to nodes, the head pointer is a simple pointer variable, whereas the next members are within nodes. Preliminaries © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 4-5 A lost node The Class Node LISTING 4-1 The header file for the template class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class Node LISTING 4-2 The implementation file for the class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved A Link-Based Implementation of the ADT Bag FIGURE 4-6 A link-based implementation of the ADT bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved Bag operations, given in UML notation The Header File LISTING 4-3 The header file for the class LinkedBag © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 4-3 The header file for the class LinkedBag © 2017 Pearson Education, Hoboken, NJ. All rights reserved Defining the Core Methods Default Constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved Inserting at the beginning of a linked chain Defining the Core Methods FIGURE 4-7 Inserting at the beginning of a linked chain © 2017 Pearson Education, Hoboken, NJ. All rights reserved Defining the Core Methods • Traverse operation visits each node in linked chain – Must move from node to node © 2017 Pearson Education, Hoboken, NJ. All rights reserved High-level pseudocode for this loop Defining the Core Methods FIGURE 4-8 The effect of the assignment curPtr = curPtr->getNext( ) © 2017 Pearson Education, Hoboken, NJ. All rights reserved Defining the Core Methods Definition of toVector © 2017 Pearson Education, Hoboken, NJ. All rights reserved Defining the Core Methods Methods isEmpty and getCurrentSize © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Method getFrequencyOf © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Search for a specific entry. To avoid duplicate code, we perform this search in a private method © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Note: definition of the method contains calls getPointerTo © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Method remove also calls getPointerTo © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Method clear deallocates all nodes in the chain. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing"
+      "text": "Link-Based Implementations Chapter 4 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-1",
       "course": "CSC340",
       "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "entry. To avoid duplicate code, we perform this search in a private method © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Note: definition of the method contains calls getPointerTo © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Method remove also calls getPointerTo © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Method clear deallocates all nodes in the chain. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Destructor calls clear, destroys instance of a class © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods FIGURE 4-9 (a) A linked chain and its shallow copy; (b) a linked chain and its deep copy © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Copy constructor to accomplish deep copy. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Implementing More Methods Copy constructor to accomplish deep copy. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Recursive Definitions Methods in LinkedBag • Revise methods in class to use recursion – Traverse chain of linked nodes – Make no changes to the chain • Method toVector – Has a straightforward recursive implementation – Must be a private method – Receives head pointer as parameter – Vector must also be a parameter © 2017 Pearson Education, Hoboken, NJ. All rights reserved Recursive Definitions Methods in LinkedBag Method toVector © 2017 Pearson Education, Hoboken, NJ. All rights reserved Recursive Definitions Methods in LinkedBag • Private method getPointerTo – Locates given entry within linked chain – Traversal stops if it locates node that contains given entry © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations • Recall test program of Listing 3-2 • Used ADT bag methods when we tested our implementation • Can use the same code—with a few changes – Change each occurrence of ArrayBag to LinkedBag and recompile the program © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Comparing Array-Based and Link-Based Implementations • Arrays easy to use, but have fixed size – Not always easy to predict number of items in ADT – Array"
+      "text": "Preliminaries • Another way to organize data items – Place them within objects—usually called nodes – Linked together into a “chain,” one after the other © 2017 Pearson Education, Hoboken, NJ. All rights reserved Figure 4-1 A freight train"
     },
     {
       "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-2",
       "course": "CSC340",
       "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved Comparing Array-Based and Link-Based Implementations • Arrays easy to use, but have fixed size – Not always easy to predict number of items in ADT – Array could waste space – Increasing size of dynamically allocated array can waste storage and time – Can access array items directly with equal access time – An array-based implementation is a good choice for a small bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved Comparing Array-Based and Link-Based Implementations • Linked chains do not have fixed size – In a chain of linked nodes, an item points explicitly to the next item – Link-based implementation requires more memory – Must traverse a linked chain to access its ith node – Time to access ith node in a linked chain depends on i © 2017 Pearson Education, Hoboken, NJ. All rights reserved End Chapter 4 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Appendix Chapter 4 © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class Node LISTING 4-2 The implementation file for the class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class Node LISTING 4-2 The implementation file for the class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+      "text": "Preliminaries © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 4-2 A node FIGURE 4-3 Several nodes linked together • Components that can link to one another, are usually called a node. • Each component contains both a data item and a “pointer” to the next item. • Since each node must contain two pieces of information, the data item and a pointer to the next node, it is natural to conclude that each node should be an object."
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-3",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Preliminaries © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 4-4 A head pointer to the first of several linked nodes Although all of the pointers shown in Figure 4-4 point to nodes, the head pointer is a simple pointer variable, whereas the next members are within nodes."
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-4",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Preliminaries © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 4-5 A lost node"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-5",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "The Class Node LISTING 4-1 The header file for the template class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-6",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "The Class Node LISTING 4-2 The implementation file for the class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-7",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "A Link-Based Implementation of the ADT Bag FIGURE 4-6 A link-based implementation of the ADT bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved Bag operations, given in UML notation"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-8",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "The Header File LISTING 4-3 The header file for the class LinkedBag © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-9",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "The Header File LISTING 4-3 The header file for the class LinkedBag © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-10",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Defining the Core Methods Default Constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved Inserting at the beginning of a linked chain"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-11",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Defining the Core Methods FIGURE 4-7 Inserting at the beginning of a linked chain © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-12",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Defining the Core Methods • Traverse operation visits each node in linked chain – Must move from node to node © 2017 Pearson Education, Hoboken, NJ. All rights reserved High-level pseudocode for this loop"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-13",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Defining the Core Methods FIGURE 4-8 The effect of the assignment curPtr = curPtr->getNext( ) © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-14",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Defining the Core Methods Definition of toVector © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-15",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Defining the Core Methods Methods isEmpty and getCurrentSize © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-16",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Implementing More Methods Method getFrequencyOf © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-17",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Implementing More Methods Search for a specific entry. To avoid duplicate code, we perform this search in a private method © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-18",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Implementing More Methods Note: definition of the method contains calls getPointerTo © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-19",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Implementing More Methods Method remove also calls getPointerTo © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-20",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Implementing More Methods Method clear deallocates all nodes in the chain. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-21",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Implementing More Methods Destructor calls clear, destroys instance of a class © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-22",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Implementing More Methods FIGURE 4-9 (a) A linked chain and its shallow copy; (b) a linked chain and its deep copy © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-23",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Implementing More Methods Copy constructor to accomplish deep copy. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-24",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Implementing More Methods Copy constructor to accomplish deep copy. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-25",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Recursive Definitions Methods in LinkedBag • Revise methods in class to use recursion – Traverse chain of linked nodes – Make no changes to the chain • Method toVector – Has a straightforward recursive implementation – Must be a private method – Receives head pointer as parameter – Vector must also be a parameter © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-26",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Recursive Definitions Methods in LinkedBag Method toVector © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-27",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Recursive Definitions Methods in LinkedBag • Private method getPointerTo – Locates given entry within linked chain – Traversal stops if it locates node that contains given entry © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-28",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Testing Multiple ADT Implementations • Recall test program of Listing 3-2 • Used ADT bag methods when we tested our implementation • Can use the same code—with a few changes – Change each occurrence of ArrayBag to LinkedBag and recompile the program © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-29",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-30",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-31",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-32",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-33",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-34",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Testing Multiple ADT Implementations LISTING 4-4 A program that tests the core methods of classes that are derived from the abstract class BagInterface © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-35",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Comparing Array-Based and Link-Based Implementations • Arrays easy to use, but have fixed size – Not always easy to predict number of items in ADT – Array could waste space – Increasing size of dynamically allocated array can waste storage and time – Can access array items directly with equal access time – An array-based implementation is a good choice for a small bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-36",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Comparing Array-Based and Link-Based Implementations • Linked chains do not have fixed size – In a chain of linked nodes, an item points explicitly to the next item – Link-based implementation requires more memory – Must traverse a linked chain to access its ith node – Time to access ith node in a linked chain depends on i © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-37",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "End Chapter 4 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-38",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Appendix Chapter 4 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-39",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "The Class Node LISTING 4-2 The implementation file for the class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 4 - WallsMirrors7ed-Ch04-40",
+      "course": "CSC340",
+      "source_file": "Week 4 - WallsMirrors7ed-Ch04.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "The Class Node LISTING 4-2 The implementation file for the class Node © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     }
   ]
 }

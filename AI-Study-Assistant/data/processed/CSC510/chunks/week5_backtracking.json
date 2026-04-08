@@ -3,57 +3,867 @@
   "source_file": "week5_backtracking.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 5,
+  "chunk_count": 86,
   "chunks": [
     {
       "chunk_id": "week5_backtracking-0",
       "course": "CSC510",
       "source_file": "week5_backtracking.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Backtracking Prof. Timothy Sun 8 Queens Puzzle Place 8 non-attacking queens on a standard chessboard. 8 Queens Puzzle Place 8 non-attacking queens on a standard chessboard. Avoid having queens: ● in same column ● in same row ● in same diagonal 8 Queens Puzzle We’ll solve the problem using brute force. 8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place 8 queens? 8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place 8 queens? We’ll solve the problem using brute force. ● # ways to place 8 queens? Not good because of many “obviously wrong” possibilities. 8 Queens Puzzle 8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place one on each row? We’ll solve the problem using brute force. ● # ways to place one on each row? 8 Queens Puzzle 8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place one on each row? Index using an array: [7, 1, 3, 6, 2, 5, 5, 4] 8 Queens Puzzle Enumerating over all rows... [1, 1, 1, 1, 1, 1, 1, 1] [1, 1, 1, 1, 1, 1, 1, 2] [1, 1, 1, 1, 1, 1, 1, 3] [1, 1, 1, 1, 1, 1, 1, 4] [1, 1, 1, 1, 1, 1, 1, 5] … 8 Queens Puzzle Enumerating over all rows... [1, 1, 1, 1, 1, 1, 1, 1] [1, 1, 1, 1, 1, 1, 1, 2] [1, 1, 1, 1, 1, 1, 1, 3] [1, 1, 1, 1, 1, 1, 1, 4] [1, 1, 1, 1, 1, 1, 1, 5] … Also many wrong possibilities. Build solution step by step, trying all possibilities at each step. Backtracking Build solution step by step, trying all possibilities at each step. Backtracking Build solution step by step, trying all possibilities at each step. Backtracking Build solution step by step, trying all possibilities at each step. Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. # permutations of 8 elements? Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. # permutations of 8 elements? Backtracking Backtracking Why is recursion = backtracking? A recursive algorithm explores the recursion tree in a depth-ﬁrst manner. Why is recursion = backtracking? A recursive algorithm explores the recursion tree in a depth-ﬁrst manner. A branch is completely explored before moving on to another branch. Backtracking How to check if (i, Q[i]) attacking (r, c)? Backtracking ● Same column: Q[i] = c ● Main diagonal: Q[i]-i = c-r ● Off diagonal: Q[i]+i = c+r Permutations ● Same column:"
+      "text": "Backtracking Prof. Timothy Sun"
     },
     {
       "chunk_id": "week5_backtracking-1",
       "course": "CSC510",
       "source_file": "week5_backtracking.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "8 elements? Backtracking Backtracking Why is recursion = backtracking? A recursive algorithm explores the recursion tree in a depth-ﬁrst manner. Why is recursion = backtracking? A recursive algorithm explores the recursion tree in a depth-ﬁrst manner. A branch is completely explored before moving on to another branch. Backtracking How to check if (i, Q[i]) attacking (r, c)? Backtracking ● Same column: Q[i] = c ● Main diagonal: Q[i]-i = c-r ● Off diagonal: Q[i]+i = c+r Permutations ● Same column: Q[i] = c ● Main diagonal: Q[i]-i = c-r ● Off diagonal: Q[i]+i = c+r Traveling Salesperson Problem Given cities and distances between cities, ﬁnd the shortest tour that visits every city. Traveling Salesperson Problem Given cities and distances between cities, ﬁnd the shortest tour that visits every city. TSP - Brute Force How do we try every tour? TSP - Brute Force How do we try every tour? Try every permutation. n! many tours TSP - Brute Force How do we try every tour? Try every permutation. n! many tours Can we do a little better? TSP - Brute Force How do we try every tour? Try every permutation. n! many tours Can we do a little better? (n-1)!/2 Recursive algorithms 1. If base case, direct solution 2. Otherwise, reduce to a smaller instance of same problem Recursive algorithms - backtracking 1. If base case, direct solution 2. Otherwise, reduce to a smaller instance of same problem a. If there are multiple possibilities, try every case. Game trees One of the earliest applications of backtracking was to play two-player games. Game trees One of the earliest applications of backtracking was to play two-player games. ● Two players, alternating moves ● No hidden information ● No randomness ● Ends in a ﬁxed number of moves Game trees One of the earliest applications of backtracking was to play two-player games. ● Two players, alternating moves (e.g., not rock-paper-scissors) ● No hidden information (e.g., not mastermind) ● No randomness (e.g., not yahtzee) ● Ends in a ﬁxed number of moves (e.g., not checkers) Game trees One of the earliest applications of backtracking was to play two-player games. ● Two players, alternating moves (e.g., not rock-paper-scissors) ● No hidden information (e.g., not mastermind) ● No randomness (e.g., not yahtzee) ● Ends in a ﬁxed number of moves (e.g., not checkers) A player is winning if they can win the game no matter what their opponent does. Recursive deﬁnition for winning If the game has already been won/lost, nothing to calculate. A state is winning if there is a move the player can make that makes it losing for the other player. Recursive deﬁnition for winning Impartial games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their own set of pieces) Impartial games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their own set of pieces) Nim is a family of games where there are a few piles with some number of stones, where on each turn, a player removes some number of stones from one pile. Impartial games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their"
+      "text": "8 Queens Puzzle Place 8 non-attacking queens on a standard chessboard."
     },
     {
       "chunk_id": "week5_backtracking-2",
       "course": "CSC510",
       "source_file": "week5_backtracking.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their own set of pieces) Nim is a family of games where there are a few piles with some number of stones, where on each turn, a player removes some number of stones from one pile. Impartial games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their own set of pieces) Nim is a family of games where there are a few piles with some number of stones, where on each turn, a player removes some number of stones from one pile. ● Number of piles? ● Maximum number of stones per turn? ● Is taking the last stone a win or a loss? Nim Many examples in video games: Nim - variant 1 First version: 1 pile, 1-3 stones per turn, person who takes last loses Nim - variant 1 First version: 1 pile, 1-3 stones per turn, person who takes last loses Who’s winning when there are… ● no stones left? ● 1 stone left? ● 3 stones left? ● 6 stones left? Nim 1 - game trees Nim 1 - game trees Rectangle tiling Given a 2 x n grid of squares, how many ways are there to tile it with 1 x 2 “dominoes”? Rectangle tiling Given a 2 x n grid of squares, how many ways are there to tile it with 1 x 2 “dominoes”? Rectangle tiling Given a 2 x n grid of squares, how many ways are there to tile it with 1 x 2 “dominoes”? Diﬃcult brute force: try to write out all the possibilities Subproblems: smaller rectangles Rectangle tiling Rectangle tiling If a mysterious wizard could tell you the solution for any 2 x k board, where k < n, how could you use that information? Rectangle tiling If a mysterious wizard could tell you the solution for any 2 x k board, where k < n, how could you use that information? Take a nibble out of your problem Rectangle tiling Every tiling has to have something that covers the left-most squares. Rectangle tiling Every tiling has to have something that covers the left-most squares. Have the mysterious wizard tell us the rest: ● “How many 2x4 tilings are there?” ● “How many 2x3 tilings are there?” Add those answers together. Rectangle tiling Every tiling has to have something that covers the left-most squares. Have the mysterious wizard tell us the rest: ● “How many 2x(n-1) tilings are there?” ● “How many 2x(n-2) tilings are there?” Add those answers together. Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 1, 2 Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 1, 2 Rectangle tiling A mathematical recurrence for the solution: Rectangle tiling Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 0, 1 (empty solution) Rectangle tiling"
+      "text": "8 Queens Puzzle Place 8 non-attacking queens on a standard chessboard. Avoid having queens: ● in same column ● in same row ● in same diagonal"
     },
     {
       "chunk_id": "week5_backtracking-3",
       "course": "CSC510",
       "source_file": "week5_backtracking.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "the base cases? Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 1, 2 Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 1, 2 Rectangle tiling A mathematical recurrence for the solution: Rectangle tiling Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 0, 1 (empty solution) Rectangle tiling Algorithms as functions A side effect is something that happens outside of the algorithm itself when it’s executed. Algorithms as functions A side effect is something that happens outside of the algorithm itself when it’s executed. ● Modifying global variables Algorithms as functions A side effect is something that happens outside of the algorithm itself when it’s executed. ● Modifying global variables ● Print statements Algorithms as functions On the other hand, the domino algorithm is a pure function. Algorithms as functions On the other hand, the domino algorithm is a pure function. ● No side effects ● Return value only depends on input arguments. Algorithms as functions On the other hand, the domino algorithm is a pure function. ● No side effects ● Return value only depends on input arguments. Whenever possible, a backtracking algorithm should be pure. Backtracking guidelines Backtracking is “incremental brute force”: Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution ○ N Queens: Placing the 1st queen, placing the 2nd queen, … ○ Domino: Tiling the left-most part of the rectangle, tiling the part right next to that, … Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution ○ N Queens: Placing the 1st queen, placing the 2nd queen, … ○ Domino: Tiling the left-most part of the rectangle, tiling the part right next to that, … ● If you make the ﬁrst choice, is the rest of it the same problem, but smaller? Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution ○ N Queens: Placing the 1st queen, placing the 2nd queen, … ○ Domino: Tiling the left-most part of the rectangle, tiling the part right next to that, … ● If you make the ﬁrst choice, is the rest of it the same problem, but smaller? ○ N Queens: Yes? (Need to keep track of previous queens) ○ Domino: Yes, a smaller (2 x k) rectangle. Backtracking guidelines Smaller versions of the same problem embedded inside are known as subproblems. Backtracking guidelines Smaller versions of the same problem embedded inside are known as subproblems. We let recursion handle all subproblems, unless we’re already at a base case. Backtracking guidelines 1. Identify the sequence of choices and see if there’s a recursive structure. a. The recurrence should consider every possible ﬁrst (or last) choice. After the ﬁrst choice, the rest of the rectangle is a smaller instance of the same problem. ﬁrst domino vertical or horizontal Backtracking guidelines 2. Solve base cases directly. Backtracking guidelines 2. Solve base cases directly. Steps 1 and 2 lead to a complete"
+      "text": "8 Queens Puzzle We’ll solve the problem using brute force."
     },
     {
       "chunk_id": "week5_backtracking-4",
       "course": "CSC510",
       "source_file": "week5_backtracking.pdf",
       "chunk_index": 4,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 5,
       "slide": null,
-      "text": "handle all subproblems, unless we’re already at a base case. Backtracking guidelines 1. Identify the sequence of choices and see if there’s a recursive structure. a. The recurrence should consider every possible ﬁrst (or last) choice. After the ﬁrst choice, the rest of the rectangle is a smaller instance of the same problem. ﬁrst domino vertical or horizontal Backtracking guidelines 2. Solve base cases directly. Backtracking guidelines 2. Solve base cases directly. Steps 1 and 2 lead to a complete recurrence relation. Backtracking guidelines 3. Write down the algorithm: convert the recurrence relation into a recursive algorithm."
+      "text": "8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place 8 queens?"
+    },
+    {
+      "chunk_id": "week5_backtracking-5",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place 8 queens?"
+    },
+    {
+      "chunk_id": "week5_backtracking-6",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "We’ll solve the problem using brute force. ● # ways to place 8 queens? Not good because of many “obviously wrong” possibilities. 8 Queens Puzzle"
+    },
+    {
+      "chunk_id": "week5_backtracking-7",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place one on each row?"
+    },
+    {
+      "chunk_id": "week5_backtracking-8",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "We’ll solve the problem using brute force. ● # ways to place one on each row? 8 Queens Puzzle"
+    },
+    {
+      "chunk_id": "week5_backtracking-9",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "8 Queens Puzzle We’ll solve the problem using brute force. ● # ways to place one on each row? Index using an array: [7, 1, 3, 6, 2, 5, 5, 4]"
+    },
+    {
+      "chunk_id": "week5_backtracking-10",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "8 Queens Puzzle Enumerating over all rows... [1, 1, 1, 1, 1, 1, 1, 1] [1, 1, 1, 1, 1, 1, 1, 2] [1, 1, 1, 1, 1, 1, 1, 3] [1, 1, 1, 1, 1, 1, 1, 4] [1, 1, 1, 1, 1, 1, 1, 5] …"
+    },
+    {
+      "chunk_id": "week5_backtracking-11",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "8 Queens Puzzle Enumerating over all rows... [1, 1, 1, 1, 1, 1, 1, 1] [1, 1, 1, 1, 1, 1, 1, 2] [1, 1, 1, 1, 1, 1, 1, 3] [1, 1, 1, 1, 1, 1, 1, 4] [1, 1, 1, 1, 1, 1, 1, 5] … Also many wrong possibilities."
+    },
+    {
+      "chunk_id": "week5_backtracking-12",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-13",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-14",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-15",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-16",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-17",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-18",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-19",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack."
+    },
+    {
+      "chunk_id": "week5_backtracking-20",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Backtracking Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack."
+    },
+    {
+      "chunk_id": "week5_backtracking-21",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-22",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. # permutations of 8 elements? Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-23",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Build solution step by step, trying all possibilities at each step. If out of possibilities, backtrack. # permutations of 8 elements? Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-24",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Backtracking"
+    },
+    {
+      "chunk_id": "week5_backtracking-25",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Why is recursion = backtracking? A recursive algorithm explores the recursion tree in a depth-ﬁrst manner."
+    },
+    {
+      "chunk_id": "week5_backtracking-26",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Why is recursion = backtracking? A recursive algorithm explores the recursion tree in a depth-ﬁrst manner. A branch is completely explored before moving on to another branch."
+    },
+    {
+      "chunk_id": "week5_backtracking-27",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Backtracking How to check if (i, Q[i]) attacking (r, c)?"
+    },
+    {
+      "chunk_id": "week5_backtracking-28",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Backtracking ● Same column: Q[i] = c ● Main diagonal: Q[i]-i = c-r ● Off diagonal: Q[i]+i = c+r"
+    },
+    {
+      "chunk_id": "week5_backtracking-29",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Permutations ● Same column: Q[i] = c ● Main diagonal: Q[i]-i = c-r ● Off diagonal: Q[i]+i = c+r"
+    },
+    {
+      "chunk_id": "week5_backtracking-30",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Traveling Salesperson Problem Given cities and distances between cities, ﬁnd the shortest tour that visits every city."
+    },
+    {
+      "chunk_id": "week5_backtracking-31",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Traveling Salesperson Problem Given cities and distances between cities, ﬁnd the shortest tour that visits every city."
+    },
+    {
+      "chunk_id": "week5_backtracking-32",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "TSP - Brute Force How do we try every tour?"
+    },
+    {
+      "chunk_id": "week5_backtracking-33",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "TSP - Brute Force How do we try every tour? Try every permutation. n! many tours"
+    },
+    {
+      "chunk_id": "week5_backtracking-34",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "TSP - Brute Force How do we try every tour? Try every permutation. n! many tours Can we do a little better?"
+    },
+    {
+      "chunk_id": "week5_backtracking-35",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "TSP - Brute Force How do we try every tour? Try every permutation. n! many tours Can we do a little better? (n-1)!/2"
+    },
+    {
+      "chunk_id": "week5_backtracking-36",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Recursive algorithms 1. If base case, direct solution 2. Otherwise, reduce to a smaller instance of same problem"
+    },
+    {
+      "chunk_id": "week5_backtracking-37",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Recursive algorithms - backtracking 1. If base case, direct solution 2. Otherwise, reduce to a smaller instance of same problem a. If there are multiple possibilities, try every case."
+    },
+    {
+      "chunk_id": "week5_backtracking-38",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Game trees One of the earliest applications of backtracking was to play two-player games."
+    },
+    {
+      "chunk_id": "week5_backtracking-39",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Game trees One of the earliest applications of backtracking was to play two-player games. ● Two players, alternating moves ● No hidden information ● No randomness ● Ends in a ﬁxed number of moves"
+    },
+    {
+      "chunk_id": "week5_backtracking-40",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Game trees One of the earliest applications of backtracking was to play two-player games. ● Two players, alternating moves (e.g., not rock-paper-scissors) ● No hidden information (e.g., not mastermind) ● No randomness (e.g., not yahtzee) ● Ends in a ﬁxed number of moves (e.g., not checkers)"
+    },
+    {
+      "chunk_id": "week5_backtracking-41",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Game trees One of the earliest applications of backtracking was to play two-player games. ● Two players, alternating moves (e.g., not rock-paper-scissors) ● No hidden information (e.g., not mastermind) ● No randomness (e.g., not yahtzee) ● Ends in a ﬁxed number of moves (e.g., not checkers) A player is winning if they can win the game no matter what their opponent does."
+    },
+    {
+      "chunk_id": "week5_backtracking-42",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Recursive deﬁnition for winning If the game has already been won/lost, nothing to calculate. A state is winning if there is a move the player can make that makes it losing for the other player."
+    },
+    {
+      "chunk_id": "week5_backtracking-43",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Recursive deﬁnition for winning"
+    },
+    {
+      "chunk_id": "week5_backtracking-44",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Impartial games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their own set of pieces)"
+    },
+    {
+      "chunk_id": "week5_backtracking-45",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Impartial games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their own set of pieces) Nim is a family of games where there are a few piles with some number of stones, where on each turn, a player removes some number of stones from one pile."
+    },
+    {
+      "chunk_id": "week5_backtracking-46",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Impartial games - Nim A game is impartial if the moves only depend on whose turn it is (e.g., no player gets their own set of pieces) Nim is a family of games where there are a few piles with some number of stones, where on each turn, a player removes some number of stones from one pile. ● Number of piles? ● Maximum number of stones per turn? ● Is taking the last stone a win or a loss?"
+    },
+    {
+      "chunk_id": "week5_backtracking-47",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Nim Many examples in video games:"
+    },
+    {
+      "chunk_id": "week5_backtracking-48",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Nim - variant 1 First version: 1 pile, 1-3 stones per turn, person who takes last loses"
+    },
+    {
+      "chunk_id": "week5_backtracking-49",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Nim - variant 1 First version: 1 pile, 1-3 stones per turn, person who takes last loses Who’s winning when there are… ● no stones left? ● 1 stone left? ● 3 stones left? ● 6 stones left?"
+    },
+    {
+      "chunk_id": "week5_backtracking-50",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Nim 1 - game trees"
+    },
+    {
+      "chunk_id": "week5_backtracking-51",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Nim 1 - game trees"
+    },
+    {
+      "chunk_id": "week5_backtracking-52",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "Rectangle tiling Given a 2 x n grid of squares, how many ways are there to tile it with 1 x 2 “dominoes”?"
+    },
+    {
+      "chunk_id": "week5_backtracking-53",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "Rectangle tiling Given a 2 x n grid of squares, how many ways are there to tile it with 1 x 2 “dominoes”?"
+    },
+    {
+      "chunk_id": "week5_backtracking-54",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "Rectangle tiling Given a 2 x n grid of squares, how many ways are there to tile it with 1 x 2 “dominoes”? Diﬃcult brute force: try to write out all the possibilities"
+    },
+    {
+      "chunk_id": "week5_backtracking-55",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "Subproblems: smaller rectangles Rectangle tiling"
+    },
+    {
+      "chunk_id": "week5_backtracking-56",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Rectangle tiling If a mysterious wizard could tell you the solution for any 2 x k board, where k < n, how could you use that information?"
+    },
+    {
+      "chunk_id": "week5_backtracking-57",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "Rectangle tiling If a mysterious wizard could tell you the solution for any 2 x k board, where k < n, how could you use that information? Take a nibble out of your problem"
+    },
+    {
+      "chunk_id": "week5_backtracking-58",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 60,
+      "slide": null,
+      "text": "Rectangle tiling Every tiling has to have something that covers the left-most squares."
+    },
+    {
+      "chunk_id": "week5_backtracking-59",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 59,
+      "chunk_in_page": 0,
+      "page": 61,
+      "slide": null,
+      "text": "Rectangle tiling Every tiling has to have something that covers the left-most squares. Have the mysterious wizard tell us the rest: ● “How many 2x4 tilings are there?” ● “How many 2x3 tilings are there?” Add those answers together."
+    },
+    {
+      "chunk_id": "week5_backtracking-60",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 60,
+      "chunk_in_page": 0,
+      "page": 62,
+      "slide": null,
+      "text": "Rectangle tiling Every tiling has to have something that covers the left-most squares. Have the mysterious wizard tell us the rest: ● “How many 2x(n-1) tilings are there?” ● “How many 2x(n-2) tilings are there?” Add those answers together."
+    },
+    {
+      "chunk_id": "week5_backtracking-61",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 61,
+      "chunk_in_page": 0,
+      "page": 63,
+      "slide": null,
+      "text": "Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis)."
+    },
+    {
+      "chunk_id": "week5_backtracking-62",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 62,
+      "chunk_in_page": 0,
+      "page": 64,
+      "slide": null,
+      "text": "Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases?"
+    },
+    {
+      "chunk_id": "week5_backtracking-63",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 63,
+      "chunk_in_page": 0,
+      "page": 65,
+      "slide": null,
+      "text": "Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 1, 2"
+    },
+    {
+      "chunk_id": "week5_backtracking-64",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 64,
+      "chunk_in_page": 0,
+      "page": 66,
+      "slide": null,
+      "text": "Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 1, 2"
+    },
+    {
+      "chunk_id": "week5_backtracking-65",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 65,
+      "chunk_in_page": 0,
+      "page": 67,
+      "slide": null,
+      "text": "Rectangle tiling A mathematical recurrence for the solution:"
+    },
+    {
+      "chunk_id": "week5_backtracking-66",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 66,
+      "chunk_in_page": 0,
+      "page": 68,
+      "slide": null,
+      "text": "Rectangle tiling"
+    },
+    {
+      "chunk_id": "week5_backtracking-67",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 67,
+      "chunk_in_page": 0,
+      "page": 69,
+      "slide": null,
+      "text": "Rectangle tiling The mysterious wizard is recursion (combined with the inductive hypothesis). What are the base cases? n = 0, 1 (empty solution)"
+    },
+    {
+      "chunk_id": "week5_backtracking-68",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 68,
+      "chunk_in_page": 0,
+      "page": 70,
+      "slide": null,
+      "text": "Rectangle tiling"
+    },
+    {
+      "chunk_id": "week5_backtracking-69",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 69,
+      "chunk_in_page": 0,
+      "page": 71,
+      "slide": null,
+      "text": "Algorithms as functions A side effect is something that happens outside of the algorithm itself when it’s executed."
+    },
+    {
+      "chunk_id": "week5_backtracking-70",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 70,
+      "chunk_in_page": 0,
+      "page": 72,
+      "slide": null,
+      "text": "Algorithms as functions A side effect is something that happens outside of the algorithm itself when it’s executed. ● Modifying global variables"
+    },
+    {
+      "chunk_id": "week5_backtracking-71",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 71,
+      "chunk_in_page": 0,
+      "page": 73,
+      "slide": null,
+      "text": "Algorithms as functions A side effect is something that happens outside of the algorithm itself when it’s executed. ● Modifying global variables ● Print statements"
+    },
+    {
+      "chunk_id": "week5_backtracking-72",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 72,
+      "chunk_in_page": 0,
+      "page": 74,
+      "slide": null,
+      "text": "Algorithms as functions On the other hand, the domino algorithm is a pure function."
+    },
+    {
+      "chunk_id": "week5_backtracking-73",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 73,
+      "chunk_in_page": 0,
+      "page": 75,
+      "slide": null,
+      "text": "Algorithms as functions On the other hand, the domino algorithm is a pure function. ● No side effects ● Return value only depends on input arguments."
+    },
+    {
+      "chunk_id": "week5_backtracking-74",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 74,
+      "chunk_in_page": 0,
+      "page": 76,
+      "slide": null,
+      "text": "Algorithms as functions On the other hand, the domino algorithm is a pure function. ● No side effects ● Return value only depends on input arguments. Whenever possible, a backtracking algorithm should be pure."
+    },
+    {
+      "chunk_id": "week5_backtracking-75",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 75,
+      "chunk_in_page": 0,
+      "page": 77,
+      "slide": null,
+      "text": "Backtracking guidelines Backtracking is “incremental brute force”:"
+    },
+    {
+      "chunk_id": "week5_backtracking-76",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 76,
+      "chunk_in_page": 0,
+      "page": 78,
+      "slide": null,
+      "text": "Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution"
+    },
+    {
+      "chunk_id": "week5_backtracking-77",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 77,
+      "chunk_in_page": 0,
+      "page": 79,
+      "slide": null,
+      "text": "Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution ○ N Queens: Placing the 1st queen, placing the 2nd queen, … ○ Domino: Tiling the left-most part of the rectangle, tiling the part right next to that, …"
+    },
+    {
+      "chunk_id": "week5_backtracking-78",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 78,
+      "chunk_in_page": 0,
+      "page": 80,
+      "slide": null,
+      "text": "Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution ○ N Queens: Placing the 1st queen, placing the 2nd queen, … ○ Domino: Tiling the left-most part of the rectangle, tiling the part right next to that, … ● If you make the ﬁrst choice, is the rest of it the same problem, but smaller?"
+    },
+    {
+      "chunk_id": "week5_backtracking-79",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 79,
+      "chunk_in_page": 0,
+      "page": 81,
+      "slide": null,
+      "text": "Backtracking guidelines Backtracking is “incremental brute force”: ● Usually a sequence of steps needed to build a solution ○ N Queens: Placing the 1st queen, placing the 2nd queen, … ○ Domino: Tiling the left-most part of the rectangle, tiling the part right next to that, … ● If you make the ﬁrst choice, is the rest of it the same problem, but smaller? ○ N Queens: Yes? (Need to keep track of previous queens) ○ Domino: Yes, a smaller (2 x k) rectangle."
+    },
+    {
+      "chunk_id": "week5_backtracking-80",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 80,
+      "chunk_in_page": 0,
+      "page": 82,
+      "slide": null,
+      "text": "Backtracking guidelines Smaller versions of the same problem embedded inside are known as subproblems."
+    },
+    {
+      "chunk_id": "week5_backtracking-81",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 81,
+      "chunk_in_page": 0,
+      "page": 83,
+      "slide": null,
+      "text": "Backtracking guidelines Smaller versions of the same problem embedded inside are known as subproblems. We let recursion handle all subproblems, unless we’re already at a base case."
+    },
+    {
+      "chunk_id": "week5_backtracking-82",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 82,
+      "chunk_in_page": 0,
+      "page": 84,
+      "slide": null,
+      "text": "Backtracking guidelines 1. Identify the sequence of choices and see if there’s a recursive structure. a. The recurrence should consider every possible ﬁrst (or last) choice. After the ﬁrst choice, the rest of the rectangle is a smaller instance of the same problem. ﬁrst domino vertical or horizontal"
+    },
+    {
+      "chunk_id": "week5_backtracking-83",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 83,
+      "chunk_in_page": 0,
+      "page": 85,
+      "slide": null,
+      "text": "Backtracking guidelines 2. Solve base cases directly."
+    },
+    {
+      "chunk_id": "week5_backtracking-84",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 84,
+      "chunk_in_page": 0,
+      "page": 86,
+      "slide": null,
+      "text": "Backtracking guidelines 2. Solve base cases directly. Steps 1 and 2 lead to a complete recurrence relation."
+    },
+    {
+      "chunk_id": "week5_backtracking-85",
+      "course": "CSC510",
+      "source_file": "week5_backtracking.pdf",
+      "chunk_index": 85,
+      "chunk_in_page": 0,
+      "page": 87,
+      "slide": null,
+      "text": "Backtracking guidelines 3. Write down the algorithm: convert the recurrence relation into a recursive algorithm."
     }
   ]
 }

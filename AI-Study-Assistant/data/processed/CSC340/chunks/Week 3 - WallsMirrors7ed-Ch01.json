@@ -3,37 +3,307 @@
   "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 3,
+  "chunk_count": 30,
   "chunks": [
     {
       "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-0",
       "course": "CSC340",
       "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Data Abstraction: The Walls Chapter 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Data Abstraction: The Walls • Data abstraction is a technique for increasing the modularity of a program—for building “walls” between a program and its data structures • During the design of a solution, you will need to perform operations on the data, therefore need to define abstract data types (ADTs). • After you specified the operations of an ADT, you consider data structures for implementation © 2017 Pearson Education, Hoboken, NJ. All rights reserved Object-Oriented Concepts • Object-oriented analysis and design (OOAD) – Process for solving problems • Solution – Computer program consisting of system of interacting classes of objects • Object – Has set of characteristics, behaviors related to solution – Known as an instance of the class – When you create an object of a class, you instantiate the object © 2017 Pearson Education, Hoboken, NJ. All rights reserved Object-Oriented Analysis & Design • Requirements of a solution – What solution must be, do • Object-oriented design – Describe solution to problem, which meets requirements – Express solution in terms of software objects and object interaction – Create one or more models of solution © 2017 Pearson Education, Hoboken, NJ. All rights reserved Aspects of Object-Oriented Solution Principles of object-oriented programming • Encapsulation: Objects combine data and operations; hides inner details • Inheritance: Classes inherit properties from other classes; allows class reuse • Polymorphism: Objects determine appropriate operations at execution time. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Cohesion • Each module should perform one well-defined task - cohesive • Benefits – Well named, self-documenting, e.g., sort – Easy to reuse – Easier to maintain – More robust; less likely to be impacted by change © 2017 Pearson Education, Hoboken, NJ. All rights reserved Coupling • Measure of dependence among modules • Dependence – Sharing data structures or calling each other’s methods • Modules should be loosely coupled – Highly coupled modules should be avoided • Benefits of loose coupling in a system • More adaptable to change • Easier to understand • Increases reusability • Has increased cohesion © 2017 Pearson Education, Hoboken, NJ. All rights reserved Specifications FIGURE 1-1 The task sort is a module separate from the MyProgram module © 2017 Pearson Education, Hoboken, NJ. All rights reserved Operation Contracts • Documents – How method can be used – What limitations it has • Specify – Purpose of modules – Data flow among modules – Pre-, post-condition, input, output of each module © 2017 Pearson Education, Hoboken, NJ. All rights reserved Unusual Conditions Ways to address invalid conditions: • Assume they will not happen • Ignore such situations • Guess at client’s intentions • Return value that signals problem • Throw an exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved Abstraction • Separate purpose of a module from its implementation – For example, you should be able to change the sorting algorithm in the previous example without affecting the rest of the solution • Specifications do not indicate how to implement – Able to use without knowing implementation © 2017 Pearson Education, Hoboken, NJ. All rights reserved Information Hiding • Abstraction helps identify details that should be hidden from public view – Ensured no other module"
+      "text": "Data Abstraction: The Walls Chapter 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-1",
       "course": "CSC340",
       "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "NJ. All rights reserved Abstraction • Separate purpose of a module from its implementation – For example, you should be able to change the sorting algorithm in the previous example without affecting the rest of the solution • Specifications do not indicate how to implement – Able to use without knowing implementation © 2017 Pearson Education, Hoboken, NJ. All rights reserved Information Hiding • Abstraction helps identify details that should be hidden from public view – Ensured no other module can tamper with these hidden details. • Isolation of the modules cannot be total, however – Client must know what tasks can be done, how to initiate a task © 2017 Pearson Education, Hoboken, NJ. All rights reserved Minimal and Complete Interfaces • Interface for a class made up of publicly accessible methods and data • Complete interface for a class – Allows programmer to accomplish any reasonable task • Minimal interface for a class – Contains method if and only if that method is essential to class’s responsibilities © 2017 Pearson Education, Hoboken, NJ. All rights reserved Abstract Data Types (ADT) • An ADT: a collection of data and a set of operations on data • A data structure: an implementation of an ADT within a programming language • Typical operations on data – Add data to a data collection. – Remove data from a data collection. – Ask questions about the data in a data collection. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Abstract Data Types (ADT) FIGURE 1-4 A dispenser of chilled water, crushed ice, and ice cubes © 2017 Pearson Education, Hoboken, NJ. All rights reserved Abstract Data Types (ADT) FIGURE 1-5 A wall of ADT operations isolates a data structure from the program that uses it © 2017 Pearson Education, Hoboken, NJ. All rights reserved Designing an ADT • Evolves naturally during the problem-solving process – What data does a problem require? – What operations does a problem require? • ADTs typically have initialization and destruction operations – Assumed but not specified at this stage © 2017 Pearson Education, Hoboken, NJ. All rights reserved The ADT Bag • Consider the bag to be an abstract data type. – We are specifying an abstraction inspired by an actual physical bag – Doesn’t do much more than contain its items – Can unordered and possibly duplicate objects – We insist objects be of same or similar types • Knowing just its interface – Can use ADT bag in a program © 2017 Pearson Education, Hoboken, NJ. All rights reserved Identifying Behaviors FIGURE 1-6 A CRC card for a class Bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved Specifying Data and Operations FIGURE 1-7 UML notation for the class Bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved Using the ADT Bag LISTING 1-2 A program for a"
+      "text": "Data Abstraction: The Walls • Data abstraction is a technique for increasing the modularity of a program—for building “walls” between a program and its data structures • During the design of a solution, you will need to perform operations on the data, therefore need to define abstract data types (ADTs). • After you specified the operations of an ADT, you consider data structures for implementation © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-2",
       "course": "CSC340",
       "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved Using the ADT Bag LISTING 1-2 A program for a card guessing game © 2017 Pearson Education, Hoboken, NJ. All rights reserved Using the ADT Bag LISTING 1-2 A program for a card guessing game © 2017 Pearson Education, Hoboken, NJ. All rights reserved End Chapter 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Appendix Chapter 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Information Hiding FIGURE 1-2 Tasks communicate through a slit in the wall © 2017 Pearson Education, Hoboken, NJ. All rights reserved Information Hiding FIGURE 1-3 A revised implementation communicates through the same slit in the wall © 2017 Pearson Education, Hoboken, NJ. All rights reserved ADTs That Suggest Other ADTs • You can use an ADT to implement another ADT – Example: Date-Time objects available in C++ for use in various contexts – Possible to create your own fraction object to use in some other object which required fractions © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+      "text": "Object-Oriented Concepts • Object-oriented analysis and design (OOAD) – Process for solving problems • Solution – Computer program consisting of system of interacting classes of objects • Object – Has set of characteristics, behaviors related to solution – Known as an instance of the class – When you create an object of a class, you instantiate the object © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-3",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Object-Oriented Analysis & Design • Requirements of a solution – What solution must be, do • Object-oriented design – Describe solution to problem, which meets requirements – Express solution in terms of software objects and object interaction – Create one or more models of solution © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-4",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Aspects of Object-Oriented Solution Principles of object-oriented programming • Encapsulation: Objects combine data and operations; hides inner details • Inheritance: Classes inherit properties from other classes; allows class reuse • Polymorphism: Objects determine appropriate operations at execution time. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-5",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Cohesion • Each module should perform one well-defined task - cohesive • Benefits – Well named, self-documenting, e.g., sort – Easy to reuse – Easier to maintain – More robust; less likely to be impacted by change © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-6",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Coupling • Measure of dependence among modules • Dependence – Sharing data structures or calling each other’s methods • Modules should be loosely coupled – Highly coupled modules should be avoided • Benefits of loose coupling in a system • More adaptable to change • Easier to understand • Increases reusability • Has increased cohesion © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-7",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Specifications FIGURE 1-1 The task sort is a module separate from the MyProgram module © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-8",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Operation Contracts • Documents – How method can be used – What limitations it has • Specify – Purpose of modules – Data flow among modules – Pre-, post-condition, input, output of each module © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-9",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Unusual Conditions Ways to address invalid conditions: • Assume they will not happen • Ignore such situations • Guess at client’s intentions • Return value that signals problem • Throw an exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-10",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Abstraction • Separate purpose of a module from its implementation – For example, you should be able to change the sorting algorithm in the previous example without affecting the rest of the solution • Specifications do not indicate how to implement – Able to use without knowing implementation © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-11",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Information Hiding • Abstraction helps identify details that should be hidden from public view – Ensured no other module can tamper with these hidden details. • Isolation of the modules cannot be total, however – Client must know what tasks can be done, how to initiate a task © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-12",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Minimal and Complete Interfaces • Interface for a class made up of publicly accessible methods and data • Complete interface for a class – Allows programmer to accomplish any reasonable task • Minimal interface for a class – Contains method if and only if that method is essential to class’s responsibilities © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-13",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Abstract Data Types (ADT) • An ADT: a collection of data and a set of operations on data • A data structure: an implementation of an ADT within a programming language • Typical operations on data – Add data to a data collection. – Remove data from a data collection. – Ask questions about the data in a data collection. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-14",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Abstract Data Types (ADT) FIGURE 1-4 A dispenser of chilled water, crushed ice, and ice cubes © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-15",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Abstract Data Types (ADT) FIGURE 1-5 A wall of ADT operations isolates a data structure from the program that uses it © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-16",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Designing an ADT • Evolves naturally during the problem-solving process – What data does a problem require? – What operations does a problem require? • ADTs typically have initialization and destruction operations – Assumed but not specified at this stage © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-17",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "The ADT Bag • Consider the bag to be an abstract data type. – We are specifying an abstraction inspired by an actual physical bag – Doesn’t do much more than contain its items – Can unordered and possibly duplicate objects – We insist objects be of same or similar types • Knowing just its interface – Can use ADT bag in a program © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-18",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Identifying Behaviors FIGURE 1-6 A CRC card for a class Bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-19",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Specifying Data and Operations FIGURE 1-7 UML notation for the class Bag © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-20",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-21",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-22",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "An Interface Template for the ADT LISTING 1-1 A file containing a C++ interface for bags © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-23",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Using the ADT Bag LISTING 1-2 A program for a card guessing game © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-24",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Using the ADT Bag LISTING 1-2 A program for a card guessing game © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-25",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "End Chapter 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-26",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Appendix Chapter 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-27",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Information Hiding FIGURE 1-2 Tasks communicate through a slit in the wall © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-28",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Information Hiding FIGURE 1-3 A revised implementation communicates through the same slit in the wall © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 3 - WallsMirrors7ed-Ch01-29",
+      "course": "CSC340",
+      "source_file": "Week 3 - WallsMirrors7ed-Ch01.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "ADTs That Suggest Other ADTs • You can use an ADT to implement another ADT – Example: Date-Time objects available in C++ for use in various contexts – Possible to create your own fraction object to use in some other object which required fractions © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     }
   ]
 }

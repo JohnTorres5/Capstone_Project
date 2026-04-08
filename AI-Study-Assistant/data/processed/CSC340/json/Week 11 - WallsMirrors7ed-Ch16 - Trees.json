@@ -1,5 +1,275 @@
 {
   "course": "CSC340",
   "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
-  "text": "Tree Implementations Chapter 16 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Nodes in a Binary Tree \u2022 Representing tree nodes \u2013 Must contain both data and \u201cpointers\u201d to node\u2019s children \u2013 Each node will be an object \u2022 Array-based \u2013 Pointers will be array indices \u2022 Link-based \u2013 Use C++ pointers \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation \u2022 Class of array-based data members \u2013 Variable root is index to tree\u2019s root node within the array tree \u2013 If tree is empty, root = -1 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation \u2022 As tree changes (additions, removals) \u2026 \u2013 Nodes may not be in contiguous array elements \u2022 Thus, need list of available nodes \u2013 Called a free list \u2022 Insert node to tree \u2013 Obtain available node from free list \u2022 Remove node from tree \u2013 Placed in free list for later use \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation LISTING 16-1 The class TreeNode for an array-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 16-1 (a) A binary tree of names; (b) its implementation using the array tree Is Figure 16-1 (a) a binary search tree? \u2022 yes Is Figure 16-1 (a) a balanced tree? \u2022 yes nullptr is -1 Link-Based Representation Figure 16-2 Most common way of implementing a tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If the tree is empty, rootPtr contains nullptr, else it will point to the tree\u2019s root node. \u2022 For a binary tree that is not empty, rootPtr- >getLeftChildPtr() points to the root\u2019s left subtree, and rootPtr- >getRightChildPtr() points to the root\u2019s right subtree. \u2022 If either of these subtrees is empty, the pointer to it would be nullptr. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Constructors \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved set the value of rootPtr to nullptr sets rootPtr to point to a new node containing the given data item sets rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees The Implementation Protected method copyTree called by copy constructor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node The Implementation destroyTree used by destructor which simply calls this method \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse it in postorder and delete The Implementation Protected method getHeightHelper \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Protected method that enables recursive traversals. \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree \u2022 Uses same node objects as for binary-tree implementation. \u2022 Class BinaryNode from Listing16-2 will be used \u2022 Recursive search algorithm from Section15.3.2 is basis for operations \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-7 Adding Kody to a binary search tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If you take the output of a preorder traversal of a binary search tree and use it with insertInorder to create a binary search tree, you will obtain a duplicate tree. Tree (a) was used in previous chapter. \u2022 The copy constructor for the ADT binary tree used a preorder traversal to copy the tree. \u2022 To insert Kody, search the BST, and search algorithm would terminate at Mia\u2019s left child Link-Based Implementation of the ADT Binary Search Tree Figure 16-8 Adding new data to a binary search tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree 3 cases for removing node N: 1. N is a leaf o Remove leaf containing target o Set pointer in parent to nullptr 2. N has only left (or right) child \u2013 cases are symmetrical o After N removed, all data items rooted at L (or R) are adopted by root of N o All items adopted are in correct order, binary search tree property preserved 3. N has two children o Locate another node M easier to remove from tree than N o Copy item that is in M to N o Remove M from tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 inorder successor of a data item is the leftmost node of N\u2019s right subtree. Link-Based Implementation of the ADT Binary Search Tree https://www.javatpoint.com/deletion-in-binary-search-tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-15 An initially empty binary search tree after the addition of 60, 20, 10, 40, 30, 50, and 70 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File \u2022 Use preorder traversal to save binary search tree in a file \u2013 Restore to original shape by using method add \u2022 Balanced binary search tree increases efficiency of ADT operations \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-16 A full tree saved in a file by using inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File Building a minimum-height binary search tree by reading sorted data sequentially from file \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Tree Sort Tree sort uses a binary search tree. \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 Tree sort: \u2022 Insertion is O(log n) in the average case, and O(n) in the worse case \u2022 Thus, insertion is O(n \u00d7 log n) in the average case, and O(n2) in the worst case \u2022 Traversal involves one copy: O(n) \u2022 Thus, traversal is O(n \u00d7 log n) in the average case, and O(n2) in the worst case General Trees FIGURE 16-18 A general tree or an n-ary tree with n = 3 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved General Trees FIGURE 16-19 An implementation of a general tree and its equivalent binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved General Trees FIGURE 16-20 An implementation of the n-ary tree in Figure 16-18 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved End Chapter 16 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Appendix \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-12 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If the tree is empty, rootPtr contains nullptr . \u2022 For a binary tree that is not empty, rootPtr->getLeftChildPtr() points to the root\u2019s left subtree, and rootPtr- >getRightChildPtr() points to the root\u2019s right subtree. \u2022 If either of these subtrees is empty, the pointer to it would be nullptr Link-Based Representation LISTING 16-2 (cont.) The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Method add \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Method balancedAdd \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Nonrecursive inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Nonrecursive inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Copy constructor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Algorithm for findNode \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-17 A tree of minimum height that is not complete \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+  "text": "Tree Implementations Chapter 16 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Nodes in a Binary Tree \u2022 Representing tree nodes \u2013 Must contain both data and \u201cpointers\u201d to node\u2019s children \u2013 Each node will be an object \u2022 Array-based \u2013 Pointers will be array indices \u2022 Link-based \u2013 Use C++ pointers \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation \u2022 Class of array-based data members \u2013 Variable root is index to tree\u2019s root node within the array tree \u2013 If tree is empty, root = -1 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation \u2022 As tree changes (additions, removals) \u2026 \u2013 Nodes may not be in contiguous array elements \u2022 Thus, need list of available nodes \u2013 Called a free list \u2022 Insert node to tree \u2013 Obtain available node from free list \u2022 Remove node from tree \u2013 Placed in free list for later use \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation LISTING 16-1 The class TreeNode for an array-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 16-1 (a) A binary tree of names; (b) its implementation using the array tree Is Figure 16-1 (a) a binary search tree? \u2022 yes Is Figure 16-1 (a) a balanced tree? \u2022 yes nullptr is -1 Link-Based Representation Figure 16-2 Most common way of implementing a tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If the tree is empty, rootPtr contains nullptr, else it will point to the tree\u2019s root node. \u2022 For a binary tree that is not empty, rootPtr- >getLeftChildPtr() points to the root\u2019s left subtree, and rootPtr- >getRightChildPtr() points to the root\u2019s right subtree. \u2022 If either of these subtrees is empty, the pointer to it would be nullptr. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Constructors \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved set the value of rootPtr to nullptr sets rootPtr to point to a new node containing the given data item sets rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees The Implementation Protected method copyTree called by copy constructor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node The Implementation destroyTree used by destructor which simply calls this method \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse it in postorder and delete The Implementation Protected method getHeightHelper \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Protected method that enables recursive traversals. \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree \u2022 Uses same node objects as for binary-tree implementation. \u2022 Class BinaryNode from Listing16-2 will be used \u2022 Recursive search algorithm from Section15.3.2 is basis for operations \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-7 Adding Kody to a binary search tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If you take the output of a preorder traversal of a binary search tree and use it with insertInorder to create a binary search tree, you will obtain a duplicate tree. Tree (a) was used in previous chapter. \u2022 The copy constructor for the ADT binary tree used a preorder traversal to copy the tree. \u2022 To insert Kody, search the BST, and search algorithm would terminate at Mia\u2019s left child Link-Based Implementation of the ADT Binary Search Tree Figure 16-8 Adding new data to a binary search tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree 3 cases for removing node N: 1. N is a leaf o Remove leaf containing target o Set pointer in parent to nullptr 2. N has only left (or right) child \u2013 cases are symmetrical o After N removed, all data items rooted at L (or R) are adopted by root of N o All items adopted are in correct order, binary search tree property preserved 3. N has two children o Locate another node M easier to remove from tree than N o Copy item that is in M to N o Remove M from tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 inorder successor of a data item is the leftmost node of N\u2019s right subtree. Link-Based Implementation of the ADT Binary Search Tree https://www.javatpoint.com/deletion-in-binary-search-tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-15 An initially empty binary search tree after the addition of 60, 20, 10, 40, 30, 50, and 70 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File \u2022 Use preorder traversal to save binary search tree in a file \u2013 Restore to original shape by using method add \u2022 Balanced binary search tree increases efficiency of ADT operations \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-16 A full tree saved in a file by using inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File Building a minimum-height binary search tree by reading sorted data sequentially from file \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Tree Sort Tree sort uses a binary search tree. \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 Tree sort: \u2022 Insertion is O(log n) in the average case, and O(n) in the worse case \u2022 Thus, insertion is O(n \u00d7 log n) in the average case, and O(n2) in the worst case \u2022 Traversal involves one copy: O(n) \u2022 Thus, traversal is O(n \u00d7 log n) in the average case, and O(n2) in the worst case General Trees FIGURE 16-18 A general tree or an n-ary tree with n = 3 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved General Trees FIGURE 16-19 An implementation of a general tree and its equivalent binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved General Trees FIGURE 16-20 An implementation of the n-ary tree in Figure 16-18 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved End Chapter 16 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Appendix \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-12 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If the tree is empty, rootPtr contains nullptr . \u2022 For a binary tree that is not empty, rootPtr->getLeftChildPtr() points to the root\u2019s left subtree, and rootPtr- >getRightChildPtr() points to the root\u2019s right subtree. \u2022 If either of these subtrees is empty, the pointer to it would be nullptr Link-Based Representation LISTING 16-2 (cont.) The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Method add \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Method balancedAdd \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Nonrecursive inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Nonrecursive inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Copy constructor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Algorithm for findNode \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-17 A tree of minimum height that is not complete \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Tree Implementations Chapter 16 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 2,
+      "text": "Nodes in a Binary Tree \u2022 Representing tree nodes \u2013 Must contain both data and \u201cpointers\u201d to node\u2019s children \u2013 Each node will be an object \u2022 Array-based \u2013 Pointers will be array indices \u2022 Link-based \u2013 Use C++ pointers \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 3,
+      "text": "Array-Based Representation \u2022 Class of array-based data members \u2013 Variable root is index to tree\u2019s root node within the array tree \u2013 If tree is empty, root = -1 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 4,
+      "text": "Array-Based Representation \u2022 As tree changes (additions, removals) \u2026 \u2013 Nodes may not be in contiguous array elements \u2022 Thus, need list of available nodes \u2013 Called a free list \u2022 Insert node to tree \u2013 Obtain available node from free list \u2022 Remove node from tree \u2013 Placed in free list for later use \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 5,
+      "text": "Array-Based Representation LISTING 16-1 The class TreeNode for an array-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 6,
+      "text": "Array-Based Representation \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 16-1 (a) A binary tree of names; (b) its implementation using the array tree Is Figure 16-1 (a) a binary search tree? \u2022 yes Is Figure 16-1 (a) a balanced tree? \u2022 yes nullptr is -1"
+    },
+    {
+      "page": 7,
+      "text": "Link-Based Representation Figure 16-2 Most common way of implementing a tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 8,
+      "text": "Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If the tree is empty, rootPtr contains nullptr, else it will point to the tree\u2019s root node. \u2022 For a binary tree that is not empty, rootPtr- >getLeftChildPtr() points to the root\u2019s left subtree, and rootPtr- >getRightChildPtr() points to the root\u2019s right subtree. \u2022 If either of these subtrees is empty, the pointer to it would be nullptr."
+    },
+    {
+      "page": 9,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them."
+    },
+    {
+      "page": 10,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 11,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion"
+    },
+    {
+      "page": 12,
+      "text": "The Implementation Constructors \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved set the value of rootPtr to nullptr sets rootPtr to point to a new node containing the given data item sets rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees"
+    },
+    {
+      "page": 13,
+      "text": "The Implementation Protected method copyTree called by copy constructor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node"
+    },
+    {
+      "page": 14,
+      "text": "The Implementation destroyTree used by destructor which simply calls this method \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse it in postorder and delete"
+    },
+    {
+      "page": 15,
+      "text": "The Implementation Protected method getHeightHelper \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 16,
+      "text": "The Implementation Protected method that enables recursive traversals. \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 17,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree \u2022 Uses same node objects as for binary-tree implementation. \u2022 Class BinaryNode from Listing16-2 will be used \u2022 Recursive search algorithm from Section15.3.2 is basis for operations \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 18,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-7 Adding Kody to a binary search tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If you take the output of a preorder traversal of a binary search tree and use it with insertInorder to create a binary search tree, you will obtain a duplicate tree. Tree (a) was used in previous chapter. \u2022 The copy constructor for the ADT binary tree used a preorder traversal to copy the tree. \u2022 To insert Kody, search the BST, and search algorithm would terminate at Mia\u2019s left child"
+    },
+    {
+      "page": 19,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-8 Adding new data to a binary search tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 20,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree 3 cases for removing node N: 1. N is a leaf o Remove leaf containing target o Set pointer in parent to nullptr 2. N has only left (or right) child \u2013 cases are symmetrical o After N removed, all data items rooted at L (or R) are adopted by root of N o All items adopted are in correct order, binary search tree property preserved 3. N has two children o Locate another node M easier to remove from tree than N o Copy item that is in M to N o Remove M from tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 21,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 22,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 23,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 24,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 inorder successor of a data item is the leftmost node of N\u2019s right subtree."
+    },
+    {
+      "page": 25,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree https://www.javatpoint.com/deletion-in-binary-search-tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 26,
+      "text": "Saving a Binary Search Tree in a File FIGURE 16-15 An initially empty binary search tree after the addition of 60, 20, 10, 40, 30, 50, and 70 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 27,
+      "text": "Saving a Binary Search Tree in a File \u2022 Use preorder traversal to save binary search tree in a file \u2013 Restore to original shape by using method add \u2022 Balanced binary search tree increases efficiency of ADT operations \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 28,
+      "text": "Saving a Binary Search Tree in a File FIGURE 16-16 A full tree saved in a file by using inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 29,
+      "text": "Saving a Binary Search Tree in a File Building a minimum-height binary search tree by reading sorted data sequentially from file \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 30,
+      "text": "Tree Sort Tree sort uses a binary search tree. \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 Tree sort: \u2022 Insertion is O(log n) in the average case, and O(n) in the worse case \u2022 Thus, insertion is O(n \u00d7 log n) in the average case, and O(n2) in the worst case \u2022 Traversal involves one copy: O(n) \u2022 Thus, traversal is O(n \u00d7 log n) in the average case, and O(n2) in the worst case"
+    },
+    {
+      "page": 31,
+      "text": "General Trees FIGURE 16-18 A general tree or an n-ary tree with n = 3 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 32,
+      "text": "General Trees FIGURE 16-19 An implementation of a general tree and its equivalent binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 33,
+      "text": "General Trees FIGURE 16-20 An implementation of the n-ary tree in Figure 16-18 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 34,
+      "text": "End Chapter 16 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 35,
+      "text": "Appendix \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 36,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 37,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 38,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-12 \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 39,
+      "text": "Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved \u2022 If the tree is empty, rootPtr contains nullptr . \u2022 For a binary tree that is not empty, rootPtr->getLeftChildPtr() points to the root\u2019s left subtree, and rootPtr- >getRightChildPtr() points to the root\u2019s right subtree. \u2022 If either of these subtrees is empty, the pointer to it would be nullptr"
+    },
+    {
+      "page": 40,
+      "text": "Link-Based Representation LISTING 16-2 (cont.) The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 41,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them."
+    },
+    {
+      "page": 42,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 43,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 44,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 45,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion"
+    },
+    {
+      "page": 46,
+      "text": "The Implementation Method add \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 47,
+      "text": "The Implementation Method balancedAdd \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 48,
+      "text": "The Implementation Nonrecursive inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 49,
+      "text": "The Implementation Nonrecursive inorder traversal \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 50,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 51,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 52,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 53,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 54,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 55,
+      "text": "The Implementation Copy constructor \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 56,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 57,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 58,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 59,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Algorithm for findNode \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 60,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 61,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 62,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 63,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 64,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 65,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 66,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "page": 67,
+      "text": "Saving a Binary Search Tree in a File FIGURE 16-17 A tree of minimum height that is not complete \u00a9 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    }
+  ]
 }

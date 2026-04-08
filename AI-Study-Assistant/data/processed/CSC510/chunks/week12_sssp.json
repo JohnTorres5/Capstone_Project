@@ -3,47 +3,877 @@
   "source_file": "week12_sssp.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 4,
+  "chunk_count": 87,
   "chunks": [
     {
       "chunk_id": "week12_sssp-0",
       "course": "CSC510",
       "source_file": "week12_sssp.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Shortest Paths Prof. Timothy Sun Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search The problem Most shortest path algorithms solve a more general problem: Single-Source Shortest Paths (SSSP) The problem Most shortest path algorithms solve a more general problem: Single-Source Shortest Paths (SSSP) Output: spanning tree rooted at starting vertex, vertex distances. Weighted shortest paths What about the weighted version? Weighted shortest paths What about the weighted version? SSSP tree can be very different from BFS tree Weighted shortest paths A shortest path may use many short edges. Assumption: positive edge weights What’s the “shortest path” from left to right in this graph? Weighted shortest paths Subpath optimality If we have a shortest path from s to t, all “subpaths” are shortest as well. What if there were a shorter path from a to b? If we have a shortest path from s to t, all “subpaths” are shortest as well. The same shortcut could be used for a path from s to t. Subpath optimality What if there were a shorter path from a to b? Generic setup On input G and start vertex s: Generic setup On input G and start vertex s: Each vertex v has: ● dist(v): length of best path from s to v so far ● pred(v): predecessor in best path so far Generic setup On input G and start vertex s: Each vertex v has: ● dist(v): length of best path from s to v so far ● pred(v): predecessor in best path so far At the end, hopefully dist(v) is the actual shortest path Initialization Before we’ve explored the graph, what’s the best paths found so far? Initialization Before we’ve explored the graph, what’s the best paths found so far? Haven’t found anything yet… How should we initialize dist( )? Initialization Before we’ve explored the graph, what’s the best paths found so far? Haven’t found anything yet… How should we initialize dist( )? ● dist(s) = 0 ● dist(v) = ∞, for all other v Relaxing “tense” edges Relaxing “tense” edges If it’s tense, relax it: Edge relaxation Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible If this terminates, we have a SSSP tree (induction, subpath optimality) Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible If this terminates, we have a SSSP tree (induction, subpath optimality) ● dist(v) = true shortest distance from s to v Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible 1. How many relaxations? 2. Where to quickly ﬁnd a tense edge? Edge relaxation - BFS"
+      "text": "Shortest Paths Prof. Timothy Sun"
     },
     {
       "chunk_id": "week12_sssp-1",
       "course": "CSC510",
       "source_file": "week12_sssp.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "until no more relaxations are possible If this terminates, we have a SSSP tree (induction, subpath optimality) Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible If this terminates, we have a SSSP tree (induction, subpath optimality) ● dist(v) = true shortest distance from s to v Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible 1. How many relaxations? 2. Where to quickly ﬁnd a tense edge? Edge relaxation - BFS For unweighted graphs and BFS, what is a relaxation? For unweighted graphs and BFS, what is a relaxation? u = vertex in queue, v = unvisited vertex Edge relaxation - BFS Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” What’s the runtime? Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” What’s the runtime? Depends on the priority queue! Dijkstra’s algorithm Binary heap: ● ExtractMin: O(|V| log |V|) ● DecreaseKey: O(|E| log |V|) Total: O(|E| log |V|) Dijkstra’s algorithm Unsorted array(!): ● ExtractMin: O(|V|2) ● DecreaseKey: O(|E|) Total: O(|V|2) Dijkstra’s algorithm Which is better, O(|E| log |V|) or O(|V|2)? Dijkstra’s algorithm Which is better, O(|E| log |V|) or O(|V|2)? Depends on edge density. Edge relaxation Greedy algorithm: why is u the best place to grow the SSSP tree? Edge relaxation Greedy algorithm: why is u the best place to grow the SSSP tree? Claim: Once u is popped, shortest path to u found: dist(u) = true distance Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in"
+      "text": "Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices?"
     },
     {
       "chunk_id": "week12_sssp-2",
       "course": "CSC510",
       "source_file": "week12_sssp.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm: Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z) Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z) dist(z) ≤ dist(y) = D(s, y) ≤ D(s, y) + D(y, z) ≤ D(s, z) Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z) dist(z) ≤ dist(y) = D(s, y) ≤ D(s, y) + D(y, z) ≤ D(s, z) Argument fails for negative edge weights Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z) dist(z) ≤ dist(y) = D(s, y) ≤ D(s, y) + D(y, z) ≤ D(s, z) Argument fails for negative edge weights Bellman-Ford Recall: relax repeatedly until you can’t relax Bellman-Ford “Relax all the edges… some number of times.” SSSP still possible with negative edges, except when there are negative cycles: Negative edge weights not possible SSSP still possible with negative edges, except when there are negative cycles: Negative edge weights possible not possible How can we differentiate: negative cycle vs. not done yet? Negative edge weights possible not possible Bellman-Ford Claim: after |V|-1 iterations, we should be done. Bellman-Ford Claim: after |V|-1 iterations, we should be done. Running time: O(|V||E|) Bellman-Ford - correctness Recall: the solution to SSSP is a tree of shortest paths: Bellman-Ford - correctness Consider any shortest path: Bellman-Ford - correctness Consider any shortest path: During ﬁrst iteration, the ﬁrst edge is discovered. Consider any shortest path: During second iteration, the second edge is discovered. Bellman-Ford - correctness Consider any shortest path: During ith iteration, the ith edge is discovered. (Induction, induction, induction…) Bellman-Ford - correctness If all the edge weights are positive, the vertices along a shortest path have increasing labels and are relaxed in that order: Dijkstra’s algorithm - alternate proof Bellman-Ford - correctness How many edges can be in a shortest path? Bellman-Ford - correctness How many edges can be in a shortest path? As many as |V|-1 (all the vertices) How many edges can be in a shortest path? As many as |V|-1 (all the vertices) Bellman-Ford - correctness Bellman-Ford - correctness What about negative cycles? Bellman-Ford - correctness What about negative cycles? Length of “shortest path” > |V|-1 edges Yen’s ordering A careful edge"
+      "text": "Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search"
     },
     {
       "chunk_id": "week12_sssp-3",
       "course": "CSC510",
       "source_file": "week12_sssp.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "algorithm - alternate proof Bellman-Ford - correctness How many edges can be in a shortest path? Bellman-Ford - correctness How many edges can be in a shortest path? As many as |V|-1 (all the vertices) How many edges can be in a shortest path? As many as |V|-1 (all the vertices) Bellman-Ford - correctness Bellman-Ford - correctness What about negative cycles? Bellman-Ford - correctness What about negative cycles? Length of “shortest path” > |V|-1 edges Yen’s ordering A careful edge ordering can lead to a faster algorithm. Yen’s ordering A careful edge ordering can lead to a faster algorithm. Arbitrarily order the vertices v1, v2, … , vn and split into “forward” and “backward” edges. Yen’s ordering A careful edge ordering can lead to a faster algorithm. Arbitrarily order the vertices v1, v2, … , vn and split into “forward” and “backward” edges. Yen’s ordering Edge ordering: ● For v in v1, v2, … , vn ○ Relax all red/forward edges leaving v. ● For v in vn, … , v2, v1 ○ Relax all black/back edges leaving v. Red-then-black paths If a shortest path were all red edges followed by all black edges: Red-then-black paths If a shortest path were all red edges followed by all black edges: One iteration would be enough In general, a shortest path may have many such paths: Red-then-black paths Red-then-black paths In general, a shortest path may have many such paths: Each iteration solves one red-then-black subpath. In the worst case, path alternates black-red-black… Red-then-black paths In the worst case, path alternates black-red-black… For |V| = 2k or 2k-1, k paths → ⌈|V|/2⌉ iterations Red-then-black paths Still O(|V||E|) time, but at least the constant is better. Red-then-black paths"
+      "text": "Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search"
+    },
+    {
+      "chunk_id": "week12_sssp-4",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search"
+    },
+    {
+      "chunk_id": "week12_sssp-5",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search"
+    },
+    {
+      "chunk_id": "week12_sssp-6",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Unweighted shortest paths Given an unweighted graph, how do you ﬁnd the shortest path between two vertices? Breadth-ﬁrst search"
+    },
+    {
+      "chunk_id": "week12_sssp-7",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "The problem Most shortest path algorithms solve a more general problem: Single-Source Shortest Paths (SSSP)"
+    },
+    {
+      "chunk_id": "week12_sssp-8",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "The problem Most shortest path algorithms solve a more general problem: Single-Source Shortest Paths (SSSP) Output: spanning tree rooted at starting vertex, vertex distances."
+    },
+    {
+      "chunk_id": "week12_sssp-9",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Weighted shortest paths What about the weighted version?"
+    },
+    {
+      "chunk_id": "week12_sssp-10",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Weighted shortest paths What about the weighted version? SSSP tree can be very different from BFS tree"
+    },
+    {
+      "chunk_id": "week12_sssp-11",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Weighted shortest paths A shortest path may use many short edges."
+    },
+    {
+      "chunk_id": "week12_sssp-12",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Assumption: positive edge weights What’s the “shortest path” from left to right in this graph? Weighted shortest paths"
+    },
+    {
+      "chunk_id": "week12_sssp-13",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Subpath optimality If we have a shortest path from s to t, all “subpaths” are shortest as well. What if there were a shorter path from a to b?"
+    },
+    {
+      "chunk_id": "week12_sssp-14",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "If we have a shortest path from s to t, all “subpaths” are shortest as well. The same shortcut could be used for a path from s to t. Subpath optimality What if there were a shorter path from a to b?"
+    },
+    {
+      "chunk_id": "week12_sssp-15",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Generic setup On input G and start vertex s:"
+    },
+    {
+      "chunk_id": "week12_sssp-16",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Generic setup On input G and start vertex s: Each vertex v has: ● dist(v): length of best path from s to v so far ● pred(v): predecessor in best path so far"
+    },
+    {
+      "chunk_id": "week12_sssp-17",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Generic setup On input G and start vertex s: Each vertex v has: ● dist(v): length of best path from s to v so far ● pred(v): predecessor in best path so far At the end, hopefully dist(v) is the actual shortest path"
+    },
+    {
+      "chunk_id": "week12_sssp-18",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Initialization Before we’ve explored the graph, what’s the best paths found so far?"
+    },
+    {
+      "chunk_id": "week12_sssp-19",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Initialization Before we’ve explored the graph, what’s the best paths found so far? Haven’t found anything yet… How should we initialize dist( )?"
+    },
+    {
+      "chunk_id": "week12_sssp-20",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Initialization Before we’ve explored the graph, what’s the best paths found so far? Haven’t found anything yet… How should we initialize dist( )? ● dist(s) = 0 ● dist(v) = ∞, for all other v"
+    },
+    {
+      "chunk_id": "week12_sssp-21",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Relaxing “tense” edges"
+    },
+    {
+      "chunk_id": "week12_sssp-22",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Relaxing “tense” edges"
+    },
+    {
+      "chunk_id": "week12_sssp-23",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "If it’s tense, relax it: Edge relaxation"
+    },
+    {
+      "chunk_id": "week12_sssp-24",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible"
+    },
+    {
+      "chunk_id": "week12_sssp-25",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible If this terminates, we have a SSSP tree (induction, subpath optimality)"
+    },
+    {
+      "chunk_id": "week12_sssp-26",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible If this terminates, we have a SSSP tree (induction, subpath optimality) ● dist(v) = true shortest distance from s to v"
+    },
+    {
+      "chunk_id": "week12_sssp-27",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Edge relaxation Algorithm idea: ● Keep relaxing until no more relaxations are possible 1. How many relaxations? 2. Where to quickly ﬁnd a tense edge?"
+    },
+    {
+      "chunk_id": "week12_sssp-28",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Edge relaxation - BFS For unweighted graphs and BFS, what is a relaxation?"
+    },
+    {
+      "chunk_id": "week12_sssp-29",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "For unweighted graphs and BFS, what is a relaxation? u = vertex in queue, v = unvisited vertex Edge relaxation - BFS"
+    },
+    {
+      "chunk_id": "week12_sssp-30",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-31",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-32",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-33",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-34",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-35",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-36",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-37",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-38",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-39",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.”"
+    },
+    {
+      "chunk_id": "week12_sssp-40",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” What’s the runtime?"
+    },
+    {
+      "chunk_id": "week12_sssp-41",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Dijkstra’s algorithm “Of all unvisited vertices, visit v with smallest dist(v), and try to relax its edges.” What’s the runtime? Depends on the priority queue!"
+    },
+    {
+      "chunk_id": "week12_sssp-42",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Dijkstra’s algorithm Binary heap: ● ExtractMin: O(|V| log |V|) ● DecreaseKey: O(|E| log |V|) Total: O(|E| log |V|)"
+    },
+    {
+      "chunk_id": "week12_sssp-43",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Dijkstra’s algorithm Unsorted array(!): ● ExtractMin: O(|V|2) ● DecreaseKey: O(|E|) Total: O(|V|2)"
+    },
+    {
+      "chunk_id": "week12_sssp-44",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Dijkstra’s algorithm Which is better, O(|E| log |V|) or O(|V|2)?"
+    },
+    {
+      "chunk_id": "week12_sssp-45",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Dijkstra’s algorithm Which is better, O(|E| log |V|) or O(|V|2)? Depends on edge density."
+    },
+    {
+      "chunk_id": "week12_sssp-46",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Edge relaxation Greedy algorithm: why is u the best place to grow the SSSP tree?"
+    },
+    {
+      "chunk_id": "week12_sssp-47",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Edge relaxation Greedy algorithm: why is u the best place to grow the SSSP tree? Claim: Once u is popped, shortest path to u found: dist(u) = true distance"
+    },
+    {
+      "chunk_id": "week12_sssp-48",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm:"
+    },
+    {
+      "chunk_id": "week12_sssp-49",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm:"
+    },
+    {
+      "chunk_id": "week12_sssp-50",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm:"
+    },
+    {
+      "chunk_id": "week12_sssp-51",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm:"
+    },
+    {
+      "chunk_id": "week12_sssp-52",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm:"
+    },
+    {
+      "chunk_id": "week12_sssp-53",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "Relaxing along a path The labels on vertices along a shortest path will be correct if the edges are relaxed in increasing order of distance from the starting vertex at some point in the algorithm:"
+    },
+    {
+      "chunk_id": "week12_sssp-54",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z)"
+    },
+    {
+      "chunk_id": "week12_sssp-55",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z) dist(z) ≤ dist(y) = D(s, y) ≤ D(s, y) + D(y, z) ≤ D(s, z)"
+    },
+    {
+      "chunk_id": "week12_sssp-56",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z) dist(z) ≤ dist(y) = D(s, y) ≤ D(s, y) + D(y, z) ≤ D(s, z) Argument fails for negative edge weights"
+    },
+    {
+      "chunk_id": "week12_sssp-57",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Dijkstra’s algorithm - proof Induction: each new vertex z to the “cloud” has dist(z) = D(s, z) dist(z) ≤ dist(y) = D(s, y) ≤ D(s, y) + D(y, z) ≤ D(s, z) Argument fails for negative edge weights"
+    },
+    {
+      "chunk_id": "week12_sssp-58",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "Bellman-Ford Recall: relax repeatedly until you can’t relax"
+    },
+    {
+      "chunk_id": "week12_sssp-59",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 59,
+      "chunk_in_page": 0,
+      "page": 60,
+      "slide": null,
+      "text": "Bellman-Ford “Relax all the edges… some number of times.”"
+    },
+    {
+      "chunk_id": "week12_sssp-60",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 60,
+      "chunk_in_page": 0,
+      "page": 61,
+      "slide": null,
+      "text": "SSSP still possible with negative edges, except when there are negative cycles: Negative edge weights not possible"
+    },
+    {
+      "chunk_id": "week12_sssp-61",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 61,
+      "chunk_in_page": 0,
+      "page": 62,
+      "slide": null,
+      "text": "SSSP still possible with negative edges, except when there are negative cycles: Negative edge weights possible not possible"
+    },
+    {
+      "chunk_id": "week12_sssp-62",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 62,
+      "chunk_in_page": 0,
+      "page": 63,
+      "slide": null,
+      "text": "How can we differentiate: negative cycle vs. not done yet? Negative edge weights possible not possible"
+    },
+    {
+      "chunk_id": "week12_sssp-63",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 63,
+      "chunk_in_page": 0,
+      "page": 64,
+      "slide": null,
+      "text": "Bellman-Ford Claim: after |V|-1 iterations, we should be done."
+    },
+    {
+      "chunk_id": "week12_sssp-64",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 64,
+      "chunk_in_page": 0,
+      "page": 65,
+      "slide": null,
+      "text": "Bellman-Ford Claim: after |V|-1 iterations, we should be done. Running time: O(|V||E|)"
+    },
+    {
+      "chunk_id": "week12_sssp-65",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 65,
+      "chunk_in_page": 0,
+      "page": 66,
+      "slide": null,
+      "text": "Bellman-Ford - correctness Recall: the solution to SSSP is a tree of shortest paths:"
+    },
+    {
+      "chunk_id": "week12_sssp-66",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 66,
+      "chunk_in_page": 0,
+      "page": 67,
+      "slide": null,
+      "text": "Bellman-Ford - correctness Consider any shortest path:"
+    },
+    {
+      "chunk_id": "week12_sssp-67",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 67,
+      "chunk_in_page": 0,
+      "page": 68,
+      "slide": null,
+      "text": "Bellman-Ford - correctness Consider any shortest path: During ﬁrst iteration, the ﬁrst edge is discovered."
+    },
+    {
+      "chunk_id": "week12_sssp-68",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 68,
+      "chunk_in_page": 0,
+      "page": 69,
+      "slide": null,
+      "text": "Consider any shortest path: During second iteration, the second edge is discovered. Bellman-Ford - correctness"
+    },
+    {
+      "chunk_id": "week12_sssp-69",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 69,
+      "chunk_in_page": 0,
+      "page": 70,
+      "slide": null,
+      "text": "Consider any shortest path: During ith iteration, the ith edge is discovered. (Induction, induction, induction…) Bellman-Ford - correctness"
+    },
+    {
+      "chunk_id": "week12_sssp-70",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 70,
+      "chunk_in_page": 0,
+      "page": 71,
+      "slide": null,
+      "text": "If all the edge weights are positive, the vertices along a shortest path have increasing labels and are relaxed in that order: Dijkstra’s algorithm - alternate proof"
+    },
+    {
+      "chunk_id": "week12_sssp-71",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 71,
+      "chunk_in_page": 0,
+      "page": 72,
+      "slide": null,
+      "text": "Bellman-Ford - correctness How many edges can be in a shortest path?"
+    },
+    {
+      "chunk_id": "week12_sssp-72",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 72,
+      "chunk_in_page": 0,
+      "page": 73,
+      "slide": null,
+      "text": "Bellman-Ford - correctness How many edges can be in a shortest path? As many as |V|-1 (all the vertices)"
+    },
+    {
+      "chunk_id": "week12_sssp-73",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 73,
+      "chunk_in_page": 0,
+      "page": 74,
+      "slide": null,
+      "text": "How many edges can be in a shortest path? As many as |V|-1 (all the vertices) Bellman-Ford - correctness"
+    },
+    {
+      "chunk_id": "week12_sssp-74",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 74,
+      "chunk_in_page": 0,
+      "page": 75,
+      "slide": null,
+      "text": "Bellman-Ford - correctness What about negative cycles?"
+    },
+    {
+      "chunk_id": "week12_sssp-75",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 75,
+      "chunk_in_page": 0,
+      "page": 76,
+      "slide": null,
+      "text": "Bellman-Ford - correctness What about negative cycles? Length of “shortest path” > |V|-1 edges"
+    },
+    {
+      "chunk_id": "week12_sssp-76",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 76,
+      "chunk_in_page": 0,
+      "page": 77,
+      "slide": null,
+      "text": "Yen’s ordering A careful edge ordering can lead to a faster algorithm."
+    },
+    {
+      "chunk_id": "week12_sssp-77",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 77,
+      "chunk_in_page": 0,
+      "page": 78,
+      "slide": null,
+      "text": "Yen’s ordering A careful edge ordering can lead to a faster algorithm. Arbitrarily order the vertices v1, v2, … , vn and split into “forward” and “backward” edges."
+    },
+    {
+      "chunk_id": "week12_sssp-78",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 78,
+      "chunk_in_page": 0,
+      "page": 79,
+      "slide": null,
+      "text": "Yen’s ordering A careful edge ordering can lead to a faster algorithm. Arbitrarily order the vertices v1, v2, … , vn and split into “forward” and “backward” edges."
+    },
+    {
+      "chunk_id": "week12_sssp-79",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 79,
+      "chunk_in_page": 0,
+      "page": 80,
+      "slide": null,
+      "text": "Yen’s ordering Edge ordering: ● For v in v1, v2, … , vn ○ Relax all red/forward edges leaving v. ● For v in vn, … , v2, v1 ○ Relax all black/back edges leaving v."
+    },
+    {
+      "chunk_id": "week12_sssp-80",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 80,
+      "chunk_in_page": 0,
+      "page": 81,
+      "slide": null,
+      "text": "Red-then-black paths If a shortest path were all red edges followed by all black edges:"
+    },
+    {
+      "chunk_id": "week12_sssp-81",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 81,
+      "chunk_in_page": 0,
+      "page": 82,
+      "slide": null,
+      "text": "Red-then-black paths If a shortest path were all red edges followed by all black edges: One iteration would be enough"
+    },
+    {
+      "chunk_id": "week12_sssp-82",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 82,
+      "chunk_in_page": 0,
+      "page": 83,
+      "slide": null,
+      "text": "In general, a shortest path may have many such paths: Red-then-black paths"
+    },
+    {
+      "chunk_id": "week12_sssp-83",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 83,
+      "chunk_in_page": 0,
+      "page": 84,
+      "slide": null,
+      "text": "Red-then-black paths In general, a shortest path may have many such paths: Each iteration solves one red-then-black subpath."
+    },
+    {
+      "chunk_id": "week12_sssp-84",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 84,
+      "chunk_in_page": 0,
+      "page": 85,
+      "slide": null,
+      "text": "In the worst case, path alternates black-red-black… Red-then-black paths"
+    },
+    {
+      "chunk_id": "week12_sssp-85",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 85,
+      "chunk_in_page": 0,
+      "page": 86,
+      "slide": null,
+      "text": "In the worst case, path alternates black-red-black… For |V| = 2k or 2k-1, k paths → ⌈|V|/2⌉ iterations Red-then-black paths"
+    },
+    {
+      "chunk_id": "week12_sssp-86",
+      "course": "CSC510",
+      "source_file": "week12_sssp.pdf",
+      "chunk_index": 86,
+      "chunk_in_page": 0,
+      "page": 87,
+      "slide": null,
+      "text": "Still O(|V||E|) time, but at least the constant is better. Red-then-black paths"
     }
   ]
 }

@@ -3,17 +3,77 @@
   "source_file": "Week 3 - UML Class Diagrams.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 1,
+  "chunk_count": 7,
   "chunks": [
     {
       "chunk_id": "Week 3 - UML Class Diagrams-0",
       "course": "CSC340",
       "source_file": "Week 3 - UML Class Diagrams.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "CSC 340 Programming Methodology Week 3 UML Class Diagrams UML Diagrams • UML has many different diagram types • Sequence, State, Timing, Use Case, etc. • In industry, most often used is the Class Diagram • Useful during analysis and design • Finished diagram can also be used as documentation • Become familiar with the Class Diagram! Class Diagrams • Proportion wise, this diagram in industry is used much more than other UML Diagrams (100 : 1 or more) • Class Diagram will be one of the first diagrams (in addition to an ERD) you will see at a job • You will need to be able to read and understand the Class Diagram Important Class Diagram artifacts • Class block - Name, attributes, methods • Association – solid line with no arrowheads • Multiplicities – numbers at the end of the lines to show cardinality • Aggregation – open diamond • Stand alone, are not joined at the hip; Bank can exist without an Account • Composition – filled-in diamond • Must appear together, Ownership; Room can’t exist without a House Banking Class Diagram Student Class Diagram Demo draw.io • Easy to use • Good for ERDs, too • FREE!"
+      "text": "CSC 340 Programming Methodology Week 3 UML Class Diagrams"
+    },
+    {
+      "chunk_id": "Week 3 - UML Class Diagrams-1",
+      "course": "CSC340",
+      "source_file": "Week 3 - UML Class Diagrams.pdf",
+      "chunk_index": 1,
+      "chunk_in_page": 0,
+      "page": 2,
+      "slide": null,
+      "text": "UML Diagrams • UML has many different diagram types • Sequence, State, Timing, Use Case, etc. • In industry, most often used is the Class Diagram • Useful during analysis and design • Finished diagram can also be used as documentation • Become familiar with the Class Diagram!"
+    },
+    {
+      "chunk_id": "Week 3 - UML Class Diagrams-2",
+      "course": "CSC340",
+      "source_file": "Week 3 - UML Class Diagrams.pdf",
+      "chunk_index": 2,
+      "chunk_in_page": 0,
+      "page": 3,
+      "slide": null,
+      "text": "Class Diagrams • Proportion wise, this diagram in industry is used much more than other UML Diagrams (100 : 1 or more) • Class Diagram will be one of the first diagrams (in addition to an ERD) you will see at a job • You will need to be able to read and understand the Class Diagram"
+    },
+    {
+      "chunk_id": "Week 3 - UML Class Diagrams-3",
+      "course": "CSC340",
+      "source_file": "Week 3 - UML Class Diagrams.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Important Class Diagram artifacts • Class block - Name, attributes, methods • Association – solid line with no arrowheads • Multiplicities – numbers at the end of the lines to show cardinality • Aggregation – open diamond • Stand alone, are not joined at the hip; Bank can exist without an Account • Composition – filled-in diamond • Must appear together, Ownership; Room can’t exist without a House"
+    },
+    {
+      "chunk_id": "Week 3 - UML Class Diagrams-4",
+      "course": "CSC340",
+      "source_file": "Week 3 - UML Class Diagrams.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Banking Class Diagram"
+    },
+    {
+      "chunk_id": "Week 3 - UML Class Diagrams-5",
+      "course": "CSC340",
+      "source_file": "Week 3 - UML Class Diagrams.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Student Class Diagram"
+    },
+    {
+      "chunk_id": "Week 3 - UML Class Diagrams-6",
+      "course": "CSC340",
+      "source_file": "Week 3 - UML Class Diagrams.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Demo draw.io • Easy to use • Good for ERDs, too • FREE!"
     }
   ]
 }

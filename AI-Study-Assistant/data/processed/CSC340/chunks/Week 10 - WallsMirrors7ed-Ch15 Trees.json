@@ -3,47 +3,397 @@
   "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 4,
+  "chunk_count": 39,
   "chunks": [
     {
       "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-0",
       "course": "CSC340",
       "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Trees Chapter 15 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Trees • Lists, stacks, and queues are linear in their organization of data – Items are one after another. • In this chapter, we organize data in a nonlinear, hierarchical form – Item can have more than one immediate successor © 2017 Pearson Education, Hoboken, NJ. All rights reserved Terminology • Trees are hierarchical in nature – Means a parent-child relationship between nodes © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 15-1 A tree and one of its subtrees A is the parent of B and C B and C are siblings C, D, E and F are leaves of tree (a) Terminology FIGURE 15-2 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Kinds of Trees • General tree – Set T of one or more nodes (not empty) – T is partitioned into disjoint subsets • An n-ary tree – A single node r, the root – n possibly empty sets that are n-ary subtrees of r – Each node can have no more than n children • Binary tree – Set of T nodes – either empty or partitioned into disjoint subsets – Single node r, the root – Two (possibly empty) sets – left and right subtrees © 2017 Pearson Education, Hoboken, NJ. All rights reserved Kinds of Trees FIGURE 15-3 Binary trees that represent algebraic expressions © 2017 Pearson Education, Hoboken, NJ. All rights reserved Kinds of Trees FIGURE 15-4 A binary search tree of names © 2017 Pearson Education, Hoboken, NJ. All rights reserved A binary search tree is a binary tree that is, sorted according to the values in its nodes. For each node n, a binary search tree satisfies the following three properties: 1. n ’s value is greater than all values in its left subtree TL 2. n ’s value is less than all values in its right subtree TR 3. Both TL and TR are binary search trees. The Height of Trees • Level of a node, n – If n is root, level 1 – If n not the root, level is 1 greater than level of its parent • Height of a tree – Number of nodes on longest path from root to a leaf – T empty, height 0 – T not empty, height equal to max level of nodes © 2017 Pearson Education, Hoboken, NJ. All rights reserved Recursive definition of height For binary trees, it is often convenient to use an equivalent recursive definition of height: • If T is empty, its height is 0. • If T is a nonempty binary tree, then: o height (T) = 1 + max {height (TL), height (TR)} © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Height of Trees FIGURE 15-5 Binary trees with the same nodes but different heights © 2017 Pearson Education, Hoboken, NJ. All rights reserved The heights are: The heights are 3 The heights are 3, 5 The heights are 3, 5, 7, and The heights are 3, 5, 7, and 7 respectively. Full, Complete, and Balanced Binary Trees FIGURE 15-6 A full binary tree of height 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved In a full binary tree of height h, all nodes that"
+      "text": "Trees Chapter 15 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-1",
       "course": "CSC340",
       "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "trees with the same nodes but different heights © 2017 Pearson Education, Hoboken, NJ. All rights reserved The heights are: The heights are 3 The heights are 3, 5 The heights are 3, 5, 7, and The heights are 3, 5, 7, and 7 respectively. Full, Complete, and Balanced Binary Trees FIGURE 15-6 A full binary tree of height 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved In a full binary tree of height h, all nodes that are at a level less than h have two children each. Full, Complete, and Balanced Binary Trees FIGURE 15-7 A complete binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved A complete binary tree of height h is a binary tree that is full down to level h – 1, with level h filled in from left to right: 1. All nodes at level h – 2 and above have two children each 2. When a node at level h – 1 has children, all nodes to its left at the same level have two children each 3. When a node at level h – 1 has one child, it is a left child Full, Complete, and Balanced Binary Trees • Full binary trees are complete o Binary tree of height h with no missing nodes. o All leaves are at level h o All other nodes each have two children. • Complete binary trees are balanced o Binary tree of height h that is full to level h – 1 and has level h filled in from left to right. • Balanced binary tree o Binary tree in which the left and right subtrees of any node have heights that differ by at most 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Maximum and Minimum Heights of a Binary Tree • Binary tree with n nodes – Max height is n • To minimize height of binary tree of n nodes – Fill each level of tree as completely as possible – A complete tree meets this requirement © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Maximum and Minimum Heights of a Binary Tree FIGURE 15-8 Binary trees of height 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Maximum and Minimum Heights of a Binary Tree FIGURE 15-9 Counting the nodes in a full binary tree of height h © 2017 Pearson Education, Hoboken, NJ. All rights reserved Maximum # of nodes for a binary tree The ADT Binary Tree • Operations of ADT binary tree – Add – Remove – Set – Retrieve data – Test for empty – Traversal operations that visit every node • Traversal can visit nodes in several different orders © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree • Options for when to visit the root – Preorder: before it traverses both subtrees – Inorder: after it traverses left subtree, before it traverses right subtree – Postorder: after it traverses both subtrees • Note traversal is O(n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree • Pseudocode for general form of a recursive traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree FIGURE 15-11 Three"
+      "text": "Trees • Lists, stacks, and queues are linear in their organization of data – Items are one after another. • In this chapter, we organize data in a nonlinear, hierarchical form – Item can have more than one immediate successor © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-2",
       "course": "CSC340",
       "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "• Options for when to visit the root – Preorder: before it traverses both subtrees – Inorder: after it traverses left subtree, before it traverses right subtree – Postorder: after it traverses both subtrees • Note traversal is O(n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree • Pseudocode for general form of a recursive traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree FIGURE 15-11 Three traversals of a binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree Preorder traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree Inorder traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Traversals of a Binary Tree Postorder traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Binary Tree Operations FIGURE 15-12 UML diagram for the class BinaryTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The ADT Binary Search Tree • Recursive definition of a binary search tree – n’s value is greater than all values in its left subtree TL. – n’s value is less than all values in its right subtree TR. – Both TL and TR are binary search trees. © 2017 Pearson Education, Hoboken, NJ. All rights reserved The ADT Binary Search Tree FIGURE 15-13 A binary search tree of names © 2017 Pearson Education, Hoboken, NJ. All rights reserved Binary Search Tree Operations FIGURE 15-14 Binary search trees with the same data as in Figure 15-13 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Binary Search Tree Operations Operations that define the ADT binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Searching a Binary Search Tree Search algorithm for a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • This algorithm will work regardless of the shape of a binary search tree. • The worse case of a binary search tree is O(n), when it is not balanced. • The average time complexity for a binary search tree is O(log n) • The best case of a binary search tree is O(1). Binary Search Tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved https://en.wikipedia.org/wiki/Binary_search_tree • The AVL tree was invented by Georgy Adelson- Velsky and Evgenii Landis in 1962 for the efficient organization of information. It was the first self-balancing binary search tree to be invented. • Various height-balanced binary search trees were introduced to confine the tree height, such as AVL trees (1962), Treaps (1989) (https://en.wikipedia.org/wiki/Treap), and red– black trees (1978) (https://en.wikipedia.org/wiki/Red%E2%80%93 black_tree). Creating a Binary Search Tree FIGURE 15-16"
+      "text": "Terminology • Trees are hierarchical in nature – Means a parent-child relationship between nodes © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 15-1 A tree and one of its subtrees A is the parent of B and C B and C are siblings C, D, E and F are leaves of tree (a)"
     },
     {
       "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-3",
       "course": "CSC340",
       "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "Binary Search Tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved https://en.wikipedia.org/wiki/Binary_search_tree • The AVL tree was invented by Georgy Adelson- Velsky and Evgenii Landis in 1962 for the efficient organization of information. It was the first self-balancing binary search tree to be invented. • Various height-balanced binary search trees were introduced to confine the tree height, such as AVL trees (1962), Treaps (1989) (https://en.wikipedia.org/wiki/Treap), and red– black trees (1978) (https://en.wikipedia.org/wiki/Red%E2%80%93 black_tree). Creating a Binary Search Tree FIGURE 15-16 Empty subtree where the search algorithm terminates when looking for Finn © 2017 Pearson Education, Hoboken, NJ. All rights reserved nameTree = a new, empty binary search tree nameTree .insert(“Jose\") nameTree .insert(“Deepak\") nameTree .insert(“Anton\") nameTree .insert(\"Elisa\") nameTree .insert(“Qiang\") nameTree .insert(“Mia\") nameTree .insert(“Zoe\") nameTree .insert(“Finn\") Traversals of a Binary Search Tree Inorder traversal of a binary search tree visits tree’s nodes in sorted search-key order © 2017 Pearson Education, Hoboken, NJ. All rights reserved Efficiency of Binary Search Tree Operations • Max number of comparisons for retrieval, addition, or removal – The height of the tree • Adding entries in sorted order – Produces maximum-height binary search tree • Adding entries in random order – Produces near-minimum-height binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Efficiency of Binary Search Tree Operations FIGURE 15-17 The Big O for the retrieval, addition, removal, and traversal operations of the ADT binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved End Chapter 15 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+      "text": "Terminology FIGURE 15-2 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-4",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Kinds of Trees • General tree – Set T of one or more nodes (not empty) – T is partitioned into disjoint subsets • An n-ary tree – A single node r, the root – n possibly empty sets that are n-ary subtrees of r – Each node can have no more than n children • Binary tree – Set of T nodes – either empty or partitioned into disjoint subsets – Single node r, the root – Two (possibly empty) sets – left and right subtrees © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-5",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Kinds of Trees FIGURE 15-3 Binary trees that represent algebraic expressions © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-6",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Kinds of Trees FIGURE 15-4 A binary search tree of names © 2017 Pearson Education, Hoboken, NJ. All rights reserved A binary search tree is a binary tree that is, sorted according to the values in its nodes. For each node n, a binary search tree satisfies the following three properties: 1. n ’s value is greater than all values in its left subtree TL 2. n ’s value is less than all values in its right subtree TR 3. Both TL and TR are binary search trees."
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-7",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "The Height of Trees • Level of a node, n – If n is root, level 1 – If n not the root, level is 1 greater than level of its parent • Height of a tree – Number of nodes on longest path from root to a leaf – T empty, height 0 – T not empty, height equal to max level of nodes © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-8",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Recursive definition of height For binary trees, it is often convenient to use an equivalent recursive definition of height: • If T is empty, its height is 0. • If T is a nonempty binary tree, then: o height (T) = 1 + max {height (TL), height (TR)} © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-9",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "The Height of Trees FIGURE 15-5 Binary trees with the same nodes but different heights © 2017 Pearson Education, Hoboken, NJ. All rights reserved The heights are: The heights are 3 The heights are 3, 5 The heights are 3, 5, 7, and The heights are 3, 5, 7, and 7 respectively."
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-10",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Full, Complete, and Balanced Binary Trees FIGURE 15-6 A full binary tree of height 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved In a full binary tree of height h, all nodes that are at a level less than h have two children each."
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-11",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Full, Complete, and Balanced Binary Trees FIGURE 15-7 A complete binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved A complete binary tree of height h is a binary tree that is full down to level h – 1, with level h filled in from left to right: 1. All nodes at level h – 2 and above have two children each 2. When a node at level h – 1 has children, all nodes to its left at the same level have two children each 3. When a node at level h – 1 has one child, it is a left child"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-12",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Full, Complete, and Balanced Binary Trees • Full binary trees are complete o Binary tree of height h with no missing nodes. o All leaves are at level h o All other nodes each have two children. • Complete binary trees are balanced o Binary tree of height h that is full to level h – 1 and has level h filled in from left to right. • Balanced binary tree o Binary tree in which the left and right subtrees of any node have heights that differ by at most 1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-13",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "The Maximum and Minimum Heights of a Binary Tree • Binary tree with n nodes – Max height is n • To minimize height of binary tree of n nodes – Fill each level of tree as completely as possible – A complete tree meets this requirement © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-14",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "The Maximum and Minimum Heights of a Binary Tree FIGURE 15-8 Binary trees of height 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-15",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "The Maximum and Minimum Heights of a Binary Tree FIGURE 15-9 Counting the nodes in a full binary tree of height h © 2017 Pearson Education, Hoboken, NJ. All rights reserved Maximum # of nodes for a binary tree"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-16",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "The ADT Binary Tree • Operations of ADT binary tree – Add – Remove – Set – Retrieve data – Test for empty – Traversal operations that visit every node • Traversal can visit nodes in several different orders © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-17",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Traversals of a Binary Tree • Options for when to visit the root – Preorder: before it traverses both subtrees – Inorder: after it traverses left subtree, before it traverses right subtree – Postorder: after it traverses both subtrees • Note traversal is O(n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-18",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Traversals of a Binary Tree • Pseudocode for general form of a recursive traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-19",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Traversals of a Binary Tree FIGURE 15-11 Three traversals of a binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-20",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Traversals of a Binary Tree Preorder traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-21",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Traversals of a Binary Tree Inorder traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-22",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Traversals of a Binary Tree Postorder traversal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-23",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Binary Tree Operations FIGURE 15-12 UML diagram for the class BinaryTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-24",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-25",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-26",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-27",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Interface Template for the ADT Binary Tree LISTING 15-1 An interface template for the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-28",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "The ADT Binary Search Tree • Recursive definition of a binary search tree – n’s value is greater than all values in its left subtree TL. – n’s value is less than all values in its right subtree TR. – Both TL and TR are binary search trees. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-29",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "The ADT Binary Search Tree FIGURE 15-13 A binary search tree of names © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-30",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Binary Search Tree Operations FIGURE 15-14 Binary search trees with the same data as in Figure 15-13 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-31",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Binary Search Tree Operations Operations that define the ADT binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-32",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Searching a Binary Search Tree Search algorithm for a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • This algorithm will work regardless of the shape of a binary search tree. • The worse case of a binary search tree is O(n), when it is not balanced. • The average time complexity for a binary search tree is O(log n) • The best case of a binary search tree is O(1)."
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-33",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Binary Search Tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved https://en.wikipedia.org/wiki/Binary_search_tree • The AVL tree was invented by Georgy Adelson- Velsky and Evgenii Landis in 1962 for the efficient organization of information. It was the first self-balancing binary search tree to be invented. • Various height-balanced binary search trees were introduced to confine the tree height, such as AVL trees (1962), Treaps (1989) (https://en.wikipedia.org/wiki/Treap), and red– black trees (1978) (https://en.wikipedia.org/wiki/Red%E2%80%93 black_tree)."
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-34",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Creating a Binary Search Tree FIGURE 15-16 Empty subtree where the search algorithm terminates when looking for Finn © 2017 Pearson Education, Hoboken, NJ. All rights reserved nameTree = a new, empty binary search tree nameTree .insert(“Jose\") nameTree .insert(“Deepak\") nameTree .insert(“Anton\") nameTree .insert(\"Elisa\") nameTree .insert(“Qiang\") nameTree .insert(“Mia\") nameTree .insert(“Zoe\") nameTree .insert(“Finn\")"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-35",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Traversals of a Binary Search Tree Inorder traversal of a binary search tree visits tree’s nodes in sorted search-key order © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-36",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Efficiency of Binary Search Tree Operations • Max number of comparisons for retrieval, addition, or removal – The height of the tree • Adding entries in sorted order – Produces maximum-height binary search tree • Adding entries in random order – Produces near-minimum-height binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-37",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Efficiency of Binary Search Tree Operations FIGURE 15-17 The Big O for the retrieval, addition, removal, and traversal operations of the ADT binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 10 - WallsMirrors7ed-Ch15 Trees-38",
+      "course": "CSC340",
+      "source_file": "Week 10 - WallsMirrors7ed-Ch15 Trees.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "End Chapter 15 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     }
   ]
 }

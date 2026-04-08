@@ -3,37 +3,637 @@
   "source_file": "week9_heaps.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 3,
+  "chunk_count": 63,
   "chunks": [
     {
       "chunk_id": "week9_heaps-0",
       "course": "CSC510",
       "source_file": "week9_heaps.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Priority Queues and Heaps Prof. Timothy Sun Priority Queues A (min-oriented) priority queue is a collection of object and “priority” pairs that supports the following operations: ● insert(key, priority) ● removeMin( ) - take out element with smallest priority Priority Queues A (min-oriented) priority queue is a collection of object and “priority” pairs that supports the following operations: ● insert(key, priority) ● removeMin( ) - take out element with smallest priority How does one implement a priority queue? Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Sorted and unsorted implementations both seem plausible. Array/List-based implementations Each implementation has its strength, and a huge drawback: Unsorted List Sorted List insert O(1) O(n) removeMin O(n) O(1) Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) time. Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. But this is a little overkill… Heaps A (binary) heap is another tree-based data structure for priority queues. Heaps A (binary) heap is another tree-based data structure for priority queues. Two key properties: ● Heap order ● Complete binary tree Heap order property Heap order property: parent always smaller than child Heap order property Heap order property: parent always smaller than child ● Grandparent always smaller than grandchild ● … and so on … Heap order property Heap order property: parent always smaller than child ● Grandparent always smaller than grandchild ● … and so on … Where’s the smallest element? Heap order property Heap order property: parent always smaller than child ● Grandparent always smaller than grandchild ● … and so on … Where’s the smallest element? At the root. Complete binary tree Complete binary tree property: ● Except for last layer, every layer is “full” ● All the leaves appear as far left as possible insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? Add to bottom row. insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent. insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent…"
+      "text": "Priority Queues and Heaps Prof. Timothy Sun"
     },
     {
       "chunk_id": "week9_heaps-1",
       "course": "CSC510",
       "source_file": "week9_heaps.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "two properties. How to re-establish the heap order property? insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent. insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary removeMin( ) Once again, need to preserve both properties. removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child Time complexity Nodes can “bubble” up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). Time complexity Nodes can “bubble” up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). (better hidden constants than BST) Array implementation The complete binary tree property allows for an array-based implementation. Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Why isn’t this good for all binary trees? Implementations Heaps don’t have any super-slow operations: Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n) Implementations Heaps don’t have any super-slow operations: … but these other approaches aren’t entirely useless Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n) Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify"
+      "text": "Priority Queues A (min-oriented) priority queue is a collection of object and “priority” pairs that supports the following operations: ● insert(key, priority) ● removeMin( ) - take out element with smallest priority"
     },
     {
       "chunk_id": "week9_heaps-2",
       "course": "CSC510",
       "source_file": "week9_heaps.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "super-slow operations: … but these other approaches aren’t entirely useless Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n) Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down Heapify - correctness Why does it work? Several “mini-heaps” are created at each layer. Heapify - correctness Why does it work? Several “mini-heaps” are created at each layer. Heapify - runtime What’s the runtime? Heapify - runtime What’s the runtime? ● n bubbling operations (O(log n)?) Heapify - runtime What’s the runtime? ● n bubbling operations (O(log n)?) ● O(n log n) time??? Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Heapify - runtime Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Each path is a potential “bubble-down” Heapify - runtime None of these paths overlap, so each edge is used at most once. Heapify - runtime None of these paths overlap, so each edge is used at most once. |E| = n - 1 Heapify - runtime None of these paths overlap, so each edge is used at most once. |E| = n - 1 → O(n) Heapify - runtime Heapsort A simple sorting algorithm using a priority queue: ● Build a priority queue with all the elements inside. ● Repeatedly call removeMin( ) Heapsort A simple sorting algorithm using a heap: ● Build a heap with all the elements inside. → O(n) ● Repeatedly call removeMin( ) → n O(log n) = O(n log n). Total runtime: O(n log n) “Extended” heap operations In a binary heap, possible to modify other elements besides the root: ● decreaseKey(key, newPriority) ● remove(key) “Extended” heap operations In a binary heap, possible to modify other elements besides the root: ● decreaseKey(key, newPriority) ● remove(key) Uses same bubbling operations as before No reason why a heap can’t have more than two children (what about BSTs?) d-ary heaps No reason why a heap can’t have more than two children (what about BSTs?) How does this affect runtime? d-ary heaps Still O(log n), but maybe you care about hidden constants. ● Bubbling up is shorter. ● Bubbling down is longer. d-ary heaps"
+      "text": "Priority Queues A (min-oriented) priority queue is a collection of object and “priority” pairs that supports the following operations: ● insert(key, priority) ● removeMin( ) - take out element with smallest priority How does one implement a priority queue?"
+    },
+    {
+      "chunk_id": "week9_heaps-3",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists:"
+    },
+    {
+      "chunk_id": "week9_heaps-4",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Sorted and unsorted implementations both seem plausible."
+    },
+    {
+      "chunk_id": "week9_heaps-5",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Array/List-based implementations Each implementation has its strength, and a huge drawback: Unsorted List Sorted List insert O(1) O(n) removeMin O(n) O(1)"
+    },
+    {
+      "chunk_id": "week9_heaps-6",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.)"
+    },
+    {
+      "chunk_id": "week9_heaps-7",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) time."
+    },
+    {
+      "chunk_id": "week9_heaps-8",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time."
+    },
+    {
+      "chunk_id": "week9_heaps-9",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. But this is a little overkill…"
+    },
+    {
+      "chunk_id": "week9_heaps-10",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Heaps A (binary) heap is another tree-based data structure for priority queues."
+    },
+    {
+      "chunk_id": "week9_heaps-11",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Heaps A (binary) heap is another tree-based data structure for priority queues. Two key properties: ● Heap order ● Complete binary tree"
+    },
+    {
+      "chunk_id": "week9_heaps-12",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Heap order property Heap order property: parent always smaller than child"
+    },
+    {
+      "chunk_id": "week9_heaps-13",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Heap order property Heap order property: parent always smaller than child ● Grandparent always smaller than grandchild ● … and so on …"
+    },
+    {
+      "chunk_id": "week9_heaps-14",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Heap order property Heap order property: parent always smaller than child ● Grandparent always smaller than grandchild ● … and so on … Where’s the smallest element?"
+    },
+    {
+      "chunk_id": "week9_heaps-15",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Heap order property Heap order property: parent always smaller than child ● Grandparent always smaller than grandchild ● … and so on … Where’s the smallest element? At the root."
+    },
+    {
+      "chunk_id": "week9_heaps-16",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Complete binary tree Complete binary tree property: ● Except for last layer, every layer is “full” ● All the leaves appear as far left as possible"
+    },
+    {
+      "chunk_id": "week9_heaps-17",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property?"
+    },
+    {
+      "chunk_id": "week9_heaps-18",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? Add to bottom row."
+    },
+    {
+      "chunk_id": "week9_heaps-19",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property?"
+    },
+    {
+      "chunk_id": "week9_heaps-20",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent."
+    },
+    {
+      "chunk_id": "week9_heaps-21",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary"
+    },
+    {
+      "chunk_id": "week9_heaps-22",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary"
+    },
+    {
+      "chunk_id": "week9_heaps-23",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary"
+    },
+    {
+      "chunk_id": "week9_heaps-24",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary"
+    },
+    {
+      "chunk_id": "week9_heaps-25",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent… as many times as necessary"
+    },
+    {
+      "chunk_id": "week9_heaps-26",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "removeMin( ) Once again, need to preserve both properties."
+    },
+    {
+      "chunk_id": "week9_heaps-27",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root."
+    },
+    {
+      "chunk_id": "week9_heaps-28",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "chunk_id": "week9_heaps-29",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "chunk_id": "week9_heaps-30",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "chunk_id": "week9_heaps-31",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let’s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "chunk_id": "week9_heaps-32",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Time complexity Nodes can “bubble” up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n)."
+    },
+    {
+      "chunk_id": "week9_heaps-33",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Time complexity Nodes can “bubble” up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). (better hidden constants than BST)"
+    },
+    {
+      "chunk_id": "week9_heaps-34",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Array implementation The complete binary tree property allows for an array-based implementation."
+    },
+    {
+      "chunk_id": "week9_heaps-35",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc."
+    },
+    {
+      "chunk_id": "week9_heaps-36",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Why isn’t this good for all binary trees?"
+    },
+    {
+      "chunk_id": "week9_heaps-37",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Implementations Heaps don’t have any super-slow operations: Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n)"
+    },
+    {
+      "chunk_id": "week9_heaps-38",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Implementations Heaps don’t have any super-slow operations: … but these other approaches aren’t entirely useless Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n)"
+    },
+    {
+      "chunk_id": "week9_heaps-39",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down"
+    },
+    {
+      "chunk_id": "week9_heaps-40",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down"
+    },
+    {
+      "chunk_id": "week9_heaps-41",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down"
+    },
+    {
+      "chunk_id": "week9_heaps-42",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down"
+    },
+    {
+      "chunk_id": "week9_heaps-43",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down"
+    },
+    {
+      "chunk_id": "week9_heaps-44",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down"
+    },
+    {
+      "chunk_id": "week9_heaps-45",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Heapify Building a heap from unsorted array in linear time: ● From bottom layer to top, bubble down"
+    },
+    {
+      "chunk_id": "week9_heaps-46",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Heapify - correctness Why does it work? Several “mini-heaps” are created at each layer."
+    },
+    {
+      "chunk_id": "week9_heaps-47",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Heapify - correctness Why does it work? Several “mini-heaps” are created at each layer."
+    },
+    {
+      "chunk_id": "week9_heaps-48",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Heapify - runtime What’s the runtime?"
+    },
+    {
+      "chunk_id": "week9_heaps-49",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Heapify - runtime What’s the runtime? ● n bubbling operations (O(log n)?)"
+    },
+    {
+      "chunk_id": "week9_heaps-50",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Heapify - runtime What’s the runtime? ● n bubbling operations (O(log n)?) ● O(n log n) time???"
+    },
+    {
+      "chunk_id": "week9_heaps-51",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Heapify - runtime"
+    },
+    {
+      "chunk_id": "week9_heaps-52",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Each path is a potential “bubble-down” Heapify - runtime"
+    },
+    {
+      "chunk_id": "week9_heaps-53",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "None of these paths overlap, so each edge is used at most once. Heapify - runtime"
+    },
+    {
+      "chunk_id": "week9_heaps-54",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "None of these paths overlap, so each edge is used at most once. |E| = n - 1 Heapify - runtime"
+    },
+    {
+      "chunk_id": "week9_heaps-55",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "None of these paths overlap, so each edge is used at most once. |E| = n - 1 → O(n) Heapify - runtime"
+    },
+    {
+      "chunk_id": "week9_heaps-56",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "Heapsort A simple sorting algorithm using a priority queue: ● Build a priority queue with all the elements inside. ● Repeatedly call removeMin( )"
+    },
+    {
+      "chunk_id": "week9_heaps-57",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Heapsort A simple sorting algorithm using a heap: ● Build a heap with all the elements inside. → O(n) ● Repeatedly call removeMin( ) → n O(log n) = O(n log n). Total runtime: O(n log n)"
+    },
+    {
+      "chunk_id": "week9_heaps-58",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "“Extended” heap operations In a binary heap, possible to modify other elements besides the root: ● decreaseKey(key, newPriority) ● remove(key)"
+    },
+    {
+      "chunk_id": "week9_heaps-59",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 59,
+      "chunk_in_page": 0,
+      "page": 60,
+      "slide": null,
+      "text": "“Extended” heap operations In a binary heap, possible to modify other elements besides the root: ● decreaseKey(key, newPriority) ● remove(key) Uses same bubbling operations as before"
+    },
+    {
+      "chunk_id": "week9_heaps-60",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 60,
+      "chunk_in_page": 0,
+      "page": 61,
+      "slide": null,
+      "text": "No reason why a heap can’t have more than two children (what about BSTs?) d-ary heaps"
+    },
+    {
+      "chunk_id": "week9_heaps-61",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 61,
+      "chunk_in_page": 0,
+      "page": 62,
+      "slide": null,
+      "text": "No reason why a heap can’t have more than two children (what about BSTs?) How does this affect runtime? d-ary heaps"
+    },
+    {
+      "chunk_id": "week9_heaps-62",
+      "course": "CSC510",
+      "source_file": "week9_heaps.pdf",
+      "chunk_index": 62,
+      "chunk_in_page": 0,
+      "page": 63,
+      "slide": null,
+      "text": "Still O(log n), but maybe you care about hidden constants. ● Bubbling up is shorter. ● Bubbling down is longer. d-ary heaps"
     }
   ]
 }

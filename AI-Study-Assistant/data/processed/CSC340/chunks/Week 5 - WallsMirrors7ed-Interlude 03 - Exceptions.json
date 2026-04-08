@@ -3,47 +3,297 @@
   "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 4,
+  "chunk_count": 29,
   "chunks": [
     {
       "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-0",
       "course": "CSC340",
       "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Exceptions C++ Interlude 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Background • Sometimes it is not possible for a method to return a boolean value when an unusual situation prevents it from completing its task • Preconditions for a method not always met – Method might return a false to indicate this – But not always possible • Example – Stack method peek() called on empty stack which contains items of type bool – Return cannot be sure if return is normal or an exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved Assertions • Express an assertion either as a comment or by using the C++ function assert – #include <cassert> – Make assertions about variables, objects – Assertion in form of boolean expression that should be true at that point in program – False halts program execution • Mainly used to validate pre- or post-conditions • This is a debugging tool – Not a substitute for an if statement – Should not be deployed in final program © 2017 Pearson Education, Hoboken, NJ. All rights reserved Assertions #include <cassert> #include <iostream> int main() { std::cout << \"Hello world 1\" << std::endl; int x = 7; /* Some big code in between and let's say x is accidentally changed to 9 */ x = 9; std::cout << \"Hello world 2\" << std::endl; // Programmer assumes x to be 7 in rest of the code assert(x==7); /* Rest of the code */ std::cout << \"Hello world, again\" <<std::endl; return 0; } • Assertions • can be useful when you are testing and debugging your program. • is not be the best solution for a final shipping program. • A violation of a function’s preconditions may be a simple mistake that the client can fix. • Such a situation does not warrant terminating program execution. What is the console output? Hello world 1 Hello world 2 Assertion failed: x == 7, … Program halts. This is not executed. Throwing Exceptions • Alternate way of communicating or returning information to function’s client • Thrown exception bypasses normal execution, – Control immediately returns to client. • Can contain information about the error or unusual condition that helps you resolve the issue and possibly try the function again © 2017 Pearson Education, Hoboken, NJ. All rights reserved Throwing Exceptions FIGURE C3-1 Hierarchy of C++ exception classes © 2017 Pearson Education, Hoboken, NJ. All rights reserved Syntax runtime_error exceptions (or one of its derived classes) are thrown by errors that are detected at runtime (e.g., division by zero or numeric overflow) • program will halt, just like an assertion fail • can contain a message that is displayed to the user giving details about the error and the reason the program halted logic_error exceptions (or one of its derived classes) represent errors in program logic (e.g., unmet precondition or failure to satisfy a postcondition, that you could detect before the program executes). • test for an error or unusual condition using an if statement; throw an exception containing a message to our client, if error occurs • To restrict the exceptions, you can include a throw clause in its header, informing you that the function might throw an exception. • Including a throw clause in a function specification ensures that the"
+      "text": "Exceptions C++ Interlude 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-1",
       "course": "CSC340",
       "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "errors in program logic (e.g., unmet precondition or failure to satisfy a postcondition, that you could detect before the program executes). • test for an error or unusual condition using an if statement; throw an exception containing a message to our client, if error occurs • To restrict the exceptions, you can include a throw clause in its header, informing you that the function might throw an exception. • Including a throw clause in a function specification ensures that the function can throw only those exceptions. An attempt by the function to throw any other exception will result in a runtime error. • Omitting a throw clause allows a function to throw any exception • You can handle only exceptions of the class logic_error and its derived classes. To handle an exception, you write code that consists of two pieces: • try block - contains the statements that might cause or throw an exception • one or more catch blocks that follow the try block Throwing Exceptions LISTING C3-3 Revised findBox function that throws an exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If you can resolve the unusual situation in a reasonable manner, your code should do so instead of throwing an exception. • If several resolutions to an abnormal occurrence are possible, and you want the client to choose one, you could/should throw an exception. • If you detect that a programmer has used your method incorrectly, you can throw a runtime exception. Recall that this action will halt program execution. Handling Exceptions • Code for handling exception – try block – contains statements that might cause or throw an exception – catch block – immediately follows try block with code to react to or catch a particular type of exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved General syntax for a try block followed by one catch block Handling Exceptions • try block – Contains statements that might cause or throw an exception • catch block – One or more catch blocks immediately follow try block – Contain code to react to or catch particular type of exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved Handling Exceptions • If no exception occurs and try block completes – Execution continues with statement after catch block • If statement within try block causes exception of type specified in catch block – Remainder of try block abandoned – Execution transfers to statements in catch block – After catch block statements finish, execution jumps to statement after last catch block © 2017 Pearson Education, Hoboken, NJ. All rights reserved Handling Exceptions • The syntax for catch block resembles that of a function definition – Specifies type of exception, and an identifier – The catch block parameter provides name for caught exception • Steps taken in catch block vary – Simple message – Elaborate update of variables, retry of offending function © 2017 Pearson Education, Hoboken, NJ. All rights reserved Handling Exceptions LISTING C3-4 Trying the function findBox © 2017 Pearson Education, Hoboken, NJ. All rights reserved Multiple catch Blocks • try block may cause more than one type of exception – Can have many catch blocks associated with it • catch blocks must be ordered – Most specific classes first – More general classes"
+      "text": "Background • Sometimes it is not possible for a method to return a boolean value when an unusual situation prevents it from completing its task • Preconditions for a method not always met – Method might return a false to indicate this – But not always possible • Example – Stack method peek() called on empty stack which contains items of type bool – Return cannot be sure if return is normal or an exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-2",
       "course": "CSC340",
       "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "in catch block vary – Simple message – Elaborate update of variables, retry of offending function © 2017 Pearson Education, Hoboken, NJ. All rights reserved Handling Exceptions LISTING C3-4 Trying the function findBox © 2017 Pearson Education, Hoboken, NJ. All rights reserved Multiple catch Blocks • try block may cause more than one type of exception – Can have many catch blocks associated with it • catch blocks must be ordered – Most specific classes first – More general classes last © 2017 Pearson Education, Hoboken, NJ. All rights reserved Multiple catch Blocks © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Arrange catch blocks in order of specificity, catching the most specific one first. • Since all exception classes have exception as an ancestor, try to avoid using exception in a catch block. • If you must catch exceptions of type exception , do so in the last catch block. Uncaught Exceptions © 2017 Pearson Education, Hoboken, NJ. All rights reserved • When an exception can occur within a loop, you must decide whether to: o place a try block within the body of the loop, in which case an exception will be caught each time the loop cycles or o place the entire loop within a try block—in which case the exception would be caught only once • Neither choice is better than the other, but if you make the wrong choice, the client likely will not get the necessary information. Programmer-Defined Exception Classes • There is a C++ Standard Library exception class defined. • You may also want to define your own exception class. • Usually, C++ exception class exception , or one of its derived classes, is the base class for programmer defined exception classes – Provides a standardized interface for working with exceptions. • Exception class typically consists of a constructor that has a string parameter © 2017 Pearson Education, Hoboken, NJ. All rights reserved Programmer-Defined Exception Classes Example – constructor provides way for throw statement to identify condition of exception. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Exceptions - Summary • To throw an exception in a function: – Determine what errors, preconditions, postconditions, and unusual conditions you must check and where they should be checked, so your function can correctly perform its task. Usually this is done with an if statement. – If an error condition has occurred, throw an exception using the throw statement. As an argument to the exception class constructor, pass a string description of the reason for the error. – Add a throw clause to the function header indicating the exceptions thrown by the function. – Derive a custom exception class to better identify the conditions that caused the error, though doing so is optional, it is desirable. • To handle an exception or use a function that could throw an exception – Place the statement that might throw an exception in a try block. The fewer statements in the try block the better. – Do not use new to create an object in a try block. – After the try block, place catch blocks for each type of exception that can be thrown by the statements in the try block. – Place the catch blocks in order from the most specific exception classes to the"
+      "text": "Assertions • Express an assertion either as a comment or by using the C++ function assert – #include <cassert> – Make assertions about variables, objects – Assertion in form of boolean expression that should be true at that point in program – False halts program execution • Mainly used to validate pre- or post-conditions • This is a debugging tool – Not a substitute for an if statement – Should not be deployed in final program © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-3",
       "course": "CSC340",
       "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "function that could throw an exception – Place the statement that might throw an exception in a try block. The fewer statements in the try block the better. – Do not use new to create an object in a try block. – After the try block, place catch blocks for each type of exception that can be thrown by the statements in the try block. – Place the catch blocks in order from the most specific exception classes to the more general exception classes. © 2017 Pearson Education, Hoboken, NJ. All rights reserved End C++ Interlude 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Appendix C++ Interlude 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Problem to Solve • Previous C++ Interlude worked on video game • Next task – Create function that searches for given string in a number of boxes • Function parameters – Array of string objects – Integer represents number of objects in array – String to be located © 2017 Pearson Education, Hoboken, NJ. All rights reserved Problem to Solve LISTING C3-1 First try at the function findBox © 2017 Pearson Education, Hoboken, NJ. All rights reserved Problem to Solve • Must deal with problem of a box containing target string not in the array – If target not found, function returns boxes[size] which is undefined – Problems occur when client tries to use this “box” • What to return when target not found? © 2017 Pearson Education, Hoboken, NJ. All rights reserved Assertions LISTING C3-2 Revised findBox function with assertions © 2017 Pearson Education, Hoboken, NJ. All rights reserved Uncaught Exceptions LISTING C3-5 A program with an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved Uncaught Exceptions LISTING C3-5 A program with an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved Uncaught Exceptions FIGURE C3-2 Flow of control for an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved Uncaught Exceptions FIGURE C3-2 Flow of control for an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved Handling Exceptions General syntax for a try block followed by one catch block © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+      "text": "Assertions #include <cassert> #include <iostream> int main() { std::cout << \"Hello world 1\" << std::endl; int x = 7; /* Some big code in between and let's say x is accidentally changed to 9 */ x = 9; std::cout << \"Hello world 2\" << std::endl; // Programmer assumes x to be 7 in rest of the code assert(x==7); /* Rest of the code */ std::cout << \"Hello world, again\" <<std::endl; return 0; } • Assertions • can be useful when you are testing and debugging your program. • is not be the best solution for a final shipping program. • A violation of a function’s preconditions may be a simple mistake that the client can fix. • Such a situation does not warrant terminating program execution. What is the console output? Hello world 1 Hello world 2 Assertion failed: x == 7, … Program halts. This is not executed."
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-4",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Throwing Exceptions • Alternate way of communicating or returning information to function’s client • Thrown exception bypasses normal execution, – Control immediately returns to client. • Can contain information about the error or unusual condition that helps you resolve the issue and possibly try the function again © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-5",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Throwing Exceptions FIGURE C3-1 Hierarchy of C++ exception classes © 2017 Pearson Education, Hoboken, NJ. All rights reserved Syntax runtime_error exceptions (or one of its derived classes) are thrown by errors that are detected at runtime (e.g., division by zero or numeric overflow) • program will halt, just like an assertion fail • can contain a message that is displayed to the user giving details about the error and the reason the program halted logic_error exceptions (or one of its derived classes) represent errors in program logic (e.g., unmet precondition or failure to satisfy a postcondition, that you could detect before the program executes). • test for an error or unusual condition using an if statement; throw an exception containing a message to our client, if error occurs • To restrict the exceptions, you can include a throw clause in its header, informing you that the function might throw an exception. • Including a throw clause in a function specification ensures that the function can throw only those exceptions. An attempt by the function to throw any other exception will result in a runtime error. • Omitting a throw clause allows a function to throw any exception • You can handle only exceptions of the class logic_error and its derived classes. To handle an exception, you write code that consists of two pieces: • try block - contains the statements that might cause or throw an exception • one or more catch blocks that follow the try block"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-6",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Throwing Exceptions LISTING C3-3 Revised findBox function that throws an exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If you can resolve the unusual situation in a reasonable manner, your code should do so instead of throwing an exception. • If several resolutions to an abnormal occurrence are possible, and you want the client to choose one, you could/should throw an exception. • If you detect that a programmer has used your method incorrectly, you can throw a runtime exception. Recall that this action will halt program execution."
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-7",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Handling Exceptions • Code for handling exception – try block – contains statements that might cause or throw an exception – catch block – immediately follows try block with code to react to or catch a particular type of exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved General syntax for a try block followed by one catch block"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-8",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Handling Exceptions • try block – Contains statements that might cause or throw an exception • catch block – One or more catch blocks immediately follow try block – Contain code to react to or catch particular type of exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-9",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Handling Exceptions • If no exception occurs and try block completes – Execution continues with statement after catch block • If statement within try block causes exception of type specified in catch block – Remainder of try block abandoned – Execution transfers to statements in catch block – After catch block statements finish, execution jumps to statement after last catch block © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-10",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Handling Exceptions • The syntax for catch block resembles that of a function definition – Specifies type of exception, and an identifier – The catch block parameter provides name for caught exception • Steps taken in catch block vary – Simple message – Elaborate update of variables, retry of offending function © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-11",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Handling Exceptions LISTING C3-4 Trying the function findBox © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-12",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Multiple catch Blocks • try block may cause more than one type of exception – Can have many catch blocks associated with it • catch blocks must be ordered – Most specific classes first – More general classes last © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-13",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Multiple catch Blocks © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Arrange catch blocks in order of specificity, catching the most specific one first. • Since all exception classes have exception as an ancestor, try to avoid using exception in a catch block. • If you must catch exceptions of type exception , do so in the last catch block."
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-14",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Uncaught Exceptions © 2017 Pearson Education, Hoboken, NJ. All rights reserved • When an exception can occur within a loop, you must decide whether to: o place a try block within the body of the loop, in which case an exception will be caught each time the loop cycles or o place the entire loop within a try block—in which case the exception would be caught only once • Neither choice is better than the other, but if you make the wrong choice, the client likely will not get the necessary information."
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-15",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Programmer-Defined Exception Classes • There is a C++ Standard Library exception class defined. • You may also want to define your own exception class. • Usually, C++ exception class exception , or one of its derived classes, is the base class for programmer defined exception classes – Provides a standardized interface for working with exceptions. • Exception class typically consists of a constructor that has a string parameter © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-16",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Programmer-Defined Exception Classes Example – constructor provides way for throw statement to identify condition of exception. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-17",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Exceptions - Summary • To throw an exception in a function: – Determine what errors, preconditions, postconditions, and unusual conditions you must check and where they should be checked, so your function can correctly perform its task. Usually this is done with an if statement. – If an error condition has occurred, throw an exception using the throw statement. As an argument to the exception class constructor, pass a string description of the reason for the error. – Add a throw clause to the function header indicating the exceptions thrown by the function. – Derive a custom exception class to better identify the conditions that caused the error, though doing so is optional, it is desirable. • To handle an exception or use a function that could throw an exception – Place the statement that might throw an exception in a try block. The fewer statements in the try block the better. – Do not use new to create an object in a try block. – After the try block, place catch blocks for each type of exception that can be thrown by the statements in the try block. – Place the catch blocks in order from the most specific exception classes to the more general exception classes. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-18",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "End C++ Interlude 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-19",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Appendix C++ Interlude 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-20",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Problem to Solve • Previous C++ Interlude worked on video game • Next task – Create function that searches for given string in a number of boxes • Function parameters – Array of string objects – Integer represents number of objects in array – String to be located © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-21",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Problem to Solve LISTING C3-1 First try at the function findBox © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-22",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Problem to Solve • Must deal with problem of a box containing target string not in the array – If target not found, function returns boxes[size] which is undefined – Problems occur when client tries to use this “box” • What to return when target not found? © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-23",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Assertions LISTING C3-2 Revised findBox function with assertions © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-24",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Uncaught Exceptions LISTING C3-5 A program with an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-25",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Uncaught Exceptions LISTING C3-5 A program with an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-26",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Uncaught Exceptions FIGURE C3-2 Flow of control for an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-27",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Uncaught Exceptions FIGURE C3-2 Flow of control for an uncaught exception © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions-28",
+      "course": "CSC340",
+      "source_file": "Week 5 - WallsMirrors7ed-Interlude 03 - Exceptions.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Handling Exceptions General syntax for a try block followed by one catch block © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     }
   ]
 }

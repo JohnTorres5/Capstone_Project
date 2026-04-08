@@ -1,5 +1,291 @@
 {
   "course": "CSC510",
   "source_file": "week5_morebacktracking510.pdf",
-  "text": "More Backtracking Examples Prof. Timothy Sun Subset Sum TSP is an example of an NP-hard problem. Another is SUBSET-SUM: Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Subset Sum TSP is an example of an NP-hard problem. Another is SUBSET-SUM: Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 39 Subset Sum Target: 39 19 12 3 8 18 6 Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 39 YES, 8+12+19 = 39 or 3+6+12+18 = 39 Bin-packing, knapsack, partition, etc. Subset Sum is one variant of a general class of \u201cpacking\u201d problems. \u25cf Bin-packing: fewest number of trips \u25cf Knapsack: one trip, maximize value \u25cf Subset sum: exactly at capacity \u25cf and so on\u2026 Bin-packing, knapsack, partition, etc. Subset Sum is one variant of a general class of \u201cpacking\u201d problems. \u25cf Bin-packing: fewest number of trips \u25cf Knapsack: one trip, maximize value \u25cf Subset sum: exactly at capacity \u25cf and so on\u2026 Most interesting variations are NP-hard! Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 50 Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 50 NO SOLUTION Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Brute-force using backtracking Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Brute-force using backtracking: effectively try every subset The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) Ans: 2n The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) Ans: 2n Proof: we can pick a subset X \u2286 S in the following way: \u25cf For each element, either: \u25cb Include it \u25cb Exclude it Two possible choices for each element, so there are 2n elements. Base cases Two parameters: \u25cf S, a set of positive numbers \u25cf T, a target value Base cases Two parameters: \u25cf S, a set of positive numbers \u25cf T, a target value Base cases: S is empty, and/or T \u2264 0. Base cases When S is empty, what values of T can it add up to? Base cases When S is empty, what values of T can it add up to? Ans: only subset is itself, which has sum 0. Base cases When T \u2264 0, which sets S (of positive integers) have a subset that adds up to T? Base cases When T \u2264 0, which sets S (of positive integers) have a subset that adds up to T? \u25cf If T < 0, then nothing \u25cf If T = 0, then every set S has the empty set as a subset. Base cases Coding up the base cases... Enumerating subsets Let e be any element of S. Every subset X of S either: \u25cf has e \u25cf doesn\u2019t have e Enumerating subsets Let e be any element of S. Every subset X of S that sums to T either: \u25cf has e X - {e} sums to T - e \u25cf doesn\u2019t have e X - {e} = X sums to T Enumerating subsets Let e be any element of S. Every subset X of S that sums to T either: \u25cf has e X - {e} sums to T - e \u25cf doesn\u2019t have e X - {e} = X sums to T Algorithm: recurse on S - {e} with T and T - e as the new targets. Enumerating subsets Enumerating subsets If S is given as an array S[1, \u2026, n], how do we quickly \ufb01nd e and S - {e}? Enumerating subsets If S is given as an array S[1, \u2026, n], how do we quickly \ufb01nd e and S - {e}? \u25cf e = S[n] \u25cf S - {e} = S[1, \u2026, n-1] Enumerating subsets Enumerating subsets Enumerating subsets Initial call: Enumerating subsets This solution indexes the subproblems. (We\u2019ll see why later) Initial call: Enumerating subsets Backtracking guidelines 1. Identify recursive structure and subproblems (recurrence) 2. Solve the base cases 3. Try all \ufb01rst choices (\u201ctake a nibble\u201d), and let recursion take care of the rest. Variations This code only checks if there exists a solution. How can we modify it to output: \u25cf Output the actual solution? \u25cf The number of solutions? \u25cf The \u201cbest\u201d solution? Variations This code only checks if there exists a solution. How can we modify it to output: \u25cf Output the actual solution? \u25cf The number of solutions? \u25cf The \u201cbest\u201d solution? Pure functions are easy to modify! Counting the number of solutions Counting the number of solutions Wood cutting Given a beam of wood n units long and selling prices p[i] for a piece i units long, what\u2019s the most money you can make by chopping up the cord? length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting Sequence of choices: cuts in the piece of wood Wood cutting Sequence of choices: cuts in the piece of wood Base case: length 0, no money Wood cutting Sequence of choices: cuts in the piece of wood Base case: length 0, no money First choice/nibble: cut out the leftmost piece. How should we cut it? Wood cutting Sequence of choices: cuts in the piece of wood Base case: length 0, no money First choice/nibble: cut out the leftmost piece. How should we cut it? Try each possibility and see which one\u2019s best. Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting How do we compute the best pro\ufb01t for what\u2019s left over? Wood cutting How do we compute the best pro\ufb01t for what\u2019s left over? Recursion! Wood cutting Try out all possible \u201c\ufb01rst pieces\u201d and pick the one that maximizes pro\ufb01t. Finding the best solution Try out all possible \u201c\ufb01rst pieces\u201d and pick the one that maximizes pro\ufb01t. Finding the best solution Wood cutting Wood cutting The base case should be m = 0, but where is it? Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON \u2192 THIS IS THE REASON Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON \u2192 THIS IS THE REASON THISISTHEREASON \u2192 THIS IS THERE A SON Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON No greedy approaches will always work. Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON No greedy approaches will always work. Let\u2019s solve using backtracking. Sequence of choices: places to add spaces Text segmentation Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words Text segmentation Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words First choice/nibble: pick out the \ufb01rst word. What is that \ufb01rst word? Text segmentation Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words First choice/nibble: pick out the \ufb01rst word. What is that \ufb01rst word? Try every possible pre\ufb01x and see which one leads to a splitting. Text segmentation Text segmentation First word, recurse on rest: T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON \u2026 Text segmentation Text segmentation BOTHEARTHANDSATURNSPIN \u25cf B OTHEARTHANDSATURNSPIN \u25cf BO THEARTHANDSATURNSPIN \u25cf BOT HEARTHANDSATURNSPIN \u25cf BOTH EARTHANDSATURNSPIN \u25cf BOTHE ARTHANDSATURNSPIN Text segmentation What\u2019s the worst-case scenario? Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. \u25cf Dictionary: a, aa \u25cf String: aaaaaaaaaaaaaaaa...aaaaaaaaab Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. \u25cf Dictionary: a, aa \u25cf String: aaaaaaaaaaaaaaaa...aaaaaaaaab"
+  "text": "More Backtracking Examples Prof. Timothy Sun Subset Sum TSP is an example of an NP-hard problem. Another is SUBSET-SUM: Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Subset Sum TSP is an example of an NP-hard problem. Another is SUBSET-SUM: Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 39 Subset Sum Target: 39 19 12 3 8 18 6 Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 39 YES, 8+12+19 = 39 or 3+6+12+18 = 39 Bin-packing, knapsack, partition, etc. Subset Sum is one variant of a general class of \u201cpacking\u201d problems. \u25cf Bin-packing: fewest number of trips \u25cf Knapsack: one trip, maximize value \u25cf Subset sum: exactly at capacity \u25cf and so on\u2026 Bin-packing, knapsack, partition, etc. Subset Sum is one variant of a general class of \u201cpacking\u201d problems. \u25cf Bin-packing: fewest number of trips \u25cf Knapsack: one trip, maximize value \u25cf Subset sum: exactly at capacity \u25cf and so on\u2026 Most interesting variations are NP-hard! Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 50 Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 50 NO SOLUTION Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Brute-force using backtracking Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Brute-force using backtracking: effectively try every subset The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) Ans: 2n The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) Ans: 2n Proof: we can pick a subset X \u2286 S in the following way: \u25cf For each element, either: \u25cb Include it \u25cb Exclude it Two possible choices for each element, so there are 2n elements. Base cases Two parameters: \u25cf S, a set of positive numbers \u25cf T, a target value Base cases Two parameters: \u25cf S, a set of positive numbers \u25cf T, a target value Base cases: S is empty, and/or T \u2264 0. Base cases When S is empty, what values of T can it add up to? Base cases When S is empty, what values of T can it add up to? Ans: only subset is itself, which has sum 0. Base cases When T \u2264 0, which sets S (of positive integers) have a subset that adds up to T? Base cases When T \u2264 0, which sets S (of positive integers) have a subset that adds up to T? \u25cf If T < 0, then nothing \u25cf If T = 0, then every set S has the empty set as a subset. Base cases Coding up the base cases... Enumerating subsets Let e be any element of S. Every subset X of S either: \u25cf has e \u25cf doesn\u2019t have e Enumerating subsets Let e be any element of S. Every subset X of S that sums to T either: \u25cf has e X - {e} sums to T - e \u25cf doesn\u2019t have e X - {e} = X sums to T Enumerating subsets Let e be any element of S. Every subset X of S that sums to T either: \u25cf has e X - {e} sums to T - e \u25cf doesn\u2019t have e X - {e} = X sums to T Algorithm: recurse on S - {e} with T and T - e as the new targets. Enumerating subsets Enumerating subsets If S is given as an array S[1, \u2026, n], how do we quickly \ufb01nd e and S - {e}? Enumerating subsets If S is given as an array S[1, \u2026, n], how do we quickly \ufb01nd e and S - {e}? \u25cf e = S[n] \u25cf S - {e} = S[1, \u2026, n-1] Enumerating subsets Enumerating subsets Enumerating subsets Initial call: Enumerating subsets This solution indexes the subproblems. (We\u2019ll see why later) Initial call: Enumerating subsets Backtracking guidelines 1. Identify recursive structure and subproblems (recurrence) 2. Solve the base cases 3. Try all \ufb01rst choices (\u201ctake a nibble\u201d), and let recursion take care of the rest. Variations This code only checks if there exists a solution. How can we modify it to output: \u25cf Output the actual solution? \u25cf The number of solutions? \u25cf The \u201cbest\u201d solution? Variations This code only checks if there exists a solution. How can we modify it to output: \u25cf Output the actual solution? \u25cf The number of solutions? \u25cf The \u201cbest\u201d solution? Pure functions are easy to modify! Counting the number of solutions Counting the number of solutions Wood cutting Given a beam of wood n units long and selling prices p[i] for a piece i units long, what\u2019s the most money you can make by chopping up the cord? length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting Sequence of choices: cuts in the piece of wood Wood cutting Sequence of choices: cuts in the piece of wood Base case: length 0, no money Wood cutting Sequence of choices: cuts in the piece of wood Base case: length 0, no money First choice/nibble: cut out the leftmost piece. How should we cut it? Wood cutting Sequence of choices: cuts in the piece of wood Base case: length 0, no money First choice/nibble: cut out the leftmost piece. How should we cut it? Try each possibility and see which one\u2019s best. Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting How do we compute the best pro\ufb01t for what\u2019s left over? Wood cutting How do we compute the best pro\ufb01t for what\u2019s left over? Recursion! Wood cutting Try out all possible \u201c\ufb01rst pieces\u201d and pick the one that maximizes pro\ufb01t. Finding the best solution Try out all possible \u201c\ufb01rst pieces\u201d and pick the one that maximizes pro\ufb01t. Finding the best solution Wood cutting Wood cutting The base case should be m = 0, but where is it? Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON \u2192 THIS IS THE REASON Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON \u2192 THIS IS THE REASON THISISTHEREASON \u2192 THIS IS THERE A SON Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON No greedy approaches will always work. Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON No greedy approaches will always work. Let\u2019s solve using backtracking. Sequence of choices: places to add spaces Text segmentation Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words Text segmentation Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words First choice/nibble: pick out the \ufb01rst word. What is that \ufb01rst word? Text segmentation Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words First choice/nibble: pick out the \ufb01rst word. What is that \ufb01rst word? Try every possible pre\ufb01x and see which one leads to a splitting. Text segmentation Text segmentation First word, recurse on rest: T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON \u2026 Text segmentation Text segmentation BOTHEARTHANDSATURNSPIN \u25cf B OTHEARTHANDSATURNSPIN \u25cf BO THEARTHANDSATURNSPIN \u25cf BOT HEARTHANDSATURNSPIN \u25cf BOTH EARTHANDSATURNSPIN \u25cf BOTHE ARTHANDSATURNSPIN Text segmentation What\u2019s the worst-case scenario? Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. \u25cf Dictionary: a, aa \u25cf String: aaaaaaaaaaaaaaaa...aaaaaaaaab Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. \u25cf Dictionary: a, aa \u25cf String: aaaaaaaaaaaaaaaa...aaaaaaaaab",
+  "pages": [
+    {
+      "page": 1,
+      "text": "More Backtracking Examples Prof. Timothy Sun"
+    },
+    {
+      "page": 2,
+      "text": "Subset Sum TSP is an example of an NP-hard problem. Another is SUBSET-SUM: Given a set of positive integers S and a target T, is there a subset of S that adds up to T?"
+    },
+    {
+      "page": 3,
+      "text": "Subset Sum TSP is an example of an NP-hard problem. Another is SUBSET-SUM: Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 39"
+    },
+    {
+      "page": 4,
+      "text": "Subset Sum Target: 39 19 12 3 8 18 6"
+    },
+    {
+      "page": 5,
+      "text": "Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 39 YES, 8+12+19 = 39 or 3+6+12+18 = 39"
+    },
+    {
+      "page": 6,
+      "text": "Bin-packing, knapsack, partition, etc. Subset Sum is one variant of a general class of \u201cpacking\u201d problems. \u25cf Bin-packing: fewest number of trips \u25cf Knapsack: one trip, maximize value \u25cf Subset sum: exactly at capacity \u25cf and so on\u2026"
+    },
+    {
+      "page": 7,
+      "text": "Bin-packing, knapsack, partition, etc. Subset Sum is one variant of a general class of \u201cpacking\u201d problems. \u25cf Bin-packing: fewest number of trips \u25cf Knapsack: one trip, maximize value \u25cf Subset sum: exactly at capacity \u25cf and so on\u2026 Most interesting variations are NP-hard!"
+    },
+    {
+      "page": 8,
+      "text": "Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 50"
+    },
+    {
+      "page": 9,
+      "text": "Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? S = {6, 12, 8, 18, 3, 19}, T = 50 NO SOLUTION"
+    },
+    {
+      "page": 10,
+      "text": "Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum"
+    },
+    {
+      "page": 11,
+      "text": "Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Brute-force using backtracking"
+    },
+    {
+      "page": 12,
+      "text": "Subset Sum Given a set of positive integers S and a target T, is there a subset of S that adds up to T? Goal: design an algorithm for solving Subset Sum Brute-force using backtracking: effectively try every subset"
+    },
+    {
+      "page": 13,
+      "text": "The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205)"
+    },
+    {
+      "page": 14,
+      "text": "The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) Ans: 2n"
+    },
+    {
+      "page": 15,
+      "text": "The set of subsets If S is a set of n elements, how many subsets are there? (including S and \u2205) Ans: 2n Proof: we can pick a subset X \u2286 S in the following way: \u25cf For each element, either: \u25cb Include it \u25cb Exclude it Two possible choices for each element, so there are 2n elements."
+    },
+    {
+      "page": 16,
+      "text": "Base cases Two parameters: \u25cf S, a set of positive numbers \u25cf T, a target value"
+    },
+    {
+      "page": 17,
+      "text": "Base cases Two parameters: \u25cf S, a set of positive numbers \u25cf T, a target value Base cases: S is empty, and/or T \u2264 0."
+    },
+    {
+      "page": 18,
+      "text": "Base cases When S is empty, what values of T can it add up to?"
+    },
+    {
+      "page": 19,
+      "text": "Base cases When S is empty, what values of T can it add up to? Ans: only subset is itself, which has sum 0."
+    },
+    {
+      "page": 20,
+      "text": "Base cases When T \u2264 0, which sets S (of positive integers) have a subset that adds up to T?"
+    },
+    {
+      "page": 21,
+      "text": "Base cases When T \u2264 0, which sets S (of positive integers) have a subset that adds up to T? \u25cf If T < 0, then nothing \u25cf If T = 0, then every set S has the empty set as a subset."
+    },
+    {
+      "page": 22,
+      "text": "Base cases Coding up the base cases..."
+    },
+    {
+      "page": 23,
+      "text": "Enumerating subsets Let e be any element of S. Every subset X of S either: \u25cf has e \u25cf doesn\u2019t have e"
+    },
+    {
+      "page": 24,
+      "text": "Enumerating subsets Let e be any element of S. Every subset X of S that sums to T either: \u25cf has e X - {e} sums to T - e \u25cf doesn\u2019t have e X - {e} = X sums to T"
+    },
+    {
+      "page": 25,
+      "text": "Enumerating subsets Let e be any element of S. Every subset X of S that sums to T either: \u25cf has e X - {e} sums to T - e \u25cf doesn\u2019t have e X - {e} = X sums to T Algorithm: recurse on S - {e} with T and T - e as the new targets."
+    },
+    {
+      "page": 26,
+      "text": "Enumerating subsets"
+    },
+    {
+      "page": 27,
+      "text": "Enumerating subsets If S is given as an array S[1, \u2026, n], how do we quickly \ufb01nd e and S - {e}?"
+    },
+    {
+      "page": 28,
+      "text": "Enumerating subsets If S is given as an array S[1, \u2026, n], how do we quickly \ufb01nd e and S - {e}? \u25cf e = S[n] \u25cf S - {e} = S[1, \u2026, n-1]"
+    },
+    {
+      "page": 29,
+      "text": "Enumerating subsets"
+    },
+    {
+      "page": 30,
+      "text": "Enumerating subsets"
+    },
+    {
+      "page": 31,
+      "text": "Enumerating subsets Initial call:"
+    },
+    {
+      "page": 32,
+      "text": "Enumerating subsets This solution indexes the subproblems. (We\u2019ll see why later) Initial call:"
+    },
+    {
+      "page": 33,
+      "text": "Enumerating subsets"
+    },
+    {
+      "page": 34,
+      "text": "Backtracking guidelines 1. Identify recursive structure and subproblems (recurrence) 2. Solve the base cases 3. Try all \ufb01rst choices (\u201ctake a nibble\u201d), and let recursion take care of the rest."
+    },
+    {
+      "page": 35,
+      "text": "Variations This code only checks if there exists a solution. How can we modify it to output: \u25cf Output the actual solution? \u25cf The number of solutions? \u25cf The \u201cbest\u201d solution?"
+    },
+    {
+      "page": 36,
+      "text": "Variations This code only checks if there exists a solution. How can we modify it to output: \u25cf Output the actual solution? \u25cf The number of solutions? \u25cf The \u201cbest\u201d solution? Pure functions are easy to modify!"
+    },
+    {
+      "page": 37,
+      "text": "Counting the number of solutions"
+    },
+    {
+      "page": 38,
+      "text": "Counting the number of solutions"
+    },
+    {
+      "page": 39,
+      "text": "Wood cutting Given a beam of wood n units long and selling prices p[i] for a piece i units long, what\u2019s the most money you can make by chopping up the cord?"
+    },
+    {
+      "page": 40,
+      "text": "length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting"
+    },
+    {
+      "page": 41,
+      "text": "length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting"
+    },
+    {
+      "page": 42,
+      "text": "length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting"
+    },
+    {
+      "page": 43,
+      "text": "Sequence of choices: cuts in the piece of wood Wood cutting"
+    },
+    {
+      "page": 44,
+      "text": "Sequence of choices: cuts in the piece of wood Base case: length 0, no money Wood cutting"
+    },
+    {
+      "page": 45,
+      "text": "Sequence of choices: cuts in the piece of wood Base case: length 0, no money First choice/nibble: cut out the leftmost piece. How should we cut it? Wood cutting"
+    },
+    {
+      "page": 46,
+      "text": "Sequence of choices: cuts in the piece of wood Base case: length 0, no money First choice/nibble: cut out the leftmost piece. How should we cut it? Try each possibility and see which one\u2019s best. Wood cutting"
+    },
+    {
+      "page": 47,
+      "text": "length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting"
+    },
+    {
+      "page": 48,
+      "text": "length 1 2 3 4 5 6 7 8 9 10 price 1 5 8 9 10 17 17 20 24 30 Wood cutting"
+    },
+    {
+      "page": 49,
+      "text": "How do we compute the best pro\ufb01t for what\u2019s left over? Wood cutting"
+    },
+    {
+      "page": 50,
+      "text": "How do we compute the best pro\ufb01t for what\u2019s left over? Recursion! Wood cutting"
+    },
+    {
+      "page": 51,
+      "text": "Try out all possible \u201c\ufb01rst pieces\u201d and pick the one that maximizes pro\ufb01t. Finding the best solution"
+    },
+    {
+      "page": 52,
+      "text": "Try out all possible \u201c\ufb01rst pieces\u201d and pick the one that maximizes pro\ufb01t. Finding the best solution"
+    },
+    {
+      "page": 53,
+      "text": "Wood cutting"
+    },
+    {
+      "page": 54,
+      "text": "Wood cutting The base case should be m = 0, but where is it?"
+    },
+    {
+      "page": 55,
+      "text": "Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON"
+    },
+    {
+      "page": 56,
+      "text": "Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON \u2192 THIS IS THE REASON"
+    },
+    {
+      "page": 57,
+      "text": "Text segmentation Given a string of characters, can we insert spaces so that we get a sequence of words? THISISTHEREASON \u2192 THIS IS THE REASON THISISTHEREASON \u2192 THIS IS THERE A SON"
+    },
+    {
+      "page": 58,
+      "text": "Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON"
+    },
+    {
+      "page": 59,
+      "text": "Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON No greedy approaches will always work."
+    },
+    {
+      "page": 60,
+      "text": "Text segmentation Possible that some words don\u2019t appear in any valid partition. TH|IS|ISTHEREASON No greedy approaches will always work. Let\u2019s solve using backtracking."
+    },
+    {
+      "page": 61,
+      "text": "Sequence of choices: places to add spaces Text segmentation"
+    },
+    {
+      "page": 62,
+      "text": "Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words Text segmentation"
+    },
+    {
+      "page": 63,
+      "text": "Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words First choice/nibble: pick out the \ufb01rst word. What is that \ufb01rst word? Text segmentation"
+    },
+    {
+      "page": 64,
+      "text": "Sequence of choices: places to add spaces Base case: length 0, splittable into 0 words First choice/nibble: pick out the \ufb01rst word. What is that \ufb01rst word? Try every possible pre\ufb01x and see which one leads to a splitting. Text segmentation"
+    },
+    {
+      "page": 65,
+      "text": "Text segmentation First word, recurse on rest: T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON \u2026"
+    },
+    {
+      "page": 66,
+      "text": "Text segmentation"
+    },
+    {
+      "page": 67,
+      "text": "Text segmentation BOTHEARTHANDSATURNSPIN \u25cf B OTHEARTHANDSATURNSPIN \u25cf BO THEARTHANDSATURNSPIN \u25cf BOT HEARTHANDSATURNSPIN \u25cf BOTH EARTHANDSATURNSPIN \u25cf BOTHE ARTHANDSATURNSPIN"
+    },
+    {
+      "page": 68,
+      "text": "Text segmentation What\u2019s the worst-case scenario?"
+    },
+    {
+      "page": 69,
+      "text": "Text segmentation What\u2019s the worst-case scenario? An almost-splittable string."
+    },
+    {
+      "page": 70,
+      "text": "Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. \u25cf Dictionary: a, aa \u25cf String: aaaaaaaaaaaaaaaa...aaaaaaaaab"
+    },
+    {
+      "page": 71,
+      "text": "Text segmentation What\u2019s the worst-case scenario? An almost-splittable string. \u25cf Dictionary: a, aa \u25cf String: aaaaaaaaaaaaaaaa...aaaaaaaaab"
+    }
+  ]
 }

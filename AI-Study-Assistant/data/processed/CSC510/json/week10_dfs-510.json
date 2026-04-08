@@ -1,5 +1,219 @@
 {
   "course": "CSC510",
   "source_file": "week10_dfs-510.pdf",
-  "text": "Depth-First Search Prof. Timothy Sun Depth-\ufb01rst search DFS is especially useful because of the structure given by the pre-order and post-order traversals through the graph. Pre-order traversal UK line of succession Pre-order traversal UK line of succession Post-order traversal Celebrity Jeopardy! schedule Post-order traversal Celebrity Jeopardy! schedule Depth-\ufb01rst search DFS is especially useful because of the structure given by the pre-order and post-order traversals through the graph. Just like connected components, we try doing DFS on every vertex, so every vertex is visited at some point. A \u201cclock\u201d keeps track of when a vertex is on the recursion stack: \u25cf New: clock < pre(v) \u25cf Active: pre(v) < clock < post(v) \u25cf Finished: post(v) < clock Depth-\ufb01rst search A \u201cclock\u201d keeps track of when a vertex is on the recursion stack: \u25cf New: clock < pre(v) \u25cf Active: pre(v) < clock < post(v) \u25cf Finished: post(v) < clock All DFSes in this class will be done in alphabetical order. Depth-\ufb01rst search Depth-\ufb01rst search Depth-\ufb01rst search back edge forward edge tree edge cross edge Depth-\ufb01rst search back forward tree cross Depth-\ufb01rst search intervals are nesting, or disjoint back forward tree cross Parentheses Theorem back forward tree cross Back edge (e.g., u \u2192 s) \u25cf [u] \u2286 [s] \u25cb pre(s) < pre(u) \u25cb post(s) > post(u) Parentheses Theorem back forward tree cross Tree edge (e.g., s \u2192 t) \u25cf [t] \u2286 [s] \u25cb pre(s) < pre(t) \u25cb post(s) > post(t) \u25cf parent(t) = s Parentheses Theorem back forward tree cross Forward edge (e.g., t \u2192 v) \u25cf [v] \u2286 [t] \u25cb pre(t) < pre(v) \u25cb post(t) > post(v) \u25cf parent(v) \u2260 t Parentheses Theorem back forward tree cross Cross edge (e.g., w \u2192 v) \u25cf [v] before [w] \u25cb pre(v) < post(v) < pre(w) < post(w) Parentheses Theorem back forward tree cross back [a] \u2286 [b] post(a) < post(b) tree/forward [b] \u2286 [a] pre(a) < pre(b) cross [b] before [a] otherwise For a directed edge (a\u2192b), Parentheses Theorem back forward tree cross What about the fourth possibility? \u25cf a\u2192b: [a] before [b] Parentheses Theorem back forward tree cross What about the fourth possibility? \u25cf a\u2192b: [a] before [b] Not possible! Undirected DFS only tree and back edges Some more examples Some more examples Some more examples Some more examples Some more examples Some more examples Finding a directed cycle Claim: a directed cycle exists iff there is a back edge back forward tree cross Finding a directed cycle How does a DFS interact with a cycle? Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst 2. Eventually reaches predecessor u Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst 2. Eventually reaches predecessor u 3. Then u\u2192v is a backedge. Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. \u25cf Check for back edges. Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|) Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|) Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|) Can also modify DFSAll to \ufb01nd a cycle \u201calong the way.\u201d A directed acyclic graph (DAG) has no directed cycles DAGs and topological sorts DAGs and topological sorts A directed acyclic graph (DAG) has no directed cycles A topological sort is an ordering of the vertices where all edges point \u201cto the right\u201d: I, B, E, H, G, C, F, A, D DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG \u25cf A cycle would have a left-pointing edge DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG \u25cf A cycle would have a left-pointing edge Harder direction: DAG \u2192 topological sort Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Sources and sinks Sources and sinks Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Proof sketch: keep walking\u2026 Sources and sinks Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Proof sketch: keep walking\u2026 Topological sort: remove a source and recurse Information from a DFS Recall: \u25cf (u\u2192v) back edge \u2192 post(u) < post(v) Information from a DFS Recall: \u25cf (u\u2192v) back edge \u2192 post(u) < post(v) In a DAG, post(u) > post(v) for every edge Topological sorting Postorder traversal is a topological sort, but backwards Topological sort algorithm: 1. Do DFS. 2. Reverse postorder traversal. Topological sort from DFS Topological sort from DFS Topological sort from DFS Topological sort from DFS Topological sorting Postorder traversal is a topological sort, but backwards Topological sort algorithm: 1. Do DFS. O(|V| + |E|) 2. Reverse postorder traversal. O(|V|) Total runtime: O(|V| + |E|)"
+  "text": "Depth-First Search Prof. Timothy Sun Depth-\ufb01rst search DFS is especially useful because of the structure given by the pre-order and post-order traversals through the graph. Pre-order traversal UK line of succession Pre-order traversal UK line of succession Post-order traversal Celebrity Jeopardy! schedule Post-order traversal Celebrity Jeopardy! schedule Depth-\ufb01rst search DFS is especially useful because of the structure given by the pre-order and post-order traversals through the graph. Just like connected components, we try doing DFS on every vertex, so every vertex is visited at some point. A \u201cclock\u201d keeps track of when a vertex is on the recursion stack: \u25cf New: clock < pre(v) \u25cf Active: pre(v) < clock < post(v) \u25cf Finished: post(v) < clock Depth-\ufb01rst search A \u201cclock\u201d keeps track of when a vertex is on the recursion stack: \u25cf New: clock < pre(v) \u25cf Active: pre(v) < clock < post(v) \u25cf Finished: post(v) < clock All DFSes in this class will be done in alphabetical order. Depth-\ufb01rst search Depth-\ufb01rst search Depth-\ufb01rst search back edge forward edge tree edge cross edge Depth-\ufb01rst search back forward tree cross Depth-\ufb01rst search intervals are nesting, or disjoint back forward tree cross Parentheses Theorem back forward tree cross Back edge (e.g., u \u2192 s) \u25cf [u] \u2286 [s] \u25cb pre(s) < pre(u) \u25cb post(s) > post(u) Parentheses Theorem back forward tree cross Tree edge (e.g., s \u2192 t) \u25cf [t] \u2286 [s] \u25cb pre(s) < pre(t) \u25cb post(s) > post(t) \u25cf parent(t) = s Parentheses Theorem back forward tree cross Forward edge (e.g., t \u2192 v) \u25cf [v] \u2286 [t] \u25cb pre(t) < pre(v) \u25cb post(t) > post(v) \u25cf parent(v) \u2260 t Parentheses Theorem back forward tree cross Cross edge (e.g., w \u2192 v) \u25cf [v] before [w] \u25cb pre(v) < post(v) < pre(w) < post(w) Parentheses Theorem back forward tree cross back [a] \u2286 [b] post(a) < post(b) tree/forward [b] \u2286 [a] pre(a) < pre(b) cross [b] before [a] otherwise For a directed edge (a\u2192b), Parentheses Theorem back forward tree cross What about the fourth possibility? \u25cf a\u2192b: [a] before [b] Parentheses Theorem back forward tree cross What about the fourth possibility? \u25cf a\u2192b: [a] before [b] Not possible! Undirected DFS only tree and back edges Some more examples Some more examples Some more examples Some more examples Some more examples Some more examples Finding a directed cycle Claim: a directed cycle exists iff there is a back edge back forward tree cross Finding a directed cycle How does a DFS interact with a cycle? Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst 2. Eventually reaches predecessor u Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst 2. Eventually reaches predecessor u 3. Then u\u2192v is a backedge. Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. \u25cf Check for back edges. Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|) Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|) Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|) Can also modify DFSAll to \ufb01nd a cycle \u201calong the way.\u201d A directed acyclic graph (DAG) has no directed cycles DAGs and topological sorts DAGs and topological sorts A directed acyclic graph (DAG) has no directed cycles A topological sort is an ordering of the vertices where all edges point \u201cto the right\u201d: I, B, E, H, G, C, F, A, D DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG \u25cf A cycle would have a left-pointing edge DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG \u25cf A cycle would have a left-pointing edge Harder direction: DAG \u2192 topological sort Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Sources and sinks Sources and sinks Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Proof sketch: keep walking\u2026 Sources and sinks Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Proof sketch: keep walking\u2026 Topological sort: remove a source and recurse Information from a DFS Recall: \u25cf (u\u2192v) back edge \u2192 post(u) < post(v) Information from a DFS Recall: \u25cf (u\u2192v) back edge \u2192 post(u) < post(v) In a DAG, post(u) > post(v) for every edge Topological sorting Postorder traversal is a topological sort, but backwards Topological sort algorithm: 1. Do DFS. 2. Reverse postorder traversal. Topological sort from DFS Topological sort from DFS Topological sort from DFS Topological sort from DFS Topological sorting Postorder traversal is a topological sort, but backwards Topological sort algorithm: 1. Do DFS. O(|V| + |E|) 2. Reverse postorder traversal. O(|V|) Total runtime: O(|V| + |E|)",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Depth-First Search Prof. Timothy Sun"
+    },
+    {
+      "page": 2,
+      "text": "Depth-\ufb01rst search DFS is especially useful because of the structure given by the pre-order and post-order traversals through the graph."
+    },
+    {
+      "page": 3,
+      "text": "Pre-order traversal UK line of succession"
+    },
+    {
+      "page": 4,
+      "text": "Pre-order traversal UK line of succession"
+    },
+    {
+      "page": 5,
+      "text": "Post-order traversal Celebrity Jeopardy! schedule"
+    },
+    {
+      "page": 6,
+      "text": "Post-order traversal Celebrity Jeopardy! schedule"
+    },
+    {
+      "page": 7,
+      "text": "Depth-\ufb01rst search DFS is especially useful because of the structure given by the pre-order and post-order traversals through the graph. Just like connected components, we try doing DFS on every vertex, so every vertex is visited at some point."
+    },
+    {
+      "page": 8,
+      "text": "A \u201cclock\u201d keeps track of when a vertex is on the recursion stack: \u25cf New: clock < pre(v) \u25cf Active: pre(v) < clock < post(v) \u25cf Finished: post(v) < clock Depth-\ufb01rst search"
+    },
+    {
+      "page": 9,
+      "text": "A \u201cclock\u201d keeps track of when a vertex is on the recursion stack: \u25cf New: clock < pre(v) \u25cf Active: pre(v) < clock < post(v) \u25cf Finished: post(v) < clock All DFSes in this class will be done in alphabetical order. Depth-\ufb01rst search"
+    },
+    {
+      "page": 10,
+      "text": "Depth-\ufb01rst search"
+    },
+    {
+      "page": 11,
+      "text": "Depth-\ufb01rst search back edge forward edge tree edge cross edge"
+    },
+    {
+      "page": 12,
+      "text": "Depth-\ufb01rst search back forward tree cross"
+    },
+    {
+      "page": 13,
+      "text": "Depth-\ufb01rst search intervals are nesting, or disjoint back forward tree cross"
+    },
+    {
+      "page": 14,
+      "text": "Parentheses Theorem back forward tree cross Back edge (e.g., u \u2192 s) \u25cf [u] \u2286 [s] \u25cb pre(s) < pre(u) \u25cb post(s) > post(u)"
+    },
+    {
+      "page": 15,
+      "text": "Parentheses Theorem back forward tree cross Tree edge (e.g., s \u2192 t) \u25cf [t] \u2286 [s] \u25cb pre(s) < pre(t) \u25cb post(s) > post(t) \u25cf parent(t) = s"
+    },
+    {
+      "page": 16,
+      "text": "Parentheses Theorem back forward tree cross Forward edge (e.g., t \u2192 v) \u25cf [v] \u2286 [t] \u25cb pre(t) < pre(v) \u25cb post(t) > post(v) \u25cf parent(v) \u2260 t"
+    },
+    {
+      "page": 17,
+      "text": "Parentheses Theorem back forward tree cross Cross edge (e.g., w \u2192 v) \u25cf [v] before [w] \u25cb pre(v) < post(v) < pre(w) < post(w)"
+    },
+    {
+      "page": 18,
+      "text": "Parentheses Theorem back forward tree cross back [a] \u2286 [b] post(a) < post(b) tree/forward [b] \u2286 [a] pre(a) < pre(b) cross [b] before [a] otherwise For a directed edge (a\u2192b),"
+    },
+    {
+      "page": 19,
+      "text": "Parentheses Theorem back forward tree cross What about the fourth possibility? \u25cf a\u2192b: [a] before [b]"
+    },
+    {
+      "page": 20,
+      "text": "Parentheses Theorem back forward tree cross What about the fourth possibility? \u25cf a\u2192b: [a] before [b] Not possible!"
+    },
+    {
+      "page": 21,
+      "text": "Undirected DFS only tree and back edges"
+    },
+    {
+      "page": 22,
+      "text": "Some more examples"
+    },
+    {
+      "page": 23,
+      "text": "Some more examples"
+    },
+    {
+      "page": 24,
+      "text": "Some more examples"
+    },
+    {
+      "page": 25,
+      "text": "Some more examples"
+    },
+    {
+      "page": 26,
+      "text": "Some more examples"
+    },
+    {
+      "page": 27,
+      "text": "Some more examples"
+    },
+    {
+      "page": 28,
+      "text": "Finding a directed cycle Claim: a directed cycle exists iff there is a back edge back forward tree cross"
+    },
+    {
+      "page": 29,
+      "text": "Finding a directed cycle How does a DFS interact with a cycle?"
+    },
+    {
+      "page": 30,
+      "text": "Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst"
+    },
+    {
+      "page": 31,
+      "text": "Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst 2. Eventually reaches predecessor u"
+    },
+    {
+      "page": 32,
+      "text": "Finding a directed cycle How does a DFS interact with a cycle? 1. Visits some vertex v \ufb01rst 2. Eventually reaches predecessor u 3. Then u\u2192v is a backedge."
+    },
+    {
+      "page": 33,
+      "text": "Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. \u25cf Check for back edges."
+    },
+    {
+      "page": 34,
+      "text": "Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|)"
+    },
+    {
+      "page": 35,
+      "text": "Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|)"
+    },
+    {
+      "page": 36,
+      "text": "Finding a directed cycle Cycle-\ufb01nding algorithm: \u25cf Do DFS. O(|V|+|E|) \u25cf Check for back edges. O(|E|) In total: O(|V|+|E|) Can also modify DFSAll to \ufb01nd a cycle \u201calong the way.\u201d"
+    },
+    {
+      "page": 37,
+      "text": "A directed acyclic graph (DAG) has no directed cycles DAGs and topological sorts"
+    },
+    {
+      "page": 38,
+      "text": "DAGs and topological sorts A directed acyclic graph (DAG) has no directed cycles A topological sort is an ordering of the vertices where all edges point \u201cto the right\u201d: I, B, E, H, G, C, F, A, D"
+    },
+    {
+      "page": 39,
+      "text": "DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort"
+    },
+    {
+      "page": 40,
+      "text": "DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG"
+    },
+    {
+      "page": 41,
+      "text": "DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG \u25cf A cycle would have a left-pointing edge"
+    },
+    {
+      "page": 42,
+      "text": "DAGs and topological sorts Claim: A graph is a DAG iff it has a topological sort Easier direction: topological sort \u2192 DAG \u25cf A cycle would have a left-pointing edge Harder direction: DAG \u2192 topological sort"
+    },
+    {
+      "page": 43,
+      "text": "Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Sources and sinks"
+    },
+    {
+      "page": 44,
+      "text": "Sources and sinks Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Proof sketch: keep walking\u2026"
+    },
+    {
+      "page": 45,
+      "text": "Sources and sinks Every DAG has a source and a sink. \u25cf Source: indegree 0 (B, I) \u25cf Sink: outdegree 0 (D, F) Proof sketch: keep walking\u2026 Topological sort: remove a source and recurse"
+    },
+    {
+      "page": 46,
+      "text": "Information from a DFS Recall: \u25cf (u\u2192v) back edge \u2192 post(u) < post(v)"
+    },
+    {
+      "page": 47,
+      "text": "Information from a DFS Recall: \u25cf (u\u2192v) back edge \u2192 post(u) < post(v) In a DAG, post(u) > post(v) for every edge"
+    },
+    {
+      "page": 48,
+      "text": "Topological sorting Postorder traversal is a topological sort, but backwards Topological sort algorithm: 1. Do DFS. 2. Reverse postorder traversal."
+    },
+    {
+      "page": 49,
+      "text": "Topological sort from DFS"
+    },
+    {
+      "page": 50,
+      "text": "Topological sort from DFS"
+    },
+    {
+      "page": 51,
+      "text": "Topological sort from DFS"
+    },
+    {
+      "page": 52,
+      "text": "Topological sort from DFS"
+    },
+    {
+      "page": 53,
+      "text": "Topological sorting Postorder traversal is a topological sort, but backwards Topological sort algorithm: 1. Do DFS. O(|V| + |E|) 2. Reverse postorder traversal. O(|V|) Total runtime: O(|V| + |E|)"
+    }
+  ]
 }

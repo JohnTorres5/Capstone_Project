@@ -3,77 +3,507 @@
   "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 7,
+  "chunk_count": 50,
   "chunks": [
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-0",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Software Engineering CSC648/848 Henry VILLAR USABILITY TESTING Focus Groups 3 Usability Testing and Evaluation • Usability testing answers the question: is the product usable – mostly YES/NO, rarely provides design suggestions. • To develop usable product need to apply UCD (User Centered Design) from day one, usability testing only verifies the usability • QA is different from usability testing: QA checks if the product performs according to specs (functionality, performance, security, reliability, free of bugs etc.). Usually done before final usability testing • Note: product can perform per specs, pass the QA but still not be usable and vice versa! Important Usability testing vs. focus groups • Classic usability testing (testers run test plans and answer questionnaires) usually does NOT offer guidance on how to improve usability, it just validates “usable/not usable” and points to problems • Focus groups help integrate some usability testing with design and improvement guidance – highly recommended. Repeat often – follow UCD 4 Important Usability testing and focus groups • Usability testing: typical users given product and test cases; users test the system and answer questionnaire • Usually done toward the end of the cycle • Good for verification but gives little deign guidance how to improve • Focus groups (internal or external) – combine usability testing AND design improvements: preferred in early stages • 3-8 people in the room observe the product together and try use cases • Discuss problems, come up with better design • Scribe records the decisions /tasks (usually a lot of small details) • Changes made – keep the list of tasks and what was changed • Repeat and iterate (internally then externally) • Apply User Centered Design – do focus groups often starting early on design and implementation 5 Important Focus groups - Essential tool in developing requirements in UCD • http://en.wikipedia.org/wiki/Focus_group • “In usability engineering, a focus group is a survey method to collect the views of users on software or a website. This marketing method can be applied to computer products to better understand the motivations of users and their perception of the product. Unlike other methods of ergonomics, focus group implies several participants: users or future users of the application. The focus group can only collect subjective data, not objective data on the use of the application as the usability test for example.” • Can be done using mockups and prototypes Important Usability Metrics • The International Organization for Standardization (ISO) recommends that usability metrics should include: • Effectiveness: The accuracy and completeness with which users achieve specified goals • Efficiency: The resources expended in relation to the accuracy and completeness with which users achieve goals. • Satisfaction: The comfort and acceptability of use. 7 Important Usability Metrics: Effectiveness • First: test that available functions allow completion of main tasks/use cases • Measure task completion: % of people who completed the defined task in defined time • Count errors per task • One suggested way to implement: 8 Test/use case % completed errors comments search upload post Important Example of effectiveness issue • Function: upload content and metadata • Users: average computing skills • GUI functionality – two options to evaluate: 1. Upload text via WWW form OR 2. Upload content via command line interface FTP • Probably most will not be able to complete the"
+      "text": "Software Engineering CSC648/848"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-1",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "of people who completed the defined task in defined time • Count errors per task • One suggested way to implement: 8 Test/use case % completed errors comments search upload post Important Example of effectiveness issue • Function: upload content and metadata • Users: average computing skills • GUI functionality – two options to evaluate: 1. Upload text via WWW form OR 2. Upload content via command line interface FTP • Probably most will not be able to complete the test 2) although the function exists ➔ need to measure this 9 Usability Metrics: Efficiency • Efficiency in time: • average time to complete the task; • average time of those who completed the task/av. time of all users • Efficiency in effort: e.g. number of clicks • Efficiency in content/design: • number of screens; • Number of clicks • number of pages of instructions (Note: many of these can be instrumented in the app and measured automatically) 10 Important Example of efficiency issues • You need to annotate (view then assign tags) 500 images a day for experiment in Machine learning • GUI solution A – total of 5 clicks • Open file • Chose file • Open and View image • Annotate • Save annotation • Go back to open file (but what was the last image you sued there?) • GUI solution B – save 2 clicks, 10-15 sec. and less errors • Open and View image • Annotate • Save annotation and NEXT Savings: 500 images X 15 sec. = about 2 h/day!!!!!! Plus less fatigue and errors 11 Usability metrics: Satisfaction (subjective) • Task satisfaction: • Ask users to perform the task then run survey where user answers/rates how they “feel” about usability (e.g. Lickert scale questions) • Optional: allow users to enter comments Satisfaction testing is the main subject of the subsequent slides 12 Important 13 How easy was it to create VM? Very difficult Average Very easy Question 15: Example questionnaire – is it correct? Comments: << Previous Next >> END **** This OK? **** 14 It was easy to create VM Strongly agree Neutral Strongly disagree Question 15: Example questionnaire CORRECTED Comments: << Previous Next >> END Agree Disagree Important Statement, NOT a question User Centered Design and Usability testing • Recall UCD – involve users early and in all steps of design and development ➔ perform usability testing often and start early • Mockups and storyboard • “Horizontal prototypes” e.g. screens with no backend • Parts or whole product • APIs (even before implementation) • Final candidate products 15 Important 16 Usability Testing • Process that employs representative target population participants to evaluate product usability using specific usability criteria • Tests should cover key use cases • Usability testing is not a guarantee for product success, but it should identify at least the key problems • It answers the question “is the product usable” but usually does NOT offer guidance how to improve it (use focus groups for that) • There are many cases where usability testing and focus groups were wrong! • Good and practical book: J. Rubin: “Handbook of Usability testing”, Wiley Technical Communication Library, 1994 Important Typical usability test • Chose representative population • Get legal agreements in place • Let testers run test as per test plans"
+      "text": "Henry VILLAR USABILITY TESTING Focus Groups"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-2",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "least the key problems • It answers the question “is the product usable” but usually does NOT offer guidance how to improve it (use focus groups for that) • There are many cases where usability testing and focus groups were wrong! • Good and practical book: J. Rubin: “Handbook of Usability testing”, Wiley Technical Communication Library, 1994 Important Typical usability test • Chose representative population • Get legal agreements in place • Let testers run test as per test plans in chosen test environment • Collect questionnaires and measurements • Analyze results and present a report to developers, management etc. • Developers; take action on the results – revise, iterate and retest 17 Important 18 Types of usability tests Exploratory: • Early in the process • Can be based on any form of the GUI (sketch, wire diagrams etc.) • Evaluate preliminary, basic design concept • Perform representative tasks in a “shallow” mode • Informal test methodology, a lot of interaction • Discuss high level concepts 19 Types of usability tests Assessment • Done After fundamental concepts are done • Evaluates usability of lower level operations • The users actually perform set of well defined tasks • Less interaction with test monitor • Quantitative measurements are collected 20 Types of usability tests Validation • Done late in development cycle, close to release • Goal is to certify product usability, “disaster insurance” against launching a poor product • Often the first time when the whole product si tested (including help and docs) • Evaluate wrt. some predetermined usability standard or benchmark • Standards come from previous testing, competitive information, marketing etc. • Very specific quantitative tests • Can establish standards for future products • Can be also done by beta customers 21 Types of usability tests Comparison • Can be done at any point in the development cycle • Compare alternatives using objective measures • Can be informal of formal, depending when it is done • Often, best of alternative designs is combined Milestone 4: Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list) Objectives: • To make final commitment for functions to be delivered (e.g. list of Priority 1 functions) and which will be used in grading • To check that all required non-functional specs are satisfied or on track • To practice formal usability test plan development • To practice formal QA • To practice code review • To ensure basic practices of secure SE are applied • Ensure effective teamwork • Ensure software development is effective • Deliverable: • Document for review (around 8 pages) 1. Product summary 2. Usability test plan 3. QA test plan 4. Code Review 5. Self-check on best practices for security 6. Self-check: Adherence to original Non-functional specs M4-5 • Milestone 4. Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list). November 12th 2024 (W12) • Milestone 5. Final Demo and Documents for Grading. December 10th 2024 (W15) Final Project Main Functions • Web App: Voting Guide with AI+ 1. Search & Filter by state, political party and issues/policies. 2. Enter official information (political parties, voter registration, polling location, voting process, etc.) 3. Site Registration (College Students, General public, Officials, Admin, etc.). 4. Rate candidates. 5. Search results may be displayed using maps"
+      "text": "3 Usability Testing and Evaluation • Usability testing answers the question: is the product usable – mostly YES/NO, rarely provides design suggestions. • To develop usable product need to apply UCD (User Centered Design) from day one, usability testing only verifies the usability • QA is different from usability testing: QA checks if the product performs according to specs (functionality, performance, security, reliability, free of bugs etc.). Usually done before final usability testing • Note: product can perform per specs, pass the QA but still not be usable and vice versa! Important"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-3",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "and Final Commitment for Product Features (P1 list). November 12th 2024 (W12) • Milestone 5. Final Demo and Documents for Grading. December 10th 2024 (W15) Final Project Main Functions • Web App: Voting Guide with AI+ 1. Search & Filter by state, political party and issues/policies. 2. Enter official information (political parties, voter registration, polling location, voting process, etc.) 3. Site Registration (College Students, General public, Officials, Admin, etc.). 4. Rate candidates. 5. Search results may be displayed using maps 6. AI capabilities is a plus. Two entrepreneurs, SFSU alumni, decided to create a start-up comprising of a team of about 6+ students to develop a web- based service to help USA college students and general public to identify county, state, and federal/national candidates running for public offices and their respective policies, and background. The web application will allow officials from the different political parties to enter the corresponding official information, and the Elections office to enter information about voter registration, polling locations, and voting process. College students and general public should be able to search by state, political party and issues/policies so results can list the corresponding data, and at the same time; user (student and general public) can enter their issues of interest and the AI chatbot can assist them with mapping what candidates are aligned with the user interest. This application is targeting three primary audiences: (1) College Students, (2) General Public, and (3) Officials from the political parties and election office. Students and general public users should be able to rate candidates. Officials from political parties and election office may need to be registered to use all the functionality of the application. General users may access to limited search capabilities and application functionality. Search results may display maps. M3 Review ( Week 10) • Milestone 3. Review of functionality, UI, SW and planning for final product delivery • 07:30-07:50PM Team 6 • 07:50-08:10PM Team 5 • 08:10-08:30PM Team 4 • 08:30-08:50PM Team 3 • 08:50-09:10PM Team 2 • 09:10-09:30PM Team 1 Part 1: Each team meets with Prof. Villar Review of functionality, UI and general project status (Zoom) 1. UI and functionality feedback (P1 functions only) 2. Brief review of code, github, database etc. 3. Project status – be ready to verbally explain status of the issues below 4. List of P1 features committed for delivery agreed at M3 review meeting Part 2: Review offline • Send email with this data to ME and: • Durga Siva Lokesh Telaprolu (TA/Grader) at dtelaprolu@sfsu.edu Study Materials 28 Can you do usability on low- budget? Yes, you can • Make usability integral part of design and development. • Start from the beginning! Use use cases…. • Involve graphics, pubs, sales, support, marketing, QA. They are your UCD Multidisciplinary team. They will not only help but feel they are part of the process, and also will be educated ahead of time about the new product. • Use people in the company (but not from Engineering) and your friends • Offer rewards (lunch etc.) • Prioritize tests • Prepare simple plans • Get a quiet place and do it • Be aware of the limitations on result quality • Any approach is better than no usability testing Usability metrics as per ISO – good overview • http://ui-designer.net/usability/usersgoals.htm 29 Usability Testing -"
+      "text": "Usability testing vs. focus groups • Classic usability testing (testers run test plans and answer questionnaires) usually does NOT offer guidance on how to improve usability, it just validates “usable/not usable” and points to problems • Focus groups help integrate some usability testing with design and improvement guidance – highly recommended. Repeat often – follow UCD 4 Important"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-4",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
       "chunk_index": 4,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 5,
       "slide": null,
-      "text": "of the process, and also will be educated ahead of time about the new product. • Use people in the company (but not from Engineering) and your friends • Offer rewards (lunch etc.) • Prioritize tests • Prepare simple plans • Get a quiet place and do it • Be aware of the limitations on result quality • Any approach is better than no usability testing Usability metrics as per ISO – good overview • http://ui-designer.net/usability/usersgoals.htm 29 Usability Testing - Video https://www.youtube.com/watch?v=BrVnBdW6_rE 31 Usability testing: practical instructions • We will present some practical and simple instructions for usability testing • Note that for many culminating projects you will be required to do this • Formal plan has to be submitted for review to SFSU Human Subject Protocol committee (Federal rules) IF results will be published • Focus of subsequent slides is testing of user satisfaction (it is assumed that UI has been effective e.g. allows completion of key tasks) 32 Typical test plan format • Purpose: what is the main purpose of the test • Problem statement: specific questions you want resolved • Usability test/task plan : • describe actual tasks the user will perform – write it as instructions for the user • User profile: who will be the users • Method and test design: how will you observe it, how will you collect the data etc. • Test environment and equipment • Test monitor role • Evaluation measures and data to be collected: how will you collect the feedback and how will you evaluate it • Legal issues (voluntary, privacy) • Report: what will final report contain Important 33 Task selection for evaluation • Tasks/tests to be evaluated are functions users want to do with the product - You then measure and evaluate user feedback • Tasks/Tests: Cover only WHAT user has to do, NOT HOW to do it: Examples: • Create and file document • Find the right document • NOT: click on X, enter Y then click on Z…(this is QA not usability) • Objective is to indirectly expose usability flaws by asking the user to perform typical tasks and NOT telling them exactly how to do it. • Choose key and most frequently done tasks covering key use cases • The task has to be specific and measurable (quantitatively or qualitatively) Important 34 Task description • Correct: • Do X (I.e. load paper) • Not correct: • Do X by clicking here, then using this, then typing that… • It is deliberately left to the user to figure out HOW to accomplish the task and to grade ease of use, intuitiveness etc. Important 35 Task description TASK DESCRIPTION Task Load paper into copier Machine state Paper tray empty Successful completion criteria Paper properly loaded Benchmark Completed in 1 minute Do NOT tell them how! Important 36 Task components TASK DESCRIPTION Task Create VM using New VM Wizard Machine state VMware WS SW just loaded Successful completion criteria Working VM created Benchmark Completed in 30 sec. 37 Selection of evaluators and test groups • Evaluators should be representative of the targeted users – use your personas specification • Independent groups or within-subject design (but be careful to avoid exposing users to same tests since this will bias the results) • Adequate numbers of testers • Offer"
+      "text": "Usability testing and focus groups • Usability testing: typical users given product and test cases; users test the system and answer questionnaire • Usually done toward the end of the cycle • Good for verification but gives little deign guidance how to improve • Focus groups (internal or external) – combine usability testing AND design improvements: preferred in early stages • 3-8 people in the room observe the product together and try use cases • Discuss problems, come up with better design • Scribe records the decisions /tasks (usually a lot of small details) • Changes made – keep the list of tasks and what was changed • Repeat and iterate (internally then externally) • Apply User Centered Design – do focus groups often starting early on design and implementation 5 Important"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-5",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
       "chunk_index": 5,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 6,
       "slide": null,
-      "text": "36 Task components TASK DESCRIPTION Task Create VM using New VM Wizard Machine state VMware WS SW just loaded Successful completion criteria Working VM created Benchmark Completed in 30 sec. 37 Selection of evaluators and test groups • Evaluators should be representative of the targeted users – use your personas specification • Independent groups or within-subject design (but be careful to avoid exposing users to same tests since this will bias the results) • Adequate numbers of testers • Offer motivation and rewards but NOT bribes • Testers have to be informed of rules and sign the legal documents when required Important 38 Test environments • Simple single room setups • Observer/monitor close to evaluator • Observer removed from evaluator • Electronic observation room • Classic elaborate usability lab • Mobile lab Also: • Instrument the app as much as possible to measure: • Task completion efficiency (clicks, screens, time) • Errors 39 Legal, privacy issues • Serious legal and privacy issues related to managing the testers. Usually, tests have to be: • Voluntary • Anonymous • Can be abandoned at any time • US Government regulates “human subject testing” • Any grant funded work or work to be published at SFSU and other academic institutions has the have usability testing (e.g. “ human subjects”) protocol approved prior to commencement of the work Important 40 Questionnaires (for user satisfaction testing) Lickert scale • I found GUI easy to use (check one) __ Strongly disagree __ Disagree __ Neither agree or disagree __ Agree __ Strongly agree (can also assign numbers from –2 to 2) Semantic differentials • I found File Open menu (circle one) Simple 3 2 1 0 1 2 3 Complex Important Has to be a statement NOT a question 41 Questionnaires Fill in questions • I found the following aspects of GUI particularly easy to use (list 0-4 aspects) -------------------------- -------------------------- -------------------------- -------------------------- Important 42 Questionnaires Check-box • Please check the statement that best describes your usage of spell check --- I always use spell check --- I use spell check only when I have to --- I never use spell check Important 43 Questionnaires Branching questions • Would you rather use advanced search --- NO (skip to question 19) --- YES (continue) • What kind of advanced search would you like? (check one) --- Boolean --- Relevance Important 44 Example evaluation of on-line test 45 Summarizing preference results • Limited choice questions • Count how many participants selected each choice (number and %) – use bar charts • For Likert scale or semantic differentials provide • average and standard deviation of scores if there are enough evaluators • Histogram of user responses for each of 5 graded scale answers • Show % of testers who strongly agree/agree • Free form questions • List questions and group answers into categories, also into positive and negative answers • Free comments • List and group them at the end of the report. Options • By functions • Positive vs. negative Important 46 Hedgehog text annotations - example of usability results (S. Raghavendra) Statistical results: Strongly Disagree Disagree Neutral Agree Strongly Agree Process of adding annotations is easy and intuitive 0 0 1 4 1 The process of adding annotations is efficient 0 0 2 3 1 In real application,"
+      "text": "Focus groups - Essential tool in developing requirements in UCD • http://en.wikipedia.org/wiki/Focus_group • “In usability engineering, a focus group is a survey method to collect the views of users on software or a website. This marketing method can be applied to computer products to better understand the motivations of users and their perception of the product. Unlike other methods of ergonomics, focus group implies several participants: users or future users of the application. The focus group can only collect subjective data, not objective data on the use of the application as the usability test for example.” • Can be done using mockups and prototypes Important"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-6",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
       "chunk_index": 6,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 7,
       "slide": null,
-      "text": "answers into categories, also into positive and negative answers • Free comments • List and group them at the end of the report. Options • By functions • Positive vs. negative Important 46 Hedgehog text annotations - example of usability results (S. Raghavendra) Statistical results: Strongly Disagree Disagree Neutral Agree Strongly Agree Process of adding annotations is easy and intuitive 0 0 1 4 1 The process of adding annotations is efficient 0 0 2 3 1 In real application, I would use annotation 0 0 2 3 1 Process of searching annotations is easy and intuitive 0 1 2 2 1 Searching annotations is efficient 0 1 1 3 1 In real application you would use the search function 0 1 1 3 1 Process of viewing annotations is easy and intuitive 0 0 0 3 3 Viewing annotations is efficient 0 0 1 2 3 Too Clumsy Difficult to work with Very Intuitive Rate the look and feel of the user interface that you used to add, view and search annotations 1 1 4 47 Analyzing Data – high level summaries • Identify and focus on tasks that did not pass the test or showed significant problems • Identify user errors and difficulties • Identify sources of errors • Prioritize problems by criticality = severity AND probability of occurrence • Analyze differences between groups (if applicable) • Provide recommendations and prioritization at the end Important Important Resources re: focus groups • About • https://en.wikipedia.org/wiki/Focus_group • https://www.nngroup.com/articles/focus-groups/ • How to run focus groups • https://www.interaction-design.org/literature/article/how-to- conduct-focus-groups • http://www.cse.lehigh.edu/~glennb/mm/FocusGroups.htm • https://uxdesign.cc/asking-the-right-questions-on-user- research-interviews-and-testing-427261742a67 48 Important Future: UX testing in the era of on-line services and big data • Products not released is well orchestrated downloads but continuously available and modified (e.g. on-line services, on-line search) • UX testing is now augmented by “test-in-production” where UX testing is being continuously done from real customer usage • Data scientists and ML experts analyze and discover/predict user patterns and behaviors ➔ products are redesigned 49 Important Thank You"
+      "text": "Usability Metrics • The International Organization for Standardization (ISO) recommends that usability metrics should include: • Effectiveness: The accuracy and completeness with which users achieve specified goals • Efficiency: The resources expended in relation to the accuracy and completeness with which users achieve goals. • Satisfaction: The comfort and acceptability of use. 7 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-7",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Usability Metrics: Effectiveness • First: test that available functions allow completion of main tasks/use cases • Measure task completion: % of people who completed the defined task in defined time • Count errors per task • One suggested way to implement: 8 Test/use case % completed errors comments search upload post Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-8",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Example of effectiveness issue • Function: upload content and metadata • Users: average computing skills • GUI functionality – two options to evaluate: 1. Upload text via WWW form OR 2. Upload content via command line interface FTP • Probably most will not be able to complete the test 2) although the function exists ➔ need to measure this 9"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-9",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Usability Metrics: Efficiency • Efficiency in time: • average time to complete the task; • average time of those who completed the task/av. time of all users • Efficiency in effort: e.g. number of clicks • Efficiency in content/design: • number of screens; • Number of clicks • number of pages of instructions (Note: many of these can be instrumented in the app and measured automatically) 10 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-10",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Example of efficiency issues • You need to annotate (view then assign tags) 500 images a day for experiment in Machine learning • GUI solution A – total of 5 clicks • Open file • Chose file • Open and View image • Annotate • Save annotation • Go back to open file (but what was the last image you sued there?) • GUI solution B – save 2 clicks, 10-15 sec. and less errors • Open and View image • Annotate • Save annotation and NEXT Savings: 500 images X 15 sec. = about 2 h/day!!!!!! Plus less fatigue and errors 11"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-11",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Usability metrics: Satisfaction (subjective) • Task satisfaction: • Ask users to perform the task then run survey where user answers/rates how they “feel” about usability (e.g. Lickert scale questions) • Optional: allow users to enter comments Satisfaction testing is the main subject of the subsequent slides 12 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-12",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "13 How easy was it to create VM? Very difficult Average Very easy Question 15: Example questionnaire – is it correct? Comments: << Previous Next >> END **** This OK? ****"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-13",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "14 It was easy to create VM Strongly agree Neutral Strongly disagree Question 15: Example questionnaire CORRECTED Comments: << Previous Next >> END Agree Disagree Important Statement, NOT a question"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-14",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "User Centered Design and Usability testing • Recall UCD – involve users early and in all steps of design and development ➔ perform usability testing often and start early • Mockups and storyboard • “Horizontal prototypes” e.g. screens with no backend • Parts or whole product • APIs (even before implementation) • Final candidate products 15 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-15",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "16 Usability Testing • Process that employs representative target population participants to evaluate product usability using specific usability criteria • Tests should cover key use cases • Usability testing is not a guarantee for product success, but it should identify at least the key problems • It answers the question “is the product usable” but usually does NOT offer guidance how to improve it (use focus groups for that) • There are many cases where usability testing and focus groups were wrong! • Good and practical book: J. Rubin: “Handbook of Usability testing”, Wiley Technical Communication Library, 1994 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-16",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Typical usability test • Chose representative population • Get legal agreements in place • Let testers run test as per test plans in chosen test environment • Collect questionnaires and measurements • Analyze results and present a report to developers, management etc. • Developers; take action on the results – revise, iterate and retest 17 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-17",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "18 Types of usability tests Exploratory: • Early in the process • Can be based on any form of the GUI (sketch, wire diagrams etc.) • Evaluate preliminary, basic design concept • Perform representative tasks in a “shallow” mode • Informal test methodology, a lot of interaction • Discuss high level concepts"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-18",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "19 Types of usability tests Assessment • Done After fundamental concepts are done • Evaluates usability of lower level operations • The users actually perform set of well defined tasks • Less interaction with test monitor • Quantitative measurements are collected"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-19",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "20 Types of usability tests Validation • Done late in development cycle, close to release • Goal is to certify product usability, “disaster insurance” against launching a poor product • Often the first time when the whole product si tested (including help and docs) • Evaluate wrt. some predetermined usability standard or benchmark • Standards come from previous testing, competitive information, marketing etc. • Very specific quantitative tests • Can establish standards for future products • Can be also done by beta customers"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-20",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "21 Types of usability tests Comparison • Can be done at any point in the development cycle • Compare alternatives using objective measures • Can be informal of formal, depending when it is done • Often, best of alternative designs is combined"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-21",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Milestone 4: Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list) Objectives: • To make final commitment for functions to be delivered (e.g. list of Priority 1 functions) and which will be used in grading • To check that all required non-functional specs are satisfied or on track • To practice formal usability test plan development • To practice formal QA • To practice code review • To ensure basic practices of secure SE are applied • Ensure effective teamwork • Ensure software development is effective • Deliverable: • Document for review (around 8 pages) 1. Product summary 2. Usability test plan 3. QA test plan 4. Code Review 5. Self-check on best practices for security 6. Self-check: Adherence to original Non-functional specs"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-22",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "M4-5 • Milestone 4. Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list). November 12th 2024 (W12) • Milestone 5. Final Demo and Documents for Grading. December 10th 2024 (W15)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-23",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Final Project Main Functions • Web App: Voting Guide with AI+ 1. Search & Filter by state, political party and issues/policies. 2. Enter official information (political parties, voter registration, polling location, voting process, etc.) 3. Site Registration (College Students, General public, Officials, Admin, etc.). 4. Rate candidates. 5. Search results may be displayed using maps 6. AI capabilities is a plus. Two entrepreneurs, SFSU alumni, decided to create a start-up comprising of a team of about 6+ students to develop a web- based service to help USA college students and general public to identify county, state, and federal/national candidates running for public offices and their respective policies, and background. The web application will allow officials from the different political parties to enter the corresponding official information, and the Elections office to enter information about voter registration, polling locations, and voting process. College students and general public should be able to search by state, political party and issues/policies so results can list the corresponding data, and at the same time; user (student and general public) can enter their issues of interest and the AI chatbot can assist them with mapping what candidates are aligned with the user interest. This application is targeting three primary audiences: (1) College Students, (2) General Public, and (3) Officials from the political parties and election office. Students and general public users should be able to rate candidates. Officials from political parties and election office may need to be registered to use all the functionality of the application. General users may access to limited search capabilities and application functionality. Search results may display maps."
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-24",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "M3 Review ( Week 10) • Milestone 3. Review of functionality, UI, SW and planning for final product delivery • 07:30-07:50PM Team 6 • 07:50-08:10PM Team 5 • 08:10-08:30PM Team 4 • 08:30-08:50PM Team 3 • 08:50-09:10PM Team 2 • 09:10-09:30PM Team 1 Part 1: Each team meets with Prof. Villar Review of functionality, UI and general project status (Zoom) 1. UI and functionality feedback (P1 functions only) 2. Brief review of code, github, database etc. 3. Project status – be ready to verbally explain status of the issues below 4. List of P1 features committed for delivery agreed at M3 review meeting"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-25",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Part 2: Review offline • Send email with this data to ME and: • Durga Siva Lokesh Telaprolu (TA/Grader) at dtelaprolu@sfsu.edu"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-26",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Study Materials"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-27",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "28 Can you do usability on low- budget? Yes, you can • Make usability integral part of design and development. • Start from the beginning! Use use cases…. • Involve graphics, pubs, sales, support, marketing, QA. They are your UCD Multidisciplinary team. They will not only help but feel they are part of the process, and also will be educated ahead of time about the new product. • Use people in the company (but not from Engineering) and your friends • Offer rewards (lunch etc.) • Prioritize tests • Prepare simple plans • Get a quiet place and do it • Be aware of the limitations on result quality • Any approach is better than no usability testing"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-28",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Usability metrics as per ISO – good overview • http://ui-designer.net/usability/usersgoals.htm 29"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-29",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Usability Testing - Video https://www.youtube.com/watch?v=BrVnBdW6_rE"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-30",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "31 Usability testing: practical instructions • We will present some practical and simple instructions for usability testing • Note that for many culminating projects you will be required to do this • Formal plan has to be submitted for review to SFSU Human Subject Protocol committee (Federal rules) IF results will be published • Focus of subsequent slides is testing of user satisfaction (it is assumed that UI has been effective e.g. allows completion of key tasks)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-31",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "32 Typical test plan format • Purpose: what is the main purpose of the test • Problem statement: specific questions you want resolved • Usability test/task plan : • describe actual tasks the user will perform – write it as instructions for the user • User profile: who will be the users • Method and test design: how will you observe it, how will you collect the data etc. • Test environment and equipment • Test monitor role • Evaluation measures and data to be collected: how will you collect the feedback and how will you evaluate it • Legal issues (voluntary, privacy) • Report: what will final report contain Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-32",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "33 Task selection for evaluation • Tasks/tests to be evaluated are functions users want to do with the product - You then measure and evaluate user feedback • Tasks/Tests: Cover only WHAT user has to do, NOT HOW to do it: Examples: • Create and file document • Find the right document • NOT: click on X, enter Y then click on Z…(this is QA not usability) • Objective is to indirectly expose usability flaws by asking the user to perform typical tasks and NOT telling them exactly how to do it. • Choose key and most frequently done tasks covering key use cases • The task has to be specific and measurable (quantitatively or qualitatively) Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-33",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "34 Task description • Correct: • Do X (I.e. load paper) • Not correct: • Do X by clicking here, then using this, then typing that… • It is deliberately left to the user to figure out HOW to accomplish the task and to grade ease of use, intuitiveness etc. Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-34",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "35 Task description TASK DESCRIPTION Task Load paper into copier Machine state Paper tray empty Successful completion criteria Paper properly loaded Benchmark Completed in 1 minute Do NOT tell them how! Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-35",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "36 Task components TASK DESCRIPTION Task Create VM using New VM Wizard Machine state VMware WS SW just loaded Successful completion criteria Working VM created Benchmark Completed in 30 sec."
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-36",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "37 Selection of evaluators and test groups • Evaluators should be representative of the targeted users – use your personas specification • Independent groups or within-subject design (but be careful to avoid exposing users to same tests since this will bias the results) • Adequate numbers of testers • Offer motivation and rewards but NOT bribes • Testers have to be informed of rules and sign the legal documents when required Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-37",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "38 Test environments • Simple single room setups • Observer/monitor close to evaluator • Observer removed from evaluator • Electronic observation room • Classic elaborate usability lab • Mobile lab Also: • Instrument the app as much as possible to measure: • Task completion efficiency (clicks, screens, time) • Errors"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-38",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "39 Legal, privacy issues • Serious legal and privacy issues related to managing the testers. Usually, tests have to be: • Voluntary • Anonymous • Can be abandoned at any time • US Government regulates “human subject testing” • Any grant funded work or work to be published at SFSU and other academic institutions has the have usability testing (e.g. “ human subjects”) protocol approved prior to commencement of the work Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-39",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "40 Questionnaires (for user satisfaction testing) Lickert scale • I found GUI easy to use (check one) __ Strongly disagree __ Disagree __ Neither agree or disagree __ Agree __ Strongly agree (can also assign numbers from –2 to 2) Semantic differentials • I found File Open menu (circle one) Simple 3 2 1 0 1 2 3 Complex Important Has to be a statement NOT a question"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-40",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "41 Questionnaires Fill in questions • I found the following aspects of GUI particularly easy to use (list 0-4 aspects) -------------------------- -------------------------- -------------------------- -------------------------- Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-41",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "42 Questionnaires Check-box • Please check the statement that best describes your usage of spell check --- I always use spell check --- I use spell check only when I have to --- I never use spell check Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-42",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "43 Questionnaires Branching questions • Would you rather use advanced search --- NO (skip to question 19) --- YES (continue) • What kind of advanced search would you like? (check one) --- Boolean --- Relevance Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-43",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "44 Example evaluation of on-line test"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-44",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "45 Summarizing preference results • Limited choice questions • Count how many participants selected each choice (number and %) – use bar charts • For Likert scale or semantic differentials provide • average and standard deviation of scores if there are enough evaluators • Histogram of user responses for each of 5 graded scale answers • Show % of testers who strongly agree/agree • Free form questions • List questions and group answers into categories, also into positive and negative answers • Free comments • List and group them at the end of the report. Options • By functions • Positive vs. negative Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-45",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "46 Hedgehog text annotations - example of usability results (S. Raghavendra) Statistical results: Strongly Disagree Disagree Neutral Agree Strongly Agree Process of adding annotations is easy and intuitive 0 0 1 4 1 The process of adding annotations is efficient 0 0 2 3 1 In real application, I would use annotation 0 0 2 3 1 Process of searching annotations is easy and intuitive 0 1 2 2 1 Searching annotations is efficient 0 1 1 3 1 In real application you would use the search function 0 1 1 3 1 Process of viewing annotations is easy and intuitive 0 0 0 3 3 Viewing annotations is efficient 0 0 1 2 3 Too Clumsy Difficult to work with Very Intuitive Rate the look and feel of the user interface that you used to add, view and search annotations 1 1 4"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-46",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "47 Analyzing Data – high level summaries • Identify and focus on tasks that did not pass the test or showed significant problems • Identify user errors and difficulties • Identify sources of errors • Prioritize problems by criticality = severity AND probability of occurrence • Analyze differences between groups (if applicable) • Provide recommendations and prioritization at the end Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-47",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Important Resources re: focus groups • About • https://en.wikipedia.org/wiki/Focus_group • https://www.nngroup.com/articles/focus-groups/ • How to run focus groups • https://www.interaction-design.org/literature/article/how-to- conduct-focus-groups • http://www.cse.lehigh.edu/~glennb/mm/FocusGroups.htm • https://uxdesign.cc/asking-the-right-questions-on-user- research-interviews-and-testing-427261742a67 48 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-48",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Future: UX testing in the era of on-line services and big data • Products not released is well orchestrated downloads but continuously available and modified (e.g. on-line services, on-line search) • UX testing is now augmented by “test-in-production” where UX testing is being continuously done from real customer usage • Data scientists and ML experts analyze and discover/predict user patterns and behaviors ➔ products are redesigned 49 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s)-49",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C10 Usability Testing and Focus Groups (s).pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Thank You"
     }
   ]
 }

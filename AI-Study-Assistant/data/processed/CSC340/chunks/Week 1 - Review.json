@@ -3,27 +3,127 @@
   "source_file": "Week 1 - Review.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 2,
+  "chunk_count": 12,
   "chunks": [
     {
       "chunk_id": "Week 1 - Review-0",
       "course": "CSC340",
       "source_file": "Week 1 - Review.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Welcome to CSC 340-02 Programming Methodology Instructor: Joseph Hui Email: jhui@sfsu.edu Projects for this class • Lectures will go fast, and missing lectures is not advised • Going to discuss and work on industry/real world problems • Use of Gen AI is discouraged • Generated code must be cited as such • Each Project will build on the previous Project • Missing a Project will still need to be done before subsequent Projects Milestone Overview – Cache Manager 0 1 2 3 4 5 6 7 8 9 10 67 34 23 80 9 86 42 53 Oldest Newest 80 53 42 23 34 9 86 67 Milestone 1 - FIFO List 9 34 53 80 23 67 42 86 Milestone 4 BST(s) Milestone 2 Hashtable Milestone 3 Combine 1 & 2 Milestone 5 Combine 3-4 Expected Class Norm • Respect each other • Listen to each other • Learn from mistakes • Consciously cultivate joy in learning • Actively participate during each lecture • Offer the instructor and each other timely and constructive feedback/suggestions • Grow together • Anything else you would like to add to this list? Class Content • Programming Methodology • What is Programming Methodology? • Introduction to C++ • Syntax, memory management, STL, C++ versus Java • Advanced Data Structures • More coverage of Data Structures studied in CSC 220 Class Overview • CSC 340 is one of the first upper division classes for CSC • This is a difficult class with a lot of ground to cover • Feedback from previous students is that I go very fast • Much less hand holding, so you’ll need to learn how to learn • Similar to how working in industry will be • My Expectation is to work on class homework 10-15 hours/week • Reading assignments are to be read BEFORE class (Appendix K, A, B) Expectations for the Class • C++ expertise • No, this class will not make you a C++ expert • Data Structures expertise • No, this class will not make you a Data Structures expert • Problem Solving expertise • No, this class will not make you a Problem Solving expert • What will this class supply? • Foundation for each of the above topics Professionally written code • Effective and efficient • Does what it is supposed to do • Does not consume more CPU or memory than needed • Performant • Stable/Reliable • Maintainability • Human understandable • Take advantage of Libraries and Frameworks • Documentation, Documentation, and more Documentation • Testing • Modular • Break large problems into smaller problems • Larger methods are generally harder to reuse When to use a particular Data Structure • Go over scenarios and decide which Data Structure to use • Scenarios will be from Job Interview Questions • Almost all interviews for software development have Data Structure questions • My personal favorites, as well as interview questions on web • The one skill I want you to develop in this class, is the ability to analyze a problem and determine which Data Structure(s) to use to solve it. • Good for Job Interviews • But, more importantly, it’s good to know for your career Programming Style • Writing easy to read and effective programs is a skill • Strive to be"
+      "text": "Welcome to CSC 340-02 Programming Methodology Instructor: Joseph Hui Email: jhui@sfsu.edu"
     },
     {
       "chunk_id": "Week 1 - Review-1",
       "course": "CSC340",
       "source_file": "Week 1 - Review.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "for software development have Data Structure questions • My personal favorites, as well as interview questions on web • The one skill I want you to develop in this class, is the ability to analyze a problem and determine which Data Structure(s) to use to solve it. • Good for Job Interviews • But, more importantly, it’s good to know for your career Programming Style • Writing easy to read and effective programs is a skill • Strive to be always write clear and understandable code • 90% of the cost for industry code is for maintenance • Clear and understandable code is maintainable code • Follow corporate coding standards • Good names for variables and methods • Always create File and Method comment headers • Comment the code for the next person • Liberal use of whitespace Generative AI as a Crutch • Dependence on Generative AI can be detrimental to your skills • ~80% of generated code is good (this will improve) • How will you determine which 20% is not so good? • Experience is needed to determine good from not so good • Experience comes from practice and more practice Closing Words on Programming Methodology “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” Martin Fowler Author of multiple OO and UML texts"
+      "text": "Projects for this class • Lectures will go fast, and missing lectures is not advised • Going to discuss and work on industry/real world problems • Use of Gen AI is discouraged • Generated code must be cited as such • Each Project will build on the previous Project • Missing a Project will still need to be done before subsequent Projects"
+    },
+    {
+      "chunk_id": "Week 1 - Review-2",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 2,
+      "chunk_in_page": 0,
+      "page": 3,
+      "slide": null,
+      "text": "Milestone Overview – Cache Manager 0 1 2 3 4 5 6 7 8 9 10 67 34 23 80 9 86 42 53 Oldest Newest 80 53 42 23 34 9 86 67 Milestone 1 - FIFO List 9 34 53 80 23 67 42 86 Milestone 4 BST(s) Milestone 2 Hashtable Milestone 3 Combine 1 & 2 Milestone 5 Combine 3-4"
+    },
+    {
+      "chunk_id": "Week 1 - Review-3",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Expected Class Norm • Respect each other • Listen to each other • Learn from mistakes • Consciously cultivate joy in learning • Actively participate during each lecture • Offer the instructor and each other timely and constructive feedback/suggestions • Grow together • Anything else you would like to add to this list?"
+    },
+    {
+      "chunk_id": "Week 1 - Review-4",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Class Content • Programming Methodology • What is Programming Methodology? • Introduction to C++ • Syntax, memory management, STL, C++ versus Java • Advanced Data Structures • More coverage of Data Structures studied in CSC 220"
+    },
+    {
+      "chunk_id": "Week 1 - Review-5",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Class Overview • CSC 340 is one of the first upper division classes for CSC • This is a difficult class with a lot of ground to cover • Feedback from previous students is that I go very fast • Much less hand holding, so you’ll need to learn how to learn • Similar to how working in industry will be • My Expectation is to work on class homework 10-15 hours/week • Reading assignments are to be read BEFORE class (Appendix K, A, B)"
+    },
+    {
+      "chunk_id": "Week 1 - Review-6",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Expectations for the Class • C++ expertise • No, this class will not make you a C++ expert • Data Structures expertise • No, this class will not make you a Data Structures expert • Problem Solving expertise • No, this class will not make you a Problem Solving expert • What will this class supply? • Foundation for each of the above topics"
+    },
+    {
+      "chunk_id": "Week 1 - Review-7",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Professionally written code • Effective and efficient • Does what it is supposed to do • Does not consume more CPU or memory than needed • Performant • Stable/Reliable • Maintainability • Human understandable • Take advantage of Libraries and Frameworks • Documentation, Documentation, and more Documentation • Testing • Modular • Break large problems into smaller problems • Larger methods are generally harder to reuse"
+    },
+    {
+      "chunk_id": "Week 1 - Review-8",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "When to use a particular Data Structure • Go over scenarios and decide which Data Structure to use • Scenarios will be from Job Interview Questions • Almost all interviews for software development have Data Structure questions • My personal favorites, as well as interview questions on web • The one skill I want you to develop in this class, is the ability to analyze a problem and determine which Data Structure(s) to use to solve it. • Good for Job Interviews • But, more importantly, it’s good to know for your career"
+    },
+    {
+      "chunk_id": "Week 1 - Review-9",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Programming Style • Writing easy to read and effective programs is a skill • Strive to be always write clear and understandable code • 90% of the cost for industry code is for maintenance • Clear and understandable code is maintainable code • Follow corporate coding standards • Good names for variables and methods • Always create File and Method comment headers • Comment the code for the next person • Liberal use of whitespace"
+    },
+    {
+      "chunk_id": "Week 1 - Review-10",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Generative AI as a Crutch • Dependence on Generative AI can be detrimental to your skills • ~80% of generated code is good (this will improve) • How will you determine which 20% is not so good? • Experience is needed to determine good from not so good • Experience comes from practice and more practice"
+    },
+    {
+      "chunk_id": "Week 1 - Review-11",
+      "course": "CSC340",
+      "source_file": "Week 1 - Review.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Closing Words on Programming Methodology “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” Martin Fowler Author of multiple OO and UML texts"
     }
   ]
 }

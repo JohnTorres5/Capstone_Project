@@ -3,57 +3,497 @@
   "source_file": "Week 11 - Review.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 5,
+  "chunk_count": 49,
   "chunks": [
     {
       "chunk_id": "Week 11 - Review-0",
       "course": "CSC340",
       "source_file": "Week 11 - Review.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "CSC 340-03 Programming Methodology Week 12 • Review Week 11 Instructor: Joseph Hui Email: jhui@sfsu.edu Basic Sorting Algorithms • The Selection Sort • The Bubble Sort • The Insertion Sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Selection Sort • Select the largest item – Place in last position • Select the next largest item – Place in 2nd to last position • Repeat for remaining unsorted items – Requires several passes over the data © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Selection Sort FIGURE 11-1 A selection sort of an array of five integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved • To sort an array into ascending order, you first search for the largest item. • Place largest item in the last position of the array • Swap the last item with the largest item, even if these items happen to be identical. • Repeat The Selection Sort LISTING 11-1 An implementation of the selection sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Note this is a nested loop for n The Selection Sort • Analysis – Selection sort is O(n2) – Appropriate for small n – O(n2) grows rapidly • Could be a good choice when – Data moves are costly, – But comparisons are not © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Easy to understand – Minimal additional space required • Cons – O(n2) – slow – Does not preserve relative order of items with equal keys (not stable) – Potentially suitable for low volume only The Bubble Sort • Compares adjacent items – Exchanges them if out of order – Requires several passes over the data • When ordering successive pairs – Largest item bubbles to end of the array © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Bubble Sort FIGURE 11-2 First two passes of a bubble sort of an array of five integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Bubble Sort LISTING 11-2 An implementation of the bubble sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Note this is a nested loop for n The Bubble Sort • Analysis – Worst case O(n2) – Best case (array already in order) is O(n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Easy to understand – No additional space required – Preserves relative order of items with equal keys (stable) • Cons – O(n2) – slow – Potentially suitable for low volume only The Insertion Sort • Take each item from unsorted region – Insert it into correct order in sorted region © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 11-3 An insertion sort partitions the array into two regions The Insertion Sort FIGURE 11-4 An insertion sort of an array of five integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved Sorted region The Insertion Sort LISTING 11-3 An implementation of the insertion sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Insertion Sort LISTING 11-3 An implementation of the insertion sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Note this is a nested loop for n The Insertion Sort • Analysis – Worst case O(n2) – Best case (array"
+      "text": "CSC 340-03 Programming Methodology Week 12 • Review Week 11 Instructor: Joseph Hui Email: jhui@sfsu.edu"
     },
     {
       "chunk_id": "Week 11 - Review-1",
       "course": "CSC340",
       "source_file": "Week 11 - Review.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "insertion sort of an array of five integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved Sorted region The Insertion Sort LISTING 11-3 An implementation of the insertion sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Insertion Sort LISTING 11-3 An implementation of the insertion sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Note this is a nested loop for n The Insertion Sort • Analysis – Worst case O(n2) – Best case (array already in order) is O(n) • Unsuitable for large arrays – Unless already sorted © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Easy to understand – No additional space required – Preserves relative order of items with equal keys (stable) • Cons – O(n2) – slow – Potentially suitable for low volume only Faster Sorting Algorithms • The Merge Sort • The Quick Sort • The Radix Sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Merge Sort FIGURE 11-5 A merge sort with an auxiliary temporary array © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Divide and conquer sorting algorithm • Halve the array, sort its halves, and then merge the halves Merge Sort FIGURE 11-6 A merge sort of an array of six integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved Merge Sort Pseudocode for the merge sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Merge Sort • Analysis – O(n log n) – Worse case O(n log n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Performs well even on large number of items – Simple to implement – Preserves relative order of items with equal keys (stable) • Cons – Requires additional memory O(n) – Requires copying of entries The Quick Sort • Another divide-and-conquer algorithm ⁻ Choose a pivot ⁻ Partition an array into items that are oLess than or equal to the pivot and oThose that are greater than or equal to the pivot ⁻ Recursively apply the same process to the partitioned sub-arrays ⁻ Recursion stops when there is one element remaining in the sub-array © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Quick Sort FIGURE 11-9 A partition about a pivot © 2017 Pearson Education, Hoboken, NJ. All rights reserved Quick sort algorithm 1. Choose a pivot 2. Partition the array 3. Recursively call The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved 1. Choose a pivot 2. Start left to right, find 1st entry that is >= pivot 3. Start right to left, find 1st entry that is <= pivot 4. if indexFromLeft is less than indexFromRight, swap the two entries, else search ends 5. Continue left and right searches The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved 6. Find next entry that is >= pivot 7. Find next entry that is <= pivot 8. if indexFromLeft is less than indexFromRight, swap the two entries, else search ends 9. Continue left and right searches The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All"
+      "text": "Basic Sorting Algorithms • The Selection Sort • The Bubble Sort • The Insertion Sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 11 - Review-2",
       "course": "CSC340",
       "source_file": "Week 11 - Review.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved 6. Find next entry that is >= pivot 7. Find next entry that is <= pivot 8. if indexFromLeft is less than indexFromRight, swap the two entries, else search ends 9. Continue left and right searches The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved 10. Find next entry that is >= pivot 11. Find next entry that is <= pivot 12. if indexFromLeft is less than indexFromRight, swap the two entries, else search ends 13. place the pivot between the subarrays S1 and S2 by swapping a[indexFromLeft] and a[last]; partition complete 14. Recursively call The Quick Sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved •Pivot selection goal • Subarrays each have the same or nearly the same number of entries •Pivot selection strategy • Last entry • First entry • Middle entry • Median-of-three The Quick Sort • Analysis – Partitioning is an O(n) task – There are either log2 n or 1 + log2 n levels of recursive calls to quickSort. • We conclude – Worst case O(n2) – Average case O(n log n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Divide and conquer algorithm that is efficient on large number of items – No additional memory required • Cons – Worst case O(n2) – Does not preserve relative order of items with equal keys (not stable) The Radix Sort • Different from other sorts – Does not compare entries in an array • Begins by organizing data (say strings) according to least significant letters – Then combine the groups • Next form groups using next least significant letter © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Radix Sort FIGURE 11-13 A radix sort of eight integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Radix Sort • Analysis – Requires n moves each time it forms groups – n moves to combine again into one group – Performs these 2 × n moves d times – Thus requires 2 × n × d moves – More appropriate for chain of linked lists than for an array • Radix sort is of order O(n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Radix sort is of order O(n) – Often faster than merge sort or quick sort for large number of items – Preserves relative order of items with equal keys (stable) • Cons – Time complexity grows linearly with the number of digits – Requires same size keys, with standard way of breaking the keys into pieces A Comparison of Sorting Algorithms FIGURE 11-14 Approximate growth rates of time required for eight sorting algorithms © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation Figure 16-2 Most common way of implementing a tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Constructors ©"
+      "text": "The Selection Sort • Select the largest item – Place in last position • Select the next largest item – Place in 2nd to last position • Repeat for remaining unsorted items – Requires several passes over the data © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 11 - Review-3",
       "course": "CSC340",
       "source_file": "Week 11 - Review.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "growth rates of time required for eight sorting algorithms © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation Figure 16-2 Most common way of implementing a tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Constructors © 2017 Pearson Education, Hoboken, NJ. All rights reserved set the value of rootPtr to nullptr sets rootPtr to point to a new node containing the given data item sets rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees The Implementation Protected method copyTree called by copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node The Implementation destroyTree used by destructor which simply calls this method © 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse it in postorder and delete The Implementation Protected method getHeightHelper © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-7 Adding Kody to a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If you take the output of a preorder traversal of a binary search tree and use it with insertInorder to create a binary search tree, you will obtain a duplicate tree. Tree (a) was used in previous chapter. • The copy constructor for the ADT binary tree used a preorder traversal to copy the tree. • To insert Kody, search the BST, and search algorithm would terminate at Mia’s left child Link-Based Implementation of the ADT Binary Search Tree 3 cases for removing node N: 1. N is a leaf o Remove leaf containing target o Set pointer in parent to nullptr 2. N has only left (or right) child – cases are symmetrical o After N removed, all data items rooted at L (or R) are adopted by root of N o All items adopted are in correct order, binary search tree property preserved 3. N has two children o Locate another node M easier to remove from tree than N o Copy item that is in M to N o Remove M from tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor © 2017 Pearson Education, Hoboken, NJ."
+      "text": "The Selection Sort FIGURE 11-1 A selection sort of an array of five integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved • To sort an array into ascending order, you first search for the largest item. • Place largest item in the last position of the array • Swap the last item with the largest item, even if these items happen to be identical. • Repeat"
     },
     {
       "chunk_id": "Week 11 - Review-4",
       "course": "CSC340",
       "source_file": "Week 11 - Review.pdf",
       "chunk_index": 4,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 5,
       "slide": null,
-      "text": "Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor © 2017 Pearson Education, Hoboken, NJ. All rights reserved • inorder successor of a data item is the leftmost node of N’s right subtree. Link-Based Implementation of the ADT Binary Search Tree https://www.javatpoint.com/deletion-in-binary-search-tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-16 A full tree saved in a file by using inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved Tree Sort Tree sort uses a binary search tree. © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Tree sort: • Insertion into BST is O(log n) in the average case, and O(n) in the worse case • Thus, insertion into BST is O(n × log n) in the average case, and O(n2) in the worst case • Traversal involves one copy: O(n) • Thus, tree sort is O(n × log n) in the average case, and O(n2) in the worst case General Trees FIGURE 16-19 An implementation of a general tree and its equivalent binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved General Trees FIGURE 16-20 An implementation of the n-ary tree in Figure 16-18 © 2017 Pearson Education, Hoboken, NJ. All rights reserved End"
+      "text": "The Selection Sort LISTING 11-1 An implementation of the selection sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Note this is a nested loop for n"
+    },
+    {
+      "chunk_id": "Week 11 - Review-5",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "The Selection Sort • Analysis – Selection sort is O(n2) – Appropriate for small n – O(n2) grows rapidly • Could be a good choice when – Data moves are costly, – But comparisons are not © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Easy to understand – Minimal additional space required • Cons – O(n2) – slow – Does not preserve relative order of items with equal keys (not stable) – Potentially suitable for low volume only"
+    },
+    {
+      "chunk_id": "Week 11 - Review-6",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "The Bubble Sort • Compares adjacent items – Exchanges them if out of order – Requires several passes over the data • When ordering successive pairs – Largest item bubbles to end of the array © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-7",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "The Bubble Sort FIGURE 11-2 First two passes of a bubble sort of an array of five integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-8",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "The Bubble Sort LISTING 11-2 An implementation of the bubble sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Note this is a nested loop for n"
+    },
+    {
+      "chunk_id": "Week 11 - Review-9",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "The Bubble Sort • Analysis – Worst case O(n2) – Best case (array already in order) is O(n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Easy to understand – No additional space required – Preserves relative order of items with equal keys (stable) • Cons – O(n2) – slow – Potentially suitable for low volume only"
+    },
+    {
+      "chunk_id": "Week 11 - Review-10",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "The Insertion Sort • Take each item from unsorted region – Insert it into correct order in sorted region © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 11-3 An insertion sort partitions the array into two regions"
+    },
+    {
+      "chunk_id": "Week 11 - Review-11",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "The Insertion Sort FIGURE 11-4 An insertion sort of an array of five integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved Sorted region"
+    },
+    {
+      "chunk_id": "Week 11 - Review-12",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "The Insertion Sort LISTING 11-3 An implementation of the insertion sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-13",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "The Insertion Sort LISTING 11-3 An implementation of the insertion sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved Note this is a nested loop for n"
+    },
+    {
+      "chunk_id": "Week 11 - Review-14",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "The Insertion Sort • Analysis – Worst case O(n2) – Best case (array already in order) is O(n) • Unsuitable for large arrays – Unless already sorted © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Easy to understand – No additional space required – Preserves relative order of items with equal keys (stable) • Cons – O(n2) – slow – Potentially suitable for low volume only"
+    },
+    {
+      "chunk_id": "Week 11 - Review-15",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Faster Sorting Algorithms • The Merge Sort • The Quick Sort • The Radix Sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-16",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Merge Sort FIGURE 11-5 A merge sort with an auxiliary temporary array © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Divide and conquer sorting algorithm • Halve the array, sort its halves, and then merge the halves"
+    },
+    {
+      "chunk_id": "Week 11 - Review-17",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Merge Sort FIGURE 11-6 A merge sort of an array of six integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-18",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Merge Sort Pseudocode for the merge sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-19",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Merge Sort • Analysis – O(n log n) – Worse case O(n log n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Performs well even on large number of items – Simple to implement – Preserves relative order of items with equal keys (stable) • Cons – Requires additional memory O(n) – Requires copying of entries"
+    },
+    {
+      "chunk_id": "Week 11 - Review-20",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "The Quick Sort • Another divide-and-conquer algorithm ⁻ Choose a pivot ⁻ Partition an array into items that are oLess than or equal to the pivot and oThose that are greater than or equal to the pivot ⁻ Recursively apply the same process to the partitioned sub-arrays ⁻ Recursion stops when there is one element remaining in the sub-array © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-21",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "The Quick Sort FIGURE 11-9 A partition about a pivot © 2017 Pearson Education, Hoboken, NJ. All rights reserved Quick sort algorithm 1. Choose a pivot 2. Partition the array 3. Recursively call"
+    },
+    {
+      "chunk_id": "Week 11 - Review-22",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved 1. Choose a pivot 2. Start left to right, find 1st entry that is >= pivot 3. Start right to left, find 1st entry that is <= pivot 4. if indexFromLeft is less than indexFromRight, swap the two entries, else search ends 5. Continue left and right searches"
+    },
+    {
+      "chunk_id": "Week 11 - Review-23",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved 6. Find next entry that is >= pivot 7. Find next entry that is <= pivot 8. if indexFromLeft is less than indexFromRight, swap the two entries, else search ends 9. Continue left and right searches"
+    },
+    {
+      "chunk_id": "Week 11 - Review-24",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "The Quick Sort FIGURE 11-10 A partitioning of an array during a quick sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved 10. Find next entry that is >= pivot 11. Find next entry that is <= pivot 12. if indexFromLeft is less than indexFromRight, swap the two entries, else search ends 13. place the pivot between the subarrays S1 and S2 by swapping a[indexFromLeft] and a[last]; partition complete 14. Recursively call"
+    },
+    {
+      "chunk_id": "Week 11 - Review-25",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "The Quick Sort © 2017 Pearson Education, Hoboken, NJ. All rights reserved •Pivot selection goal • Subarrays each have the same or nearly the same number of entries •Pivot selection strategy • Last entry • First entry • Middle entry • Median-of-three"
+    },
+    {
+      "chunk_id": "Week 11 - Review-26",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "The Quick Sort • Analysis – Partitioning is an O(n) task – There are either log2 n or 1 + log2 n levels of recursive calls to quickSort. • We conclude – Worst case O(n2) – Average case O(n log n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Divide and conquer algorithm that is efficient on large number of items – No additional memory required • Cons – Worst case O(n2) – Does not preserve relative order of items with equal keys (not stable)"
+    },
+    {
+      "chunk_id": "Week 11 - Review-27",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "The Radix Sort • Different from other sorts – Does not compare entries in an array • Begins by organizing data (say strings) according to least significant letters – Then combine the groups • Next form groups using next least significant letter © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-28",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "The Radix Sort FIGURE 11-13 A radix sort of eight integers © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-29",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "The Radix Sort • Analysis – Requires n moves each time it forms groups – n moves to combine again into one group – Performs these 2 × n moves d times – Thus requires 2 × n × d moves – More appropriate for chain of linked lists than for an array • Radix sort is of order O(n) © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Pros – Radix sort is of order O(n) – Often faster than merge sort or quick sort for large number of items – Preserves relative order of items with equal keys (stable) • Cons – Time complexity grows linearly with the number of digits – Requires same size keys, with standard way of breaking the keys into pieces"
+    },
+    {
+      "chunk_id": "Week 11 - Review-30",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "A Comparison of Sorting Algorithms FIGURE 11-14 Approximate growth rates of time required for eight sorting algorithms © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-31",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Link-Based Representation Figure 16-2 Most common way of implementing a tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-32",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion"
+    },
+    {
+      "chunk_id": "Week 11 - Review-33",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "The Implementation Constructors © 2017 Pearson Education, Hoboken, NJ. All rights reserved set the value of rootPtr to nullptr sets rootPtr to point to a new node containing the given data item sets rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees"
+    },
+    {
+      "chunk_id": "Week 11 - Review-34",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "The Implementation Protected method copyTree called by copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node"
+    },
+    {
+      "chunk_id": "Week 11 - Review-35",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "The Implementation destroyTree used by destructor which simply calls this method © 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse it in postorder and delete"
+    },
+    {
+      "chunk_id": "Week 11 - Review-36",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "The Implementation Protected method getHeightHelper © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-37",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-7 Adding Kody to a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If you take the output of a preorder traversal of a binary search tree and use it with insertInorder to create a binary search tree, you will obtain a duplicate tree. Tree (a) was used in previous chapter. • The copy constructor for the ADT binary tree used a preorder traversal to copy the tree. • To insert Kody, search the BST, and search algorithm would terminate at Mia’s left child"
+    },
+    {
+      "chunk_id": "Week 11 - Review-38",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree 3 cases for removing node N: 1. N is a leaf o Remove leaf containing target o Set pointer in parent to nullptr 2. N has only left (or right) child – cases are symmetrical o After N removed, all data items rooted at L (or R) are adopted by root of N o All items adopted are in correct order, binary search tree property preserved 3. N has two children o Locate another node M easier to remove from tree than N o Copy item that is in M to N o Remove M from tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-39",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-40",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-41",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-42",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor © 2017 Pearson Education, Hoboken, NJ. All rights reserved • inorder successor of a data item is the leftmost node of N’s right subtree."
+    },
+    {
+      "chunk_id": "Week 11 - Review-43",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree https://www.javatpoint.com/deletion-in-binary-search-tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-44",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Saving a Binary Search Tree in a File FIGURE 16-16 A full tree saved in a file by using inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-45",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Tree Sort Tree sort uses a binary search tree. © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Tree sort: • Insertion into BST is O(log n) in the average case, and O(n) in the worse case • Thus, insertion into BST is O(n × log n) in the average case, and O(n2) in the worst case • Traversal involves one copy: O(n) • Thus, tree sort is O(n × log n) in the average case, and O(n2) in the worst case"
+    },
+    {
+      "chunk_id": "Week 11 - Review-46",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "General Trees FIGURE 16-19 An implementation of a general tree and its equivalent binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-47",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "General Trees FIGURE 16-20 An implementation of the n-ary tree in Figure 16-18 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - Review-48",
+      "course": "CSC340",
+      "source_file": "Week 11 - Review.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "End"
     }
   ]
 }

@@ -3,37 +3,907 @@
   "source_file": "week11_mst.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 3,
+  "chunk_count": 90,
   "chunks": [
     {
       "chunk_id": "week11_mst-0",
       "course": "CSC510",
       "source_file": "week11_mst.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Minimum Spanning Trees Prof. Timothy Sun Goal: add power lines to give power to each city Setting up a power grid Goal: add power lines to give power to each city Setting up a power grid Goal: add power lines to give power to each city, minimizing cost Setting up a power grid Only need to include some of the edges to maintain connectivity. Goal: add power lines to give power to each city, minimizing cost Setting up a power grid Only need to include some of the edges to maintain connectivity. Trees A tree is an undirected, acyclic, connected graph. Trees A tree is an undirected, acyclic, connected graph. A spanning tree is a subgraph on the same vertex set that’s a tree. Trees Properties: ● “Minimal connected graph” ● “Maximal acyclic graph” ● |E| = |V|-1 ● Unique path between pairs of vertices ● etc. Minimum Spanning Tree Each edge has a weight w(e) Minimum Spanning Tree Each edge has a weight w(e) The weight of a tree w(T) is the sum of its edge weights w(T) = 42 Minimum Spanning Tree Each edge has a weight w(e) The weight of a tree w(T) is the sum of its edge weights A minimum spanning tree is a spanning tree with smallest weight w(T) = 30 Fundamental cycles Adding any edge to a tree makes a fundamental cycle. Fundamental cycles Adding any edge to a tree makes a fundamental cycle. What can we say about w(e) if the tree is an MST? Fundamental cycles Adding any edge to a tree makes a fundamental cycle. What can we say about w(e) if the tree is an MST? For every e’ on fundamental cycle, w(e’) ≤ w(e) Fundamental cycles Adding any edge to a tree makes a fundamental cycle. What can we say about w(e) if the tree is an MST? For every e’ on fundamental cycle, w(e’) ≤ w(e) (otherwise, you could exchange) MST Uniqueness Useful to think of the MST of a graph… MST Uniqueness Useful to think of the MST of a graph… ...but there can be more than one. MST Uniqueness Distinct edge weights → unique MST Proof sketch: fundamental cycle ﬂipping between two distinct MSTs MST Uniqueness What about duplicate edge weights? Find a consistent tie-breaking rule, e.g.: ● Order the edges ● Perturb the edge weights MST Uniqueness MST Uniqueness Safe Edges At every iteration, an MST algorithm maintains a “spanning forest” F Safe Edges At every iteration, an MST algorithm maintains a “spanning forest” F For a component of F, its safe edge is the lightest edge going to a different component Safe Edges General idea: “ﬁnd a safe edge and add to F” (greedy) Claim: MST contains all safe edges Safe Edges Executive summary: ● Kruskal: add lightest safe edge ● Prim: add safe edge of component of v ● Boruvka: add all safe edges at once Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle. Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T Prim’s algorithm Prim’s algorithm Prim’s algorithm Prim’s algorithm Prim’s algorithm"
+      "text": "Minimum Spanning Trees Prof. Timothy Sun"
     },
     {
       "chunk_id": "week11_mst-1",
       "course": "CSC510",
       "source_file": "week11_mst.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "safe edge of component of v ● Boruvka: add all safe edges at once Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle. Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Kruskal’s algorithm Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T Prim’s algorithm Prim’s algorithm Prim’s algorithm Prim’s algorithm Prim’s algorithm Prim’s algorithm Prim’s algorithm Prim’s algorithm Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Boruvka’s algorithm Boruvka’s algorithm Boruvka’s algorithm Boruvka’s algorithm Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. (CountComp using DFS, etc.) Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Store safe edges in array indexed by component number. Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Linear scan through edges (u, v): ● “Are u and v in different components?” Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Linear scan through edges (u, v): ● “Are u and v in different components?” ○ Check if they’re the new minimum for both components. Boruvka’s algorithm - ﬁnding safe edges Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. (linear scan) b. Add all safe edges. (adding k edges) c. Relabel components of forest. (DFS or something) Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. (linear scan) O(|E|) b. Add all safe edges. (adding k edges) O(|V|) c. Relabel components of forest. (DFS or something) O(|E|) Each iteration takes O(|E|) time. How many iterations? Slowly shrinking components In the worst case, components are paired up, decreasing by a factor of 2. Slowly shrinking components In the worst case, components are paired up, decreasing by a factor of 2. How long until there’s only one component left? Slowly shrinking components In the worst case, components are paired up, decreasing by a factor of 2. How long until there’s only one component left? O(log |V|) iterations Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. (linear scan) O(|E|) b. Add all safe edges. (adding k edges) O(|V|) c. Relabel components of forest. (DFS or something) O(|E|) Each iteration takes O(|E|) time. How many iterations? O(log |V|) Total runtime: O(|E| log |V|) Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle. Kruskal’s algorithm 1. Sort all"
+      "text": "Goal: add power lines to give power to each city Setting up a power grid"
     },
     {
       "chunk_id": "week11_mst-2",
       "course": "CSC510",
       "source_file": "week11_mst.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "there’s only one component left? O(log |V|) iterations Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. (linear scan) O(|E|) b. Add all safe edges. (adding k edges) O(|V|) c. Relabel components of forest. (DFS or something) O(|E|) Each iteration takes O(|E|) time. How many iterations? O(log |V|) Total runtime: O(|E| log |V|) Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle. Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle. This step is about detecting components. Should we use CountComp again? Kruskal’s algorithm For each iteration of Kruskal, most components don’t change. Kruskal’s algorithm For each iteration of Kruskal, most components don’t change. Kruskal’s algorithm Just relabel one of the merged components. Kruskal’s algorithm Just relabel one of the merged components. Kruskal’s algorithm Just relabel one of the merged components. Kruskal’s algorithm Just relabel smaller of the two merged components. Kruskal’s algorithm How long does relabeling take? Kruskal’s algorithm How long does relabeling take? ● How many times can a vertex be relabeled? Kruskal’s algorithm How long does relabeling take? ● How many times can a vertex be relabeled? O(log |V|) times O(|V| log |V|) in total Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle. Kruskal’s algorithm 1. Sort all the edge weights. O(|E| log |E|) 2. Repeatedly pick the smallest edge without creating a cycle. O(|E| + |V| log |V|) Kruskal’s algorithm 1. Sort all the edge weights. O(|E| log |E|) 2. Repeatedly pick the smallest edge without creating a cycle. O(|E| + |V| log |V|) Total: O(|E| log |V|) Kruskal’s algorithm Kruskal’s algorithm often described using a disjoint-set data structure: ● MakeSet(v) ● Find(v) ● Union(u, v) Kruskal’s algorithm Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T a. Something-ﬁrst search where bag = priority queue storing edges Prim’s priority queue Prim’s priority queue Prim’s priority queue Prim’s priority queue Prim’s priority queue Prim’s algorithm Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T a. Something-ﬁrst search (bag = priority queue/heap) O(|E| log |V|) as well A vertex-centric version An alternate implementation of Prim’s algorithm uses vertex priorities A vertex-centric version An alternate implementation of Prim’s algorithm uses vertex priorities A vertex-centric version An alternate implementation of Prim’s algorithm uses vertex priorities We’ll see almost the same idea in Dijkstra’s algorithm"
+      "text": "Goal: add power lines to give power to each city Setting up a power grid"
+    },
+    {
+      "chunk_id": "week11_mst-3",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Goal: add power lines to give power to each city, minimizing cost Setting up a power grid Only need to include some of the edges to maintain connectivity."
+    },
+    {
+      "chunk_id": "week11_mst-4",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Goal: add power lines to give power to each city, minimizing cost Setting up a power grid Only need to include some of the edges to maintain connectivity."
+    },
+    {
+      "chunk_id": "week11_mst-5",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Trees A tree is an undirected, acyclic, connected graph."
+    },
+    {
+      "chunk_id": "week11_mst-6",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Trees A tree is an undirected, acyclic, connected graph. A spanning tree is a subgraph on the same vertex set that’s a tree."
+    },
+    {
+      "chunk_id": "week11_mst-7",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Trees Properties: ● “Minimal connected graph” ● “Maximal acyclic graph” ● |E| = |V|-1 ● Unique path between pairs of vertices ● etc."
+    },
+    {
+      "chunk_id": "week11_mst-8",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Minimum Spanning Tree Each edge has a weight w(e)"
+    },
+    {
+      "chunk_id": "week11_mst-9",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Minimum Spanning Tree Each edge has a weight w(e) The weight of a tree w(T) is the sum of its edge weights w(T) = 42"
+    },
+    {
+      "chunk_id": "week11_mst-10",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Minimum Spanning Tree Each edge has a weight w(e) The weight of a tree w(T) is the sum of its edge weights A minimum spanning tree is a spanning tree with smallest weight w(T) = 30"
+    },
+    {
+      "chunk_id": "week11_mst-11",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Fundamental cycles Adding any edge to a tree makes a fundamental cycle."
+    },
+    {
+      "chunk_id": "week11_mst-12",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Fundamental cycles Adding any edge to a tree makes a fundamental cycle. What can we say about w(e) if the tree is an MST?"
+    },
+    {
+      "chunk_id": "week11_mst-13",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Fundamental cycles Adding any edge to a tree makes a fundamental cycle. What can we say about w(e) if the tree is an MST? For every e’ on fundamental cycle, w(e’) ≤ w(e)"
+    },
+    {
+      "chunk_id": "week11_mst-14",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Fundamental cycles Adding any edge to a tree makes a fundamental cycle. What can we say about w(e) if the tree is an MST? For every e’ on fundamental cycle, w(e’) ≤ w(e) (otherwise, you could exchange)"
+    },
+    {
+      "chunk_id": "week11_mst-15",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "MST Uniqueness Useful to think of the MST of a graph…"
+    },
+    {
+      "chunk_id": "week11_mst-16",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "MST Uniqueness Useful to think of the MST of a graph… ...but there can be more than one."
+    },
+    {
+      "chunk_id": "week11_mst-17",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "MST Uniqueness Distinct edge weights → unique MST Proof sketch: fundamental cycle ﬂipping between two distinct MSTs"
+    },
+    {
+      "chunk_id": "week11_mst-18",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "MST Uniqueness What about duplicate edge weights? Find a consistent tie-breaking rule, e.g.: ● Order the edges ● Perturb the edge weights"
+    },
+    {
+      "chunk_id": "week11_mst-19",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "MST Uniqueness"
+    },
+    {
+      "chunk_id": "week11_mst-20",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "MST Uniqueness"
+    },
+    {
+      "chunk_id": "week11_mst-21",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Safe Edges At every iteration, an MST algorithm maintains a “spanning forest” F"
+    },
+    {
+      "chunk_id": "week11_mst-22",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Safe Edges At every iteration, an MST algorithm maintains a “spanning forest” F For a component of F, its safe edge is the lightest edge going to a different component"
+    },
+    {
+      "chunk_id": "week11_mst-23",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Safe Edges General idea: “ﬁnd a safe edge and add to F” (greedy) Claim: MST contains all safe edges"
+    },
+    {
+      "chunk_id": "week11_mst-24",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Safe Edges Executive summary: ● Kruskal: add lightest safe edge ● Prim: add safe edge of component of v ● Boruvka: add all safe edges at once"
+    },
+    {
+      "chunk_id": "week11_mst-25",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle."
+    },
+    {
+      "chunk_id": "week11_mst-26",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-27",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-28",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-29",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-30",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-31",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-32",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-33",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-34",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T"
+    },
+    {
+      "chunk_id": "week11_mst-35",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-36",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-37",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-38",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-39",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-40",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-41",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-42",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-43",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest."
+    },
+    {
+      "chunk_id": "week11_mst-44",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Boruvka’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-45",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Boruvka’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-46",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Boruvka’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-47",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Boruvka’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-48",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest."
+    },
+    {
+      "chunk_id": "week11_mst-49",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest."
+    },
+    {
+      "chunk_id": "week11_mst-50",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. (CountComp using DFS, etc.)"
+    },
+    {
+      "chunk_id": "week11_mst-51",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest."
+    },
+    {
+      "chunk_id": "week11_mst-52",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Store safe edges in array indexed by component number."
+    },
+    {
+      "chunk_id": "week11_mst-53",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Linear scan through edges (u, v): ● “Are u and v in different components?”"
+    },
+    {
+      "chunk_id": "week11_mst-54",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. b. Add all safe edges. c. Relabel components of forest. Linear scan through edges (u, v): ● “Are u and v in different components?” ○ Check if they’re the new minimum for both components."
+    },
+    {
+      "chunk_id": "week11_mst-55",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "Boruvka’s algorithm - ﬁnding safe edges"
+    },
+    {
+      "chunk_id": "week11_mst-56",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. (linear scan) b. Add all safe edges. (adding k edges) c. Relabel components of forest. (DFS or something)"
+    },
+    {
+      "chunk_id": "week11_mst-57",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. (linear scan) O(|E|) b. Add all safe edges. (adding k edges) O(|V|) c. Relabel components of forest. (DFS or something) O(|E|) Each iteration takes O(|E|) time. How many iterations?"
+    },
+    {
+      "chunk_id": "week11_mst-58",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "Slowly shrinking components In the worst case, components are paired up, decreasing by a factor of 2."
+    },
+    {
+      "chunk_id": "week11_mst-59",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 59,
+      "chunk_in_page": 0,
+      "page": 60,
+      "slide": null,
+      "text": "Slowly shrinking components In the worst case, components are paired up, decreasing by a factor of 2. How long until there’s only one component left?"
+    },
+    {
+      "chunk_id": "week11_mst-60",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 60,
+      "chunk_in_page": 0,
+      "page": 61,
+      "slide": null,
+      "text": "Slowly shrinking components In the worst case, components are paired up, decreasing by a factor of 2. How long until there’s only one component left? O(log |V|) iterations"
+    },
+    {
+      "chunk_id": "week11_mst-61",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 61,
+      "chunk_in_page": 0,
+      "page": 62,
+      "slide": null,
+      "text": "Boruvka’s algorithm 1. Repeat until one component: a. Identify each component’s safe edge. (linear scan) O(|E|) b. Add all safe edges. (adding k edges) O(|V|) c. Relabel components of forest. (DFS or something) O(|E|) Each iteration takes O(|E|) time. How many iterations? O(log |V|) Total runtime: O(|E| log |V|)"
+    },
+    {
+      "chunk_id": "week11_mst-62",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 62,
+      "chunk_in_page": 0,
+      "page": 63,
+      "slide": null,
+      "text": "Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle."
+    },
+    {
+      "chunk_id": "week11_mst-63",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 63,
+      "chunk_in_page": 0,
+      "page": 64,
+      "slide": null,
+      "text": "Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle. This step is about detecting components. Should we use CountComp again?"
+    },
+    {
+      "chunk_id": "week11_mst-64",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 64,
+      "chunk_in_page": 0,
+      "page": 65,
+      "slide": null,
+      "text": "Kruskal’s algorithm For each iteration of Kruskal, most components don’t change."
+    },
+    {
+      "chunk_id": "week11_mst-65",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 65,
+      "chunk_in_page": 0,
+      "page": 66,
+      "slide": null,
+      "text": "Kruskal’s algorithm For each iteration of Kruskal, most components don’t change."
+    },
+    {
+      "chunk_id": "week11_mst-66",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 66,
+      "chunk_in_page": 0,
+      "page": 67,
+      "slide": null,
+      "text": "Kruskal’s algorithm Just relabel one of the merged components."
+    },
+    {
+      "chunk_id": "week11_mst-67",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 67,
+      "chunk_in_page": 0,
+      "page": 68,
+      "slide": null,
+      "text": "Kruskal’s algorithm Just relabel one of the merged components."
+    },
+    {
+      "chunk_id": "week11_mst-68",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 68,
+      "chunk_in_page": 0,
+      "page": 69,
+      "slide": null,
+      "text": "Kruskal’s algorithm Just relabel one of the merged components."
+    },
+    {
+      "chunk_id": "week11_mst-69",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 69,
+      "chunk_in_page": 0,
+      "page": 70,
+      "slide": null,
+      "text": "Kruskal’s algorithm Just relabel smaller of the two merged components."
+    },
+    {
+      "chunk_id": "week11_mst-70",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 70,
+      "chunk_in_page": 0,
+      "page": 71,
+      "slide": null,
+      "text": "Kruskal’s algorithm How long does relabeling take?"
+    },
+    {
+      "chunk_id": "week11_mst-71",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 71,
+      "chunk_in_page": 0,
+      "page": 72,
+      "slide": null,
+      "text": "Kruskal’s algorithm How long does relabeling take? ● How many times can a vertex be relabeled?"
+    },
+    {
+      "chunk_id": "week11_mst-72",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 72,
+      "chunk_in_page": 0,
+      "page": 73,
+      "slide": null,
+      "text": "Kruskal’s algorithm How long does relabeling take? ● How many times can a vertex be relabeled? O(log |V|) times O(|V| log |V|) in total"
+    },
+    {
+      "chunk_id": "week11_mst-73",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 73,
+      "chunk_in_page": 0,
+      "page": 74,
+      "slide": null,
+      "text": "Kruskal’s algorithm 1. Sort all the edge weights. 2. Repeatedly pick the smallest edge without creating a cycle."
+    },
+    {
+      "chunk_id": "week11_mst-74",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 74,
+      "chunk_in_page": 0,
+      "page": 75,
+      "slide": null,
+      "text": "Kruskal’s algorithm 1. Sort all the edge weights. O(|E| log |E|) 2. Repeatedly pick the smallest edge without creating a cycle. O(|E| + |V| log |V|)"
+    },
+    {
+      "chunk_id": "week11_mst-75",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 75,
+      "chunk_in_page": 0,
+      "page": 76,
+      "slide": null,
+      "text": "Kruskal’s algorithm 1. Sort all the edge weights. O(|E| log |E|) 2. Repeatedly pick the smallest edge without creating a cycle. O(|E| + |V| log |V|) Total: O(|E| log |V|)"
+    },
+    {
+      "chunk_id": "week11_mst-76",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 76,
+      "chunk_in_page": 0,
+      "page": 77,
+      "slide": null,
+      "text": "Kruskal’s algorithm Kruskal’s algorithm often described using a disjoint-set data structure: ● MakeSet(v) ● Find(v) ● Union(u, v)"
+    },
+    {
+      "chunk_id": "week11_mst-77",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 77,
+      "chunk_in_page": 0,
+      "page": 78,
+      "slide": null,
+      "text": "Kruskal’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-78",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 78,
+      "chunk_in_page": 0,
+      "page": 79,
+      "slide": null,
+      "text": "Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T"
+    },
+    {
+      "chunk_id": "week11_mst-79",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 79,
+      "chunk_in_page": 0,
+      "page": 80,
+      "slide": null,
+      "text": "Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T a. Something-ﬁrst search where bag = priority queue storing edges"
+    },
+    {
+      "chunk_id": "week11_mst-80",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 80,
+      "chunk_in_page": 0,
+      "page": 81,
+      "slide": null,
+      "text": "Prim’s priority queue"
+    },
+    {
+      "chunk_id": "week11_mst-81",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 81,
+      "chunk_in_page": 0,
+      "page": 82,
+      "slide": null,
+      "text": "Prim’s priority queue"
+    },
+    {
+      "chunk_id": "week11_mst-82",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 82,
+      "chunk_in_page": 0,
+      "page": 83,
+      "slide": null,
+      "text": "Prim’s priority queue"
+    },
+    {
+      "chunk_id": "week11_mst-83",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 83,
+      "chunk_in_page": 0,
+      "page": 84,
+      "slide": null,
+      "text": "Prim’s priority queue"
+    },
+    {
+      "chunk_id": "week11_mst-84",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 84,
+      "chunk_in_page": 0,
+      "page": 85,
+      "slide": null,
+      "text": "Prim’s priority queue"
+    },
+    {
+      "chunk_id": "week11_mst-85",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 85,
+      "chunk_in_page": 0,
+      "page": 86,
+      "slide": null,
+      "text": "Prim’s algorithm"
+    },
+    {
+      "chunk_id": "week11_mst-86",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 86,
+      "chunk_in_page": 0,
+      "page": 87,
+      "slide": null,
+      "text": "Prim’s algorithm 1. Pick any vertex v, and set T = {v} 2. Repeatedly “grow” T by adding smallest edge leaving T a. Something-ﬁrst search (bag = priority queue/heap) O(|E| log |V|) as well"
+    },
+    {
+      "chunk_id": "week11_mst-87",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 87,
+      "chunk_in_page": 0,
+      "page": 88,
+      "slide": null,
+      "text": "A vertex-centric version An alternate implementation of Prim’s algorithm uses vertex priorities"
+    },
+    {
+      "chunk_id": "week11_mst-88",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 88,
+      "chunk_in_page": 0,
+      "page": 89,
+      "slide": null,
+      "text": "A vertex-centric version An alternate implementation of Prim’s algorithm uses vertex priorities"
+    },
+    {
+      "chunk_id": "week11_mst-89",
+      "course": "CSC510",
+      "source_file": "week11_mst.pdf",
+      "chunk_index": 89,
+      "chunk_in_page": 0,
+      "page": 90,
+      "slide": null,
+      "text": "A vertex-centric version An alternate implementation of Prim’s algorithm uses vertex priorities We’ll see almost the same idea in Dijkstra’s algorithm"
     }
   ]
 }

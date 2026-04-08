@@ -1,5 +1,391 @@
 {
   "course": "CSC510",
   "source_file": "week7_dynamic510.pdf",
-  "text": "Dynamic Programming Prof. Timothy Sun Recap: fast exponentiation Alg. based on repeated squaring Recap: fast exponentiation Alg. based on repeated squaring This still runs in \u0398(N) time. Recap: fast exponentiation Alg. based on repeated squaring Recap: fast exponentiation Alg. based on repeated squaring Now runs in \u0398(log N) time (exponential speedup) The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, \u2026 de\ufb01ned by the recurrence Avoiding repeated work Looks familiar... A recursion tree for Fibonacci numbers A recursion tree for Fibonacci numbers Lots of repeats... Avoiding repeated work The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, \u2026 de\ufb01ned by the recurrence Backtracking algorithms take exponential time! What if we could remember what we computed before? Avoiding repeated work What if we could remember what we computed before? Avoiding repeated work Approach known as memoization [sic]... but what\u2019s the runtime? Better way would be to \ufb01ll up the table without recursion. Dynamic programming Better way would be to \ufb01ll up the table without recursion. \u0398(n) running time Dynamic programming Better way would be to \ufb01ll up the table without recursion. \u0398(n) running time Dynamic programming: solve all subproblems iteratively Dynamic programming A recursion tree for Fibonacci numbers Lots of repeats... Actual graph of dependencies Much more compact... Fibonacci Numbers Backtracking vs. Dynamic Programming Fibonacci Numbers Backtracking vs. Dynamic Programming complex \u2192 simple simple \u2192 complex Fibonacci Numbers Backtracking vs. Dynamic Programming Recursive calls replaced with array lookups Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Only need to understand how (and not why) the backtracking algorithm works. Components of Backtracking 1. Describe subproblems 2. Identify base cases 3. Derive a recurrence Components of Backtracking 1. Describe subproblems Smaller Fibonacci numbers 2. Identify base cases F1 and F2 3. Derive a recurrence Fn = Fn-1 + Fn-2 Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems 3. Determining a \ufb01ll order Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems Store in 1D array 3. Determining a \ufb01ll order Increasing order Components of DP Important things: \u25cf Which subproblems are base cases? \u25cf Which subproblems show up in the recurrence? Components of DP Important things: \u25cf Which subproblems are base cases? \u25cf Which subproblems show up in the recurrence? Unimportant things: \u25cf Why does the recurrence work? Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Fill order: ordering of subproblems so that dependencies are solved \ufb01rst. Actual graph of dependencies A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON \u2026 Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d (version 2, indexed) Text splitting revisited Subproblems: su\ufb03xes, indexed by i. Text splitting revisited Subproblems: su\ufb03xes, indexed by i, can store in an array A[1, \u2026, n+1] Text splitting revisited In what order should the subproblems be solved? Text splitting revisited In what order should the subproblems be solved? Decreasing order Text splitting revisited Text splitting revisited Text splitting revisited \u201cE\u201d is not a word, so let\u2019s move on to the next pre\ufb01x Text splitting revisited \u201cER\u201d is a word (in Scrabble!), but the rest of the string isn\u2019t splittable Text splitting revisited \u201cERE\u201d is a word, and the rest of the string is splittable Text splitting revisited Text splitting revisited The original string is splittable, as seen in the \ufb01rst cell. The dynamic programming algorithm The dynamic programming algorithm Runtime: \u0398(n2) Generic DP structure Generic DP structure Convert recurrence or backtracking algorithm here Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Reconstruction Easy to \ufb01gure out which \ufb01rst word is correct. Our algorithm only return true or false. How to \ufb01nd the actual splitting? Reconstruction Easy to \ufb01gure out which \ufb01rst word is correct. Our algorithm only return true or false. How to \ufb01nd the actual splitting? Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Easy to \ufb01gure out which \ufb01rst word is correct. Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Easy to \ufb01gure out which \ufb01rst word is correct. Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Opposite direction from dynamic programming (Same direction as backtracking) Reconstruction Essentially backtracking, but already knowing the right path. Reconstruction When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller \u25cf polynomial # of subproblems \u2192 polynomial time DP Subset Sum revisited Is there a subset of S that adds up to T? Dependencies in Subset Sum (we\u2019ll deal with negative t later) Dependencies in Subset Sum What\u2019s a good \ufb01ll order? Fill order Usually, row-by-row or column-by-column works Fill order Usually, row-by-row or column-by-column works Fill order Usually, row-by-row or column-by-column works Storing subproblems: 2D array, i = 0, \u2026, n, t = 0, \u2026, T Dependencies: (i, t) depends on (i-1, t) and (i-1, t-S[i]) Fill order: e.g., increasing i, doesn\u2019t matter for T Subset Sum revisited Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? There is a solution, since the bottom-right cell is TRUE Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? No solution Subset Sum - dynamic Fleshed out To avoid negative t, split the loop into two cases Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? No, T is exponential in number of digits Wood cutting The backtracking The backtracking Storing subproblems? Fill order? The backtracking Storing subproblems: 1D array [0, \u2026, M] Fill order? The backtracking Storing subproblems: 1D array [0, \u2026, M] Fill order: increasing order Wood cutting Wood cutting Runtime: \u0398(M2)"
+  "text": "Dynamic Programming Prof. Timothy Sun Recap: fast exponentiation Alg. based on repeated squaring Recap: fast exponentiation Alg. based on repeated squaring This still runs in \u0398(N) time. Recap: fast exponentiation Alg. based on repeated squaring Recap: fast exponentiation Alg. based on repeated squaring Now runs in \u0398(log N) time (exponential speedup) The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, \u2026 de\ufb01ned by the recurrence Avoiding repeated work Looks familiar... A recursion tree for Fibonacci numbers A recursion tree for Fibonacci numbers Lots of repeats... Avoiding repeated work The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, \u2026 de\ufb01ned by the recurrence Backtracking algorithms take exponential time! What if we could remember what we computed before? Avoiding repeated work What if we could remember what we computed before? Avoiding repeated work Approach known as memoization [sic]... but what\u2019s the runtime? Better way would be to \ufb01ll up the table without recursion. Dynamic programming Better way would be to \ufb01ll up the table without recursion. \u0398(n) running time Dynamic programming Better way would be to \ufb01ll up the table without recursion. \u0398(n) running time Dynamic programming: solve all subproblems iteratively Dynamic programming A recursion tree for Fibonacci numbers Lots of repeats... Actual graph of dependencies Much more compact... Fibonacci Numbers Backtracking vs. Dynamic Programming Fibonacci Numbers Backtracking vs. Dynamic Programming complex \u2192 simple simple \u2192 complex Fibonacci Numbers Backtracking vs. Dynamic Programming Recursive calls replaced with array lookups Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Only need to understand how (and not why) the backtracking algorithm works. Components of Backtracking 1. Describe subproblems 2. Identify base cases 3. Derive a recurrence Components of Backtracking 1. Describe subproblems Smaller Fibonacci numbers 2. Identify base cases F1 and F2 3. Derive a recurrence Fn = Fn-1 + Fn-2 Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems 3. Determining a \ufb01ll order Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems Store in 1D array 3. Determining a \ufb01ll order Increasing order Components of DP Important things: \u25cf Which subproblems are base cases? \u25cf Which subproblems show up in the recurrence? Components of DP Important things: \u25cf Which subproblems are base cases? \u25cf Which subproblems show up in the recurrence? Unimportant things: \u25cf Why does the recurrence work? Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Fill order: ordering of subproblems so that dependencies are solved \ufb01rst. Actual graph of dependencies A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible: Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON \u2026 Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d (version 2, indexed) Text splitting revisited Subproblems: su\ufb03xes, indexed by i. Text splitting revisited Subproblems: su\ufb03xes, indexed by i, can store in an array A[1, \u2026, n+1] Text splitting revisited In what order should the subproblems be solved? Text splitting revisited In what order should the subproblems be solved? Decreasing order Text splitting revisited Text splitting revisited Text splitting revisited \u201cE\u201d is not a word, so let\u2019s move on to the next pre\ufb01x Text splitting revisited \u201cER\u201d is a word (in Scrabble!), but the rest of the string isn\u2019t splittable Text splitting revisited \u201cERE\u201d is a word, and the rest of the string is splittable Text splitting revisited Text splitting revisited The original string is splittable, as seen in the \ufb01rst cell. The dynamic programming algorithm The dynamic programming algorithm Runtime: \u0398(n2) Generic DP structure Generic DP structure Convert recurrence or backtracking algorithm here Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Reconstruction Easy to \ufb01gure out which \ufb01rst word is correct. Our algorithm only return true or false. How to \ufb01nd the actual splitting? Reconstruction Easy to \ufb01gure out which \ufb01rst word is correct. Our algorithm only return true or false. How to \ufb01nd the actual splitting? Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Easy to \ufb01gure out which \ufb01rst word is correct. Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Easy to \ufb01gure out which \ufb01rst word is correct. Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Opposite direction from dynamic programming (Same direction as backtracking) Reconstruction Essentially backtracking, but already knowing the right path. Reconstruction When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller \u25cf polynomial # of subproblems \u2192 polynomial time DP Subset Sum revisited Is there a subset of S that adds up to T? Dependencies in Subset Sum (we\u2019ll deal with negative t later) Dependencies in Subset Sum What\u2019s a good \ufb01ll order? Fill order Usually, row-by-row or column-by-column works Fill order Usually, row-by-row or column-by-column works Fill order Usually, row-by-row or column-by-column works Storing subproblems: 2D array, i = 0, \u2026, n, t = 0, \u2026, T Dependencies: (i, t) depends on (i-1, t) and (i-1, t-S[i]) Fill order: e.g., increasing i, doesn\u2019t matter for T Subset Sum revisited Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? There is a solution, since the bottom-right cell is TRUE Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? No solution Subset Sum - dynamic Fleshed out To avoid negative t, split the loop into two cases Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? No, T is exponential in number of digits Wood cutting The backtracking The backtracking Storing subproblems? Fill order? The backtracking Storing subproblems: 1D array [0, \u2026, M] Fill order? The backtracking Storing subproblems: 1D array [0, \u2026, M] Fill order: increasing order Wood cutting Wood cutting Runtime: \u0398(M2)",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Dynamic Programming Prof. Timothy Sun"
+    },
+    {
+      "page": 2,
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring"
+    },
+    {
+      "page": 3,
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring This still runs in \u0398(N) time."
+    },
+    {
+      "page": 4,
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring"
+    },
+    {
+      "page": 5,
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring Now runs in \u0398(log N) time (exponential speedup)"
+    },
+    {
+      "page": 6,
+      "text": "The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, \u2026 de\ufb01ned by the recurrence Avoiding repeated work"
+    },
+    {
+      "page": 7,
+      "text": "Looks familiar..."
+    },
+    {
+      "page": 8,
+      "text": "A recursion tree for Fibonacci numbers"
+    },
+    {
+      "page": 9,
+      "text": "A recursion tree for Fibonacci numbers Lots of repeats..."
+    },
+    {
+      "page": 10,
+      "text": "Avoiding repeated work The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, \u2026 de\ufb01ned by the recurrence Backtracking algorithms take exponential time!"
+    },
+    {
+      "page": 11,
+      "text": "What if we could remember what we computed before? Avoiding repeated work"
+    },
+    {
+      "page": 12,
+      "text": "What if we could remember what we computed before? Avoiding repeated work Approach known as memoization [sic]... but what\u2019s the runtime?"
+    },
+    {
+      "page": 13,
+      "text": "Better way would be to \ufb01ll up the table without recursion. Dynamic programming"
+    },
+    {
+      "page": 14,
+      "text": "Better way would be to \ufb01ll up the table without recursion. \u0398(n) running time Dynamic programming"
+    },
+    {
+      "page": 15,
+      "text": "Better way would be to \ufb01ll up the table without recursion. \u0398(n) running time Dynamic programming: solve all subproblems iteratively Dynamic programming"
+    },
+    {
+      "page": 16,
+      "text": "A recursion tree for Fibonacci numbers Lots of repeats..."
+    },
+    {
+      "page": 17,
+      "text": "Actual graph of dependencies Much more compact..."
+    },
+    {
+      "page": 18,
+      "text": "Fibonacci Numbers Backtracking vs. Dynamic Programming"
+    },
+    {
+      "page": 19,
+      "text": "Fibonacci Numbers Backtracking vs. Dynamic Programming complex \u2192 simple simple \u2192 complex"
+    },
+    {
+      "page": 20,
+      "text": "Fibonacci Numbers Backtracking vs. Dynamic Programming Recursive calls replaced with array lookups"
+    },
+    {
+      "page": 21,
+      "text": "Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions)"
+    },
+    {
+      "page": 22,
+      "text": "Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Only need to understand how (and not why) the backtracking algorithm works."
+    },
+    {
+      "page": 23,
+      "text": "Components of Backtracking 1. Describe subproblems 2. Identify base cases 3. Derive a recurrence"
+    },
+    {
+      "page": 24,
+      "text": "Components of Backtracking 1. Describe subproblems Smaller Fibonacci numbers 2. Identify base cases F1 and F2 3. Derive a recurrence Fn = Fn-1 + Fn-2"
+    },
+    {
+      "page": 25,
+      "text": "Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems 3. Determining a \ufb01ll order"
+    },
+    {
+      "page": 26,
+      "text": "Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems Store in 1D array 3. Determining a \ufb01ll order Increasing order"
+    },
+    {
+      "page": 27,
+      "text": "Components of DP Important things: \u25cf Which subproblems are base cases? \u25cf Which subproblems show up in the recurrence?"
+    },
+    {
+      "page": 28,
+      "text": "Components of DP Important things: \u25cf Which subproblems are base cases? \u25cf Which subproblems show up in the recurrence? Unimportant things: \u25cf Why does the recurrence work?"
+    },
+    {
+      "page": 29,
+      "text": "Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D."
+    },
+    {
+      "page": 30,
+      "text": "Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Fill order: ordering of subproblems so that dependencies are solved \ufb01rst."
+    },
+    {
+      "page": 31,
+      "text": "Actual graph of dependencies"
+    },
+    {
+      "page": 32,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 33,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 34,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 35,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 36,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 37,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 38,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 39,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 40,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 41,
+      "text": "A messy dependency graph As long as there\u2019s no in\ufb01nite recursion, a \ufb01ll order is always possible:"
+    },
+    {
+      "page": 42,
+      "text": "Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON \u2026"
+    },
+    {
+      "page": 43,
+      "text": "Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d"
+    },
+    {
+      "page": 44,
+      "text": "Text splitting revisited \u201cTry every possible \ufb01rst word and recurse.\u201d (version 2, indexed)"
+    },
+    {
+      "page": 45,
+      "text": "Text splitting revisited Subproblems: su\ufb03xes, indexed by i."
+    },
+    {
+      "page": 46,
+      "text": "Text splitting revisited Subproblems: su\ufb03xes, indexed by i, can store in an array A[1, \u2026, n+1]"
+    },
+    {
+      "page": 47,
+      "text": "Text splitting revisited In what order should the subproblems be solved?"
+    },
+    {
+      "page": 48,
+      "text": "Text splitting revisited In what order should the subproblems be solved? Decreasing order"
+    },
+    {
+      "page": 49,
+      "text": "Text splitting revisited"
+    },
+    {
+      "page": 50,
+      "text": "Text splitting revisited"
+    },
+    {
+      "page": 51,
+      "text": "Text splitting revisited \u201cE\u201d is not a word, so let\u2019s move on to the next pre\ufb01x"
+    },
+    {
+      "page": 52,
+      "text": "Text splitting revisited \u201cER\u201d is a word (in Scrabble!), but the rest of the string isn\u2019t splittable"
+    },
+    {
+      "page": 53,
+      "text": "Text splitting revisited \u201cERE\u201d is a word, and the rest of the string is splittable"
+    },
+    {
+      "page": 54,
+      "text": "Text splitting revisited"
+    },
+    {
+      "page": 55,
+      "text": "Text splitting revisited The original string is splittable, as seen in the \ufb01rst cell."
+    },
+    {
+      "page": 56,
+      "text": "The dynamic programming algorithm"
+    },
+    {
+      "page": 57,
+      "text": "The dynamic programming algorithm Runtime: \u0398(n2)"
+    },
+    {
+      "page": 58,
+      "text": "Generic DP structure"
+    },
+    {
+      "page": 59,
+      "text": "Generic DP structure Convert recurrence or backtracking algorithm here"
+    },
+    {
+      "page": 60,
+      "text": "Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting?"
+    },
+    {
+      "page": 61,
+      "text": "Reconstruction Easy to \ufb01gure out which \ufb01rst word is correct. Our algorithm only return true or false. How to \ufb01nd the actual splitting?"
+    },
+    {
+      "page": 62,
+      "text": "Reconstruction Easy to \ufb01gure out which \ufb01rst word is correct. Our algorithm only return true or false. How to \ufb01nd the actual splitting?"
+    },
+    {
+      "page": 63,
+      "text": "Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Easy to \ufb01gure out which \ufb01rst word is correct."
+    },
+    {
+      "page": 64,
+      "text": "Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Easy to \ufb01gure out which \ufb01rst word is correct."
+    },
+    {
+      "page": 65,
+      "text": "Reconstruction Our algorithm only return true or false. How to \ufb01nd the actual splitting? Opposite direction from dynamic programming (Same direction as backtracking)"
+    },
+    {
+      "page": 66,
+      "text": "Reconstruction Essentially backtracking, but already knowing the right path."
+    },
+    {
+      "page": 67,
+      "text": "Reconstruction"
+    },
+    {
+      "page": 68,
+      "text": "When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller"
+    },
+    {
+      "page": 69,
+      "text": "When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller"
+    },
+    {
+      "page": 70,
+      "text": "When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller \u25cf polynomial # of subproblems \u2192 polynomial time DP"
+    },
+    {
+      "page": 71,
+      "text": "Subset Sum revisited Is there a subset of S that adds up to T?"
+    },
+    {
+      "page": 72,
+      "text": "Dependencies in Subset Sum (we\u2019ll deal with negative t later)"
+    },
+    {
+      "page": 73,
+      "text": "Dependencies in Subset Sum What\u2019s a good \ufb01ll order?"
+    },
+    {
+      "page": 74,
+      "text": "Fill order Usually, row-by-row or column-by-column works"
+    },
+    {
+      "page": 75,
+      "text": "Fill order Usually, row-by-row or column-by-column works"
+    },
+    {
+      "page": 76,
+      "text": "Fill order Usually, row-by-row or column-by-column works"
+    },
+    {
+      "page": 77,
+      "text": "Storing subproblems: 2D array, i = 0, \u2026, n, t = 0, \u2026, T Dependencies: (i, t) depends on (i-1, t) and (i-1, t-S[i]) Fill order: e.g., increasing i, doesn\u2019t matter for T Subset Sum revisited"
+    },
+    {
+      "page": 78,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7?"
+    },
+    {
+      "page": 79,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7?"
+    },
+    {
+      "page": 80,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7?"
+    },
+    {
+      "page": 81,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? There is a solution, since the bottom-right cell is TRUE"
+    },
+    {
+      "page": 82,
+      "text": "Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19?"
+    },
+    {
+      "page": 83,
+      "text": "Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? No solution"
+    },
+    {
+      "page": 84,
+      "text": "Subset Sum - dynamic"
+    },
+    {
+      "page": 85,
+      "text": "Fleshed out To avoid negative t, split the loop into two cases"
+    },
+    {
+      "page": 86,
+      "text": "Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries)"
+    },
+    {
+      "page": 87,
+      "text": "Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT)"
+    },
+    {
+      "page": 88,
+      "text": "Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP???"
+    },
+    {
+      "page": 89,
+      "text": "Subset Sum revisited Runtime: how long did it take to \ufb01ll in the table? \u25cf Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? No, T is exponential in number of digits"
+    },
+    {
+      "page": 90,
+      "text": "Wood cutting"
+    },
+    {
+      "page": 91,
+      "text": "The backtracking"
+    },
+    {
+      "page": 92,
+      "text": "The backtracking Storing subproblems? Fill order?"
+    },
+    {
+      "page": 93,
+      "text": "The backtracking Storing subproblems: 1D array [0, \u2026, M] Fill order?"
+    },
+    {
+      "page": 94,
+      "text": "The backtracking Storing subproblems: 1D array [0, \u2026, M] Fill order: increasing order"
+    },
+    {
+      "page": 95,
+      "text": "Wood cutting"
+    },
+    {
+      "page": 96,
+      "text": "Wood cutting Runtime: \u0398(M2)"
+    }
+  ]
 }

@@ -1,307 +1,51 @@
 [
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "source_file": "git flow.pdf",
     "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 2,
+    "page_or_slide": 3,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page2_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\git_flow_page3_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "source_file": "git flow.pdf",
     "file_type": "pdf",
     "page_or_slide": 5,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page5_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\git_flow_page5_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 39,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page39_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 39,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page39_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 40,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page40_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page44_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 45,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page45_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 45,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page45_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 46,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page46_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 47,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page47_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 49,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page49_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 50,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page50_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 51,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page51_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 52,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page52_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 53,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page53_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 2,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page2_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 41,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page41_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 41,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page41_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 47,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page47_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 2,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page2_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 5,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page5_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 5,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page5_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page6_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page6_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "source_file": "git flow.pdf",
     "file_type": "pdf",
     "page_or_slide": 7,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page7_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\git_flow_page7_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "source_file": "git flow.pdf",
     "file_type": "pdf",
-    "page_or_slide": 18,
+    "page_or_slide": 15,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page18_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\git_flow_page15_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "source_file": "git flow.pdf",
     "file_type": "pdf",
-    "page_or_slide": 19,
+    "page_or_slide": 16,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page19_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\git_flow_page16_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "source_file": "git flow.pdf",
     "file_type": "pdf",
-    "page_or_slide": 25,
+    "page_or_slide": 24,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page25_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 27,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page27_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 33,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page33_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 68,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page68_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 69,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 69,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 69,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img3.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 69,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img4.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\git_flow_page24_img1.png"
   },
   {
     "course": "CSC648",
@@ -309,7 +53,7 @@
     "file_type": "pdf",
     "page_or_slide": 17,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/gitusuage_page17_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\gitusuage_page17_img1.png"
   },
   {
     "course": "CSC648",
@@ -317,7 +61,7 @@
     "file_type": "pdf",
     "page_or_slide": 18,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/gitusuage_page18_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\gitusuage_page18_img1.png"
   },
   {
     "course": "CSC648",
@@ -325,7 +69,7 @@
     "file_type": "pdf",
     "page_or_slide": 19,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/gitusuage_page19_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\gitusuage_page19_img1.png"
   },
   {
     "course": "CSC648",
@@ -333,7 +77,7 @@
     "file_type": "pdf",
     "page_or_slide": 20,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/gitusuage_page20_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\gitusuage_page20_img1.png"
   },
   {
     "course": "CSC648",
@@ -341,7 +85,7 @@
     "file_type": "pdf",
     "page_or_slide": 21,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/gitusuage_page21_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\gitusuage_page21_img1.png"
   },
   {
     "course": "CSC648",
@@ -349,7 +93,7 @@
     "file_type": "pdf",
     "page_or_slide": 24,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/gitusuage_page24_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\gitusuage_page24_img1.png"
   },
   {
     "course": "CSC648",
@@ -357,623 +101,31 @@
     "file_type": "pdf",
     "page_or_slide": 25,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/gitusuage_page25_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\gitusuage_page25_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page1_img3.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 2,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page2_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page3_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page6_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page6_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 8,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 8,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 8,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img3.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 8,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img4.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 17,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page17_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 17,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page17_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 19,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page19_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 27,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page27_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 27,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page27_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 28,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page28_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 29,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 29,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 29,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 29,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img4.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 38,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page38_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 50,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page50_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 51,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page51_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 51,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page51_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page3_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page3_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page3_img4.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 4,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page4_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 5,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page5_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 7,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page7_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 8,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page8_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 11,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 11,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 11,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 11,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img4.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page1_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 2,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page2_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 5,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page5_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 5,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img5.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 6,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img6.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 8,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img8.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 9,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img9.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 8,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page8_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 9,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page9_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "source_file": "SFSU CSC648-848 Spring 2026 Milestone 0.pdf",
     "file_type": "pdf",
     "page_or_slide": 10,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page10_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848_Spring_2026_Milestone_0_page10_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "source_file": "SFSU CSC648-848 Spring 2026 Milestone 0.pdf",
     "file_type": "pdf",
-    "page_or_slide": 10,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page10_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 11,
+    "page_or_slide": 12,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page11_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848_Spring_2026_Milestone_0_page12_img1.png"
   },
   {
     "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "source_file": "SFSU CSC648-848 Spring 2026 Milestone 0.pdf",
     "file_type": "pdf",
-    "page_or_slide": 11,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page11_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 16,
+    "page_or_slide": 13,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page16_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 26,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page26_img3.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 26,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page26_img4.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 48,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page48_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 63,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page63_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page3_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 5,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page5_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 5,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page5_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 9,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page9_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 32,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page32_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 56,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page56_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 57,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page57_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page3_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page6_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page6_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 6,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page6_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 7,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page7_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 8,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page8_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
-    "file_type": "pptx",
-    "page_or_slide": 1,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide1_img1.jpg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
-    "file_type": "pptx",
-    "page_or_slide": 4,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide4_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
-    "file_type": "pptx",
-    "page_or_slide": 5,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide5_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
-    "file_type": "pptx",
-    "page_or_slide": 14,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide14_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
-    "file_type": "pptx",
-    "page_or_slide": 18,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide18_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
-    "file_type": "pptx",
-    "page_or_slide": 18,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide18_img2.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848_Spring_2026_Milestone_0_page13_img1.png"
   },
   {
     "course": "CSC648",
@@ -981,463 +133,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848_Spring_2026_Milestone_1_page3_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 Spring 2026 Milestone 0.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 10,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848_Spring_2026_Milestone_0_page10_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 Spring 2026 Milestone 0.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 12,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848_Spring_2026_Milestone_0_page12_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 Spring 2026 Milestone 0.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 13,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848_Spring_2026_Milestone_0_page13_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 2,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page2_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img4.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 5,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img5.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 6,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img6.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 4,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page4_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 12,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page12_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 16,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 16,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 16,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 16,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img4.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 17,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page17_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 19,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page19_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 19,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page19_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 22,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 22,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 22,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 22,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img4.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 22,
-    "image_index": 5,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img5.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "git flow.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/git_flow_page3_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "git flow.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 5,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/git_flow_page5_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "git flow.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 7,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/git_flow_page7_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "git flow.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 15,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/git_flow_page15_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "git flow.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 16,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/git_flow_page16_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "git flow.pdf",
-    "file_type": "pdf",
-    "page_or_slide": 24,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/git_flow_page24_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 1,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page1_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 2,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page2_img1.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 3,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page3_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 13,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page13_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 14,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page14_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 15,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page15_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 16,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page16_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 22,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page22_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 23,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page23_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 23,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page23_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 23,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page23_img4.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 29,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page29_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 30,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page30_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 36,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page36_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 37,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page37_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 43,
-    "image_index": 10,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page43_img10.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img1.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img2.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img3.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img4.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 6,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img6.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 8,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img8.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 9,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img9.png"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 44,
-    "image_index": 10,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page44_img10.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 48,
-    "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page48_img2.jpeg"
-  },
-  {
-    "course": "CSC648",
-    "source_file": "What makes a great software engineer (ACM).pdf",
-    "file_type": "pdf",
-    "page_or_slide": 49,
-    "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/What_makes_a_great_software_engineer__ACM__page49_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848_Spring_2026_Milestone_1_page3_img1.png"
   },
   {
     "course": "CSC648",
@@ -1445,7 +141,7 @@
     "file_type": "pdf",
     "page_or_slide": 1,
     "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page1_img2.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page1_img2.jpeg"
   },
   {
     "course": "CSC648",
@@ -1453,7 +149,7 @@
     "file_type": "pdf",
     "page_or_slide": 2,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page2_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page2_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1461,7 +157,7 @@
     "file_type": "pdf",
     "page_or_slide": 26,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page26_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page26_img1.png"
   },
   {
     "course": "CSC648",
@@ -1469,7 +165,7 @@
     "file_type": "pdf",
     "page_or_slide": 27,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page27_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page27_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1477,7 +173,7 @@
     "file_type": "pdf",
     "page_or_slide": 30,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page30_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page30_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1485,7 +181,7 @@
     "file_type": "pdf",
     "page_or_slide": 44,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page44_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C10_Usability_Testing_and_Focus_Groups__s__page44_img1.png"
   },
   {
     "course": "CSC648",
@@ -1493,7 +189,7 @@
     "file_type": "pdf",
     "page_or_slide": 1,
     "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page1_img2.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page1_img2.jpeg"
   },
   {
     "course": "CSC648",
@@ -1501,7 +197,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1509,7 +205,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img2.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img2.png"
   },
   {
     "course": "CSC648",
@@ -1517,7 +213,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img3.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img3.jpeg"
   },
   {
     "course": "CSC648",
@@ -1525,7 +221,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img4.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img4.jpeg"
   },
   {
     "course": "CSC648",
@@ -1533,7 +229,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 5,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img5.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img5.png"
   },
   {
     "course": "CSC648",
@@ -1541,7 +237,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 6,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img6.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page3_img6.png"
   },
   {
     "course": "CSC648",
@@ -1549,7 +245,7 @@
     "file_type": "pdf",
     "page_or_slide": 5,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page5_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page5_img1.png"
   },
   {
     "course": "CSC648",
@@ -1557,7 +253,7 @@
     "file_type": "pdf",
     "page_or_slide": 6,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img1.png"
   },
   {
     "course": "CSC648",
@@ -1565,7 +261,7 @@
     "file_type": "pdf",
     "page_or_slide": 6,
     "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img2.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img2.png"
   },
   {
     "course": "CSC648",
@@ -1573,7 +269,7 @@
     "file_type": "pdf",
     "page_or_slide": 6,
     "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img4.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img4.png"
   },
   {
     "course": "CSC648",
@@ -1581,7 +277,7 @@
     "file_type": "pdf",
     "page_or_slide": 6,
     "image_index": 6,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img6.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page6_img6.png"
   },
   {
     "course": "CSC648",
@@ -1589,7 +285,7 @@
     "file_type": "pdf",
     "page_or_slide": 7,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page7_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page7_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1597,7 +293,7 @@
     "file_type": "pdf",
     "page_or_slide": 9,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page9_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page9_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1605,7 +301,7 @@
     "file_type": "pdf",
     "page_or_slide": 10,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page10_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page10_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1613,7 +309,7 @@
     "file_type": "pdf",
     "page_or_slide": 12,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page12_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page12_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1621,7 +317,7 @@
     "file_type": "pdf",
     "page_or_slide": 14,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page14_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page14_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1629,7 +325,7 @@
     "file_type": "pdf",
     "page_or_slide": 16,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page16_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page16_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1637,7 +333,7 @@
     "file_type": "pdf",
     "page_or_slide": 26,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page26_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page26_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1645,7 +341,7 @@
     "file_type": "pdf",
     "page_or_slide": 27,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img1.png"
   },
   {
     "course": "CSC648",
@@ -1653,7 +349,7 @@
     "file_type": "pdf",
     "page_or_slide": 27,
     "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img2.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img2.jpeg"
   },
   {
     "course": "CSC648",
@@ -1661,7 +357,7 @@
     "file_type": "pdf",
     "page_or_slide": 27,
     "image_index": 3,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img3.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img3.jpeg"
   },
   {
     "course": "CSC648",
@@ -1669,7 +365,7 @@
     "file_type": "pdf",
     "page_or_slide": 27,
     "image_index": 4,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img4.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page27_img4.jpeg"
   },
   {
     "course": "CSC648",
@@ -1677,7 +373,7 @@
     "file_type": "pdf",
     "page_or_slide": 32,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page32_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page32_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1685,7 +381,103 @@
     "file_type": "pdf",
     "page_or_slide": 69,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page69_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C11___12_Software_Engineering_Methodology_and_Process_page69_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page3_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page3_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page3_img4.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 4,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page4_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 5,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page5_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 7,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page7_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 8,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page8_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 11,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 11,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 11,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C13 Software Engineering Review & Prep for the Future.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 11,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C13_Software_Engineering_Review___Prep_for_the_Future_page11_img4.png"
   },
   {
     "course": "CSC648",
@@ -1693,7 +485,7 @@
     "file_type": "pdf",
     "page_or_slide": 1,
     "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page1_img2.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page1_img2.jpeg"
   },
   {
     "course": "CSC648",
@@ -1701,7 +493,7 @@
     "file_type": "pdf",
     "page_or_slide": 3,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page3_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page3_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1709,7 +501,7 @@
     "file_type": "pdf",
     "page_or_slide": 4,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page4_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page4_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1717,7 +509,7 @@
     "file_type": "pdf",
     "page_or_slide": 5,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page5_img1.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page5_img1.jpeg"
   },
   {
     "course": "CSC648",
@@ -1725,7 +517,7 @@
     "file_type": "pdf",
     "page_or_slide": 8,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page8_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page8_img1.png"
   },
   {
     "course": "CSC648",
@@ -1733,7 +525,7 @@
     "file_type": "pdf",
     "page_or_slide": 8,
     "image_index": 2,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page8_img2.jpeg"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page8_img2.jpeg"
   },
   {
     "course": "CSC648",
@@ -1741,6 +533,1214 @@
     "file_type": "pdf",
     "page_or_slide": 11,
     "image_index": 1,
-    "image_path": "/Users/apple/Capstone_Project/AI-Study-Assistant/data/processed/CSC648/images/SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page11_img1.png"
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C8_Security_Engineering__s__page11_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page3_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 5,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page5_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 5,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page5_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 9,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page9_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 32,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page32_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 56,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page56_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2024 C9 Software QA.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 57,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2024_C9_Software_QA_page57_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page3_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page6_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page6_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page6_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 7,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page7_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Fall 2025 C14 Software Engineering Review M5 and Prep Final Exam (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 8,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Fall_2025_C14_Software_Engineering_Review_M5_and_Prep_Final_Exam__s__page8_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page1_img3.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 2,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page2_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page3_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page6_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page6_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 8,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 8,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 8,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img3.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 8,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page8_img4.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 17,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page17_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 17,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page17_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 19,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page19_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 27,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page27_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 27,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page27_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 28,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page28_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 29,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 29,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 29,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 29,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page29_img4.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 38,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page38_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 50,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page50_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 51,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page51_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 51,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C1_Introduction_and_Motivation_page51_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page1_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 2,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page2_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 5,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page5_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 5,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img5.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 6,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img6.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 8,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img8.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 9,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page6_img9.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 8,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page8_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 9,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page9_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 10,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page10_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 10,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page10_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 11,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page11_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 11,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page11_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 16,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page16_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 26,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page26_img3.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 26,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page26_img4.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 48,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page48_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C2 Use Cases Requirements and Specifications.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 63,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C2_Use_Cases_Requirements_and_Specifications_page63_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 2,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page2_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 5,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page5_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 5,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page5_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page6_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 6,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page6_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 7,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page7_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 18,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page18_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 19,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page19_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 25,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page25_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 27,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page27_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 33,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page33_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 68,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page68_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 69,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 69,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 69,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img3.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C3 Arch Intro - SE Teamwork.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 69,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C3_Arch_Intro_-_SE_Teamwork_page69_img4.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 2,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page2_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img4.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 5,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img5.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 6,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page3_img6.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 4,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page4_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 12,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page12_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 16,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 16,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 16,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 16,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page16_img4.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 17,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page17_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 19,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page19_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 19,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page19_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 22,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 22,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 22,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 22,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img4.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C4 SW Architectures and Design (s).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 22,
+    "image_index": 5,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C4_SW_Architectures_and_Design__s__page22_img5.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 2,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page2_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 5,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page5_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 39,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page39_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 39,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page39_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 40,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page40_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page44_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 45,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page45_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 45,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page45_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 46,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page46_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 47,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page47_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 49,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page49_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 50,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page50_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 51,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page51_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 52,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page52_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C5 Usability GUI Principles Design Dev and Eval.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 53,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C5_Usability_GUI_Principles_Design_Dev_and_Eval_page53_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 2,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page2_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 41,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page41_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 41,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page41_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C6 SW Project Management Ethics and IP.pdf",
+    "file_type": "pdf",
+    "page_or_slide": 47,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C6_SW_Project_Management_Ethics_and_IP_page47_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
+    "file_type": "pptx",
+    "page_or_slide": 1,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide1_img1.jpg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
+    "file_type": "pptx",
+    "page_or_slide": 4,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide4_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
+    "file_type": "pptx",
+    "page_or_slide": 5,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide5_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
+    "file_type": "pptx",
+    "page_or_slide": 14,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide14_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
+    "file_type": "pptx",
+    "page_or_slide": 18,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide18_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "SFSU CSC648-848 [02] Spring 2026 C7 Coding Style and Coding Practices (s).pptx",
+    "file_type": "pptx",
+    "page_or_slide": 18,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\SFSU_CSC648-848__02__Spring_2026_C7_Coding_Style_and_Coding_Practices__s__slide18_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 1,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page1_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 2,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page2_img1.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 3,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page3_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 13,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page13_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 14,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page14_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 15,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page15_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 16,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page16_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 22,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page22_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 23,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page23_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 23,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page23_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 23,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page23_img4.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 29,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page29_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 30,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page30_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 36,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page36_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 37,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page37_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 43,
+    "image_index": 10,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page43_img10.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img1.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img2.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 3,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img3.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 4,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img4.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 6,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img6.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 8,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img8.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 9,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img9.png"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 44,
+    "image_index": 10,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page44_img10.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 48,
+    "image_index": 2,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page48_img2.jpeg"
+  },
+  {
+    "course": "CSC648",
+    "source_file": "What makes a great software engineer (ACM).pdf",
+    "file_type": "pdf",
+    "page_or_slide": 49,
+    "image_index": 1,
+    "image_path": "data\\processed\\CSC648\\images\\What_makes_a_great_software_engineer__ACM__page49_img1.jpeg"
   }
 ]

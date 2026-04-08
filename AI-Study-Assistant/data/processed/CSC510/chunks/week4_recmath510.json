@@ -3,17 +3,487 @@
   "source_file": "week4_recmath510.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 1,
+  "chunk_count": 48,
   "chunks": [
     {
       "chunk_id": "week4_recmath510-0",
       "course": "CSC510",
       "source_file": "week4_recmath510.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Recursive Arithmetic Prof. Timothy Sun Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Runtime: O(n2) Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Runtime: O(n2) repeated work Horner scheme Horner scheme Horner scheme Horner scheme Horner scheme Horner scheme Runtime: O(n) How about a recursive formulation?: Recursive Horner How about a recursive formulation?: Recursive Horner Horner’s scheme is optimal for polynomials: Fast exponentiation Horner’s scheme is optimal for polynomials: … but what about just a single large power? Fast exponentiation Horner’s scheme is optimal for polynomials: … but what about just a single large power? Big exponents used in public-key cryptography. Fast exponentiation Fast exponentiation Θ(N) is too slow: ●N ≈ 10600 Fast exponentiation Θ(N) is too slow: ●N ≈ 10600, log10 N = 600. Θ(log N) is the number of digits (space) needed to write down N. Several algorithms based on repeated squaring: Fast exponentiation An iterative approach might look like: ● Decompose N into binary ● Multiply the “1” powers Fast exponentiation Fast exponentiation How would we do this recursively? Fast exponentiation How would we do this recursively? Fast exponentiation How would we do this recursively? fails for odd numbers How would we do this recursively? Fast exponentiation Fast exponentiation How would we do this recursively? Still O(N) time: T(N) = 2T(N/2) + O(1) = Θ(N) Fast exponentiation One recursive call: Fast exponentiation One recursive call: By master theorem, runtime is T(N) = T(N/2) + O(1) = Θ(log N) Fast exponentiation Addition How long does it take to add two n digit numbers together? Addition How long does it take to add two n digit numbers together? Θ(n) operations Multiplication? How long does it take to multiply two n digit numbers together? Multiplication? How long does it take to multiply two n digit numbers together? Multiplication? How long does it take to multiply two n digit numbers together? Θ(n2) operations Karatsuba’s algorithm It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits Karatsuba’s algorithm Karatsuba’s algorithm It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits A ﬁrst attempt… A ﬁrst attempt… A ﬁrst attempt… Some helper functions A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) = Θ(n2) by master theorem. A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) = Θ(n2) by master theorem. No improvement??? Karatsuba’s algorithm Karatsuba’s brilliant idea: BC + AD = AC + BD - (A - B)(C - D) Karatsuba’s algorithm How many recursive calls now? How many recursive calls now? Looks like 5, but only 3 (2 repeated) Karatsuba’s algorithm Karatsuba’s algorithm Runtime would be: T(n) = 3T(n/2) + Θ(n) Karatsuba’s algorithm Runtime would be: T(n) = 3T(n/2) + Θ(n) = by master theorem."
+      "text": "Recursive Arithmetic Prof. Timothy Sun"
+    },
+    {
+      "chunk_id": "week4_recmath510-1",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 1,
+      "chunk_in_page": 0,
+      "page": 2,
+      "slide": null,
+      "text": "Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)?"
+    },
+    {
+      "chunk_id": "week4_recmath510-2",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 2,
+      "chunk_in_page": 0,
+      "page": 3,
+      "slide": null,
+      "text": "Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)?"
+    },
+    {
+      "chunk_id": "week4_recmath510-3",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Runtime: O(n2)"
+    },
+    {
+      "chunk_id": "week4_recmath510-4",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Evaluating polynomials Given an array [a0, a1, …, an], and x, how do you evaluate p(x)? Runtime: O(n2) repeated work"
+    },
+    {
+      "chunk_id": "week4_recmath510-5",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Horner scheme"
+    },
+    {
+      "chunk_id": "week4_recmath510-6",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Horner scheme"
+    },
+    {
+      "chunk_id": "week4_recmath510-7",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Horner scheme"
+    },
+    {
+      "chunk_id": "week4_recmath510-8",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Horner scheme"
+    },
+    {
+      "chunk_id": "week4_recmath510-9",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Horner scheme"
+    },
+    {
+      "chunk_id": "week4_recmath510-10",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Horner scheme Runtime: O(n)"
+    },
+    {
+      "chunk_id": "week4_recmath510-11",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "How about a recursive formulation?: Recursive Horner"
+    },
+    {
+      "chunk_id": "week4_recmath510-12",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "How about a recursive formulation?: Recursive Horner"
+    },
+    {
+      "chunk_id": "week4_recmath510-13",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Horner’s scheme is optimal for polynomials: Fast exponentiation"
+    },
+    {
+      "chunk_id": "week4_recmath510-14",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Horner’s scheme is optimal for polynomials: … but what about just a single large power? Fast exponentiation"
+    },
+    {
+      "chunk_id": "week4_recmath510-15",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Horner’s scheme is optimal for polynomials: … but what about just a single large power? Big exponents used in public-key cryptography. Fast exponentiation"
+    },
+    {
+      "chunk_id": "week4_recmath510-16",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Fast exponentiation Θ(N) is too slow: ●N ≈ 10600"
+    },
+    {
+      "chunk_id": "week4_recmath510-17",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Fast exponentiation Θ(N) is too slow: ●N ≈ 10600, log10 N = 600. Θ(log N) is the number of digits (space) needed to write down N."
+    },
+    {
+      "chunk_id": "week4_recmath510-18",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Several algorithms based on repeated squaring: Fast exponentiation"
+    },
+    {
+      "chunk_id": "week4_recmath510-19",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "An iterative approach might look like: ● Decompose N into binary ● Multiply the “1” powers Fast exponentiation"
+    },
+    {
+      "chunk_id": "week4_recmath510-20",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Fast exponentiation How would we do this recursively?"
+    },
+    {
+      "chunk_id": "week4_recmath510-21",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Fast exponentiation How would we do this recursively?"
+    },
+    {
+      "chunk_id": "week4_recmath510-22",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Fast exponentiation How would we do this recursively? fails for odd numbers"
+    },
+    {
+      "chunk_id": "week4_recmath510-23",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "How would we do this recursively? Fast exponentiation"
+    },
+    {
+      "chunk_id": "week4_recmath510-24",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Fast exponentiation How would we do this recursively? Still O(N) time: T(N) = 2T(N/2) + O(1) = Θ(N)"
+    },
+    {
+      "chunk_id": "week4_recmath510-25",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Fast exponentiation One recursive call:"
+    },
+    {
+      "chunk_id": "week4_recmath510-26",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Fast exponentiation One recursive call: By master theorem, runtime is T(N) = T(N/2) + O(1) = Θ(log N)"
+    },
+    {
+      "chunk_id": "week4_recmath510-27",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Fast exponentiation"
+    },
+    {
+      "chunk_id": "week4_recmath510-28",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Addition How long does it take to add two n digit numbers together?"
+    },
+    {
+      "chunk_id": "week4_recmath510-29",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Addition How long does it take to add two n digit numbers together? Θ(n) operations"
+    },
+    {
+      "chunk_id": "week4_recmath510-30",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Multiplication? How long does it take to multiply two n digit numbers together?"
+    },
+    {
+      "chunk_id": "week4_recmath510-31",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Multiplication? How long does it take to multiply two n digit numbers together?"
+    },
+    {
+      "chunk_id": "week4_recmath510-32",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Multiplication? How long does it take to multiply two n digit numbers together? Θ(n2) operations"
+    },
+    {
+      "chunk_id": "week4_recmath510-33",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Karatsuba’s algorithm It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits"
+    },
+    {
+      "chunk_id": "week4_recmath510-34",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits Karatsuba’s algorithm"
+    },
+    {
+      "chunk_id": "week4_recmath510-35",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Karatsuba’s algorithm It is possible to do o(n2) operations using divide-and-conquer Each part A, B, C, D has n/2 digits"
+    },
+    {
+      "chunk_id": "week4_recmath510-36",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "A ﬁrst attempt…"
+    },
+    {
+      "chunk_id": "week4_recmath510-37",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "A ﬁrst attempt…"
+    },
+    {
+      "chunk_id": "week4_recmath510-38",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "A ﬁrst attempt…"
+    },
+    {
+      "chunk_id": "week4_recmath510-39",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Some helper functions"
+    },
+    {
+      "chunk_id": "week4_recmath510-40",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n)"
+    },
+    {
+      "chunk_id": "week4_recmath510-41",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) = Θ(n2) by master theorem."
+    },
+    {
+      "chunk_id": "week4_recmath510-42",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "A ﬁrst attempt… Runtime would be: T(n) = 4 T(n/2) + Θ(n) = Θ(n2) by master theorem. No improvement???"
+    },
+    {
+      "chunk_id": "week4_recmath510-43",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Karatsuba’s algorithm Karatsuba’s brilliant idea: BC + AD = AC + BD - (A - B)(C - D)"
+    },
+    {
+      "chunk_id": "week4_recmath510-44",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Karatsuba’s algorithm How many recursive calls now?"
+    },
+    {
+      "chunk_id": "week4_recmath510-45",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "How many recursive calls now? Looks like 5, but only 3 (2 repeated) Karatsuba’s algorithm"
+    },
+    {
+      "chunk_id": "week4_recmath510-46",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Karatsuba’s algorithm Runtime would be: T(n) = 3T(n/2) + Θ(n)"
+    },
+    {
+      "chunk_id": "week4_recmath510-47",
+      "course": "CSC510",
+      "source_file": "week4_recmath510.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Karatsuba’s algorithm Runtime would be: T(n) = 3T(n/2) + Θ(n) = by master theorem."
     }
   ]
 }

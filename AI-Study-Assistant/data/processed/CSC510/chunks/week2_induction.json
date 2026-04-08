@@ -3,37 +3,357 @@
   "source_file": "week2_induction.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 3,
+  "chunk_count": 35,
   "chunks": [
     {
       "chunk_id": "week2_induction-0",
       "course": "CSC510",
       "source_file": "week2_induction.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Proof by Induction Prof. Timothy Sun A summation formula We gave upper and lower bounds to prove that 1 + 2 + 3 + … + n = ϴ(n2) A summation formula But what about an exact formula? 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. A summation formula But what about an exact formula? 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Sometimes one can use proof by induction if there’s a recursive structure: (1 + 2 + 3 + … + (n-1)) + n Proof by induction Every induction proof has two steps: ● Base case (prove for n = starting value) ● Inductive step (if true for n ≤ k, prove it’s true for n = k+1, for every k) Proof by induction Every induction proof has two steps: ● Base case (prove for n = starting value) ● Inductive step (if true for n ≤ k, prove it’s true for n = k+1, for every k) Assuming that it’s true for n ≤ k is called the inductive hypothesis. Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Base case: check n = 1. ● LHS: 1 ● RHS: 1(1+1)/2 = 1 Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Base case: check n = 1. ● LHS: 1 ● RHS: 1(1+1)/2 = 1 LHS = RHS Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Inductive step: if formula is true when n ≤ k, then it’s true when n = k+1 Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Inductive step: if formula is true when n ≤ k, then it’s true when n = k+1 Why does induction work? “Isn’t induction circular? You’re assuming [in the inductive hypothesis] the thing you’re trying to prove!” Emphasis on the word “if”: “if formula is true when n ≤ k, then it’s true when n = k+1” Inductive step is conditional The following statement is true: “If n = n+1, then n+1 = n+2,” but this is never true when n is an integer. Why does induction work? The “domino” analogy: ● Domino i is the statement for n = i. ● Each domino knocks over the next one (inductive step). ● The chain reaction starts when knocking over the ﬁrst domino (base case). A coding analogy? A coding analogy? A coding analogy? We could store “sum,” but we can exploit the previous check passing Verifying each branch, we can simplify further A coding analogy? An induction puzzle - weak induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box i+1. An induction puzzle - weak induction Will all the boxes be checked under the following rules? ●"
+      "text": "Proof by Induction Prof. Timothy Sun"
     },
     {
       "chunk_id": "week2_induction-1",
       "course": "CSC510",
       "source_file": "week2_induction.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "A coding analogy? A coding analogy? A coding analogy? We could store “sum,” but we can exploit the previous check passing Verifying each branch, we can simplify further A coding analogy? An induction puzzle - weak induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box i+1. An induction puzzle - weak induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box i+1. Yes! An induction puzzle - strong induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Boxes 1 through i are checked, then so is Box i+1. An induction puzzle - strong induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Boxes 1 through i are checked, then so is Box i+1. Yes! An induction puzzle - a weird induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box 2i. ● If Box i is checked, then so is Box i-1. An induction puzzle - a weird induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box 2i. ● If Box i is checked, then so is Box i-1. Yes! Pitfalls Some fallacious proofs by induction: ● “I’m 2/3 Chinese and 1/3 Latino.” ● “All horses are the same color.” ● “Everyone is essentially bald.” What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. Monochromatic horses What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. By IH, ﬁrst ﬁve horses are the same color Monochromatic horses What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. By IH again, last ﬁve horses are the same color Monochromatic horses What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. Therefore, all six horses are the same color! Monochromatic horses Proof by induction A few more examples: ● Prove that n3+2n is divisible by 3 for every positive integer n. ● Find and prove a formula for ● Show that if you have an unlimited collection of 3-cent and 5-cent stamps, you can make any postage ≥ 8 cents. Revisiting some calculus… Formally proving for all n ≥ 0 using induction. Revisiting some calculus… Formally proving for all n ≥ 0 using induction. Base case: when n = 0, we can evaluate the limit directly: Revisiting some calculus… Inductive step: if it’s true for n ≤ k, use l’Hopital’s rule once to show that it’s true for n = k + 1: Well-ordering principle “For every non-empty set of positive integers, there is a smallest element.” Well-ordering principle “For every non-empty set"
+      "text": "A summation formula We gave upper and lower bounds to prove that 1 + 2 + 3 + … + n = ϴ(n2)"
     },
     {
       "chunk_id": "week2_induction-2",
       "course": "CSC510",
       "source_file": "week2_induction.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "Formally proving for all n ≥ 0 using induction. Revisiting some calculus… Formally proving for all n ≥ 0 using induction. Base case: when n = 0, we can evaluate the limit directly: Revisiting some calculus… Inductive step: if it’s true for n ≤ k, use l’Hopital’s rule once to show that it’s true for n = k + 1: Well-ordering principle “For every non-empty set of positive integers, there is a smallest element.” Well-ordering principle “For every non-empty set of positive integers, there is a smallest element.” Equivalent to induction: ● “If it were false, there would be a smallest counterexample…”"
+      "text": "A summation formula But what about an exact formula? 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1."
+    },
+    {
+      "chunk_id": "week2_induction-3",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "A summation formula But what about an exact formula? 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Sometimes one can use proof by induction if there’s a recursive structure: (1 + 2 + 3 + … + (n-1)) + n"
+    },
+    {
+      "chunk_id": "week2_induction-4",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Proof by induction Every induction proof has two steps: ● Base case (prove for n = starting value) ● Inductive step (if true for n ≤ k, prove it’s true for n = k+1, for every k)"
+    },
+    {
+      "chunk_id": "week2_induction-5",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Proof by induction Every induction proof has two steps: ● Base case (prove for n = starting value) ● Inductive step (if true for n ≤ k, prove it’s true for n = k+1, for every k) Assuming that it’s true for n ≤ k is called the inductive hypothesis."
+    },
+    {
+      "chunk_id": "week2_induction-6",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1."
+    },
+    {
+      "chunk_id": "week2_induction-7",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Base case: check n = 1. ● LHS: 1 ● RHS: 1(1+1)/2 = 1"
+    },
+    {
+      "chunk_id": "week2_induction-8",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Base case: check n = 1. ● LHS: 1 ● RHS: 1(1+1)/2 = 1 LHS = RHS"
+    },
+    {
+      "chunk_id": "week2_induction-9",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Inductive step: if formula is true when n ≤ k, then it’s true when n = k+1"
+    },
+    {
+      "chunk_id": "week2_induction-10",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Proof by induction Want to prove: 1 + 2 + 3 + … + n = n(n+1)/2, for all n ≥ 1. Inductive step: if formula is true when n ≤ k, then it’s true when n = k+1"
+    },
+    {
+      "chunk_id": "week2_induction-11",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Why does induction work? “Isn’t induction circular? You’re assuming [in the inductive hypothesis] the thing you’re trying to prove!” Emphasis on the word “if”: “if formula is true when n ≤ k, then it’s true when n = k+1”"
+    },
+    {
+      "chunk_id": "week2_induction-12",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Inductive step is conditional The following statement is true: “If n = n+1, then n+1 = n+2,” but this is never true when n is an integer."
+    },
+    {
+      "chunk_id": "week2_induction-13",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Why does induction work? The “domino” analogy: ● Domino i is the statement for n = i. ● Each domino knocks over the next one (inductive step). ● The chain reaction starts when knocking over the ﬁrst domino (base case)."
+    },
+    {
+      "chunk_id": "week2_induction-14",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "A coding analogy?"
+    },
+    {
+      "chunk_id": "week2_induction-15",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "A coding analogy?"
+    },
+    {
+      "chunk_id": "week2_induction-16",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "A coding analogy? We could store “sum,” but we can exploit the previous check passing"
+    },
+    {
+      "chunk_id": "week2_induction-17",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Verifying each branch, we can simplify further A coding analogy?"
+    },
+    {
+      "chunk_id": "week2_induction-18",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "An induction puzzle - weak induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box i+1."
+    },
+    {
+      "chunk_id": "week2_induction-19",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "An induction puzzle - weak induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box i+1. Yes!"
+    },
+    {
+      "chunk_id": "week2_induction-20",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "An induction puzzle - strong induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Boxes 1 through i are checked, then so is Box i+1."
+    },
+    {
+      "chunk_id": "week2_induction-21",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "An induction puzzle - strong induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Boxes 1 through i are checked, then so is Box i+1. Yes!"
+    },
+    {
+      "chunk_id": "week2_induction-22",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "An induction puzzle - a weird induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box 2i. ● If Box i is checked, then so is Box i-1."
+    },
+    {
+      "chunk_id": "week2_induction-23",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "An induction puzzle - a weird induction Will all the boxes be checked under the following rules? ● Box 1 is checked. ● If Box i is checked, then so is Box 2i. ● If Box i is checked, then so is Box i-1. Yes!"
+    },
+    {
+      "chunk_id": "week2_induction-24",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Pitfalls Some fallacious proofs by induction: ● “I’m 2/3 Chinese and 1/3 Latino.” ● “All horses are the same color.” ● “Everyone is essentially bald.”"
+    },
+    {
+      "chunk_id": "week2_induction-25",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. Monochromatic horses"
+    },
+    {
+      "chunk_id": "week2_induction-26",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. By IH, ﬁrst ﬁve horses are the same color Monochromatic horses"
+    },
+    {
+      "chunk_id": "week2_induction-27",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. By IH again, last ﬁve horses are the same color Monochromatic horses"
+    },
+    {
+      "chunk_id": "week2_induction-28",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "What’s wrong with this inductive step?: If true for some k, like k = 5, try proving for sets of k + 1 = 6 horses. Therefore, all six horses are the same color! Monochromatic horses"
+    },
+    {
+      "chunk_id": "week2_induction-29",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Proof by induction A few more examples: ● Prove that n3+2n is divisible by 3 for every positive integer n. ● Find and prove a formula for ● Show that if you have an unlimited collection of 3-cent and 5-cent stamps, you can make any postage ≥ 8 cents."
+    },
+    {
+      "chunk_id": "week2_induction-30",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Revisiting some calculus… Formally proving for all n ≥ 0 using induction."
+    },
+    {
+      "chunk_id": "week2_induction-31",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Revisiting some calculus… Formally proving for all n ≥ 0 using induction. Base case: when n = 0, we can evaluate the limit directly:"
+    },
+    {
+      "chunk_id": "week2_induction-32",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Revisiting some calculus… Inductive step: if it’s true for n ≤ k, use l’Hopital’s rule once to show that it’s true for n = k + 1:"
+    },
+    {
+      "chunk_id": "week2_induction-33",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Well-ordering principle “For every non-empty set of positive integers, there is a smallest element.”"
+    },
+    {
+      "chunk_id": "week2_induction-34",
+      "course": "CSC510",
+      "source_file": "week2_induction.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Well-ordering principle “For every non-empty set of positive integers, there is a smallest element.” Equivalent to induction: ● “If it were false, there would be a smallest counterexample…”"
     }
   ]
 }

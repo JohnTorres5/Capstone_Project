@@ -3,47 +3,827 @@
   "source_file": "week3_recursion510.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 4,
+  "chunk_count": 82,
   "chunks": [
     {
       "chunk_id": "week3_recursion510-0",
       "course": "CSC510",
       "source_file": "week3_recursion510.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Recursion and Divide-and-Conquer Prof. Timothy Sun Reduction Reduction: converting a problem X into a problem Y, where we already have a “black box” algorithm for Y. Reduction Reduction: converting a problem X into a problem Y, where we already have a “black box” algorithm for Y. Proof of correctness for alg. X should not depend on details of the black box, though the runtime would. Reduction - median Example: Finding the median element of an array. Reduction - median Example: Finding the median element of an array. Reduction - median Example: Finding the median element of an array. Reduction to sorting: ● Sort the array, then return n/2-th element. Reduction - median Reduction - median “Sort the array, then return n/2-th element.” Reduction - median “Sort the array, then return n/2-th element.” ● Does it matter if we use, e.g., bubblesort vs. mergesort? Reduction - median “Sort the array, then return n/2-th element.” ● Does it matter if we use, e.g., bubblesort vs. mergesort? ○ Correctness: no ○ Runtime: yes Recursion Recursive alg. usually consists of two parts: ● Algorithm for a base case ● Reduction to a smaller instance of the same problem Recursion Recursive alg. usually consists of two parts: ● Algorithm for a base case ● Reduction to a smaller instance of the same problem Original instance: X, smaller instance Y. Correctness for Y by the (strong) inductive hypothesis. The most important slide in this class When designing or proving the correctness of a recursive algorithm, ASSUME RECURSIVE CALLS WORK CORRECTLY Towers of Hanoi Move all the discs to the right peg, one at a time, without a bigger disc on top of a smaller disc. Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, …, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, …, n-1 to the right. Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, …, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, …, n-1 to the right. How do we do steps 1 and 3? Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, …, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, …, n-1 to the right. How do we do steps 1 and 3? Recursion, recursion, recursion! Towers of Hanoi “Move n discs from ‘start’ to ‘end’ with the help of ‘other’” Towers of Hanoi To prove correctness, no need to unwrap the recursion. “Move n discs from ‘start’ to ‘end’ with the help of ‘other’” Insertion sort, revisited iterative Insertion sort, revisited iterative recursive Divide and conquer Divide and conquer is a recursive technique for algorithm design: ● Reduce to multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem. Divide and conquer Divide and conquer is a recursive technique for algorithm design: ● Reduce to multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? Divide and conquer Divide and conquer is a recursive technique for"
+      "text": "Recursion and Divide-and-Conquer Prof. Timothy Sun"
     },
     {
       "chunk_id": "week3_recursion510-1",
       "course": "CSC510",
       "source_file": "week3_recursion510.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem. Divide and conquer Divide and conquer is a recursive technique for algorithm design: ● Reduce to multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? Divide and conquer Divide and conquer is a recursive technique for algorithm design: ● Reduce to multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? mergesort and quicksort Two deﬁnitions of sortedness An array A[1, … , n] is sorted if: ● For any pair of indices i < j, A[i] ≤ A[j]. Two deﬁnitions of sortedness An array A[1, … , n] is sorted if: ● For any pair of indices i < j, A[i] ≤ A[j]. … or equivalently: ● For any pair of consecutive indices i, i+1, A[i] ≤ A[i+1]. Two deﬁnitions of sortedness An array A[1, … , n] is sorted if: ● For any pair of indices i < j, A[i] ≤ A[j]. … or equivalently: ● For any pair of consecutive indices i, i+1, A[i] ≤ A[i+1]. (induction, induction, induction…) Concatenation Given two arrays A[1, … , n], and B[1, … , m], their concatenation A ○ B is the array you get by sticking them back to back. When is a concatenation sorted? Concatenation Given two arrays A[1, … , n], and B[1, … , m], their concatenation A ○ B is the array you get by sticking them back to back. When is a concatenation sorted? When A and B are sorted, and A[n] ≤ B[1]. Quicksort “Partition around the pivot, recursively sort smaller and bigger, concatenate.” Quicksort How do we know that the recursive calls “work”? Proof is by induction. Quicksort Base case: n = 0 or 1. Quicksort Base case: n = 0 or 1. ● Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, …, k, would it be correct for array size k+1? Quicksort Base case: n = 0 or 1. ● Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, …, k, would it be correct for array size k+1? ● IH + concatenation proof Quicksort Base case: n = 0 or 1. ● Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, …, k, would it be correct for array size k+1? ● IH + concatenation proof By the principle of induction, quicksort is correct for all n ≥ 0. Mergesort Similar proof of correctness for mergesort. Why does this work? Impossible to imagine the recursion! Why does this work? Base case: n = 0, 1 like before Why does this work? Inductive step: ● Find and place largest Base case: n = 0, 1 like before Why does this work? Inductive step: ● Find and place largest ● Sort the rest Base case: n = 0, 1 like before Given an array of integers What’s the subarray whose sum is the biggest? Maximum subarray Given an array of integers What’s the subarray"
+      "text": "Reduction Reduction: converting a problem X into a problem Y, where we already have a “black box” algorithm for Y."
     },
     {
       "chunk_id": "week3_recursion510-2",
       "course": "CSC510",
       "source_file": "week3_recursion510.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "imagine the recursion! Why does this work? Base case: n = 0, 1 like before Why does this work? Inductive step: ● Find and place largest Base case: n = 0, 1 like before Why does this work? Inductive step: ● Find and place largest ● Sort the rest Base case: n = 0, 1 like before Given an array of integers What’s the subarray whose sum is the biggest? Maximum subarray Given an array of integers What’s the subarray whose sum is the biggest? 216? Maximum subarray Given an array of integers What’s the subarray whose sum is the biggest? 247, best possible Maximum subarray Maximum subarray Brute force: calculate each subarray Maximum subarray Brute force: calculate each subarray Maximum subarray Brute force: calculate each subarray Runtime: Θ(n3)! Maximum subarray Brute force: calculate each subarray Runtime: Θ(n3), due to repeated work Maximum “preﬁx” How to develop a Θ(n) algorithm? Maximum “preﬁx” How to develop a Θ(n) algorithm? Cumulative sums. Maximum subarray Maximum subarray Runtime: Θ(n2) Maximum subarray A divide and conquer approach: splitting the array in half Maximum subarray A divide and conquer approach: splitting the array in half Maximum subarray A divide and conquer approach: splitting the array in half recursive calls Maximum subarray What’s the best way to solve this subproblem? Maximum subarray What’s the best way to solve this subproblem? Observation: best solution = best left half + best right half Maximum subarray Maximum subarray Order statistics For quicksort, guarantee a good pivot, if median chosen every time. Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: “Given an unsorted array, ﬁnd the k-th order statistic (k-th smallest elt.)” Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: “Given an unsorted array, ﬁnd the k-th order statistic (k-th smallest elt.)” Median: n/2-th order statistic (slightly different from median in stats.) Simple approach Sort ﬁrst, pick out k-th element. Θ(n log n) Simple approach Sort ﬁrst, pick out k-th element. Θ(n log n) Can we do better? Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Based on size of L, we can ﬁgure out the “rank” of the pivot. Quickselect Like quicksort in that: ● it partitions the elements Quickselect Quickselect Quickselect Quickselect Like quicksort in that: ● it partitions the elements ● runtime depends on pivot quality Quickselect In worst case, might need to recurse on bigger half: Quickselect In worst case, might need to recurse on bigger half: Quickselect Let’s say pivot is always the median. Quickselect Let’s say pivot is always the median. Quickselect Let’s say pivot is always the median. Let’s say pivot is always the median. But isn’t this circular?? Quickselect A simple pivot selection Probability of landing in shaded region? Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average?"
+      "text": "Reduction Reduction: converting a problem X into a problem Y, where we already have a “black box” algorithm for Y. Proof of correctness for alg. X should not depend on details of the black box, though the runtime would."
     },
     {
       "chunk_id": "week3_recursion510-3",
       "course": "CSC510",
       "source_file": "week3_recursion510.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "median. Quickselect Let’s say pivot is always the median. Quickselect Let’s say pivot is always the median. Let’s say pivot is always the median. But isn’t this circular?? Quickselect A simple pivot selection Probability of landing in shaded region? Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? 2 (geometric distribution, p = 1/2) Standard choice: choose a random pivot element."
+      "text": "Reduction - median Example: Finding the median element of an array."
+    },
+    {
+      "chunk_id": "week3_recursion510-4",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Reduction - median Example: Finding the median element of an array."
+    },
+    {
+      "chunk_id": "week3_recursion510-5",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Reduction - median Example: Finding the median element of an array. Reduction to sorting: ● Sort the array, then return n/2-th element."
+    },
+    {
+      "chunk_id": "week3_recursion510-6",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Reduction - median"
+    },
+    {
+      "chunk_id": "week3_recursion510-7",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Reduction - median “Sort the array, then return n/2-th element.”"
+    },
+    {
+      "chunk_id": "week3_recursion510-8",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "Reduction - median “Sort the array, then return n/2-th element.” ● Does it matter if we use, e.g., bubblesort vs. mergesort?"
+    },
+    {
+      "chunk_id": "week3_recursion510-9",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Reduction - median “Sort the array, then return n/2-th element.” ● Does it matter if we use, e.g., bubblesort vs. mergesort? ○ Correctness: no ○ Runtime: yes"
+    },
+    {
+      "chunk_id": "week3_recursion510-10",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Recursion Recursive alg. usually consists of two parts: ● Algorithm for a base case ● Reduction to a smaller instance of the same problem"
+    },
+    {
+      "chunk_id": "week3_recursion510-11",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Recursion Recursive alg. usually consists of two parts: ● Algorithm for a base case ● Reduction to a smaller instance of the same problem Original instance: X, smaller instance Y. Correctness for Y by the (strong) inductive hypothesis."
+    },
+    {
+      "chunk_id": "week3_recursion510-12",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "The most important slide in this class When designing or proving the correctness of a recursive algorithm, ASSUME RECURSIVE CALLS WORK CORRECTLY"
+    },
+    {
+      "chunk_id": "week3_recursion510-13",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Towers of Hanoi Move all the discs to the right peg, one at a time, without a bigger disc on top of a smaller disc."
+    },
+    {
+      "chunk_id": "week3_recursion510-14",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, …, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, …, n-1 to the right."
+    },
+    {
+      "chunk_id": "week3_recursion510-15",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, …, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, …, n-1 to the right. How do we do steps 1 and 3?"
+    },
+    {
+      "chunk_id": "week3_recursion510-16",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, …, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, …, n-1 to the right. How do we do steps 1 and 3? Recursion, recursion, recursion!"
+    },
+    {
+      "chunk_id": "week3_recursion510-17",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Towers of Hanoi “Move n discs from ‘start’ to ‘end’ with the help of ‘other’”"
+    },
+    {
+      "chunk_id": "week3_recursion510-18",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Towers of Hanoi To prove correctness, no need to unwrap the recursion. “Move n discs from ‘start’ to ‘end’ with the help of ‘other’”"
+    },
+    {
+      "chunk_id": "week3_recursion510-19",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Insertion sort, revisited iterative"
+    },
+    {
+      "chunk_id": "week3_recursion510-20",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Insertion sort, revisited iterative recursive"
+    },
+    {
+      "chunk_id": "week3_recursion510-21",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Divide and conquer Divide and conquer is a recursive technique for algorithm design: ● Reduce to multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem."
+    },
+    {
+      "chunk_id": "week3_recursion510-22",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Divide and conquer Divide and conquer is a recursive technique for algorithm design: ● Reduce to multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer?"
+    },
+    {
+      "chunk_id": "week3_recursion510-23",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Divide and conquer Divide and conquer is a recursive technique for algorithm design: ● Reduce to multiple smaller instances of the same problem. ● Solve each of those instances. ● Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? mergesort and quicksort"
+    },
+    {
+      "chunk_id": "week3_recursion510-24",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Two deﬁnitions of sortedness An array A[1, … , n] is sorted if: ● For any pair of indices i < j, A[i] ≤ A[j]."
+    },
+    {
+      "chunk_id": "week3_recursion510-25",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Two deﬁnitions of sortedness An array A[1, … , n] is sorted if: ● For any pair of indices i < j, A[i] ≤ A[j]. … or equivalently: ● For any pair of consecutive indices i, i+1, A[i] ≤ A[i+1]."
+    },
+    {
+      "chunk_id": "week3_recursion510-26",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Two deﬁnitions of sortedness An array A[1, … , n] is sorted if: ● For any pair of indices i < j, A[i] ≤ A[j]. … or equivalently: ● For any pair of consecutive indices i, i+1, A[i] ≤ A[i+1]. (induction, induction, induction…)"
+    },
+    {
+      "chunk_id": "week3_recursion510-27",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Concatenation Given two arrays A[1, … , n], and B[1, … , m], their concatenation A ○ B is the array you get by sticking them back to back. When is a concatenation sorted?"
+    },
+    {
+      "chunk_id": "week3_recursion510-28",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Concatenation Given two arrays A[1, … , n], and B[1, … , m], their concatenation A ○ B is the array you get by sticking them back to back. When is a concatenation sorted? When A and B are sorted, and A[n] ≤ B[1]."
+    },
+    {
+      "chunk_id": "week3_recursion510-29",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Quicksort “Partition around the pivot, recursively sort smaller and bigger, concatenate.”"
+    },
+    {
+      "chunk_id": "week3_recursion510-30",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Quicksort How do we know that the recursive calls “work”? Proof is by induction."
+    },
+    {
+      "chunk_id": "week3_recursion510-31",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Quicksort Base case: n = 0 or 1."
+    },
+    {
+      "chunk_id": "week3_recursion510-32",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Quicksort Base case: n = 0 or 1. ● Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, …, k, would it be correct for array size k+1?"
+    },
+    {
+      "chunk_id": "week3_recursion510-33",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Quicksort Base case: n = 0 or 1. ● Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, …, k, would it be correct for array size k+1? ● IH + concatenation proof"
+    },
+    {
+      "chunk_id": "week3_recursion510-34",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Quicksort Base case: n = 0 or 1. ● Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, …, k, would it be correct for array size k+1? ● IH + concatenation proof By the principle of induction, quicksort is correct for all n ≥ 0."
+    },
+    {
+      "chunk_id": "week3_recursion510-35",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Mergesort Similar proof of correctness for mergesort."
+    },
+    {
+      "chunk_id": "week3_recursion510-36",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Why does this work? Impossible to imagine the recursion!"
+    },
+    {
+      "chunk_id": "week3_recursion510-37",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Why does this work? Base case: n = 0, 1 like before"
+    },
+    {
+      "chunk_id": "week3_recursion510-38",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Why does this work? Inductive step: ● Find and place largest Base case: n = 0, 1 like before"
+    },
+    {
+      "chunk_id": "week3_recursion510-39",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Why does this work? Inductive step: ● Find and place largest ● Sort the rest Base case: n = 0, 1 like before"
+    },
+    {
+      "chunk_id": "week3_recursion510-40",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Given an array of integers What’s the subarray whose sum is the biggest? Maximum subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-41",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Given an array of integers What’s the subarray whose sum is the biggest? 216? Maximum subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-42",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Given an array of integers What’s the subarray whose sum is the biggest? 247, best possible Maximum subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-43",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Maximum subarray Brute force: calculate each subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-44",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Maximum subarray Brute force: calculate each subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-45",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Maximum subarray Brute force: calculate each subarray Runtime: Θ(n3)!"
+    },
+    {
+      "chunk_id": "week3_recursion510-46",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Maximum subarray Brute force: calculate each subarray Runtime: Θ(n3), due to repeated work"
+    },
+    {
+      "chunk_id": "week3_recursion510-47",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Maximum “preﬁx” How to develop a Θ(n) algorithm?"
+    },
+    {
+      "chunk_id": "week3_recursion510-48",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Maximum “preﬁx” How to develop a Θ(n) algorithm? Cumulative sums."
+    },
+    {
+      "chunk_id": "week3_recursion510-49",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Maximum subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-50",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Maximum subarray Runtime: Θ(n2)"
+    },
+    {
+      "chunk_id": "week3_recursion510-51",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Maximum subarray A divide and conquer approach: splitting the array in half"
+    },
+    {
+      "chunk_id": "week3_recursion510-52",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Maximum subarray A divide and conquer approach: splitting the array in half"
+    },
+    {
+      "chunk_id": "week3_recursion510-53",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "Maximum subarray A divide and conquer approach: splitting the array in half recursive calls"
+    },
+    {
+      "chunk_id": "week3_recursion510-54",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "Maximum subarray What’s the best way to solve this subproblem?"
+    },
+    {
+      "chunk_id": "week3_recursion510-55",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "Maximum subarray What’s the best way to solve this subproblem? Observation: best solution = best left half + best right half"
+    },
+    {
+      "chunk_id": "week3_recursion510-56",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "Maximum subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-57",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Maximum subarray"
+    },
+    {
+      "chunk_id": "week3_recursion510-58",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "Order statistics For quicksort, guarantee a good pivot, if median chosen every time."
+    },
+    {
+      "chunk_id": "week3_recursion510-59",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 59,
+      "chunk_in_page": 0,
+      "page": 60,
+      "slide": null,
+      "text": "Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: “Given an unsorted array, ﬁnd the k-th order statistic (k-th smallest elt.)”"
+    },
+    {
+      "chunk_id": "week3_recursion510-60",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 60,
+      "chunk_in_page": 0,
+      "page": 61,
+      "slide": null,
+      "text": "Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: “Given an unsorted array, ﬁnd the k-th order statistic (k-th smallest elt.)” Median: n/2-th order statistic (slightly different from median in stats.)"
+    },
+    {
+      "chunk_id": "week3_recursion510-61",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 61,
+      "chunk_in_page": 0,
+      "page": 62,
+      "slide": null,
+      "text": "Simple approach Sort ﬁrst, pick out k-th element. Θ(n log n)"
+    },
+    {
+      "chunk_id": "week3_recursion510-62",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 62,
+      "chunk_in_page": 0,
+      "page": 63,
+      "slide": null,
+      "text": "Simple approach Sort ﬁrst, pick out k-th element. Θ(n log n) Can we do better?"
+    },
+    {
+      "chunk_id": "week3_recursion510-63",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 63,
+      "chunk_in_page": 0,
+      "page": 64,
+      "slide": null,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time."
+    },
+    {
+      "chunk_id": "week3_recursion510-64",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 64,
+      "chunk_in_page": 0,
+      "page": 65,
+      "slide": null,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time."
+    },
+    {
+      "chunk_id": "week3_recursion510-65",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 65,
+      "chunk_in_page": 0,
+      "page": 66,
+      "slide": null,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time."
+    },
+    {
+      "chunk_id": "week3_recursion510-66",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 66,
+      "chunk_in_page": 0,
+      "page": 67,
+      "slide": null,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Based on size of L, we can ﬁgure out the “rank” of the pivot."
+    },
+    {
+      "chunk_id": "week3_recursion510-67",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 67,
+      "chunk_in_page": 0,
+      "page": 68,
+      "slide": null,
+      "text": "Quickselect Like quicksort in that: ● it partitions the elements"
+    },
+    {
+      "chunk_id": "week3_recursion510-68",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 68,
+      "chunk_in_page": 0,
+      "page": 69,
+      "slide": null,
+      "text": "Quickselect"
+    },
+    {
+      "chunk_id": "week3_recursion510-69",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 69,
+      "chunk_in_page": 0,
+      "page": 70,
+      "slide": null,
+      "text": "Quickselect"
+    },
+    {
+      "chunk_id": "week3_recursion510-70",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 70,
+      "chunk_in_page": 0,
+      "page": 71,
+      "slide": null,
+      "text": "Quickselect"
+    },
+    {
+      "chunk_id": "week3_recursion510-71",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 71,
+      "chunk_in_page": 0,
+      "page": 72,
+      "slide": null,
+      "text": "Quickselect Like quicksort in that: ● it partitions the elements ● runtime depends on pivot quality"
+    },
+    {
+      "chunk_id": "week3_recursion510-72",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 72,
+      "chunk_in_page": 0,
+      "page": 73,
+      "slide": null,
+      "text": "Quickselect In worst case, might need to recurse on bigger half:"
+    },
+    {
+      "chunk_id": "week3_recursion510-73",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 73,
+      "chunk_in_page": 0,
+      "page": 74,
+      "slide": null,
+      "text": "Quickselect In worst case, might need to recurse on bigger half:"
+    },
+    {
+      "chunk_id": "week3_recursion510-74",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 74,
+      "chunk_in_page": 0,
+      "page": 75,
+      "slide": null,
+      "text": "Quickselect Let’s say pivot is always the median."
+    },
+    {
+      "chunk_id": "week3_recursion510-75",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 75,
+      "chunk_in_page": 0,
+      "page": 76,
+      "slide": null,
+      "text": "Quickselect Let’s say pivot is always the median."
+    },
+    {
+      "chunk_id": "week3_recursion510-76",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 76,
+      "chunk_in_page": 0,
+      "page": 77,
+      "slide": null,
+      "text": "Quickselect Let’s say pivot is always the median."
+    },
+    {
+      "chunk_id": "week3_recursion510-77",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 77,
+      "chunk_in_page": 0,
+      "page": 78,
+      "slide": null,
+      "text": "Let’s say pivot is always the median. But isn’t this circular?? Quickselect"
+    },
+    {
+      "chunk_id": "week3_recursion510-78",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 78,
+      "chunk_in_page": 0,
+      "page": 79,
+      "slide": null,
+      "text": "A simple pivot selection Probability of landing in shaded region? Standard choice: choose a random pivot element."
+    },
+    {
+      "chunk_id": "week3_recursion510-79",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 79,
+      "chunk_in_page": 0,
+      "page": 80,
+      "slide": null,
+      "text": "A simple pivot selection Probability of landing in shaded region? 1/2 Standard choice: choose a random pivot element."
+    },
+    {
+      "chunk_id": "week3_recursion510-80",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 80,
+      "chunk_in_page": 0,
+      "page": 81,
+      "slide": null,
+      "text": "A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? Standard choice: choose a random pivot element."
+    },
+    {
+      "chunk_id": "week3_recursion510-81",
+      "course": "CSC510",
+      "source_file": "week3_recursion510.pdf",
+      "chunk_index": 81,
+      "chunk_in_page": 0,
+      "page": 82,
+      "slide": null,
+      "text": "A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? 2 (geometric distribution, p = 1/2) Standard choice: choose a random pivot element."
     }
   ]
 }

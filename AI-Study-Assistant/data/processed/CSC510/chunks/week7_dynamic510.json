@@ -3,37 +3,967 @@
   "source_file": "week7_dynamic510.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 3,
+  "chunk_count": 96,
   "chunks": [
     {
       "chunk_id": "week7_dynamic510-0",
       "course": "CSC510",
       "source_file": "week7_dynamic510.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Dynamic Programming Prof. Timothy Sun Recap: fast exponentiation Alg. based on repeated squaring Recap: fast exponentiation Alg. based on repeated squaring This still runs in Θ(N) time. Recap: fast exponentiation Alg. based on repeated squaring Recap: fast exponentiation Alg. based on repeated squaring Now runs in Θ(log N) time (exponential speedup) The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, … deﬁned by the recurrence Avoiding repeated work Looks familiar... A recursion tree for Fibonacci numbers A recursion tree for Fibonacci numbers Lots of repeats... Avoiding repeated work The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, … deﬁned by the recurrence Backtracking algorithms take exponential time! What if we could remember what we computed before? Avoiding repeated work What if we could remember what we computed before? Avoiding repeated work Approach known as memoization [sic]... but what’s the runtime? Better way would be to ﬁll up the table without recursion. Dynamic programming Better way would be to ﬁll up the table without recursion. Θ(n) running time Dynamic programming Better way would be to ﬁll up the table without recursion. Θ(n) running time Dynamic programming: solve all subproblems iteratively Dynamic programming A recursion tree for Fibonacci numbers Lots of repeats... Actual graph of dependencies Much more compact... Fibonacci Numbers Backtracking vs. Dynamic Programming Fibonacci Numbers Backtracking vs. Dynamic Programming complex → simple simple → complex Fibonacci Numbers Backtracking vs. Dynamic Programming Recursive calls replaced with array lookups Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Only need to understand how (and not why) the backtracking algorithm works. Components of Backtracking 1. Describe subproblems 2. Identify base cases 3. Derive a recurrence Components of Backtracking 1. Describe subproblems Smaller Fibonacci numbers 2. Identify base cases F1 and F2 3. Derive a recurrence Fn = Fn-1 + Fn-2 Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems 3. Determining a ﬁll order Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems Store in 1D array 3. Determining a ﬁll order Increasing order Components of DP Important things: ● Which subproblems are base cases? ● Which subproblems show up in the recurrence? Components of DP Important things: ● Which subproblems are base cases? ● Which subproblems show up in the recurrence? Unimportant things: ● Why does the recurrence work? Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Fill order: ordering of subproblems so that dependencies are solved ﬁrst. Actual graph of dependencies A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order"
+      "text": "Dynamic Programming Prof. Timothy Sun"
     },
     {
       "chunk_id": "week7_dynamic510-1",
       "course": "CSC510",
       "source_file": "week7_dynamic510.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "Fill order: ordering of subproblems so that dependencies are solved ﬁrst. Actual graph of dependencies A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible: Text splitting revisited “Try every possible ﬁrst word and recurse.” T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON … Text splitting revisited “Try every possible ﬁrst word and recurse.” Text splitting revisited “Try every possible ﬁrst word and recurse.” (version 2, indexed) Text splitting revisited Subproblems: suﬃxes, indexed by i. Text splitting revisited Subproblems: suﬃxes, indexed by i, can store in an array A[1, …, n+1] Text splitting revisited In what order should the subproblems be solved? Text splitting revisited In what order should the subproblems be solved? Decreasing order Text splitting revisited Text splitting revisited Text splitting revisited “E” is not a word, so let’s move on to the next preﬁx Text splitting revisited “ER” is a word (in Scrabble!), but the rest of the string isn’t splittable Text splitting revisited “ERE” is a word, and the rest of the string is splittable Text splitting revisited Text splitting revisited The original string is splittable, as seen in the ﬁrst cell. The dynamic programming algorithm The dynamic programming algorithm Runtime: Θ(n2) Generic DP structure Generic DP structure Convert recurrence or backtracking algorithm here Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Reconstruction Easy to ﬁgure out which ﬁrst word is correct. Our algorithm only return true or false. How to ﬁnd the actual splitting? Reconstruction Easy to ﬁgure out which ﬁrst word is correct. Our algorithm only return true or false. How to ﬁnd the actual splitting? Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Easy to ﬁgure out which ﬁrst word is correct. Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Easy to ﬁgure out which ﬁrst word is correct. Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Opposite direction from dynamic programming (Same direction as backtracking) Reconstruction Essentially backtracking, but already knowing the right path. Reconstruction When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With"
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring"
     },
     {
       "chunk_id": "week7_dynamic510-2",
       "course": "CSC510",
       "source_file": "week7_dynamic510.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "is correct. Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Opposite direction from dynamic programming (Same direction as backtracking) Reconstruction Essentially backtracking, but already knowing the right path. Reconstruction When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller ● polynomial # of subproblems → polynomial time DP Subset Sum revisited Is there a subset of S that adds up to T? Dependencies in Subset Sum (we’ll deal with negative t later) Dependencies in Subset Sum What’s a good ﬁll order? Fill order Usually, row-by-row or column-by-column works Fill order Usually, row-by-row or column-by-column works Fill order Usually, row-by-row or column-by-column works Storing subproblems: 2D array, i = 0, …, n, t = 0, …, T Dependencies: (i, t) depends on (i-1, t) and (i-1, t-S[i]) Fill order: e.g., increasing i, doesn’t matter for T Subset Sum revisited Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? There is a solution, since the bottom-right cell is TRUE Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? No solution Subset Sum - dynamic Fleshed out To avoid negative t, split the loop into two cases Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries) Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries) Subset Sum: O(nT) Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? No, T is exponential in number of digits Wood cutting The backtracking The backtracking Storing subproblems? Fill order? The backtracking Storing subproblems: 1D array [0, …, M] Fill order? The backtracking Storing subproblems: 1D array [0, …, M] Fill order: increasing order Wood cutting Wood cutting Runtime: Θ(M2)"
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring This still runs in Θ(N) time."
+    },
+    {
+      "chunk_id": "week7_dynamic510-3",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring"
+    },
+    {
+      "chunk_id": "week7_dynamic510-4",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Recap: fast exponentiation Alg. based on repeated squaring Now runs in Θ(log N) time (exponential speedup)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-5",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, … deﬁned by the recurrence Avoiding repeated work"
+    },
+    {
+      "chunk_id": "week7_dynamic510-6",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Looks familiar..."
+    },
+    {
+      "chunk_id": "week7_dynamic510-7",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "A recursion tree for Fibonacci numbers"
+    },
+    {
+      "chunk_id": "week7_dynamic510-8",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "A recursion tree for Fibonacci numbers Lots of repeats..."
+    },
+    {
+      "chunk_id": "week7_dynamic510-9",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Avoiding repeated work The Fibonacci numbers are the sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, … deﬁned by the recurrence Backtracking algorithms take exponential time!"
+    },
+    {
+      "chunk_id": "week7_dynamic510-10",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "What if we could remember what we computed before? Avoiding repeated work"
+    },
+    {
+      "chunk_id": "week7_dynamic510-11",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "What if we could remember what we computed before? Avoiding repeated work Approach known as memoization [sic]... but what’s the runtime?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-12",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Better way would be to ﬁll up the table without recursion. Dynamic programming"
+    },
+    {
+      "chunk_id": "week7_dynamic510-13",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Better way would be to ﬁll up the table without recursion. Θ(n) running time Dynamic programming"
+    },
+    {
+      "chunk_id": "week7_dynamic510-14",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Better way would be to ﬁll up the table without recursion. Θ(n) running time Dynamic programming: solve all subproblems iteratively Dynamic programming"
+    },
+    {
+      "chunk_id": "week7_dynamic510-15",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "A recursion tree for Fibonacci numbers Lots of repeats..."
+    },
+    {
+      "chunk_id": "week7_dynamic510-16",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Actual graph of dependencies Much more compact..."
+    },
+    {
+      "chunk_id": "week7_dynamic510-17",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Fibonacci Numbers Backtracking vs. Dynamic Programming"
+    },
+    {
+      "chunk_id": "week7_dynamic510-18",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Fibonacci Numbers Backtracking vs. Dynamic Programming complex → simple simple → complex"
+    },
+    {
+      "chunk_id": "week7_dynamic510-19",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Fibonacci Numbers Backtracking vs. Dynamic Programming Recursive calls replaced with array lookups"
+    },
+    {
+      "chunk_id": "week7_dynamic510-20",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-21",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Dynamic Programming Every* recurrence can be converted into a memoized or dynamic programming algorithm. (recurrences = pure functions) Only need to understand how (and not why) the backtracking algorithm works."
+    },
+    {
+      "chunk_id": "week7_dynamic510-22",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Components of Backtracking 1. Describe subproblems 2. Identify base cases 3. Derive a recurrence"
+    },
+    {
+      "chunk_id": "week7_dynamic510-23",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Components of Backtracking 1. Describe subproblems Smaller Fibonacci numbers 2. Identify base cases F1 and F2 3. Derive a recurrence Fn = Fn-1 + Fn-2"
+    },
+    {
+      "chunk_id": "week7_dynamic510-24",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems 3. Determining a ﬁll order"
+    },
+    {
+      "chunk_id": "week7_dynamic510-25",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Components of DP 1. Creating a backtracking algorithm(!) 2. Storing subproblems Store in 1D array 3. Determining a ﬁll order Increasing order"
+    },
+    {
+      "chunk_id": "week7_dynamic510-26",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Components of DP Important things: ● Which subproblems are base cases? ● Which subproblems show up in the recurrence?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-27",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Components of DP Important things: ● Which subproblems are base cases? ● Which subproblems show up in the recurrence? Unimportant things: ● Why does the recurrence work?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-28",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D."
+    },
+    {
+      "chunk_id": "week7_dynamic510-29",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Components of DP If subproblems A, B, C are used in the recurrence to solve subproblem D, then A, B, C are dependencies of D. Fill order: ordering of subproblems so that dependencies are solved ﬁrst."
+    },
+    {
+      "chunk_id": "week7_dynamic510-30",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Actual graph of dependencies"
+    },
+    {
+      "chunk_id": "week7_dynamic510-31",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-32",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-33",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-34",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-35",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-36",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-37",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-38",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-39",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-40",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "A messy dependency graph As long as there’s no inﬁnite recursion, a ﬁll order is always possible:"
+    },
+    {
+      "chunk_id": "week7_dynamic510-41",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Text splitting revisited “Try every possible ﬁrst word and recurse.” T HISISTHEREASON TH ISISTHEREASON THI SISTHEREASON …"
+    },
+    {
+      "chunk_id": "week7_dynamic510-42",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Text splitting revisited “Try every possible ﬁrst word and recurse.”"
+    },
+    {
+      "chunk_id": "week7_dynamic510-43",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Text splitting revisited “Try every possible ﬁrst word and recurse.” (version 2, indexed)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-44",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Text splitting revisited Subproblems: suﬃxes, indexed by i."
+    },
+    {
+      "chunk_id": "week7_dynamic510-45",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Text splitting revisited Subproblems: suﬃxes, indexed by i, can store in an array A[1, …, n+1]"
+    },
+    {
+      "chunk_id": "week7_dynamic510-46",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Text splitting revisited In what order should the subproblems be solved?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-47",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Text splitting revisited In what order should the subproblems be solved? Decreasing order"
+    },
+    {
+      "chunk_id": "week7_dynamic510-48",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Text splitting revisited"
+    },
+    {
+      "chunk_id": "week7_dynamic510-49",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Text splitting revisited"
+    },
+    {
+      "chunk_id": "week7_dynamic510-50",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Text splitting revisited “E” is not a word, so let’s move on to the next preﬁx"
+    },
+    {
+      "chunk_id": "week7_dynamic510-51",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Text splitting revisited “ER” is a word (in Scrabble!), but the rest of the string isn’t splittable"
+    },
+    {
+      "chunk_id": "week7_dynamic510-52",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Text splitting revisited “ERE” is a word, and the rest of the string is splittable"
+    },
+    {
+      "chunk_id": "week7_dynamic510-53",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "Text splitting revisited"
+    },
+    {
+      "chunk_id": "week7_dynamic510-54",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "Text splitting revisited The original string is splittable, as seen in the ﬁrst cell."
+    },
+    {
+      "chunk_id": "week7_dynamic510-55",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "The dynamic programming algorithm"
+    },
+    {
+      "chunk_id": "week7_dynamic510-56",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "The dynamic programming algorithm Runtime: Θ(n2)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-57",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Generic DP structure"
+    },
+    {
+      "chunk_id": "week7_dynamic510-58",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "Generic DP structure Convert recurrence or backtracking algorithm here"
+    },
+    {
+      "chunk_id": "week7_dynamic510-59",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 59,
+      "chunk_in_page": 0,
+      "page": 60,
+      "slide": null,
+      "text": "Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-60",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 60,
+      "chunk_in_page": 0,
+      "page": 61,
+      "slide": null,
+      "text": "Reconstruction Easy to ﬁgure out which ﬁrst word is correct. Our algorithm only return true or false. How to ﬁnd the actual splitting?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-61",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 61,
+      "chunk_in_page": 0,
+      "page": 62,
+      "slide": null,
+      "text": "Reconstruction Easy to ﬁgure out which ﬁrst word is correct. Our algorithm only return true or false. How to ﬁnd the actual splitting?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-62",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 62,
+      "chunk_in_page": 0,
+      "page": 63,
+      "slide": null,
+      "text": "Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Easy to ﬁgure out which ﬁrst word is correct."
+    },
+    {
+      "chunk_id": "week7_dynamic510-63",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 63,
+      "chunk_in_page": 0,
+      "page": 64,
+      "slide": null,
+      "text": "Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Easy to ﬁgure out which ﬁrst word is correct."
+    },
+    {
+      "chunk_id": "week7_dynamic510-64",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 64,
+      "chunk_in_page": 0,
+      "page": 65,
+      "slide": null,
+      "text": "Reconstruction Our algorithm only return true or false. How to ﬁnd the actual splitting? Opposite direction from dynamic programming (Same direction as backtracking)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-65",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 65,
+      "chunk_in_page": 0,
+      "page": 66,
+      "slide": null,
+      "text": "Reconstruction Essentially backtracking, but already knowing the right path."
+    },
+    {
+      "chunk_id": "week7_dynamic510-66",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 66,
+      "chunk_in_page": 0,
+      "page": 67,
+      "slide": null,
+      "text": "Reconstruction"
+    },
+    {
+      "chunk_id": "week7_dynamic510-67",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 67,
+      "chunk_in_page": 0,
+      "page": 68,
+      "slide": null,
+      "text": "When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller"
+    },
+    {
+      "chunk_id": "week7_dynamic510-68",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 68,
+      "chunk_in_page": 0,
+      "page": 69,
+      "slide": null,
+      "text": "When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller"
+    },
+    {
+      "chunk_id": "week7_dynamic510-69",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 69,
+      "chunk_in_page": 0,
+      "page": 70,
+      "slide": null,
+      "text": "When is DP useful? Backtracking takes exponential time With overlap, the number of subproblems might be much smaller ● polynomial # of subproblems → polynomial time DP"
+    },
+    {
+      "chunk_id": "week7_dynamic510-70",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 70,
+      "chunk_in_page": 0,
+      "page": 71,
+      "slide": null,
+      "text": "Subset Sum revisited Is there a subset of S that adds up to T?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-71",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 71,
+      "chunk_in_page": 0,
+      "page": 72,
+      "slide": null,
+      "text": "Dependencies in Subset Sum (we’ll deal with negative t later)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-72",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 72,
+      "chunk_in_page": 0,
+      "page": 73,
+      "slide": null,
+      "text": "Dependencies in Subset Sum What’s a good ﬁll order?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-73",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 73,
+      "chunk_in_page": 0,
+      "page": 74,
+      "slide": null,
+      "text": "Fill order Usually, row-by-row or column-by-column works"
+    },
+    {
+      "chunk_id": "week7_dynamic510-74",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 74,
+      "chunk_in_page": 0,
+      "page": 75,
+      "slide": null,
+      "text": "Fill order Usually, row-by-row or column-by-column works"
+    },
+    {
+      "chunk_id": "week7_dynamic510-75",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 75,
+      "chunk_in_page": 0,
+      "page": 76,
+      "slide": null,
+      "text": "Fill order Usually, row-by-row or column-by-column works"
+    },
+    {
+      "chunk_id": "week7_dynamic510-76",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 76,
+      "chunk_in_page": 0,
+      "page": 77,
+      "slide": null,
+      "text": "Storing subproblems: 2D array, i = 0, …, n, t = 0, …, T Dependencies: (i, t) depends on (i-1, t) and (i-1, t-S[i]) Fill order: e.g., increasing i, doesn’t matter for T Subset Sum revisited"
+    },
+    {
+      "chunk_id": "week7_dynamic510-77",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 77,
+      "chunk_in_page": 0,
+      "page": 78,
+      "slide": null,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-78",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 78,
+      "chunk_in_page": 0,
+      "page": 79,
+      "slide": null,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-79",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 79,
+      "chunk_in_page": 0,
+      "page": 80,
+      "slide": null,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-80",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 80,
+      "chunk_in_page": 0,
+      "page": 81,
+      "slide": null,
+      "text": "Subset Sum revisited What does the 2D array look like for: S = [1, 4, 3, 2], T = 7? There is a solution, since the bottom-right cell is TRUE"
+    },
+    {
+      "chunk_id": "week7_dynamic510-81",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 81,
+      "chunk_in_page": 0,
+      "page": 82,
+      "slide": null,
+      "text": "Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-82",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 82,
+      "chunk_in_page": 0,
+      "page": 83,
+      "slide": null,
+      "text": "Subset Sum revisited S = [5, 2, 4, 7, 11], T = 19? No solution"
+    },
+    {
+      "chunk_id": "week7_dynamic510-83",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 83,
+      "chunk_in_page": 0,
+      "page": 84,
+      "slide": null,
+      "text": "Subset Sum - dynamic"
+    },
+    {
+      "chunk_id": "week7_dynamic510-84",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 84,
+      "chunk_in_page": 0,
+      "page": 85,
+      "slide": null,
+      "text": "Fleshed out To avoid negative t, split the loop into two cases"
+    },
+    {
+      "chunk_id": "week7_dynamic510-85",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 85,
+      "chunk_in_page": 0,
+      "page": 86,
+      "slide": null,
+      "text": "Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-86",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 86,
+      "chunk_in_page": 0,
+      "page": 87,
+      "slide": null,
+      "text": "Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries) Subset Sum: O(nT)"
+    },
+    {
+      "chunk_id": "week7_dynamic510-87",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 87,
+      "chunk_in_page": 0,
+      "page": 88,
+      "slide": null,
+      "text": "Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP???"
+    },
+    {
+      "chunk_id": "week7_dynamic510-88",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 88,
+      "chunk_in_page": 0,
+      "page": 89,
+      "slide": null,
+      "text": "Subset Sum revisited Runtime: how long did it take to ﬁll in the table? ● Usually O(# dependencies * # entries) Subset Sum: O(nT) - does this mean P = NP??? No, T is exponential in number of digits"
+    },
+    {
+      "chunk_id": "week7_dynamic510-89",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 89,
+      "chunk_in_page": 0,
+      "page": 90,
+      "slide": null,
+      "text": "Wood cutting"
+    },
+    {
+      "chunk_id": "week7_dynamic510-90",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 90,
+      "chunk_in_page": 0,
+      "page": 91,
+      "slide": null,
+      "text": "The backtracking"
+    },
+    {
+      "chunk_id": "week7_dynamic510-91",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 91,
+      "chunk_in_page": 0,
+      "page": 92,
+      "slide": null,
+      "text": "The backtracking Storing subproblems? Fill order?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-92",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 92,
+      "chunk_in_page": 0,
+      "page": 93,
+      "slide": null,
+      "text": "The backtracking Storing subproblems: 1D array [0, …, M] Fill order?"
+    },
+    {
+      "chunk_id": "week7_dynamic510-93",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 93,
+      "chunk_in_page": 0,
+      "page": 94,
+      "slide": null,
+      "text": "The backtracking Storing subproblems: 1D array [0, …, M] Fill order: increasing order"
+    },
+    {
+      "chunk_id": "week7_dynamic510-94",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 94,
+      "chunk_in_page": 0,
+      "page": 95,
+      "slide": null,
+      "text": "Wood cutting"
+    },
+    {
+      "chunk_id": "week7_dynamic510-95",
+      "course": "CSC510",
+      "source_file": "week7_dynamic510.pdf",
+      "chunk_index": 95,
+      "chunk_in_page": 0,
+      "page": 96,
+      "slide": null,
+      "text": "Wood cutting Runtime: Θ(M2)"
     }
   ]
 }

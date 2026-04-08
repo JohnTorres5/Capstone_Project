@@ -1,5 +1,335 @@
 {
   "course": "CSC510",
   "source_file": "week3_recursion510.pdf",
-  "text": "Recursion and Divide-and-Conquer Prof. Timothy Sun Reduction Reduction: converting a problem X into a problem Y, where we already have a \u201cblack box\u201d algorithm for Y. Reduction Reduction: converting a problem X into a problem Y, where we already have a \u201cblack box\u201d algorithm for Y. Proof of correctness for alg. X should not depend on details of the black box, though the runtime would. Reduction - median Example: Finding the median element of an array. Reduction - median Example: Finding the median element of an array. Reduction - median Example: Finding the median element of an array. Reduction to sorting: \u25cf Sort the array, then return n/2-th element. Reduction - median Reduction - median \u201cSort the array, then return n/2-th element.\u201d Reduction - median \u201cSort the array, then return n/2-th element.\u201d \u25cf Does it matter if we use, e.g., bubblesort vs. mergesort? Reduction - median \u201cSort the array, then return n/2-th element.\u201d \u25cf Does it matter if we use, e.g., bubblesort vs. mergesort? \u25cb Correctness: no \u25cb Runtime: yes Recursion Recursive alg. usually consists of two parts: \u25cf Algorithm for a base case \u25cf Reduction to a smaller instance of the same problem Recursion Recursive alg. usually consists of two parts: \u25cf Algorithm for a base case \u25cf Reduction to a smaller instance of the same problem Original instance: X, smaller instance Y. Correctness for Y by the (strong) inductive hypothesis. The most important slide in this class When designing or proving the correctness of a recursive algorithm, ASSUME RECURSIVE CALLS WORK CORRECTLY Towers of Hanoi Move all the discs to the right peg, one at a time, without a bigger disc on top of a smaller disc. Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. How do we do steps 1 and 3? Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. How do we do steps 1 and 3? Recursion, recursion, recursion! Towers of Hanoi \u201cMove n discs from \u2018start\u2019 to \u2018end\u2019 with the help of \u2018other\u2019\u201d Towers of Hanoi To prove correctness, no need to unwrap the recursion. \u201cMove n discs from \u2018start\u2019 to \u2018end\u2019 with the help of \u2018other\u2019\u201d Insertion sort, revisited iterative Insertion sort, revisited iterative recursive Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? mergesort and quicksort Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. \u2026 or equivalently: \u25cf For any pair of consecutive indices i, i+1, A[i] \u2264 A[i+1]. Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. \u2026 or equivalently: \u25cf For any pair of consecutive indices i, i+1, A[i] \u2264 A[i+1]. (induction, induction, induction\u2026) Concatenation Given two arrays A[1, \u2026 , n], and B[1, \u2026 , m], their concatenation A \u25cb B is the array you get by sticking them back to back. When is a concatenation sorted? Concatenation Given two arrays A[1, \u2026 , n], and B[1, \u2026 , m], their concatenation A \u25cb B is the array you get by sticking them back to back. When is a concatenation sorted? When A and B are sorted, and A[n] \u2264 B[1]. Quicksort \u201cPartition around the pivot, recursively sort smaller and bigger, concatenate.\u201d Quicksort How do we know that the recursive calls \u201cwork\u201d? Proof is by induction. Quicksort Base case: n = 0 or 1. Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? \u25cf IH + concatenation proof Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? \u25cf IH + concatenation proof By the principle of induction, quicksort is correct for all n \u2265 0. Mergesort Similar proof of correctness for mergesort. Why does this work? Impossible to imagine the recursion! Why does this work? Base case: n = 0, 1 like before Why does this work? Inductive step: \u25cf Find and place largest Base case: n = 0, 1 like before Why does this work? Inductive step: \u25cf Find and place largest \u25cf Sort the rest Base case: n = 0, 1 like before Given an array of integers What\u2019s the subarray whose sum is the biggest? Maximum subarray Given an array of integers What\u2019s the subarray whose sum is the biggest? 216? Maximum subarray Given an array of integers What\u2019s the subarray whose sum is the biggest? 247, best possible Maximum subarray Maximum subarray Brute force: calculate each subarray Maximum subarray Brute force: calculate each subarray Maximum subarray Brute force: calculate each subarray Runtime: \u0398(n3)! Maximum subarray Brute force: calculate each subarray Runtime: \u0398(n3), due to repeated work Maximum \u201cpre\ufb01x\u201d How to develop a \u0398(n) algorithm? Maximum \u201cpre\ufb01x\u201d How to develop a \u0398(n) algorithm? Cumulative sums. Maximum subarray Maximum subarray Runtime: \u0398(n2) Maximum subarray A divide and conquer approach: splitting the array in half Maximum subarray A divide and conquer approach: splitting the array in half Maximum subarray A divide and conquer approach: splitting the array in half recursive calls Maximum subarray What\u2019s the best way to solve this subproblem? Maximum subarray What\u2019s the best way to solve this subproblem? Observation: best solution = best left half + best right half Maximum subarray Maximum subarray Order statistics For quicksort, guarantee a good pivot, if median chosen every time. Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: \u201cGiven an unsorted array, \ufb01nd the k-th order statistic (k-th smallest elt.)\u201d Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: \u201cGiven an unsorted array, \ufb01nd the k-th order statistic (k-th smallest elt.)\u201d Median: n/2-th order statistic (slightly different from median in stats.) Simple approach Sort \ufb01rst, pick out k-th element. \u0398(n log n) Simple approach Sort \ufb01rst, pick out k-th element. \u0398(n log n) Can we do better? Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Based on size of L, we can \ufb01gure out the \u201crank\u201d of the pivot. Quickselect Like quicksort in that: \u25cf it partitions the elements Quickselect Quickselect Quickselect Quickselect Like quicksort in that: \u25cf it partitions the elements \u25cf runtime depends on pivot quality Quickselect In worst case, might need to recurse on bigger half: Quickselect In worst case, might need to recurse on bigger half: Quickselect Let\u2019s say pivot is always the median. Quickselect Let\u2019s say pivot is always the median. Quickselect Let\u2019s say pivot is always the median. Let\u2019s say pivot is always the median. But isn\u2019t this circular?? Quickselect A simple pivot selection Probability of landing in shaded region? Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? 2 (geometric distribution, p = 1/2) Standard choice: choose a random pivot element."
+  "text": "Recursion and Divide-and-Conquer Prof. Timothy Sun Reduction Reduction: converting a problem X into a problem Y, where we already have a \u201cblack box\u201d algorithm for Y. Reduction Reduction: converting a problem X into a problem Y, where we already have a \u201cblack box\u201d algorithm for Y. Proof of correctness for alg. X should not depend on details of the black box, though the runtime would. Reduction - median Example: Finding the median element of an array. Reduction - median Example: Finding the median element of an array. Reduction - median Example: Finding the median element of an array. Reduction to sorting: \u25cf Sort the array, then return n/2-th element. Reduction - median Reduction - median \u201cSort the array, then return n/2-th element.\u201d Reduction - median \u201cSort the array, then return n/2-th element.\u201d \u25cf Does it matter if we use, e.g., bubblesort vs. mergesort? Reduction - median \u201cSort the array, then return n/2-th element.\u201d \u25cf Does it matter if we use, e.g., bubblesort vs. mergesort? \u25cb Correctness: no \u25cb Runtime: yes Recursion Recursive alg. usually consists of two parts: \u25cf Algorithm for a base case \u25cf Reduction to a smaller instance of the same problem Recursion Recursive alg. usually consists of two parts: \u25cf Algorithm for a base case \u25cf Reduction to a smaller instance of the same problem Original instance: X, smaller instance Y. Correctness for Y by the (strong) inductive hypothesis. The most important slide in this class When designing or proving the correctness of a recursive algorithm, ASSUME RECURSIVE CALLS WORK CORRECTLY Towers of Hanoi Move all the discs to the right peg, one at a time, without a bigger disc on top of a smaller disc. Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. How do we do steps 1 and 3? Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. How do we do steps 1 and 3? Recursion, recursion, recursion! Towers of Hanoi \u201cMove n discs from \u2018start\u2019 to \u2018end\u2019 with the help of \u2018other\u2019\u201d Towers of Hanoi To prove correctness, no need to unwrap the recursion. \u201cMove n discs from \u2018start\u2019 to \u2018end\u2019 with the help of \u2018other\u2019\u201d Insertion sort, revisited iterative Insertion sort, revisited iterative recursive Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? mergesort and quicksort Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. \u2026 or equivalently: \u25cf For any pair of consecutive indices i, i+1, A[i] \u2264 A[i+1]. Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. \u2026 or equivalently: \u25cf For any pair of consecutive indices i, i+1, A[i] \u2264 A[i+1]. (induction, induction, induction\u2026) Concatenation Given two arrays A[1, \u2026 , n], and B[1, \u2026 , m], their concatenation A \u25cb B is the array you get by sticking them back to back. When is a concatenation sorted? Concatenation Given two arrays A[1, \u2026 , n], and B[1, \u2026 , m], their concatenation A \u25cb B is the array you get by sticking them back to back. When is a concatenation sorted? When A and B are sorted, and A[n] \u2264 B[1]. Quicksort \u201cPartition around the pivot, recursively sort smaller and bigger, concatenate.\u201d Quicksort How do we know that the recursive calls \u201cwork\u201d? Proof is by induction. Quicksort Base case: n = 0 or 1. Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? \u25cf IH + concatenation proof Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? \u25cf IH + concatenation proof By the principle of induction, quicksort is correct for all n \u2265 0. Mergesort Similar proof of correctness for mergesort. Why does this work? Impossible to imagine the recursion! Why does this work? Base case: n = 0, 1 like before Why does this work? Inductive step: \u25cf Find and place largest Base case: n = 0, 1 like before Why does this work? Inductive step: \u25cf Find and place largest \u25cf Sort the rest Base case: n = 0, 1 like before Given an array of integers What\u2019s the subarray whose sum is the biggest? Maximum subarray Given an array of integers What\u2019s the subarray whose sum is the biggest? 216? Maximum subarray Given an array of integers What\u2019s the subarray whose sum is the biggest? 247, best possible Maximum subarray Maximum subarray Brute force: calculate each subarray Maximum subarray Brute force: calculate each subarray Maximum subarray Brute force: calculate each subarray Runtime: \u0398(n3)! Maximum subarray Brute force: calculate each subarray Runtime: \u0398(n3), due to repeated work Maximum \u201cpre\ufb01x\u201d How to develop a \u0398(n) algorithm? Maximum \u201cpre\ufb01x\u201d How to develop a \u0398(n) algorithm? Cumulative sums. Maximum subarray Maximum subarray Runtime: \u0398(n2) Maximum subarray A divide and conquer approach: splitting the array in half Maximum subarray A divide and conquer approach: splitting the array in half Maximum subarray A divide and conquer approach: splitting the array in half recursive calls Maximum subarray What\u2019s the best way to solve this subproblem? Maximum subarray What\u2019s the best way to solve this subproblem? Observation: best solution = best left half + best right half Maximum subarray Maximum subarray Order statistics For quicksort, guarantee a good pivot, if median chosen every time. Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: \u201cGiven an unsorted array, \ufb01nd the k-th order statistic (k-th smallest elt.)\u201d Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: \u201cGiven an unsorted array, \ufb01nd the k-th order statistic (k-th smallest elt.)\u201d Median: n/2-th order statistic (slightly different from median in stats.) Simple approach Sort \ufb01rst, pick out k-th element. \u0398(n log n) Simple approach Sort \ufb01rst, pick out k-th element. \u0398(n log n) Can we do better? Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Based on size of L, we can \ufb01gure out the \u201crank\u201d of the pivot. Quickselect Like quicksort in that: \u25cf it partitions the elements Quickselect Quickselect Quickselect Quickselect Like quicksort in that: \u25cf it partitions the elements \u25cf runtime depends on pivot quality Quickselect In worst case, might need to recurse on bigger half: Quickselect In worst case, might need to recurse on bigger half: Quickselect Let\u2019s say pivot is always the median. Quickselect Let\u2019s say pivot is always the median. Quickselect Let\u2019s say pivot is always the median. Let\u2019s say pivot is always the median. But isn\u2019t this circular?? Quickselect A simple pivot selection Probability of landing in shaded region? Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? Standard choice: choose a random pivot element. A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? 2 (geometric distribution, p = 1/2) Standard choice: choose a random pivot element.",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Recursion and Divide-and-Conquer Prof. Timothy Sun"
+    },
+    {
+      "page": 2,
+      "text": "Reduction Reduction: converting a problem X into a problem Y, where we already have a \u201cblack box\u201d algorithm for Y."
+    },
+    {
+      "page": 3,
+      "text": "Reduction Reduction: converting a problem X into a problem Y, where we already have a \u201cblack box\u201d algorithm for Y. Proof of correctness for alg. X should not depend on details of the black box, though the runtime would."
+    },
+    {
+      "page": 4,
+      "text": "Reduction - median Example: Finding the median element of an array."
+    },
+    {
+      "page": 5,
+      "text": "Reduction - median Example: Finding the median element of an array."
+    },
+    {
+      "page": 6,
+      "text": "Reduction - median Example: Finding the median element of an array. Reduction to sorting: \u25cf Sort the array, then return n/2-th element."
+    },
+    {
+      "page": 7,
+      "text": "Reduction - median"
+    },
+    {
+      "page": 8,
+      "text": "Reduction - median \u201cSort the array, then return n/2-th element.\u201d"
+    },
+    {
+      "page": 9,
+      "text": "Reduction - median \u201cSort the array, then return n/2-th element.\u201d \u25cf Does it matter if we use, e.g., bubblesort vs. mergesort?"
+    },
+    {
+      "page": 10,
+      "text": "Reduction - median \u201cSort the array, then return n/2-th element.\u201d \u25cf Does it matter if we use, e.g., bubblesort vs. mergesort? \u25cb Correctness: no \u25cb Runtime: yes"
+    },
+    {
+      "page": 11,
+      "text": "Recursion Recursive alg. usually consists of two parts: \u25cf Algorithm for a base case \u25cf Reduction to a smaller instance of the same problem"
+    },
+    {
+      "page": 12,
+      "text": "Recursion Recursive alg. usually consists of two parts: \u25cf Algorithm for a base case \u25cf Reduction to a smaller instance of the same problem Original instance: X, smaller instance Y. Correctness for Y by the (strong) inductive hypothesis."
+    },
+    {
+      "page": 13,
+      "text": "The most important slide in this class When designing or proving the correctness of a recursive algorithm, ASSUME RECURSIVE CALLS WORK CORRECTLY"
+    },
+    {
+      "page": 14,
+      "text": "Towers of Hanoi Move all the discs to the right peg, one at a time, without a bigger disc on top of a smaller disc."
+    },
+    {
+      "page": 15,
+      "text": "Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right."
+    },
+    {
+      "page": 16,
+      "text": "Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. How do we do steps 1 and 3?"
+    },
+    {
+      "page": 17,
+      "text": "Towers of Hanoi Any solution would consist of three major steps: 1. Move discs 1, \u2026, n-1 to the middle. 2. Move disc n to the right. 3. Move discs 1, \u2026, n-1 to the right. How do we do steps 1 and 3? Recursion, recursion, recursion!"
+    },
+    {
+      "page": 18,
+      "text": "Towers of Hanoi \u201cMove n discs from \u2018start\u2019 to \u2018end\u2019 with the help of \u2018other\u2019\u201d"
+    },
+    {
+      "page": 19,
+      "text": "Towers of Hanoi To prove correctness, no need to unwrap the recursion. \u201cMove n discs from \u2018start\u2019 to \u2018end\u2019 with the help of \u2018other\u2019\u201d"
+    },
+    {
+      "page": 20,
+      "text": "Insertion sort, revisited iterative"
+    },
+    {
+      "page": 21,
+      "text": "Insertion sort, revisited iterative recursive"
+    },
+    {
+      "page": 22,
+      "text": "Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem."
+    },
+    {
+      "page": 23,
+      "text": "Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer?"
+    },
+    {
+      "page": 24,
+      "text": "Divide and conquer Divide and conquer is a recursive technique for algorithm design: \u25cf Reduce to multiple smaller instances of the same problem. \u25cf Solve each of those instances. \u25cf Recombine into the solution of the original problem. Which sorting algorithms are examples of divide and conquer? mergesort and quicksort"
+    },
+    {
+      "page": 25,
+      "text": "Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]."
+    },
+    {
+      "page": 26,
+      "text": "Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. \u2026 or equivalently: \u25cf For any pair of consecutive indices i, i+1, A[i] \u2264 A[i+1]."
+    },
+    {
+      "page": 27,
+      "text": "Two de\ufb01nitions of sortedness An array A[1, \u2026 , n] is sorted if: \u25cf For any pair of indices i < j, A[i] \u2264 A[j]. \u2026 or equivalently: \u25cf For any pair of consecutive indices i, i+1, A[i] \u2264 A[i+1]. (induction, induction, induction\u2026)"
+    },
+    {
+      "page": 28,
+      "text": "Concatenation Given two arrays A[1, \u2026 , n], and B[1, \u2026 , m], their concatenation A \u25cb B is the array you get by sticking them back to back. When is a concatenation sorted?"
+    },
+    {
+      "page": 29,
+      "text": "Concatenation Given two arrays A[1, \u2026 , n], and B[1, \u2026 , m], their concatenation A \u25cb B is the array you get by sticking them back to back. When is a concatenation sorted? When A and B are sorted, and A[n] \u2264 B[1]."
+    },
+    {
+      "page": 30,
+      "text": "Quicksort \u201cPartition around the pivot, recursively sort smaller and bigger, concatenate.\u201d"
+    },
+    {
+      "page": 31,
+      "text": "Quicksort How do we know that the recursive calls \u201cwork\u201d? Proof is by induction."
+    },
+    {
+      "page": 32,
+      "text": "Quicksort Base case: n = 0 or 1."
+    },
+    {
+      "page": 33,
+      "text": "Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1?"
+    },
+    {
+      "page": 34,
+      "text": "Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? \u25cf IH + concatenation proof"
+    },
+    {
+      "page": 35,
+      "text": "Quicksort Base case: n = 0 or 1. \u25cf Correctly does nothing. Inductive step: if quicksort is correct for array sizes 0, \u2026, k, would it be correct for array size k+1? \u25cf IH + concatenation proof By the principle of induction, quicksort is correct for all n \u2265 0."
+    },
+    {
+      "page": 36,
+      "text": "Mergesort Similar proof of correctness for mergesort."
+    },
+    {
+      "page": 37,
+      "text": "Why does this work? Impossible to imagine the recursion!"
+    },
+    {
+      "page": 38,
+      "text": "Why does this work? Base case: n = 0, 1 like before"
+    },
+    {
+      "page": 39,
+      "text": "Why does this work? Inductive step: \u25cf Find and place largest Base case: n = 0, 1 like before"
+    },
+    {
+      "page": 40,
+      "text": "Why does this work? Inductive step: \u25cf Find and place largest \u25cf Sort the rest Base case: n = 0, 1 like before"
+    },
+    {
+      "page": 41,
+      "text": "Given an array of integers What\u2019s the subarray whose sum is the biggest? Maximum subarray"
+    },
+    {
+      "page": 42,
+      "text": "Given an array of integers What\u2019s the subarray whose sum is the biggest? 216? Maximum subarray"
+    },
+    {
+      "page": 43,
+      "text": "Given an array of integers What\u2019s the subarray whose sum is the biggest? 247, best possible Maximum subarray"
+    },
+    {
+      "page": 44,
+      "text": "Maximum subarray Brute force: calculate each subarray"
+    },
+    {
+      "page": 45,
+      "text": "Maximum subarray Brute force: calculate each subarray"
+    },
+    {
+      "page": 46,
+      "text": "Maximum subarray Brute force: calculate each subarray Runtime: \u0398(n3)!"
+    },
+    {
+      "page": 47,
+      "text": "Maximum subarray Brute force: calculate each subarray Runtime: \u0398(n3), due to repeated work"
+    },
+    {
+      "page": 48,
+      "text": "Maximum \u201cpre\ufb01x\u201d How to develop a \u0398(n) algorithm?"
+    },
+    {
+      "page": 49,
+      "text": "Maximum \u201cpre\ufb01x\u201d How to develop a \u0398(n) algorithm? Cumulative sums."
+    },
+    {
+      "page": 50,
+      "text": "Maximum subarray"
+    },
+    {
+      "page": 51,
+      "text": "Maximum subarray Runtime: \u0398(n2)"
+    },
+    {
+      "page": 52,
+      "text": "Maximum subarray A divide and conquer approach: splitting the array in half"
+    },
+    {
+      "page": 53,
+      "text": "Maximum subarray A divide and conquer approach: splitting the array in half"
+    },
+    {
+      "page": 54,
+      "text": "Maximum subarray A divide and conquer approach: splitting the array in half recursive calls"
+    },
+    {
+      "page": 55,
+      "text": "Maximum subarray What\u2019s the best way to solve this subproblem?"
+    },
+    {
+      "page": 56,
+      "text": "Maximum subarray What\u2019s the best way to solve this subproblem? Observation: best solution = best left half + best right half"
+    },
+    {
+      "page": 57,
+      "text": "Maximum subarray"
+    },
+    {
+      "page": 58,
+      "text": "Maximum subarray"
+    },
+    {
+      "page": 59,
+      "text": "Order statistics For quicksort, guarantee a good pivot, if median chosen every time."
+    },
+    {
+      "page": 60,
+      "text": "Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: \u201cGiven an unsorted array, \ufb01nd the k-th order statistic (k-th smallest elt.)\u201d"
+    },
+    {
+      "page": 61,
+      "text": "Order statistics For quicksort, guarantee a good pivot, if median chosen every time. The more general problem: \u201cGiven an unsorted array, \ufb01nd the k-th order statistic (k-th smallest elt.)\u201d Median: n/2-th order statistic (slightly different from median in stats.)"
+    },
+    {
+      "page": 62,
+      "text": "Simple approach Sort \ufb01rst, pick out k-th element. \u0398(n log n)"
+    },
+    {
+      "page": 63,
+      "text": "Simple approach Sort \ufb01rst, pick out k-th element. \u0398(n log n) Can we do better?"
+    },
+    {
+      "page": 64,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time."
+    },
+    {
+      "page": 65,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time."
+    },
+    {
+      "page": 66,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time."
+    },
+    {
+      "page": 67,
+      "text": "Partition subroutine Partitioning around the pivot gives us some information in O(n) time. Based on size of L, we can \ufb01gure out the \u201crank\u201d of the pivot."
+    },
+    {
+      "page": 68,
+      "text": "Quickselect Like quicksort in that: \u25cf it partitions the elements"
+    },
+    {
+      "page": 69,
+      "text": "Quickselect"
+    },
+    {
+      "page": 70,
+      "text": "Quickselect"
+    },
+    {
+      "page": 71,
+      "text": "Quickselect"
+    },
+    {
+      "page": 72,
+      "text": "Quickselect Like quicksort in that: \u25cf it partitions the elements \u25cf runtime depends on pivot quality"
+    },
+    {
+      "page": 73,
+      "text": "Quickselect In worst case, might need to recurse on bigger half:"
+    },
+    {
+      "page": 74,
+      "text": "Quickselect In worst case, might need to recurse on bigger half:"
+    },
+    {
+      "page": 75,
+      "text": "Quickselect Let\u2019s say pivot is always the median."
+    },
+    {
+      "page": 76,
+      "text": "Quickselect Let\u2019s say pivot is always the median."
+    },
+    {
+      "page": 77,
+      "text": "Quickselect Let\u2019s say pivot is always the median."
+    },
+    {
+      "page": 78,
+      "text": "Let\u2019s say pivot is always the median. But isn\u2019t this circular?? Quickselect"
+    },
+    {
+      "page": 79,
+      "text": "A simple pivot selection Probability of landing in shaded region? Standard choice: choose a random pivot element."
+    },
+    {
+      "page": 80,
+      "text": "A simple pivot selection Probability of landing in shaded region? 1/2 Standard choice: choose a random pivot element."
+    },
+    {
+      "page": 81,
+      "text": "A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? Standard choice: choose a random pivot element."
+    },
+    {
+      "page": 82,
+      "text": "A simple pivot selection Probability of landing in shaded region? 1/2 How many tries on average? 2 (geometric distribution, p = 1/2) Standard choice: choose a random pivot element."
+    }
+  ]
 }

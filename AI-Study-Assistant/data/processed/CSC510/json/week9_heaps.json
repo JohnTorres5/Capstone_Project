@@ -1,5 +1,259 @@
 {
   "course": "CSC510",
   "source_file": "week9_heaps.pdf",
-  "text": "Priority Queues and Heaps Prof. Timothy Sun Priority Queues A (min-oriented) priority queue is a collection of object and \u201cpriority\u201d pairs that supports the following operations: \u25cf insert(key, priority) \u25cf removeMin( ) - take out element with smallest priority Priority Queues A (min-oriented) priority queue is a collection of object and \u201cpriority\u201d pairs that supports the following operations: \u25cf insert(key, priority) \u25cf removeMin( ) - take out element with smallest priority How does one implement a priority queue? Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Sorted and unsorted implementations both seem plausible. Array/List-based implementations Each implementation has its strength, and a huge drawback: Unsorted List Sorted List insert O(1) O(n) removeMin O(n) O(1) Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) time. Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. But this is a little overkill\u2026 Heaps A (binary) heap is another tree-based data structure for priority queues. Heaps A (binary) heap is another tree-based data structure for priority queues. Two key properties: \u25cf Heap order \u25cf Complete binary tree Heap order property Heap order property: parent always smaller than child Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Where\u2019s the smallest element? Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Where\u2019s the smallest element? At the root. Complete binary tree Complete binary tree property: \u25cf Except for last layer, every layer is \u201cfull\u201d \u25cf All the leaves appear as far left as possible insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? Add to bottom row. insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent. insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary removeMin( ) Once again, need to preserve both properties. removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child Time complexity Nodes can \u201cbubble\u201d up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). Time complexity Nodes can \u201cbubble\u201d up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). (better hidden constants than BST) Array implementation The complete binary tree property allows for an array-based implementation. Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Why isn\u2019t this good for all binary trees? Implementations Heaps don\u2019t have any super-slow operations: Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n) Implementations Heaps don\u2019t have any super-slow operations: \u2026 but these other approaches aren\u2019t entirely useless Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n) Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify - correctness Why does it work? Several \u201cmini-heaps\u201d are created at each layer. Heapify - correctness Why does it work? Several \u201cmini-heaps\u201d are created at each layer. Heapify - runtime What\u2019s the runtime? Heapify - runtime What\u2019s the runtime? \u25cf n bubbling operations (O(log n)?) Heapify - runtime What\u2019s the runtime? \u25cf n bubbling operations (O(log n)?) \u25cf O(n log n) time??? Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Heapify - runtime Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Each path is a potential \u201cbubble-down\u201d Heapify - runtime None of these paths overlap, so each edge is used at most once. Heapify - runtime None of these paths overlap, so each edge is used at most once. |E| = n - 1 Heapify - runtime None of these paths overlap, so each edge is used at most once. |E| = n - 1 \u2192 O(n) Heapify - runtime Heapsort A simple sorting algorithm using a priority queue: \u25cf Build a priority queue with all the elements inside. \u25cf Repeatedly call removeMin( ) Heapsort A simple sorting algorithm using a heap: \u25cf Build a heap with all the elements inside. \u2192 O(n) \u25cf Repeatedly call removeMin( ) \u2192 n O(log n) = O(n log n). Total runtime: O(n log n) \u201cExtended\u201d heap operations In a binary heap, possible to modify other elements besides the root: \u25cf decreaseKey(key, newPriority) \u25cf remove(key) \u201cExtended\u201d heap operations In a binary heap, possible to modify other elements besides the root: \u25cf decreaseKey(key, newPriority) \u25cf remove(key) Uses same bubbling operations as before No reason why a heap can\u2019t have more than two children (what about BSTs?) d-ary heaps No reason why a heap can\u2019t have more than two children (what about BSTs?) How does this affect runtime? d-ary heaps Still O(log n), but maybe you care about hidden constants. \u25cf Bubbling up is shorter. \u25cf Bubbling down is longer. d-ary heaps"
+  "text": "Priority Queues and Heaps Prof. Timothy Sun Priority Queues A (min-oriented) priority queue is a collection of object and \u201cpriority\u201d pairs that supports the following operations: \u25cf insert(key, priority) \u25cf removeMin( ) - take out element with smallest priority Priority Queues A (min-oriented) priority queue is a collection of object and \u201cpriority\u201d pairs that supports the following operations: \u25cf insert(key, priority) \u25cf removeMin( ) - take out element with smallest priority How does one implement a priority queue? Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Sorted and unsorted implementations both seem plausible. Array/List-based implementations Each implementation has its strength, and a huge drawback: Unsorted List Sorted List insert O(1) O(n) removeMin O(n) O(1) Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) time. Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. But this is a little overkill\u2026 Heaps A (binary) heap is another tree-based data structure for priority queues. Heaps A (binary) heap is another tree-based data structure for priority queues. Two key properties: \u25cf Heap order \u25cf Complete binary tree Heap order property Heap order property: parent always smaller than child Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Where\u2019s the smallest element? Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Where\u2019s the smallest element? At the root. Complete binary tree Complete binary tree property: \u25cf Except for last layer, every layer is \u201cfull\u201d \u25cf All the leaves appear as far left as possible insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? Add to bottom row. insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent. insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary removeMin( ) Once again, need to preserve both properties. removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child Time complexity Nodes can \u201cbubble\u201d up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). Time complexity Nodes can \u201cbubble\u201d up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). (better hidden constants than BST) Array implementation The complete binary tree property allows for an array-based implementation. Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Why isn\u2019t this good for all binary trees? Implementations Heaps don\u2019t have any super-slow operations: Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n) Implementations Heaps don\u2019t have any super-slow operations: \u2026 but these other approaches aren\u2019t entirely useless Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n) Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down Heapify - correctness Why does it work? Several \u201cmini-heaps\u201d are created at each layer. Heapify - correctness Why does it work? Several \u201cmini-heaps\u201d are created at each layer. Heapify - runtime What\u2019s the runtime? Heapify - runtime What\u2019s the runtime? \u25cf n bubbling operations (O(log n)?) Heapify - runtime What\u2019s the runtime? \u25cf n bubbling operations (O(log n)?) \u25cf O(n log n) time??? Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Heapify - runtime Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Each path is a potential \u201cbubble-down\u201d Heapify - runtime None of these paths overlap, so each edge is used at most once. Heapify - runtime None of these paths overlap, so each edge is used at most once. |E| = n - 1 Heapify - runtime None of these paths overlap, so each edge is used at most once. |E| = n - 1 \u2192 O(n) Heapify - runtime Heapsort A simple sorting algorithm using a priority queue: \u25cf Build a priority queue with all the elements inside. \u25cf Repeatedly call removeMin( ) Heapsort A simple sorting algorithm using a heap: \u25cf Build a heap with all the elements inside. \u2192 O(n) \u25cf Repeatedly call removeMin( ) \u2192 n O(log n) = O(n log n). Total runtime: O(n log n) \u201cExtended\u201d heap operations In a binary heap, possible to modify other elements besides the root: \u25cf decreaseKey(key, newPriority) \u25cf remove(key) \u201cExtended\u201d heap operations In a binary heap, possible to modify other elements besides the root: \u25cf decreaseKey(key, newPriority) \u25cf remove(key) Uses same bubbling operations as before No reason why a heap can\u2019t have more than two children (what about BSTs?) d-ary heaps No reason why a heap can\u2019t have more than two children (what about BSTs?) How does this affect runtime? d-ary heaps Still O(log n), but maybe you care about hidden constants. \u25cf Bubbling up is shorter. \u25cf Bubbling down is longer. d-ary heaps",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Priority Queues and Heaps Prof. Timothy Sun"
+    },
+    {
+      "page": 2,
+      "text": "Priority Queues A (min-oriented) priority queue is a collection of object and \u201cpriority\u201d pairs that supports the following operations: \u25cf insert(key, priority) \u25cf removeMin( ) - take out element with smallest priority"
+    },
+    {
+      "page": 3,
+      "text": "Priority Queues A (min-oriented) priority queue is a collection of object and \u201cpriority\u201d pairs that supports the following operations: \u25cf insert(key, priority) \u25cf removeMin( ) - take out element with smallest priority How does one implement a priority queue?"
+    },
+    {
+      "page": 4,
+      "text": "Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists:"
+    },
+    {
+      "page": 5,
+      "text": "Array/List-based implementations Like stacks, queues, etc., a natural attempt would be to use arrays or lists: Sorted and unsorted implementations both seem plausible."
+    },
+    {
+      "page": 6,
+      "text": "Array/List-based implementations Each implementation has its strength, and a huge drawback: Unsorted List Sorted List insert O(1) O(n) removeMin O(n) O(1)"
+    },
+    {
+      "page": 7,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.)"
+    },
+    {
+      "page": 8,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) time."
+    },
+    {
+      "page": 9,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time."
+    },
+    {
+      "page": 10,
+      "text": "Balanced BSTs? One data structure that would solve this issue is a balanced binary search tree (e.g. AVL, red-black, etc.) insert and removeMin can be implemented in O(h) = O(log n) time. But this is a little overkill\u2026"
+    },
+    {
+      "page": 11,
+      "text": "Heaps A (binary) heap is another tree-based data structure for priority queues."
+    },
+    {
+      "page": 12,
+      "text": "Heaps A (binary) heap is another tree-based data structure for priority queues. Two key properties: \u25cf Heap order \u25cf Complete binary tree"
+    },
+    {
+      "page": 13,
+      "text": "Heap order property Heap order property: parent always smaller than child"
+    },
+    {
+      "page": 14,
+      "text": "Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026"
+    },
+    {
+      "page": 15,
+      "text": "Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Where\u2019s the smallest element?"
+    },
+    {
+      "page": 16,
+      "text": "Heap order property Heap order property: parent always smaller than child \u25cf Grandparent always smaller than grandchild \u25cf \u2026 and so on \u2026 Where\u2019s the smallest element? At the root."
+    },
+    {
+      "page": 17,
+      "text": "Complete binary tree Complete binary tree property: \u25cf Except for last layer, every layer is \u201cfull\u201d \u25cf All the leaves appear as far left as possible"
+    },
+    {
+      "page": 18,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property?"
+    },
+    {
+      "page": 19,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to add a node that preserves the complete binary tree property? Add to bottom row."
+    },
+    {
+      "page": 20,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property?"
+    },
+    {
+      "page": 21,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent."
+    },
+    {
+      "page": 22,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary"
+    },
+    {
+      "page": 23,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary"
+    },
+    {
+      "page": 24,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary"
+    },
+    {
+      "page": 25,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary"
+    },
+    {
+      "page": 26,
+      "text": "insert( ) - bubbling up Each operation must preserve the two properties. How to re-establish the heap order property? Swap with parent\u2026 as many times as necessary"
+    },
+    {
+      "page": 27,
+      "text": "removeMin( ) Once again, need to preserve both properties."
+    },
+    {
+      "page": 28,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root."
+    },
+    {
+      "page": 29,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "page": 30,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "page": 31,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "page": 32,
+      "text": "removeMin( ) Once again, need to preserve both properties. Only removable node is the last one, so let\u2019s swap it with the root and delete the root. Repeatedly swap with smaller child"
+    },
+    {
+      "page": 33,
+      "text": "Time complexity Nodes can \u201cbubble\u201d up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n)."
+    },
+    {
+      "page": 34,
+      "text": "Time complexity Nodes can \u201cbubble\u201d up or down the entire height of the tree in the worst case. Both operations take O(h) = O(log n). (better hidden constants than BST)"
+    },
+    {
+      "page": 35,
+      "text": "Array implementation The complete binary tree property allows for an array-based implementation."
+    },
+    {
+      "page": 36,
+      "text": "Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc."
+    },
+    {
+      "page": 37,
+      "text": "Array implementation The complete binary tree property allows for an array-based implementation. No need for node objects, pointers/references, etc. Why isn\u2019t this good for all binary trees?"
+    },
+    {
+      "page": 38,
+      "text": "Implementations Heaps don\u2019t have any super-slow operations: Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n)"
+    },
+    {
+      "page": 39,
+      "text": "Implementations Heaps don\u2019t have any super-slow operations: \u2026 but these other approaches aren\u2019t entirely useless Unsorted List Sorted List Heap insert O(1) O(n) O(log n) removeMin O(n) O(1) O(log n)"
+    },
+    {
+      "page": 40,
+      "text": "Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down"
+    },
+    {
+      "page": 41,
+      "text": "Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down"
+    },
+    {
+      "page": 42,
+      "text": "Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down"
+    },
+    {
+      "page": 43,
+      "text": "Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down"
+    },
+    {
+      "page": 44,
+      "text": "Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down"
+    },
+    {
+      "page": 45,
+      "text": "Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down"
+    },
+    {
+      "page": 46,
+      "text": "Heapify Building a heap from unsorted array in linear time: \u25cf From bottom layer to top, bubble down"
+    },
+    {
+      "page": 47,
+      "text": "Heapify - correctness Why does it work? Several \u201cmini-heaps\u201d are created at each layer."
+    },
+    {
+      "page": 48,
+      "text": "Heapify - correctness Why does it work? Several \u201cmini-heaps\u201d are created at each layer."
+    },
+    {
+      "page": 49,
+      "text": "Heapify - runtime What\u2019s the runtime?"
+    },
+    {
+      "page": 50,
+      "text": "Heapify - runtime What\u2019s the runtime? \u25cf n bubbling operations (O(log n)?)"
+    },
+    {
+      "page": 51,
+      "text": "Heapify - runtime What\u2019s the runtime? \u25cf n bubbling operations (O(log n)?) \u25cf O(n log n) time???"
+    },
+    {
+      "page": 52,
+      "text": "Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Heapify - runtime"
+    },
+    {
+      "page": 53,
+      "text": "Suppose bottom layer is full and consider, for each node, the following path: 1. Go to right child 2. Repeatedly go to the left child until you reach a leaf Each path is a potential \u201cbubble-down\u201d Heapify - runtime"
+    },
+    {
+      "page": 54,
+      "text": "None of these paths overlap, so each edge is used at most once. Heapify - runtime"
+    },
+    {
+      "page": 55,
+      "text": "None of these paths overlap, so each edge is used at most once. |E| = n - 1 Heapify - runtime"
+    },
+    {
+      "page": 56,
+      "text": "None of these paths overlap, so each edge is used at most once. |E| = n - 1 \u2192 O(n) Heapify - runtime"
+    },
+    {
+      "page": 57,
+      "text": "Heapsort A simple sorting algorithm using a priority queue: \u25cf Build a priority queue with all the elements inside. \u25cf Repeatedly call removeMin( )"
+    },
+    {
+      "page": 58,
+      "text": "Heapsort A simple sorting algorithm using a heap: \u25cf Build a heap with all the elements inside. \u2192 O(n) \u25cf Repeatedly call removeMin( ) \u2192 n O(log n) = O(n log n). Total runtime: O(n log n)"
+    },
+    {
+      "page": 59,
+      "text": "\u201cExtended\u201d heap operations In a binary heap, possible to modify other elements besides the root: \u25cf decreaseKey(key, newPriority) \u25cf remove(key)"
+    },
+    {
+      "page": 60,
+      "text": "\u201cExtended\u201d heap operations In a binary heap, possible to modify other elements besides the root: \u25cf decreaseKey(key, newPriority) \u25cf remove(key) Uses same bubbling operations as before"
+    },
+    {
+      "page": 61,
+      "text": "No reason why a heap can\u2019t have more than two children (what about BSTs?) d-ary heaps"
+    },
+    {
+      "page": 62,
+      "text": "No reason why a heap can\u2019t have more than two children (what about BSTs?) How does this affect runtime? d-ary heaps"
+    },
+    {
+      "page": 63,
+      "text": "Still O(log n), but maybe you care about hidden constants. \u25cf Bubbling up is shorter. \u25cf Bubbling down is longer. d-ary heaps"
+    }
+  ]
 }

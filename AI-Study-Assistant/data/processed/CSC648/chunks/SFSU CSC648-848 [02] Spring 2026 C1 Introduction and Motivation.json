@@ -3,87 +3,557 @@
   "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 8,
+  "chunk_count": 55,
   "chunks": [
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-0",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Software Engineering Spring 2026 Henry VILLAR INTRODUCTION & SE MOTIVATION SE Syllabus, Topics, Policies, Rules, Organization and Grading + Team Project and M0 Acknowledge • This is shared content that the instructors of this course from the different sessions are using. Slides are based on course materials created by Dr Dragutin Petkovic and updated by Henry Villar • There are 4 Professors teaching SE: • [01] Isabel Hyo Jung Song • [02] Henry Villar (Online Synchronous) • Our Grader [02]: Jaideep Reddy Gade. • [03] Dragutin Petkovic • [04] Isabel Hyo Jung Song • [05] Jose Ortiz Costa • Anthony John Souza [TA – General CSC 648-848] Agenda • Introductions and SE Motivation – Why is this class important? • About the class: what will be covered; final class project • Student responsibilities, attendance, participation, team collaboration • Canvas site overview – will contain class material • Policies & Grading • Class team assignments • Team Project • Milestone 0 • Roll Call / Enrollment and pre-requisites review. • Office hours (Tuesdays After class 8:45 PM – 9:15 PM – Please send an email) Spring 2026 Calendar* – CSC 648-848 [02] Week Date Topic Team Project Points W1 January 27 Introduction and Motivation for Software Engineering Team Assignments W2 February 3 Requirements and Specifications: Personas & Use Cases Configuration Chosen (IT Infra & SW Stack) W3 February 10 Software Engineering Teamwork & Arch Intro Milestone 0: IT Infra & SW Stack + Individual video 10 W4 February 17 Software Architectures and Design W5 February 24 Design: Usability and GUI Principles, Design, Development and Evaluation Milestone 1: High Level Requirements & Specifications, Use Cases and Architecture (10) W6 March 3 Software Project Management, SE and AI Ethics, IP Issues W7 March 10 Implementation: Coding +Style and Coding Practices Milestone 2: More Detailed Requirements, Specs, Architecture, UI mock-ups and Vertical SW prototype (5) W8 March 17 Security Engineering Vertical Prototype (5) March 24 |March 31 Spring Recess – March 23-27 | March 31st Cesar Chavez Day W9 April 7 Validation: SW Testing & QA Milestone 3: Review of functionality, UI, SW and planning for final product delivery (10) W10 April 14 Cont. Validation: Usability Testing and Focus Groups W11 April 21 Software Engineering: Methodology & Process Milestone 4: Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list). (10) W12 April 28 Software Engineering: Preparing for the Future. Best Practices and What makes a great Software Engineer? W13 May 5th Software Engineering Review. Prep for M5 Demo & Final Exam Talk to Team leads W14 May 12 Final Project Demo – SW Release Milestone 5: Final Demo and Documents for Grading (10) 50 W15 May 19 FINAL EXAM 40 *Subject to change Team Assignments Today’s Outcomes 1. Understand exactly the expectations of the Software Engineering class: Project-based. 2. Team familiarity – Assignments 1. Roles & Responsibilities 3. Talk about the Infrastructure and Software Stack 4. Final Team Project 5. Milestone 0 Final Objective, the Pragmatic One About Me: JEVP, Henry Villar @Splunk/Cisco Previously: VMware, NetApp & Intel • EDUCATION • Liberty University • Ph.D. Developmental Psychology. Student (2022-Present) • San Francisco State University • Masters of Science in Computer Science. Computing and Business (2011) • Bachelor of Science in Computer Science, and Minor in Mathematics (2006) • Naval"
+      "text": "Software Engineering Spring 2026"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-1",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "Team familiarity – Assignments 1. Roles & Responsibilities 3. Talk about the Infrastructure and Software Stack 4. Final Team Project 5. Milestone 0 Final Objective, the Pragmatic One About Me: JEVP, Henry Villar @Splunk/Cisco Previously: VMware, NetApp & Intel • EDUCATION • Liberty University • Ph.D. Developmental Psychology. Student (2022-Present) • San Francisco State University • Masters of Science in Computer Science. Computing and Business (2011) • Bachelor of Science in Computer Science, and Minor in Mathematics (2006) • Naval Academy of Mexico • Bachelor of Science in Hydrographic Engineering. Valedictorian (1993) Students Introductions YOUR NAME, LOCATION & PREFERRED PROGRAMING LANGUAGE ARE YOU ALREADY WORKING? TECH OR NOT TECH? SOMETHING ABOUT YOU THAT WE CAN’T TELL JUST BY LOOKING AT YOU ;^) Motivation Software Engineering (SE) is “The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software”. \"Software Engineering 2004\": Curriculum Guidelines for Undergraduate Degree Programs in Software Engineering, The joint Task Force on Computing Curricula, IEEE Computer Society, Association for Computing Machinery, August 2004 Motivation • Most of the failures of delivering SW to specs, on time and budget, and to a user “delight” were rooted in a misunderstanding user needs, and/or poor design, planning and organization. Charette, R. N., “Why Software Fails”, IEEE Spectrum, September 2005, pp. 42 Motivation • ACM study on SW outsourcing and globalization specifically mentions the need to train SE students in so called “soft skills”, teamwork, communication, SE process organization and issues related to globalization Aspray W., Mayadas F., Vardi M.Y., Editors: “Globalization and Offshoring of Software, A Report of the ACM Job Migration Task Force”, ACM 2006, http://www.acm.org/globalizationreport/ Motivation • Check job postings for SW engineers – most require (besides specific technical skills): • Ability to work in a team • Oral and written communication • Knowledge of SE tools • Familiarity with modern SE processes and lifecycle (NEW emphasis on continuous and collaborative SE) • Awareness about user experience • Numerous student testimonials how the class helped them find the job or in current job Some things never change… SW Technology (tools, frameworks, languages, components, protocols) do change very often (yearly…) BUT Principles and best practices of SE management, organization and people stuff change little with time Hence, learning SE principles (from this class) offers you long term skills which grow in importance as you get more experienced Hard (technical) and soft (interpersonal/professional) skills for SE • Hard skills – traditional CS curriculum • Data structures, Math • Programming • Computer architectures • Database/networking • …. • BUT ALSO: Soft skills • Teamwork and communications • Ability to follow SE best practices and processes • Dealing with customers, stakeholders, management • SW development using team tools What makes great SW Engineer and how to teach SW Engineering Check ACM slides posted on Canvas Science vs. Engineering • Grow and expand knowledge • “Build in order to learn” • “Vertical” education – go into depth and details • Emphasis on individual competency • Apply knowledge to build useful products • “Learn in order to build” • “Horizontal” education – cover all aspects to some degree – via a project from inception to delivery • Emphasis on teamwork What makes a great SW engineer -0 check ACM slides (posted) About CSC 648/848 Class goals: make you a"
+      "text": "Henry VILLAR INTRODUCTION & SE MOTIVATION SE Syllabus, Topics, Policies, Rules, Organization and Grading + Team Project and M0"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-2",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "Engineering • Grow and expand knowledge • “Build in order to learn” • “Vertical” education – go into depth and details • Emphasis on individual competency • Apply knowledge to build useful products • “Learn in order to build” • “Horizontal” education – cover all aspects to some degree – via a project from inception to delivery • Emphasis on teamwork What makes a great SW engineer -0 check ACM slides (posted) About CSC 648/848 Class goals: make you a better SW Engineer and give you skills to be successful in the marketplace This class is NOT about coding (but is about programming practices, application and style) This class is going to help you learn how to work in a team to build SW on time, budget and per specs which delights the customers You will learn: •Valuable best practices and methods for successful SE (continuous collaborative development, teamwork) and get experience close to real working environment – great for those looking or work but never worked before •Modern SW development tools You should update your Resume/CV after class – instructions will be posted Class experience and final project portfolio are great for job search Class teaching philosophy Teach SE best practices, concepts and terms – focus on practical SE A lot of class discussion and real-life examples In parallel let student teams implement above best practices around team project Teach what they need when they need it Immerse, supervise and coach student teams (6-7 students) in as realistic setting as possible (model industry startup setting) Above methods: Ensures real learning “by doing it” More fun, less boring Better learning M1 high level specs M2 detailed specs M3 prototype and arch. Final proj. specs M4 beta and usability M5 final delivery and demo 2) Final project 3) Req&Specs 4) GUI, usability 5) UML, SW processes 6) PM, teamwork 7) Des. Patterns, Coding style, Src. Cntrl, 8) QA usability 11) SW quality Time Milestones Teaching of SE “theory” and best practices is synchronized and driven by milestones M0 9) Guest speakers 10) ethics, legalese Topics Spring 2025 Calendar* – CSC 648-848 [02] Week Date Topic Team Project Points W1 January 27 Introduction and Motivation for Software Engineering Team Assignments W2 February 3 Requirements and Specifications: Personas & Use Cases Configuration Chosen (IT Infra & SW Stack) W3 February 10 Software Engineering Teamwork & Arch Intro Milestone 0: IT Infra & SW Stack + Individual video 10 W4 February 17 Software Architectures and Design W5 February 24 Design: Usability and GUI Principles, Design, Development and Evaluation Milestone 1: High Level Requirements & Specifications, Use Cases and Architecture (10) W6 March 3 Software Project Management, SE and AI Ethics, IP Issues W7 March 10 Implementation: Coding +Style and Coding Practices Milestone 2: More Detailed Requirements, Specs, Architecture, UI mock-ups and Vertical SW prototype (5) W8 March 17 Security Engineering Vertical Prototype (5) March 24 |March 31 Spring Recess – March 23-27 | March 31st Cesar Chavez Day W9 April 7 Validation: SW Testing & QA Milestone 3: Review of functionality, UI, SW and planning for final product delivery (10) W10 April 14 Cont. Validation: Usability Testing and Focus Groups W11 April 21 Software Engineering: Methodology & Process Milestone 4: Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list)."
+      "text": "Acknowledge • This is shared content that the instructors of this course from the different sessions are using. Slides are based on course materials created by Dr Dragutin Petkovic and updated by Henry Villar • There are 4 Professors teaching SE: • [01] Isabel Hyo Jung Song • [02] Henry Villar (Online Synchronous) • Our Grader [02]: Jaideep Reddy Gade. • [03] Dragutin Petkovic • [04] Isabel Hyo Jung Song • [05] Jose Ortiz Costa • Anthony John Souza [TA – General CSC 648-848]"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-3",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "(5) W8 March 17 Security Engineering Vertical Prototype (5) March 24 |March 31 Spring Recess – March 23-27 | March 31st Cesar Chavez Day W9 April 7 Validation: SW Testing & QA Milestone 3: Review of functionality, UI, SW and planning for final product delivery (10) W10 April 14 Cont. Validation: Usability Testing and Focus Groups W11 April 21 Software Engineering: Methodology & Process Milestone 4: Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list). (10) W12 April 28 Software Engineering: Preparing for the Future. Best Practices and What makes a great Software Engineer? W13 May 5th Software Engineering Review. Prep for M5 Demo & Final Exam Talk to Team leads W14 May 12 Final Project Demo – SW Release Milestone 5: Final Demo and Documents for Grading (10) 50 W15 May 19 FINAL EXAM 40 *Subject to change About the class organization • Class structure (unless otherwise): • First half of the class – teaching and discussion (Lecture) • Second half of the class – supervised teamwork ***MANDATORY attendance *** • Milestone 0 –– learn SE tools and each team organise their IT (with our supervision) • Final Team Project: simulating small SW company: Students will work in teams of 5-7 to produce a SW product (same for all teams). Each student team will deliver 5 group Milestones and demo their project at the end. • High level final team project description to be posted on Canvas – same for all teams • Final individual exam – tests basic knowledge • No formal homework, no midterm BUT a lot of teamwork and 6 formal milestones (M0, M1-M5) an final individual exam • Teamwork participation is the key and mandatory!!!! Mandatory class policies • Attendance first 4 weeks full class is mandatory, so students can start strong working with their teams and establish teamwork – if not assigned to the team student will be dropped. • Fifth week and later: • Must attend teamwork session (last 1+ hours of the class) • All Teams will present TAKEAWAYS from previous class • Must participate in team activities and follow good team ethics and behavior. • Must read and respond to team and instructor e- mails within 24 hours • Must follow the requested deadlines • Must use class mandated SE and communication tools for final project development • Must report absence to team and instructors ahead of time to instructor and team lead Failure to abide by class policies will result in reduced grade points Communication Policies: instructors - students • Team project material and class slides will be posted on the SFSU Canvas ahead of time • E-mail will be used by the instructors for general information and broadcasting to students. Will have “CSC648-848 section N team M” label in subject line (N is section number, M is team number). • Must respond to emails from Instructor and from your team members and follow up in a timely manner (within 24 hours). • If you send e-mail to instructors must have “CSC 648-848 section N Team M ” in subject line (N class section, M is team number) • Team leads communicate with instructors for general issues, then shares with the rest of the team • Absence has to be communicated to team and instructor"
+      "text": "Agenda • Introductions and SE Motivation – Why is this class important? • About the class: what will be covered; final class project • Student responsibilities, attendance, participation, team collaboration • Canvas site overview – will contain class material • Policies & Grading • Class team assignments • Team Project • Milestone 0 • Roll Call / Enrollment and pre-requisites review. • Office hours (Tuesdays After class 8:45 PM – 9:15 PM – Please send an email)"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-4",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 4,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 5,
       "slide": null,
-      "text": "number, M is team number). • Must respond to emails from Instructor and from your team members and follow up in a timely manner (within 24 hours). • If you send e-mail to instructors must have “CSC 648-848 section N Team M ” in subject line (N class section, M is team number) • Team leads communicate with instructors for general issues, then shares with the rest of the team • Absence has to be communicated to team and instructor ahead of time • Any delay in team delivery needs to be asked for via e-mail at least 24 h before the deadline About the class – Grading • Milestone 0 – individual assignment up to 10/100 • Team grade: student teams developing a product emulating small SW company, via Milestones 1-5 – 50/100. Demo and folder with documentation – M5 folder. • Team grade has SE Product component (how good is the product the team developed) and SE Process (how well the team followed SE best practices) • All team members get same grade unless exceptions (low attendance, low participation etc) • Team leads may get up to 5 points extra credit for job well done • Front end and back end team leads and github master my get up to 3 points extra credit for job well done • Final exam: closed book, closed notes, in class/virtual. 40/100 of the grade (40 questions) • No homework; No midterm BUT a lot of teamwork and 6 delivery milestones (M0-M5) Canvas https://sfsu.instructure.com Class syllabus • Check Canvas Syllabus Break 10 Minutes Software Development Life Cycle (SDLC) / SE Process Lifecycle 1. Planning 2. Analysis 3. Design 4. Implementation 5. Testing & Integration 6. Maintenance SW Engineering Process Components 1. Requirements and Specification 2. Design and Implementation 3. Validation 4. Maintenance and Evolution SW Engineering Process Components • There are several basic components present in all SW Engineering methodologies: 1. SW Requirements and Specification: functionality, constraints, look and feel, GUI, performance 2. SW Design and Implementation 3. SW Validation: formal, test plans, QA 4. SW Maintenance and Evolution: ongoing changes (and fixes) to meet customer needs These components are applied in different way and order (linear, iterative, spiral...) depending on chosen SW Engineering methodology or models (I.e. waterfall, extreme, agile etc.) Important Methodologies (Process Models) Waterfall Evolutionary Iterative Incremental Open Source Development Extreme Programing User Centered Design (UCD) Continuous Development AGILE & SCRUM SW Process Models (or Methodologies) • Abstract representations of overall development of SW - methods and practices for organizing the SE effort • Waterfall • Evolutionary • Iterative • Open Source development • Extreme programming • For GUI and usability: User Centered Design (UCD) – variation of iterative development • Continuous development • Agile, Scrum – high level project management (PM) processes used to “manage, organize and implement ” the above SE processes Important Milestone 0 – individual milestone – Choose and learn team project SW tools - 10/100 • First, students have to chose the tools and get approval from Instructor/CTO • Then, they have to learn how to use chosen tools and create team page (ABOUT page) • 10/100 of the grade -Details be presented and posted on Canvas – graded for individual team members separately • Students within the team encouraged to help each other!"
+      "text": "Spring 2026 Calendar* – CSC 648-848 [02] Week Date Topic Team Project Points W1 January 27 Introduction and Motivation for Software Engineering Team Assignments W2 February 3 Requirements and Specifications: Personas & Use Cases Configuration Chosen (IT Infra & SW Stack) W3 February 10 Software Engineering Teamwork & Arch Intro Milestone 0: IT Infra & SW Stack + Individual video 10 W4 February 17 Software Architectures and Design W5 February 24 Design: Usability and GUI Principles, Design, Development and Evaluation Milestone 1: High Level Requirements & Specifications, Use Cases and Architecture (10) W6 March 3 Software Project Management, SE and AI Ethics, IP Issues W7 March 10 Implementation: Coding +Style and Coding Practices Milestone 2: More Detailed Requirements, Specs, Architecture, UI mock-ups and Vertical SW prototype (5) W8 March 17 Security Engineering Vertical Prototype (5) March 24 |March 31 Spring Recess – March 23-27 | March 31st Cesar Chavez Day W9 April 7 Validation: SW Testing & QA Milestone 3: Review of functionality, UI, SW and planning for final product delivery (10) W10 April 14 Cont. Validation: Usability Testing and Focus Groups W11 April 21 Software Engineering: Methodology & Process Milestone 4: Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list). (10) W12 April 28 Software Engineering: Preparing for the Future. Best Practices and What makes a great Software Engineer? W13 May 5th Software Engineering Review. Prep for M5 Demo & Final Exam Talk to Team leads W14 May 12 Final Project Demo – SW Release Milestone 5: Final Demo and Documents for Grading (10) 50 W15 May 19 FINAL EXAM 40 *Subject to change"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-5",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 5,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 6,
       "slide": null,
-      "text": "” the above SE processes Important Milestone 0 – individual milestone – Choose and learn team project SW tools - 10/100 • First, students have to chose the tools and get approval from Instructor/CTO • Then, they have to learn how to use chosen tools and create team page (ABOUT page) • 10/100 of the grade -Details be presented and posted on Canvas – graded for individual team members separately • Students within the team encouraged to help each other! • Other benefits of M0: • Learn how to use tools for professional SW development • Learn basics of Cloud Computing and server management • Build teamwork Class IT (for team project development)– Milestone 0 • Milestone 0 (M0) - Read Instructions • Class CTO recommends set of tools and frameworks • Student teams decide/propose what to use • Class CTO approves • Student install tools • Student build a team WWW page • Team to chose/manage their own delivery server and github • Teams will have one team lead/project manager and one front-end and one back-and leads instead of one CTO Every single student should have this config Part of the M0 (individual video) IDE Self Skill Survey Member's Familiarity with Server-Side Language (Python, JavaScript, PHP) on a scale of 1 to 5, with 5 being very familiar and 1 being never used it. Jane: 5 Jack: 2 John: 3 Joe: 1 Jill: 4 Jake: 5 Group/Team Milestones 1-5 • Class Team Project – High Level Description • Milestone 1: High Level Req.&Specs, Use cases • Milestone 2: More detailed specs, tools, servers and architecture defined, UI mock-ups, first vertical prototype • Milestone 3: Project review (in-person): full horizontal (UI) and basic vertical prototype -feedback via focus group with Professor as customer “persona”; CTO reviews code and github off-line and sends feedback; • Milestone 4: Beta delivery, QA plans and usability feedback, final functionality committed • Milestone 5: Final Project demo (“Milestone 5 Folder”) and demo of the SW – both graded for final team grade Team Grading – 50/100 • All team members must contribute to the best of their abilities • Team lead also participates in the development • All group members get the same grade unless the instructors are told or discover that somebody is not contributing fully (e.g. poor attendance and communication, poor delivery on assigned tasks). • Feedback and interaction are encouraged – hence the feedback, your questions, and intermediate project results are not graded. We grade only the final results after all the feedback is incorporated (M5 folder and final SW) • All team leads may get up to 5 extra points; front-end and back-end team leads and github masters may get up to 3 points Participation and full focus on team project are required and are cornerstone of the class (50/100 points) Team gets same grade for team project unless: • Team lead reports (MUST be done as soon as problem occurs) or instructor discovers low participation e.g. • Not responsive to e-mails • Misses meetings with no excuse • Does not abide by schedules • Instructor will investigate (e.g. speak to team lead, document, check github) then instructor will speak to individual and put him/her on formal notice • Failure to improve may result from minimum 10% up to 50% of"
+      "text": "Team Assignments"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-6",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 6,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 7,
       "slide": null,
-      "text": "Team gets same grade for team project unless: • Team lead reports (MUST be done as soon as problem occurs) or instructor discovers low participation e.g. • Not responsive to e-mails • Misses meetings with no excuse • Does not abide by schedules • Instructor will investigate (e.g. speak to team lead, document, check github) then instructor will speak to individual and put him/her on formal notice • Failure to improve may result from minimum 10% up to 50% of team grade reduction for the individual!!!! Important Team grade -Final project grading – same grade per team • Total 50/100 of the grade • Adherence and achievement of adequate SE process – 25% (based on M5 folder and student behavior during the whole semester) • Quality of the delivered SE product – 25 % (based on delivered SW and its architecture, gihub organization, code “smell;” etc.) • All team members generally get the same grade • Rare Exception: In case of individual participation problems team grade for that individual shall be reduced Measured Team Outcomes for SE process Measured Team Outcomes for SE product 1. Fraction of the team participating at the meetings with the instructor 2. Quality and timing of follow-up on outstanding issues 3. Ability to deal with feedback constructively 4. Producing the non-SW and SW deliverables on time; following submission guidelines 5. Quality and completeness of non-SW deliverables (requirements, use cases, UI mockups, design documents, test plans etc.) as in M5 folder 6. Number of teamwork issues that instructor had to deal with (whether resolved or not) 7. Ability to apply best SE process and teamwork practices 8. Adherence to continuous and collaborative development practices 9. Ability to effectively use the SE tools (e.g. collaborative tools, version control, issue trackers) 1. Correctness and reliability of operation 2. Functionality of the product vs. desired requirements and use cases 3. Ease of use, user interface 4. Architecture of the developed system 5. Database design 6. Basic security, field validation 7. Performance 8. Code quality and “smell” (coding principles, style, documentation) 9. Proper usage of collaborative tools e.g. repository 10. Presentation style and effectiveness of final product demonstration (content, delivery, adherence to time, dealing with Q/A) Rubrics for team project grading 25 % 25 % Final individual exam – 40% of the grade • Modeled as a “certification test” – check knowledge of basic concepts and terms and application of best practices • Five sections, 40 questions (each 1 point), 8 in each section: • SE Processes • Requirements and Specs • UI and usability • QA • Project Management • Mainly multiple choice Prep for final exam – what you need to learn • Go over slides and remember class discussion • Focus on main concepts, defections and best practices • No need to memorize tools and technology names nor numbers (e.g. max typing speed etc.) - they are given in slides as reference material – they change often anyway • For exam prep OK to only check slides marked Important Important Slides and Book (optional) • NO book required • Class in part based on excellent SE book by Prof. Ian Sommerville, with additional material on WWW GUI and Usability from book by McCracken. The book is optional but recommended • Prof. Sommerville offers some material here: •"
+      "text": "Today’s Outcomes 1. Understand exactly the expectations of the Software Engineering class: Project-based. 2. Team familiarity – Assignments 1. Roles & Responsibilities 3. Talk about the Infrastructure and Software Stack 4. Final Team Project 5. Milestone 0"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-7",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
       "chunk_index": 7,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 8,
       "slide": null,
-      "text": "nor numbers (e.g. max typing speed etc.) - they are given in slides as reference material – they change often anyway • For exam prep OK to only check slides marked Important Important Slides and Book (optional) • NO book required • Class in part based on excellent SE book by Prof. Ian Sommerville, with additional material on WWW GUI and Usability from book by McCracken. The book is optional but recommended • Prof. Sommerville offers some material here: • https://iansommerville.com/software-engineering- book/static/videos/ • We acknowledge copyright for the Prof. Sommerville slides we will use • Class slides represent valuable material summarizing years of SE experience and best practices – keep them and use them at work. • Both the book and slides are of long term value – they cover best practices and concepts which do not change often How does the class prepare you for job market • We simulate real world small company - comes as close to real work experience • Your team project becomes your portfolio (M5 folder, WWW application and github) • You improve your CV with the tools and SE processes you learned and practiced • Instructions on how to improve your CV after the class are in http://cs.sfsu.edu/employment • See “Tips and Tricks…” slide Prerequisites strictly observed • Undergraduates • CSC 648: CSC 413 grade C or better (strictly enforced); no concurrent enrolment allowed • CSC 317 is also required. • Conditionally classified grads who had CSC413 as a condition must clear this first, no concurrent enrolment allowed • International visiting students - contact instructors Pre-requisite chart Team Assignments Team Collabora tion (8:00- 8:45) Get Familiar with your team Review Final Team Project Review M0 Outputs: List of Team Members Responsibilities/Roles SW stack chosen ready to ask for approval – see email template Takeaways Software Engineering (SE) is “The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software”. Most of the failures of delivering SW to specs, on time and budget, and to a user “delight” were rooted in a misunderstanding user needs, and/or poor design, planning and organization. SOFT SKILLS Get familiar with the dynamic and organization of the class, calendar and milestones: SW stack approved by W2, Team Responsibilities by W2, and M0 is due in W3 Integrate fully with your team and collaborate SE Process and Methodology Plans for next Week Team 1 present TAKEAWAYS from week 1 “SE Introduction & Motivation” Week 1 Summary Week 2 topic: Use Cases, Requirements and Specifications Team Project, M0, and Team integration (lead/project manager, back/front-end lead, github master). Make sure you read the corresponding slides and the M0 documentation. Enjoy the Learning Journey!"
+      "text": "Final Objective, the Pragmatic One"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-8",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "About Me: JEVP, Henry Villar @Splunk/Cisco Previously: VMware, NetApp & Intel • EDUCATION • Liberty University • Ph.D. Developmental Psychology. Student (2022-Present) • San Francisco State University • Masters of Science in Computer Science. Computing and Business (2011) • Bachelor of Science in Computer Science, and Minor in Mathematics (2006) • Naval Academy of Mexico • Bachelor of Science in Hydrographic Engineering. Valedictorian (1993)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-9",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Students Introductions YOUR NAME, LOCATION & PREFERRED PROGRAMING LANGUAGE ARE YOU ALREADY WORKING? TECH OR NOT TECH? SOMETHING ABOUT YOU THAT WE CAN’T TELL JUST BY LOOKING AT YOU ;^)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-10",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "Motivation Software Engineering (SE) is “The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software”. \"Software Engineering 2004\": Curriculum Guidelines for Undergraduate Degree Programs in Software Engineering, The joint Task Force on Computing Curricula, IEEE Computer Society, Association for Computing Machinery, August 2004"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-11",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Motivation • Most of the failures of delivering SW to specs, on time and budget, and to a user “delight” were rooted in a misunderstanding user needs, and/or poor design, planning and organization. Charette, R. N., “Why Software Fails”, IEEE Spectrum, September 2005, pp. 42"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-12",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Motivation • ACM study on SW outsourcing and globalization specifically mentions the need to train SE students in so called “soft skills”, teamwork, communication, SE process organization and issues related to globalization Aspray W., Mayadas F., Vardi M.Y., Editors: “Globalization and Offshoring of Software, A Report of the ACM Job Migration Task Force”, ACM 2006, http://www.acm.org/globalizationreport/"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-13",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Motivation • Check job postings for SW engineers – most require (besides specific technical skills): • Ability to work in a team • Oral and written communication • Knowledge of SE tools • Familiarity with modern SE processes and lifecycle (NEW emphasis on continuous and collaborative SE) • Awareness about user experience • Numerous student testimonials how the class helped them find the job or in current job"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-14",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Some things never change… SW Technology (tools, frameworks, languages, components, protocols) do change very often (yearly…) BUT Principles and best practices of SE management, organization and people stuff change little with time Hence, learning SE principles (from this class) offers you long term skills which grow in importance as you get more experienced"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-15",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Hard (technical) and soft (interpersonal/professional) skills for SE • Hard skills – traditional CS curriculum • Data structures, Math • Programming • Computer architectures • Database/networking • …. • BUT ALSO: Soft skills • Teamwork and communications • Ability to follow SE best practices and processes • Dealing with customers, stakeholders, management • SW development using team tools"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-16",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "What makes great SW Engineer and how to teach SW Engineering Check ACM slides posted on Canvas"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-17",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Science vs. Engineering • Grow and expand knowledge • “Build in order to learn” • “Vertical” education – go into depth and details • Emphasis on individual competency • Apply knowledge to build useful products • “Learn in order to build” • “Horizontal” education – cover all aspects to some degree – via a project from inception to delivery • Emphasis on teamwork What makes a great SW engineer -0 check ACM slides (posted)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-18",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "About CSC 648/848 Class goals: make you a better SW Engineer and give you skills to be successful in the marketplace This class is NOT about coding (but is about programming practices, application and style) This class is going to help you learn how to work in a team to build SW on time, budget and per specs which delights the customers You will learn: •Valuable best practices and methods for successful SE (continuous collaborative development, teamwork) and get experience close to real working environment – great for those looking or work but never worked before •Modern SW development tools You should update your Resume/CV after class – instructions will be posted Class experience and final project portfolio are great for job search"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-19",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Class teaching philosophy Teach SE best practices, concepts and terms – focus on practical SE A lot of class discussion and real-life examples In parallel let student teams implement above best practices around team project Teach what they need when they need it Immerse, supervise and coach student teams (6-7 students) in as realistic setting as possible (model industry startup setting) Above methods: Ensures real learning “by doing it” More fun, less boring Better learning"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-20",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "M1 high level specs M2 detailed specs M3 prototype and arch. Final proj. specs M4 beta and usability M5 final delivery and demo 2) Final project 3) Req&Specs 4) GUI, usability 5) UML, SW processes 6) PM, teamwork 7) Des. Patterns, Coding style, Src. Cntrl, 8) QA usability 11) SW quality Time Milestones Teaching of SE “theory” and best practices is synchronized and driven by milestones M0 9) Guest speakers 10) ethics, legalese Topics"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-21",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Spring 2025 Calendar* – CSC 648-848 [02] Week Date Topic Team Project Points W1 January 27 Introduction and Motivation for Software Engineering Team Assignments W2 February 3 Requirements and Specifications: Personas & Use Cases Configuration Chosen (IT Infra & SW Stack) W3 February 10 Software Engineering Teamwork & Arch Intro Milestone 0: IT Infra & SW Stack + Individual video 10 W4 February 17 Software Architectures and Design W5 February 24 Design: Usability and GUI Principles, Design, Development and Evaluation Milestone 1: High Level Requirements & Specifications, Use Cases and Architecture (10) W6 March 3 Software Project Management, SE and AI Ethics, IP Issues W7 March 10 Implementation: Coding +Style and Coding Practices Milestone 2: More Detailed Requirements, Specs, Architecture, UI mock-ups and Vertical SW prototype (5) W8 March 17 Security Engineering Vertical Prototype (5) March 24 |March 31 Spring Recess – March 23-27 | March 31st Cesar Chavez Day W9 April 7 Validation: SW Testing & QA Milestone 3: Review of functionality, UI, SW and planning for final product delivery (10) W10 April 14 Cont. Validation: Usability Testing and Focus Groups W11 April 21 Software Engineering: Methodology & Process Milestone 4: Beta Launch, QA and Usability Testing and Final Commitment for Product Features (P1 list). (10) W12 April 28 Software Engineering: Preparing for the Future. Best Practices and What makes a great Software Engineer? W13 May 5th Software Engineering Review. Prep for M5 Demo & Final Exam Talk to Team leads W14 May 12 Final Project Demo – SW Release Milestone 5: Final Demo and Documents for Grading (10) 50 W15 May 19 FINAL EXAM 40 *Subject to change"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-22",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "About the class organization • Class structure (unless otherwise): • First half of the class – teaching and discussion (Lecture) • Second half of the class – supervised teamwork ***MANDATORY attendance *** • Milestone 0 –– learn SE tools and each team organise their IT (with our supervision) • Final Team Project: simulating small SW company: Students will work in teams of 5-7 to produce a SW product (same for all teams). Each student team will deliver 5 group Milestones and demo their project at the end. • High level final team project description to be posted on Canvas – same for all teams • Final individual exam – tests basic knowledge • No formal homework, no midterm BUT a lot of teamwork and 6 formal milestones (M0, M1-M5) an final individual exam • Teamwork participation is the key and mandatory!!!!"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-23",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Mandatory class policies • Attendance first 4 weeks full class is mandatory, so students can start strong working with their teams and establish teamwork – if not assigned to the team student will be dropped. • Fifth week and later: • Must attend teamwork session (last 1+ hours of the class) • All Teams will present TAKEAWAYS from previous class • Must participate in team activities and follow good team ethics and behavior. • Must read and respond to team and instructor e- mails within 24 hours • Must follow the requested deadlines • Must use class mandated SE and communication tools for final project development • Must report absence to team and instructors ahead of time to instructor and team lead Failure to abide by class policies will result in reduced grade points"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-24",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Communication Policies: instructors - students • Team project material and class slides will be posted on the SFSU Canvas ahead of time • E-mail will be used by the instructors for general information and broadcasting to students. Will have “CSC648-848 section N team M” label in subject line (N is section number, M is team number). • Must respond to emails from Instructor and from your team members and follow up in a timely manner (within 24 hours). • If you send e-mail to instructors must have “CSC 648-848 section N Team M ” in subject line (N class section, M is team number) • Team leads communicate with instructors for general issues, then shares with the rest of the team • Absence has to be communicated to team and instructor ahead of time • Any delay in team delivery needs to be asked for via e-mail at least 24 h before the deadline"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-25",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "About the class – Grading • Milestone 0 – individual assignment up to 10/100 • Team grade: student teams developing a product emulating small SW company, via Milestones 1-5 – 50/100. Demo and folder with documentation – M5 folder. • Team grade has SE Product component (how good is the product the team developed) and SE Process (how well the team followed SE best practices) • All team members get same grade unless exceptions (low attendance, low participation etc) • Team leads may get up to 5 points extra credit for job well done • Front end and back end team leads and github master my get up to 3 points extra credit for job well done • Final exam: closed book, closed notes, in class/virtual. 40/100 of the grade (40 questions) • No homework; No midterm BUT a lot of teamwork and 6 delivery milestones (M0-M5)"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-26",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Canvas https://sfsu.instructure.com"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-27",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Class syllabus • Check Canvas"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-28",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Syllabus"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-29",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Break 10 Minutes"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-30",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Software Development Life Cycle (SDLC) / SE Process Lifecycle 1. Planning 2. Analysis 3. Design 4. Implementation 5. Testing & Integration 6. Maintenance"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-31",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "SW Engineering Process Components 1. Requirements and Specification 2. Design and Implementation 3. Validation 4. Maintenance and Evolution"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-32",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "SW Engineering Process Components • There are several basic components present in all SW Engineering methodologies: 1. SW Requirements and Specification: functionality, constraints, look and feel, GUI, performance 2. SW Design and Implementation 3. SW Validation: formal, test plans, QA 4. SW Maintenance and Evolution: ongoing changes (and fixes) to meet customer needs These components are applied in different way and order (linear, iterative, spiral...) depending on chosen SW Engineering methodology or models (I.e. waterfall, extreme, agile etc.) Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-33",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Methodologies (Process Models) Waterfall Evolutionary Iterative Incremental Open Source Development Extreme Programing User Centered Design (UCD) Continuous Development AGILE & SCRUM"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-34",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "SW Process Models (or Methodologies) • Abstract representations of overall development of SW - methods and practices for organizing the SE effort • Waterfall • Evolutionary • Iterative • Open Source development • Extreme programming • For GUI and usability: User Centered Design (UCD) – variation of iterative development • Continuous development • Agile, Scrum – high level project management (PM) processes used to “manage, organize and implement ” the above SE processes Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-35",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Milestone 0 – individual milestone – Choose and learn team project SW tools - 10/100 • First, students have to chose the tools and get approval from Instructor/CTO • Then, they have to learn how to use chosen tools and create team page (ABOUT page) • 10/100 of the grade -Details be presented and posted on Canvas – graded for individual team members separately • Students within the team encouraged to help each other! • Other benefits of M0: • Learn how to use tools for professional SW development • Learn basics of Cloud Computing and server management • Build teamwork"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-36",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Class IT (for team project development)– Milestone 0 • Milestone 0 (M0) - Read Instructions • Class CTO recommends set of tools and frameworks • Student teams decide/propose what to use • Class CTO approves • Student install tools • Student build a team WWW page • Team to chose/manage their own delivery server and github • Teams will have one team lead/project manager and one front-end and one back-and leads instead of one CTO"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-37",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Every single student should have this config Part of the M0 (individual video) IDE"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-38",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Self Skill Survey Member's Familiarity with Server-Side Language (Python, JavaScript, PHP) on a scale of 1 to 5, with 5 being very familiar and 1 being never used it. Jane: 5 Jack: 2 John: 3 Joe: 1 Jill: 4 Jake: 5"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-39",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Group/Team Milestones 1-5 • Class Team Project – High Level Description • Milestone 1: High Level Req.&Specs, Use cases • Milestone 2: More detailed specs, tools, servers and architecture defined, UI mock-ups, first vertical prototype • Milestone 3: Project review (in-person): full horizontal (UI) and basic vertical prototype -feedback via focus group with Professor as customer “persona”; CTO reviews code and github off-line and sends feedback; • Milestone 4: Beta delivery, QA plans and usability feedback, final functionality committed • Milestone 5: Final Project demo (“Milestone 5 Folder”) and demo of the SW – both graded for final team grade"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-40",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Team Grading – 50/100 • All team members must contribute to the best of their abilities • Team lead also participates in the development • All group members get the same grade unless the instructors are told or discover that somebody is not contributing fully (e.g. poor attendance and communication, poor delivery on assigned tasks). • Feedback and interaction are encouraged – hence the feedback, your questions, and intermediate project results are not graded. We grade only the final results after all the feedback is incorporated (M5 folder and final SW) • All team leads may get up to 5 extra points; front-end and back-end team leads and github masters may get up to 3 points"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-41",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Participation and full focus on team project are required and are cornerstone of the class (50/100 points) Team gets same grade for team project unless: • Team lead reports (MUST be done as soon as problem occurs) or instructor discovers low participation e.g. • Not responsive to e-mails • Misses meetings with no excuse • Does not abide by schedules • Instructor will investigate (e.g. speak to team lead, document, check github) then instructor will speak to individual and put him/her on formal notice • Failure to improve may result from minimum 10% up to 50% of team grade reduction for the individual!!!! Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-42",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Team grade -Final project grading – same grade per team • Total 50/100 of the grade • Adherence and achievement of adequate SE process – 25% (based on M5 folder and student behavior during the whole semester) • Quality of the delivered SE product – 25 % (based on delivered SW and its architecture, gihub organization, code “smell;” etc.) • All team members generally get the same grade • Rare Exception: In case of individual participation problems team grade for that individual shall be reduced"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-43",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Measured Team Outcomes for SE process Measured Team Outcomes for SE product 1. Fraction of the team participating at the meetings with the instructor 2. Quality and timing of follow-up on outstanding issues 3. Ability to deal with feedback constructively 4. Producing the non-SW and SW deliverables on time; following submission guidelines 5. Quality and completeness of non-SW deliverables (requirements, use cases, UI mockups, design documents, test plans etc.) as in M5 folder 6. Number of teamwork issues that instructor had to deal with (whether resolved or not) 7. Ability to apply best SE process and teamwork practices 8. Adherence to continuous and collaborative development practices 9. Ability to effectively use the SE tools (e.g. collaborative tools, version control, issue trackers) 1. Correctness and reliability of operation 2. Functionality of the product vs. desired requirements and use cases 3. Ease of use, user interface 4. Architecture of the developed system 5. Database design 6. Basic security, field validation 7. Performance 8. Code quality and “smell” (coding principles, style, documentation) 9. Proper usage of collaborative tools e.g. repository 10. Presentation style and effectiveness of final product demonstration (content, delivery, adherence to time, dealing with Q/A) Rubrics for team project grading 25 % 25 %"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-44",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Final individual exam – 40% of the grade • Modeled as a “certification test” – check knowledge of basic concepts and terms and application of best practices • Five sections, 40 questions (each 1 point), 8 in each section: • SE Processes • Requirements and Specs • UI and usability • QA • Project Management • Mainly multiple choice"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-45",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Prep for final exam – what you need to learn • Go over slides and remember class discussion • Focus on main concepts, defections and best practices • No need to memorize tools and technology names nor numbers (e.g. max typing speed etc.) - they are given in slides as reference material – they change often anyway • For exam prep OK to only check slides marked Important Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-46",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Slides and Book (optional) • NO book required • Class in part based on excellent SE book by Prof. Ian Sommerville, with additional material on WWW GUI and Usability from book by McCracken. The book is optional but recommended • Prof. Sommerville offers some material here: • https://iansommerville.com/software-engineering- book/static/videos/ • We acknowledge copyright for the Prof. Sommerville slides we will use • Class slides represent valuable material summarizing years of SE experience and best practices – keep them and use them at work. • Both the book and slides are of long term value – they cover best practices and concepts which do not change often"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-47",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "How does the class prepare you for job market • We simulate real world small company - comes as close to real work experience • Your team project becomes your portfolio (M5 folder, WWW application and github) • You improve your CV with the tools and SE processes you learned and practiced • Instructions on how to improve your CV after the class are in http://cs.sfsu.edu/employment • See “Tips and Tricks…” slide"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-48",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Prerequisites strictly observed • Undergraduates • CSC 648: CSC 413 grade C or better (strictly enforced); no concurrent enrolment allowed • CSC 317 is also required. • Conditionally classified grads who had CSC413 as a condition must clear this first, no concurrent enrolment allowed • International visiting students - contact instructors"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-49",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Pre-requisite chart"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-50",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Team Assignments"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-51",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Team Collabora tion (8:00- 8:45) Get Familiar with your team Review Final Team Project Review M0 Outputs: List of Team Members Responsibilities/Roles SW stack chosen ready to ask for approval – see email template"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-52",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Takeaways Software Engineering (SE) is “The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software”. Most of the failures of delivering SW to specs, on time and budget, and to a user “delight” were rooted in a misunderstanding user needs, and/or poor design, planning and organization. SOFT SKILLS Get familiar with the dynamic and organization of the class, calendar and milestones: SW stack approved by W2, Team Responsibilities by W2, and M0 is due in W3 Integrate fully with your team and collaborate SE Process and Methodology"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-53",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "Plans for next Week Team 1 present TAKEAWAYS from week 1 “SE Introduction & Motivation” Week 1 Summary Week 2 topic: Use Cases, Requirements and Specifications Team Project, M0, and Team integration (lead/project manager, back/front-end lead, github master). Make sure you read the corresponding slides and the M0 documentation."
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation-54",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Spring 2026 C1 Introduction and Motivation.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "Enjoy the Learning Journey!"
     }
   ]
 }

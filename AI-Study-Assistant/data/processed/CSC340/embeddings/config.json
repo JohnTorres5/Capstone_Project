@@ -2,8 +2,8 @@
   "course": "CSC340",
   "model_name": "sentence-transformers/all-MiniLM-L6-v2",
   "vector_dim": 384,
-  "chunk_count": 179,
-  "created_at_utc": "2026-03-26T15:17:21.895361+00:00",
+  "chunk_count": 1327,
+  "created_at_utc": "2026-04-08T21:10:09.916902+00:00",
   "distance_metric": "cosine (via inner product on L2-normalized vectors)",
   "files": {
     "index": "index.faiss",

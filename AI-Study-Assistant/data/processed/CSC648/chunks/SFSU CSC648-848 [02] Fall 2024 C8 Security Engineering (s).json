@@ -3,47 +3,337 @@
   "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 4,
+  "chunk_count": 33,
   "chunks": [
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-0",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Software Engineering CSC648/848 Week 7 Summary 1. What is Coding/Programing Style? Set of rules or guidelines used when writing the source code for a computer program (Software) 2. What are the elements of coding style? 1. Naming Conventions (variables, functions, classes) 2. File naming and Organization 3. Formatting 4. Comments 5. Documentation 3. What are the benefits of good coding style? Easier: Maintenance, Testing, Optimization, and Portability. 4. What are some of the best practices of coding style for Security? 1. Use code & architecture reviews 2. Check inputs 3. Ensure proper transmission and management of Passwords 4. Use secure internet protocols 5. Check buffer size 6. Prevent injection of SQL code into forms Henry VILLAR SECURITY ENGINEERING Software Systems that can resist malicious attacks Security SW Engineering • Security engineering focuses on how to develop and maintain software systems that can resist malicious attacks intended to damage a computer-based system or its data. 4 Important Objective and Topics Objective: Cover SE processes and practices related to creating secure SW systems. • Security concepts, terminology • Security Requirement and Specification Process • Security Risk management • Design and coding practices for security • Some practical advices • Security certificates and HTTPS for WWW sites • Securing forms input 6 Issues • As in all complex systems security management relates to ❑People ❑Process, policies ❑Technology 7 Important Check current press • Frequent coverage of security breaches (often simply unprotected PW) • Latest: • https://www.splunk.com/en_us/cyb er-security/solarwinds-cyberattack- response.html • https://healthitsecurity.com/news/w hite-house-solarwinds-hack- impacted-9-fed-agencies-100- entities • https://cybersecuritynews.com/cyber- security-news-letter-october/ • https://www.cisa.gov/topics/cyber- threats-and-advisories • Good career path 8 System layers where security may be compromised Chapter 13 Security Engineering 9 Security concepts/terminology Term Definition Asset Something of value which has to be protected. The asset may be the software system itself or data used by that system. Attack An exploitation of a system’s vulnerability. Generally, this is from outside the system and is a deliberate attempt to cause some damage. Control A protective measure that reduces a system’s vulnerability. Encryption is an example of a control that reduces a vulnerability of a weak access control system Exposure Possible loss or harm to a computing system. This can be loss or damage to data, or can be a loss of time and effort if recovery is necessary after a security breach. Threat Circumstances that have potential to cause loss or harm. You can think of these as a system vulnerability that is subjected to an attack. Vulnerability A weakness in a computer-based system that may be exploited to cause loss or harm. 10 Chapter 13 Security Engineering Important Security • The security of a system is a system property that reflects the system’s ability to protect itself from accidental or deliberate external attack. • Security is essential as most systems are networked so that external access to the system through the Internet is possible. • Security is an essential pre-requisite for availability, reliability and safety. 12 Chapter 13 Security Engineering Security dimensions - Types of Threats • Confidentiality • Information in a system may be disclosed or made accessible to people or programs that are not authorized to have access to that information. • Integrity • Information in a system may be damaged or corrupted making it unusual or unreliable. • Availability • Access to a system or"
+      "text": "Software Engineering CSC648/848"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-1",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "system through the Internet is possible. • Security is an essential pre-requisite for availability, reliability and safety. 12 Chapter 13 Security Engineering Security dimensions - Types of Threats • Confidentiality • Information in a system may be disclosed or made accessible to people or programs that are not authorized to have access to that information. • Integrity • Information in a system may be damaged or corrupted making it unusual or unreliable. • Availability • Access to a system or its data that is normally available may not be possible. 12/11/2014 Chapter 13 Security Engineering 13 Security Assurance - Controls against threats • Vulnerability avoidance • The system is designed so that vulnerabilities do not occur. For example, if there is no external network connection then external attack is impossible • Attack detection and elimination • The system is designed so that attacks on vulnerabilities are detected and neutralised before they result in an exposure. For example, virus checkers find and remove viruses before they infect a system • Exposure limitation and recovery • The system is designed so that the adverse consequences of a successful attack are minimised. For example, a backup policy allows damaged information to be restored 14 Chapter 13 Security Engineering 12/11/2014 Security requirements and specification process Acknowledged use of SE book by Sommerville (2006), 8e 15 The preliminary risk assessment process for security requirements 16 Chapter 13 Security Engineering 12/11/2014 Important Security Risk Management Acknowledged use of SE book by Sommerville (2006), 8e 17 Overview • Assessing the possible losses that might ensue from attacks on the system • Balancing these losses against the costs of security procedures that may reduce these losses. • Risk management should be driven by an organizational security policy. • Risk management involves • Preliminary risk assessment • Life cycle risk assessment Acknowledged use of SE book by Sommerville (2006), 8e 18 Important Asset Analysis: Example Asset Value Exposure The information system High High, Financial loss – losing customers, restoring system, communication The user database High High, Financial loss, harm to users An individual user record Normally low other than high profile patients Direct loss is low, loss of reputation Acknowledged use of SE book by Sommerville (2006), 8e 19 Threat and Control Analysis: Example Threat Probability Control Feasibility Unauthorized user gains access to confidential data High 1. Require users to authenticate themselves. 2. Track system usage High cost, user resistance. Simple to implement, supports recovery. Unauthorized user makes system unavailable Low Allow system management from known physical location that are secure Low cost. Attention to distribution of keys. Acknowledged use of SE book by Sommerville (2006), 8e 20 Security Design and Coding Guidelines Acknowledged use of SE book by Sommerville (2006), 8e 21 Secure systems design • Security should be designed into a system – it is very difficult to make an insecure system secure after it has been designed or implemented • Architectural design • how do architectural design decisions affect the security of a system? • Good practice • what is accepted good practice when designing secure systems? Chapter 13 Security Engineering 22 12/11/2014 Design and risk assessment Chapter 13 Security Engineering 23 12/11/2014 Architectural Design • Protection • How should the system be organized so that critical assets can be protected against external attack? • Distribution"
+      "text": "Week 7 Summary 1. What is Coding/Programing Style? Set of rules or guidelines used when writing the source code for a computer program (Software) 2. What are the elements of coding style? 1. Naming Conventions (variables, functions, classes) 2. File naming and Organization 3. Formatting 4. Comments 5. Documentation 3. What are the benefits of good coding style? Easier: Maintenance, Testing, Optimization, and Portability. 4. What are some of the best practices of coding style for Security? 1. Use code & architecture reviews 2. Check inputs 3. Ensure proper transmission and management of Passwords 4. Use secure internet protocols 5. Check buffer size 6. Prevent injection of SQL code into forms"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-2",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "to make an insecure system secure after it has been designed or implemented • Architectural design • how do architectural design decisions affect the security of a system? • Good practice • what is accepted good practice when designing secure systems? Chapter 13 Security Engineering 22 12/11/2014 Design and risk assessment Chapter 13 Security Engineering 23 12/11/2014 Architectural Design • Protection • How should the system be organized so that critical assets can be protected against external attack? • Distribution • How should system assets be distributed so that the effects of a successful attack are minimized? Acknowledged use of SE book by Sommerville (2006), 8e 24 A layered protection architecture Chapter 13 Security Engineering 25 12/11/2014 Important USER RECORDS Other Issues - Process • Access management • Password management • Physical rooms security • People issues and HR • Auditing SW – usually using white box analysis (code inspection) 26 Important Best Practices Coding Style for Security • Ensure and enforce proper coding practices – use code and architecture reviews • Check inputs and allow only valid ones • Ensure proper transmission and management of passwords • Use secure internet protocols • Check buffer size – make sure no attack can be done by sending longer data streams • Prevent injection of SQL code into the forms • Check uploaded content for executables • Virus check all uploaded content 27 Important Web and Internet security – some resources and examples • http://www.cisecurity.org/ • http://msdn.microsoft.com/en-us/library/ff648647.aspx • http://en.wikipedia.org/wiki/Web_application_security • “The majority of web application attacks occur through cross-site scripting (XSS) and SQL injection attacks[6] which typically result from flawed coding, and failure to sanitize input to and output from the web application.” 28 Use and setting of HTTPS for your WWW site • HTTPS – secure protocol • Use for communicating confidential stuff (pw, login, registration, account and credit card data…) • Easy to set up but requires purchase of sec. certificate • Good brief tutorial • http://www.howto-expert.com/how-to-get-https-setting-up-ssl-on-your- website/ 29 Forms and security • Most common WWW security attacks – forms used most often as a venue of the attack • Cross site scripting • https://excess-xss.com/ • SQL Injection • https://www.w3schools.com/sql/sql_injection.asp • https://en.wikipedia.org/wiki/SQL_injection 30 Forms and security • Hence, follow best SE practices for forms security (and other types of security issues) • One of the fist places to start is validation of form inputs ➔ plenty of tools and coder and APIs available e.g. • https://1000hz.github.io/bootstrap-validator/ • https://help.formassembly.com/help/best-practices-in-web-form-security 31 Mobile apps security best practces • https://www.tripwire.com/state-of-security/security-awareness/top- mobile-app-security-best-practices-developers/ • https://www.newgenapps.com/blog/10-biggest-risks-to-mobile- apps-security • https://www.ipraxa.com/blog/mobile-app-security-best-practices/ 32 Team Project Time • Milestone 3 Review of functionality, UI, SW and planning for final product delivery. Objectives and Overview: 1. Define exactly what product you are delivering 2. Ensure software development is on track 3. Provide feedback on all major UI screens and functionality 4. Check the code and software architecture 5. Check all algorithms 6. Identify and address all technical risks 7. Ensure effective teamwork 8. Ensure software development is effective • Part 1: Each team meets with Prof. Villar Review of functionality, UI and general project status. 20-30 minutes. Checklist for this part is in Appendix I. The feedback as well as finalized P1 list MUST be recorded using template (or its modification) as in Appendix I. You will submit it (summary Document) with"
+      "text": "Henry VILLAR SECURITY ENGINEERING Software Systems that can resist malicious attacks"
     },
     {
       "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-3",
       "course": "CSC648",
       "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "the code and software architecture 5. Check all algorithms 6. Identify and address all technical risks 7. Ensure effective teamwork 8. Ensure software development is effective • Part 1: Each team meets with Prof. Villar Review of functionality, UI and general project status. 20-30 minutes. Checklist for this part is in Appendix I. The feedback as well as finalized P1 list MUST be recorded using template (or its modification) as in Appendix I. You will submit it (summary Document) with M5 folder. • UI and functionality feedback (P1 functions only) • Brief review of code, github, database etc. • Project status – be ready to verbally explain status of the issues below • List of P1 features committed for delivery agreed at M3 review meeting • Part 2: SW review off-line. Architecture, Code, github, team account, database and general SW and code review will be done off-line. • NOTE: The M3 SUMMARY document must be part of the M5 final documentation Final Project Main Functions • Web App: Voting Guide with AI+ 1. Search & Filter by state, political party and issues/policies. 2. Enter official information (political parties, voter registration, polling location, voting process, etc.) 3. Site Registration (College Students, General public, Officials, Admin, etc.). 4. Rate candidates. 5. Search results may be displayed using maps 6. AI capabilities is a plus. Two entrepreneurs, SFSU alumni, decided to create a start-up comprising of a team of about 6+ students to develop a web- based service to help USA college students and general public to identify county, state, and federal/national candidates running for public offices and their respective policies, and background. The web application will allow officials from the different political parties to enter the corresponding official information, and the Elections office to enter information about voter registration, polling locations, and voting process. College students and general public should be able to search by state, political party and issues/policies so results can list the corresponding data, and at the same time; user (student and general public) can enter their issues of interest and the AI chatbot can assist them with mapping what candidates are aligned with the user interest. This application is targeting three primary audiences: (1) College Students, (2) General Public, and (3) Officials from the political parties and election office. Students and general public users should be able to rate candidates. Officials from political parties and election office may need to be registered to use all the functionality of the application. General users may access to limited search capabilities and application functionality. Search results may display maps. Thank You"
+      "text": "Security SW Engineering • Security engineering focuses on how to develop and maintain software systems that can resist malicious attacks intended to damage a computer-based system or its data. 4 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-4",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Objective and Topics Objective: Cover SE processes and practices related to creating secure SW systems. • Security concepts, terminology • Security Requirement and Specification Process • Security Risk management • Design and coding practices for security • Some practical advices • Security certificates and HTTPS for WWW sites • Securing forms input 6"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-5",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Issues • As in all complex systems security management relates to ❑People ❑Process, policies ❑Technology 7 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-6",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Check current press • Frequent coverage of security breaches (often simply unprotected PW) • Latest: • https://www.splunk.com/en_us/cyb er-security/solarwinds-cyberattack- response.html • https://healthitsecurity.com/news/w hite-house-solarwinds-hack- impacted-9-fed-agencies-100- entities • https://cybersecuritynews.com/cyber- security-news-letter-october/ • https://www.cisa.gov/topics/cyber- threats-and-advisories • Good career path 8"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-7",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "System layers where security may be compromised Chapter 13 Security Engineering 9"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-8",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Security concepts/terminology Term Definition Asset Something of value which has to be protected. The asset may be the software system itself or data used by that system. Attack An exploitation of a system’s vulnerability. Generally, this is from outside the system and is a deliberate attempt to cause some damage. Control A protective measure that reduces a system’s vulnerability. Encryption is an example of a control that reduces a vulnerability of a weak access control system Exposure Possible loss or harm to a computing system. This can be loss or damage to data, or can be a loss of time and effort if recovery is necessary after a security breach. Threat Circumstances that have potential to cause loss or harm. You can think of these as a system vulnerability that is subjected to an attack. Vulnerability A weakness in a computer-based system that may be exploited to cause loss or harm. 10 Chapter 13 Security Engineering Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-9",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "Security • The security of a system is a system property that reflects the system’s ability to protect itself from accidental or deliberate external attack. • Security is essential as most systems are networked so that external access to the system through the Internet is possible. • Security is an essential pre-requisite for availability, reliability and safety. 12 Chapter 13 Security Engineering"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-10",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "Security dimensions - Types of Threats • Confidentiality • Information in a system may be disclosed or made accessible to people or programs that are not authorized to have access to that information. • Integrity • Information in a system may be damaged or corrupted making it unusual or unreliable. • Availability • Access to a system or its data that is normally available may not be possible. 12/11/2014 Chapter 13 Security Engineering 13"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-11",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "Security Assurance - Controls against threats • Vulnerability avoidance • The system is designed so that vulnerabilities do not occur. For example, if there is no external network connection then external attack is impossible • Attack detection and elimination • The system is designed so that attacks on vulnerabilities are detected and neutralised before they result in an exposure. For example, virus checkers find and remove viruses before they infect a system • Exposure limitation and recovery • The system is designed so that the adverse consequences of a successful attack are minimised. For example, a backup policy allows damaged information to be restored 14 Chapter 13 Security Engineering 12/11/2014"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-12",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Security requirements and specification process Acknowledged use of SE book by Sommerville (2006), 8e 15"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-13",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "The preliminary risk assessment process for security requirements 16 Chapter 13 Security Engineering 12/11/2014 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-14",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Security Risk Management Acknowledged use of SE book by Sommerville (2006), 8e 17"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-15",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Overview • Assessing the possible losses that might ensue from attacks on the system • Balancing these losses against the costs of security procedures that may reduce these losses. • Risk management should be driven by an organizational security policy. • Risk management involves • Preliminary risk assessment • Life cycle risk assessment Acknowledged use of SE book by Sommerville (2006), 8e 18 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-16",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Asset Analysis: Example Asset Value Exposure The information system High High, Financial loss – losing customers, restoring system, communication The user database High High, Financial loss, harm to users An individual user record Normally low other than high profile patients Direct loss is low, loss of reputation Acknowledged use of SE book by Sommerville (2006), 8e 19"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-17",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Threat and Control Analysis: Example Threat Probability Control Feasibility Unauthorized user gains access to confidential data High 1. Require users to authenticate themselves. 2. Track system usage High cost, user resistance. Simple to implement, supports recovery. Unauthorized user makes system unavailable Low Allow system management from known physical location that are secure Low cost. Attention to distribution of keys. Acknowledged use of SE book by Sommerville (2006), 8e 20"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-18",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Security Design and Coding Guidelines Acknowledged use of SE book by Sommerville (2006), 8e 21"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-19",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Secure systems design • Security should be designed into a system – it is very difficult to make an insecure system secure after it has been designed or implemented • Architectural design • how do architectural design decisions affect the security of a system? • Good practice • what is accepted good practice when designing secure systems? Chapter 13 Security Engineering 22 12/11/2014"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-20",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Design and risk assessment Chapter 13 Security Engineering 23 12/11/2014"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-21",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Architectural Design • Protection • How should the system be organized so that critical assets can be protected against external attack? • Distribution • How should system assets be distributed so that the effects of a successful attack are minimized? Acknowledged use of SE book by Sommerville (2006), 8e 24"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-22",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "A layered protection architecture Chapter 13 Security Engineering 25 12/11/2014 Important USER RECORDS"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-23",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Other Issues - Process • Access management • Password management • Physical rooms security • People issues and HR • Auditing SW – usually using white box analysis (code inspection) 26 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-24",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Best Practices Coding Style for Security • Ensure and enforce proper coding practices – use code and architecture reviews • Check inputs and allow only valid ones • Ensure proper transmission and management of passwords • Use secure internet protocols • Check buffer size – make sure no attack can be done by sending longer data streams • Prevent injection of SQL code into the forms • Check uploaded content for executables • Virus check all uploaded content 27 Important"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-25",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Web and Internet security – some resources and examples • http://www.cisecurity.org/ • http://msdn.microsoft.com/en-us/library/ff648647.aspx • http://en.wikipedia.org/wiki/Web_application_security • “The majority of web application attacks occur through cross-site scripting (XSS) and SQL injection attacks[6] which typically result from flawed coding, and failure to sanitize input to and output from the web application.” 28"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-26",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Use and setting of HTTPS for your WWW site • HTTPS – secure protocol • Use for communicating confidential stuff (pw, login, registration, account and credit card data…) • Easy to set up but requires purchase of sec. certificate • Good brief tutorial • http://www.howto-expert.com/how-to-get-https-setting-up-ssl-on-your- website/ 29"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-27",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Forms and security • Most common WWW security attacks – forms used most often as a venue of the attack • Cross site scripting • https://excess-xss.com/ • SQL Injection • https://www.w3schools.com/sql/sql_injection.asp • https://en.wikipedia.org/wiki/SQL_injection 30"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-28",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Forms and security • Hence, follow best SE practices for forms security (and other types of security issues) • One of the fist places to start is validation of form inputs ➔ plenty of tools and coder and APIs available e.g. • https://1000hz.github.io/bootstrap-validator/ • https://help.formassembly.com/help/best-practices-in-web-form-security 31"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-29",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Mobile apps security best practces • https://www.tripwire.com/state-of-security/security-awareness/top- mobile-app-security-best-practices-developers/ • https://www.newgenapps.com/blog/10-biggest-risks-to-mobile- apps-security • https://www.ipraxa.com/blog/mobile-app-security-best-practices/ 32"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-30",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Team Project Time • Milestone 3 Review of functionality, UI, SW and planning for final product delivery. Objectives and Overview: 1. Define exactly what product you are delivering 2. Ensure software development is on track 3. Provide feedback on all major UI screens and functionality 4. Check the code and software architecture 5. Check all algorithms 6. Identify and address all technical risks 7. Ensure effective teamwork 8. Ensure software development is effective • Part 1: Each team meets with Prof. Villar Review of functionality, UI and general project status. 20-30 minutes. Checklist for this part is in Appendix I. The feedback as well as finalized P1 list MUST be recorded using template (or its modification) as in Appendix I. You will submit it (summary Document) with M5 folder. • UI and functionality feedback (P1 functions only) • Brief review of code, github, database etc. • Project status – be ready to verbally explain status of the issues below • List of P1 features committed for delivery agreed at M3 review meeting • Part 2: SW review off-line. Architecture, Code, github, team account, database and general SW and code review will be done off-line. • NOTE: The M3 SUMMARY document must be part of the M5 final documentation"
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-31",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Final Project Main Functions • Web App: Voting Guide with AI+ 1. Search & Filter by state, political party and issues/policies. 2. Enter official information (political parties, voter registration, polling location, voting process, etc.) 3. Site Registration (College Students, General public, Officials, Admin, etc.). 4. Rate candidates. 5. Search results may be displayed using maps 6. AI capabilities is a plus. Two entrepreneurs, SFSU alumni, decided to create a start-up comprising of a team of about 6+ students to develop a web- based service to help USA college students and general public to identify county, state, and federal/national candidates running for public offices and their respective policies, and background. The web application will allow officials from the different political parties to enter the corresponding official information, and the Elections office to enter information about voter registration, polling locations, and voting process. College students and general public should be able to search by state, political party and issues/policies so results can list the corresponding data, and at the same time; user (student and general public) can enter their issues of interest and the AI chatbot can assist them with mapping what candidates are aligned with the user interest. This application is targeting three primary audiences: (1) College Students, (2) General Public, and (3) Officials from the political parties and election office. Students and general public users should be able to rate candidates. Officials from political parties and election office may need to be registered to use all the functionality of the application. General users may access to limited search capabilities and application functionality. Search results may display maps."
+    },
+    {
+      "chunk_id": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s)-32",
+      "course": "CSC648",
+      "source_file": "SFSU CSC648-848 [02] Fall 2024 C8 Security Engineering (s).pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Thank You"
     }
   ]
 }

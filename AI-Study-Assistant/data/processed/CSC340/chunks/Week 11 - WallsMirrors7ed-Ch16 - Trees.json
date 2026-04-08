@@ -3,57 +3,677 @@
   "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 5,
+  "chunk_count": 67,
   "chunks": [
     {
       "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-0",
       "course": "CSC340",
       "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Tree Implementations Chapter 16 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Nodes in a Binary Tree • Representing tree nodes – Must contain both data and “pointers” to node’s children – Each node will be an object • Array-based – Pointers will be array indices • Link-based – Use C++ pointers © 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation • Class of array-based data members – Variable root is index to tree’s root node within the array tree – If tree is empty, root = -1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation • As tree changes (additions, removals) … – Nodes may not be in contiguous array elements • Thus, need list of available nodes – Called a free list • Insert node to tree – Obtain available node from free list • Remove node from tree – Placed in free list for later use © 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation LISTING 16-1 The class TreeNode for an array-based implementation of the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Array-Based Representation © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 16-1 (a) A binary tree of names; (b) its implementation using the array tree Is Figure 16-1 (a) a binary search tree? • yes Is Figure 16-1 (a) a balanced tree? • yes nullptr is -1 Link-Based Representation Figure 16-2 Most common way of implementing a tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If the tree is empty, rootPtr contains nullptr, else it will point to the tree’s root node. • For a binary tree that is not empty, rootPtr- >getLeftChildPtr() points to the root’s left subtree, and rootPtr- >getRightChildPtr() points to the root’s right subtree. • If either of these subtrees is empty, the pointer to it would be nullptr. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Constructors © 2017 Pearson Education, Hoboken, NJ. All rights reserved set the value of rootPtr to nullptr sets rootPtr to point to a new node containing the given data item sets rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees The Implementation Protected method copyTree called by copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node The Implementation destroyTree used by destructor which simply calls this method © 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse"
+      "text": "Tree Implementations Chapter 16 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-1",
       "course": "CSC340",
       "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees The Implementation Protected method copyTree called by copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node The Implementation destroyTree used by destructor which simply calls this method © 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse it in postorder and delete The Implementation Protected method getHeightHelper © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Protected method that enables recursive traversals. © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree • Uses same node objects as for binary-tree implementation. • Class BinaryNode from Listing16-2 will be used • Recursive search algorithm from Section15.3.2 is basis for operations © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-7 Adding Kody to a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If you take the output of a preorder traversal of a binary search tree and use it with insertInorder to create a binary search tree, you will obtain a duplicate tree. Tree (a) was used in previous chapter. • The copy constructor for the ADT binary tree used a preorder traversal to copy the tree. • To insert Kody, search the BST, and search algorithm would terminate at Mia’s left child Link-Based Implementation of the ADT Binary Search Tree Figure 16-8 Adding new data to a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree 3 cases for removing node N: 1. N is a leaf o Remove leaf containing target o Set pointer in parent to nullptr 2. N has only left (or right) child – cases are symmetrical o After N removed, all data items rooted at L (or R) are adopted by root of N o All items adopted are in correct order, binary search tree property preserved 3. N has two children o Locate another node M easier to remove from tree than N o Copy item that is in M to N o Remove M from tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor © 2017 Pearson Education, Hoboken, NJ. All rights reserved • inorder successor of a data item is the leftmost node of N’s right subtree. Link-Based Implementation of"
+      "text": "Nodes in a Binary Tree • Representing tree nodes – Must contain both data and “pointers” to node’s children – Each node will be an object • Array-based – Pointers will be array indices • Link-based – Use C++ pointers © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-2",
       "course": "CSC340",
       "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
       "chunk_index": 2,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 3,
       "slide": null,
-      "text": "© 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor © 2017 Pearson Education, Hoboken, NJ. All rights reserved • inorder successor of a data item is the leftmost node of N’s right subtree. Link-Based Implementation of the ADT Binary Search Tree https://www.javatpoint.com/deletion-in-binary-search-tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-15 An initially empty binary search tree after the addition of 60, 20, 10, 40, 30, 50, and 70 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File • Use preorder traversal to save binary search tree in a file – Restore to original shape by using method add • Balanced binary search tree increases efficiency of ADT operations © 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-16 A full tree saved in a file by using inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File Building a minimum-height binary search tree by reading sorted data sequentially from file © 2017 Pearson Education, Hoboken, NJ. All rights reserved Tree Sort Tree sort uses a binary search tree. © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Tree sort: • Insertion is O(log n) in the average case, and O(n) in the worse case • Thus, insertion is O(n × log n) in the average case, and O(n2) in the worst case • Traversal involves one copy: O(n) • Thus, traversal is O(n × log n) in the average case, and O(n2) in the worst case General Trees FIGURE 16-18 A general tree or an n-ary tree with n = 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved General Trees FIGURE 16-19 An implementation of a general tree and its equivalent binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved General Trees FIGURE 16-20 An implementation of the n-ary tree in Figure 16-18 © 2017 Pearson Education, Hoboken, NJ. All rights reserved End Chapter 16 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Appendix © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-12 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If"
+      "text": "Array-Based Representation • Class of array-based data members – Variable root is index to tree’s root node within the array tree – If tree is empty, root = -1 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-3",
       "course": "CSC340",
       "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
       "chunk_index": 3,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 4,
       "slide": null,
-      "text": "data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-12 © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If the tree is empty, rootPtr contains nullptr . • For a binary tree that is not empty, rootPtr->getLeftChildPtr() points to the root’s left subtree, and rootPtr- >getRightChildPtr() points to the root’s right subtree. • If either of these subtrees is empty, the pointer to it would be nullptr Link-Based Representation LISTING 16-2 (cont.) The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them. The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion The Implementation Method add © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Method balancedAdd © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Nonrecursive inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Nonrecursive inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive"
+      "text": "Array-Based Representation • As tree changes (additions, removals) … – Nodes may not be in contiguous array elements • Thus, need list of available nodes – Called a free list • Insert node to tree – Obtain available node from free list • Remove node from tree – Placed in free list for later use © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     },
     {
       "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-4",
       "course": "CSC340",
       "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
       "chunk_index": 4,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 5,
       "slide": null,
-      "text": "2017 Pearson Education, Hoboken, NJ. All rights reserved The Implementation Copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Algorithm for findNode © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved Saving a Binary Search Tree in a File FIGURE 16-17 A tree of minimum height that is not complete © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+      "text": "Array-Based Representation LISTING 16-1 The class TreeNode for an array-based implementation of the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-5",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Array-Based Representation © 2017 Pearson Education, Hoboken, NJ. All rights reserved FIGURE 16-1 (a) A binary tree of names; (b) its implementation using the array tree Is Figure 16-1 (a) a binary search tree? • yes Is Figure 16-1 (a) a balanced tree? • yes nullptr is -1"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-6",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Link-Based Representation Figure 16-2 Most common way of implementing a tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-7",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If the tree is empty, rootPtr contains nullptr, else it will point to the tree’s root node. • For a binary tree that is not empty, rootPtr- >getLeftChildPtr() points to the root’s left subtree, and rootPtr- >getRightChildPtr() points to the root’s right subtree. • If either of these subtrees is empty, the pointer to it would be nullptr."
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-8",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them."
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-9",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-10",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-11",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "The Implementation Constructors © 2017 Pearson Education, Hoboken, NJ. All rights reserved set the value of rootPtr to nullptr sets rootPtr to point to a new node containing the given data item sets rootPtr to point to a new node containing the given data item and pointers to copies of the given subtrees"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-12",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "The Implementation Protected method copyTree called by copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved To copy a tree, traverse it in preorder and insert each item visited into a new node"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-13",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "The Implementation destroyTree used by destructor which simply calls this method © 2017 Pearson Education, Hoboken, NJ. All rights reserved To delete a tree, traverse it in postorder and delete"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-14",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "The Implementation Protected method getHeightHelper © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-15",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "The Implementation Protected method that enables recursive traversals. © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-16",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree • Uses same node objects as for binary-tree implementation. • Class BinaryNode from Listing16-2 will be used • Recursive search algorithm from Section15.3.2 is basis for operations © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-17",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-7 Adding Kody to a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If you take the output of a preorder traversal of a binary search tree and use it with insertInorder to create a binary search tree, you will obtain a duplicate tree. Tree (a) was used in previous chapter. • The copy constructor for the ADT binary tree used a preorder traversal to copy the tree. • To insert Kody, search the BST, and search algorithm would terminate at Mia’s left child"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-18",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-8 Adding new data to a binary search tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-19",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree 3 cases for removing node N: 1. N is a leaf o Remove leaf containing target o Set pointer in parent to nullptr 2. N has only left (or right) child – cases are symmetrical o After N removed, all data items rooted at L (or R) are adopted by root of N o All items adopted are in correct order, binary search tree property preserved 3. N has two children o Locate another node M easier to remove from tree than N o Copy item that is in M to N o Remove M from tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-20",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-21",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-10 Case 3: The data item to remove is in a node N that has two children © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-22",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE16-11 Not any node will do © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-23",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-13 Replacing the data item in node N with its inorder successor © 2017 Pearson Education, Hoboken, NJ. All rights reserved • inorder successor of a data item is the leftmost node of N’s right subtree."
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-24",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree https://www.javatpoint.com/deletion-in-binary-search-tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-25",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Saving a Binary Search Tree in a File FIGURE 16-15 An initially empty binary search tree after the addition of 60, 20, 10, 40, 30, 50, and 70 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-26",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "Saving a Binary Search Tree in a File • Use preorder traversal to save binary search tree in a file – Restore to original shape by using method add • Balanced binary search tree increases efficiency of ADT operations © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-27",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Saving a Binary Search Tree in a File FIGURE 16-16 A full tree saved in a file by using inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-28",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Saving a Binary Search Tree in a File Building a minimum-height binary search tree by reading sorted data sequentially from file © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-29",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Tree Sort Tree sort uses a binary search tree. © 2017 Pearson Education, Hoboken, NJ. All rights reserved • Tree sort: • Insertion is O(log n) in the average case, and O(n) in the worse case • Thus, insertion is O(n × log n) in the average case, and O(n2) in the worst case • Traversal involves one copy: O(n) • Thus, traversal is O(n × log n) in the average case, and O(n2) in the worst case"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-30",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "General Trees FIGURE 16-18 A general tree or an n-ary tree with n = 3 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-31",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "General Trees FIGURE 16-19 An implementation of a general tree and its equivalent binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-32",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "General Trees FIGURE 16-20 An implementation of the n-ary tree in Figure 16-18 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-33",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "End Chapter 16 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-34",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Appendix © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-35",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-36",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-37",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-12 © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-38",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "Link-Based Representation LISTING 16-2 The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved • If the tree is empty, rootPtr contains nullptr . • For a binary tree that is not empty, rootPtr->getLeftChildPtr() points to the root’s left subtree, and rootPtr- >getRightChildPtr() points to the root’s right subtree. • If either of these subtrees is empty, the pointer to it would be nullptr"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-39",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Link-Based Representation LISTING 16-2 (cont.) The header file containing the class BinaryNode for a link-based implementation of the ADT binary tree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-40",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved The methods are protected (not private) so that derived classes can use them."
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-41",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-42",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-43",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-44",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "The Header File LISTING 16-3 A header file for the link-based implementation of the class BinaryNodeTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved Public traversal methods each call a protected method that performs the actual recursion"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-45",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "The Implementation Method add © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-46",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "The Implementation Method balancedAdd © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-47",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "The Implementation Nonrecursive inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-48",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "The Implementation Nonrecursive inorder traversal © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-49",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-50",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-51",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-52",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-53",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 53,
+      "chunk_in_page": 0,
+      "page": 54,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Final draft of the removal algorithm © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-54",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 54,
+      "chunk_in_page": 0,
+      "page": 55,
+      "slide": null,
+      "text": "The Implementation Copy constructor © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-55",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 55,
+      "chunk_in_page": 0,
+      "page": 56,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-56",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 56,
+      "chunk_in_page": 0,
+      "page": 57,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-57",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 57,
+      "chunk_in_page": 0,
+      "page": 58,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-14 Recursive removal of node N © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-58",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 58,
+      "chunk_in_page": 0,
+      "page": 59,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Algorithm for findNode © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-59",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 59,
+      "chunk_in_page": 0,
+      "page": 60,
+      "slide": null,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-60",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 60,
+      "chunk_in_page": 0,
+      "page": 61,
+      "slide": null,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-61",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 61,
+      "chunk_in_page": 0,
+      "page": 62,
+      "slide": null,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-62",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 62,
+      "chunk_in_page": 0,
+      "page": 63,
+      "slide": null,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-63",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 63,
+      "chunk_in_page": 0,
+      "page": 64,
+      "slide": null,
+      "text": "The Class BinarySearchTree LISTING 16-4 A header file for the link-based implementation of the class BinarySearchTree © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-64",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 64,
+      "chunk_in_page": 0,
+      "page": 65,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree Figure 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-65",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 65,
+      "chunk_in_page": 0,
+      "page": 66,
+      "slide": null,
+      "text": "Link-Based Implementation of the ADT Binary Search Tree FIGURE 16-9 Case 2 for removeValue: The data item to remove is in a node N that has only a left child and whose parent is node P © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
+    },
+    {
+      "chunk_id": "Week 11 - WallsMirrors7ed-Ch16 - Trees-66",
+      "course": "CSC340",
+      "source_file": "Week 11 - WallsMirrors7ed-Ch16 - Trees.pdf",
+      "chunk_index": 66,
+      "chunk_in_page": 0,
+      "page": 67,
+      "slide": null,
+      "text": "Saving a Binary Search Tree in a File FIGURE 16-17 A tree of minimum height that is not complete © 2017 Pearson Education, Hoboken, NJ. All rights reserved"
     }
   ]
 }

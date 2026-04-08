@@ -3,27 +3,537 @@
   "source_file": "week2_pseudocode.pdf",
   "chunk_size": 550,
   "overlap": 80,
-  "chunk_count": 2,
+  "chunk_count": 53,
   "chunks": [
     {
       "chunk_id": "week2_pseudocode-0",
       "course": "CSC510",
       "source_file": "week2_pseudocode.pdf",
       "chunk_index": 0,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 1,
       "slide": null,
-      "text": "Pseudocode and Analyzing Runtime Prof. Timothy Sun A personal take on pseudocode For homework and exams, all algorithms must be described in pseudocode: ● structure of some programming languages (blocks, loops, arrays, etc.) ● natural languages (e.g. “and” instead of “&&”) ● mathematical notation (sets, arithmetic operators, etc.) Don’t submit actual code (even Python)! A personal take on pseudocode Assignment Assignment is written as… to distinguish it from “equals”. No need to declare types Declare arrays in the following way: A[1] and A[n] are deﬁned (sorry…) (It saves a line!) Arrays Loops and blocks For loops will be “for-each” loops: No need for parentheses, etc. Blocks denoted by indentation alone. Boolean operators replaced with words: Use of math symbols when appropriate. Boolean and arithmetic operators Function declarations Once again, no types, just the name and parameters A personal take on pseudocode Real algorithms have many different kinds of operations, so let’s look at some toy examples that use a “count” variable that plays the role of time: Runtime of iterative algorithms No loops Give a big-O estimate for the return value of “count”: No loops Answer: O(1) Give a big-O estimate for the return value of “count”: A single loop Give a big-O estimate for the return value of “count”: A single loop Answer: O(n), because the loop does n iterations Give a big-O estimate for the return value of “count”: Different number of iterations Give a big-O estimate for the return value of “count”: Different number of iterations Answer: O(n), again Give a big-O estimate for the return value of “count”: Different number of iterations Give a big-O estimate for the return value of “count”: Different number of iterations Answer: O(n3) Give a big-O estimate for the return value of “count”: Exponentially growing variables Give a big-O estimate for the return value of “count”: Exponentially growing variables Answer: O(log n) Give a big-O estimate for the return value of “count”: Consecutive loops Give a big-O estimate for the return value of “count”: Consecutive loops Answer: O(n)+O(n) = O(n) Give a big-O estimate for the return value of “count”: Nested loops Give a big-O estimate for the return value of “count”: Nested loops Answer: O(n)O(n) = O(n2), since each loop runs for n iterations Give a big-O estimate for the return value of “count”: Give a big-O estimate for the return value of “count”: Nested loops Give a big-O estimate for the return value of “count”: Nested loops Answer: O(n3) consecutive loops = add nested loops = multiply Two kinds of loops Answer: O(n) Answer: O(n2) Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Nested, consecutive, nested… Answer: O(n)[O(n)O(n)+O(n)] = O(n3) Varying number of iterations? Give a big-O estimate for the return value of “count”: Varying number of iterations? Answer: still O(n2) Give a big-O estimate for the return value of “count”: n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … + n ≤ n + n + n + n + … + n = n2 Estimating diﬃcult sums n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 +"
+      "text": "Pseudocode and Analyzing Runtime Prof. Timothy Sun"
     },
     {
       "chunk_id": "week2_pseudocode-1",
       "course": "CSC510",
       "source_file": "week2_pseudocode.pdf",
       "chunk_index": 1,
-      "chunk_in_page": null,
-      "page": null,
+      "chunk_in_page": 0,
+      "page": 2,
       "slide": null,
-      "text": "still O(n2) Give a big-O estimate for the return value of “count”: n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … + n ≤ n + n + n + n + … + n = n2 Estimating diﬃcult sums n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … n/2 + … + n ≥ n/2 + … + n ≥ n/2 + … + n/2 ≈ (n/2)2 Estimating diﬃcult sums A useful estimation trick Function calls Give a big-O estimate for the runtime of “Function”: Give a big-O estimate for the runtime of “Function”: Function calls Answer: O(n2), since “Subroutine” is called O(n) times Analyzing iterative algorithms Give a big-O estimate for the return value of “count”: Analyzing iterative algorithms Answer: two variables now, O(mn) Give a big-O estimate for the return value of “count”: Give a big-O estimate for the runtime of “Function”: Putting it all together Give a big-O estimate for the runtime of “Function”: Putting it all together O(n) Give a big-O estimate for the runtime of “Function”: Putting it all together O(m) O(n) O(n) Give a big-O estimate for the runtime of “Function”: Putting it all together O(m) O(n) O(n) Answer: O(m)O(m)O(n)+O(n)O(m) = O(m2n) Different kinds of operations Treat each primitive operation (assignment, comparison, math operations, etc.) as O(1) time. O(1) Different kinds of operations Treat each primitive operation (assignment, comparison, math operations, etc.) as O(1) time. Can use previous rules to combine into one simple expression. O(1) Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Answer: O(n)[O(1)+O(n)O(1)+O(1)] Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Answer: O(n)[O(1)+O(n)O(1)+O(1)] = O(n2) worst case runtime Different kinds of operations Don’t forget to include the cost of any function calls, if any."
+      "text": "A personal take on pseudocode For homework and exams, all algorithms must be described in pseudocode: ● structure of some programming languages (blocks, loops, arrays, etc.) ● natural languages (e.g. “and” instead of “&&”) ● mathematical notation (sets, arithmetic operators, etc.) Don’t submit actual code (even Python)!"
+    },
+    {
+      "chunk_id": "week2_pseudocode-2",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 2,
+      "chunk_in_page": 0,
+      "page": 3,
+      "slide": null,
+      "text": "A personal take on pseudocode"
+    },
+    {
+      "chunk_id": "week2_pseudocode-3",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 3,
+      "chunk_in_page": 0,
+      "page": 4,
+      "slide": null,
+      "text": "Assignment Assignment is written as… to distinguish it from “equals”. No need to declare types"
+    },
+    {
+      "chunk_id": "week2_pseudocode-4",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 4,
+      "chunk_in_page": 0,
+      "page": 5,
+      "slide": null,
+      "text": "Declare arrays in the following way: A[1] and A[n] are deﬁned (sorry…) (It saves a line!) Arrays"
+    },
+    {
+      "chunk_id": "week2_pseudocode-5",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 5,
+      "chunk_in_page": 0,
+      "page": 6,
+      "slide": null,
+      "text": "Loops and blocks For loops will be “for-each” loops: No need for parentheses, etc. Blocks denoted by indentation alone."
+    },
+    {
+      "chunk_id": "week2_pseudocode-6",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 6,
+      "chunk_in_page": 0,
+      "page": 7,
+      "slide": null,
+      "text": "Boolean operators replaced with words: Use of math symbols when appropriate. Boolean and arithmetic operators"
+    },
+    {
+      "chunk_id": "week2_pseudocode-7",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 7,
+      "chunk_in_page": 0,
+      "page": 8,
+      "slide": null,
+      "text": "Function declarations Once again, no types, just the name and parameters"
+    },
+    {
+      "chunk_id": "week2_pseudocode-8",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 8,
+      "chunk_in_page": 0,
+      "page": 9,
+      "slide": null,
+      "text": "A personal take on pseudocode"
+    },
+    {
+      "chunk_id": "week2_pseudocode-9",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 9,
+      "chunk_in_page": 0,
+      "page": 10,
+      "slide": null,
+      "text": "Real algorithms have many different kinds of operations, so let’s look at some toy examples that use a “count” variable that plays the role of time: Runtime of iterative algorithms"
+    },
+    {
+      "chunk_id": "week2_pseudocode-10",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 10,
+      "chunk_in_page": 0,
+      "page": 11,
+      "slide": null,
+      "text": "No loops Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-11",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 11,
+      "chunk_in_page": 0,
+      "page": 12,
+      "slide": null,
+      "text": "No loops Answer: O(1) Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-12",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 12,
+      "chunk_in_page": 0,
+      "page": 13,
+      "slide": null,
+      "text": "A single loop Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-13",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 13,
+      "chunk_in_page": 0,
+      "page": 14,
+      "slide": null,
+      "text": "A single loop Answer: O(n), because the loop does n iterations Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-14",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 14,
+      "chunk_in_page": 0,
+      "page": 15,
+      "slide": null,
+      "text": "Different number of iterations Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-15",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 15,
+      "chunk_in_page": 0,
+      "page": 16,
+      "slide": null,
+      "text": "Different number of iterations Answer: O(n), again Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-16",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 16,
+      "chunk_in_page": 0,
+      "page": 17,
+      "slide": null,
+      "text": "Different number of iterations Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-17",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 17,
+      "chunk_in_page": 0,
+      "page": 18,
+      "slide": null,
+      "text": "Different number of iterations Answer: O(n3) Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-18",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 18,
+      "chunk_in_page": 0,
+      "page": 19,
+      "slide": null,
+      "text": "Exponentially growing variables Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-19",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 19,
+      "chunk_in_page": 0,
+      "page": 20,
+      "slide": null,
+      "text": "Exponentially growing variables Answer: O(log n) Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-20",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 20,
+      "chunk_in_page": 0,
+      "page": 21,
+      "slide": null,
+      "text": "Consecutive loops Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-21",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 21,
+      "chunk_in_page": 0,
+      "page": 22,
+      "slide": null,
+      "text": "Consecutive loops Answer: O(n)+O(n) = O(n) Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-22",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 22,
+      "chunk_in_page": 0,
+      "page": 23,
+      "slide": null,
+      "text": "Nested loops Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-23",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 23,
+      "chunk_in_page": 0,
+      "page": 24,
+      "slide": null,
+      "text": "Nested loops Answer: O(n)O(n) = O(n2), since each loop runs for n iterations Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-24",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 24,
+      "chunk_in_page": 0,
+      "page": 25,
+      "slide": null,
+      "text": "Give a big-O estimate for the return value of “count”: Nested loops"
+    },
+    {
+      "chunk_id": "week2_pseudocode-25",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 25,
+      "chunk_in_page": 0,
+      "page": 26,
+      "slide": null,
+      "text": "Give a big-O estimate for the return value of “count”: Nested loops Answer: O(n3)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-26",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 26,
+      "chunk_in_page": 0,
+      "page": 27,
+      "slide": null,
+      "text": "consecutive loops = add nested loops = multiply Two kinds of loops Answer: O(n) Answer: O(n2)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-27",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 27,
+      "chunk_in_page": 0,
+      "page": 28,
+      "slide": null,
+      "text": "Nested, consecutive, nested…"
+    },
+    {
+      "chunk_id": "week2_pseudocode-28",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 28,
+      "chunk_in_page": 0,
+      "page": 29,
+      "slide": null,
+      "text": "Nested, consecutive, nested…"
+    },
+    {
+      "chunk_id": "week2_pseudocode-29",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 29,
+      "chunk_in_page": 0,
+      "page": 30,
+      "slide": null,
+      "text": "Nested, consecutive, nested…"
+    },
+    {
+      "chunk_id": "week2_pseudocode-30",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 30,
+      "chunk_in_page": 0,
+      "page": 31,
+      "slide": null,
+      "text": "Nested, consecutive, nested…"
+    },
+    {
+      "chunk_id": "week2_pseudocode-31",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 31,
+      "chunk_in_page": 0,
+      "page": 32,
+      "slide": null,
+      "text": "Nested, consecutive, nested…"
+    },
+    {
+      "chunk_id": "week2_pseudocode-32",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 32,
+      "chunk_in_page": 0,
+      "page": 33,
+      "slide": null,
+      "text": "Nested, consecutive, nested…"
+    },
+    {
+      "chunk_id": "week2_pseudocode-33",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 33,
+      "chunk_in_page": 0,
+      "page": 34,
+      "slide": null,
+      "text": "Nested, consecutive, nested… Answer: O(n)[O(n)O(n)+O(n)] = O(n3)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-34",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 34,
+      "chunk_in_page": 0,
+      "page": 35,
+      "slide": null,
+      "text": "Varying number of iterations? Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-35",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 35,
+      "chunk_in_page": 0,
+      "page": 36,
+      "slide": null,
+      "text": "Varying number of iterations? Answer: still O(n2) Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-36",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 36,
+      "chunk_in_page": 0,
+      "page": 37,
+      "slide": null,
+      "text": "n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … + n ≤ n + n + n + n + … + n = n2 Estimating diﬃcult sums"
+    },
+    {
+      "chunk_id": "week2_pseudocode-37",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 37,
+      "chunk_in_page": 0,
+      "page": 38,
+      "slide": null,
+      "text": "n + … + 1 = n(n+1)/2 = ϴ(n2), but what if we didn’t know the formula? 1 + 2 + 3 + 4 + … n/2 + … + n ≥ n/2 + … + n ≥ n/2 + … + n/2 ≈ (n/2)2 Estimating diﬃcult sums"
+    },
+    {
+      "chunk_id": "week2_pseudocode-38",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 38,
+      "chunk_in_page": 0,
+      "page": 39,
+      "slide": null,
+      "text": "A useful estimation trick"
+    },
+    {
+      "chunk_id": "week2_pseudocode-39",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 39,
+      "chunk_in_page": 0,
+      "page": 40,
+      "slide": null,
+      "text": "Function calls Give a big-O estimate for the runtime of “Function”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-40",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 40,
+      "chunk_in_page": 0,
+      "page": 41,
+      "slide": null,
+      "text": "Give a big-O estimate for the runtime of “Function”: Function calls Answer: O(n2), since “Subroutine” is called O(n) times"
+    },
+    {
+      "chunk_id": "week2_pseudocode-41",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 41,
+      "chunk_in_page": 0,
+      "page": 42,
+      "slide": null,
+      "text": "Analyzing iterative algorithms Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-42",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 42,
+      "chunk_in_page": 0,
+      "page": 43,
+      "slide": null,
+      "text": "Analyzing iterative algorithms Answer: two variables now, O(mn) Give a big-O estimate for the return value of “count”:"
+    },
+    {
+      "chunk_id": "week2_pseudocode-43",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 43,
+      "chunk_in_page": 0,
+      "page": 44,
+      "slide": null,
+      "text": "Give a big-O estimate for the runtime of “Function”: Putting it all together"
+    },
+    {
+      "chunk_id": "week2_pseudocode-44",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 44,
+      "chunk_in_page": 0,
+      "page": 45,
+      "slide": null,
+      "text": "Give a big-O estimate for the runtime of “Function”: Putting it all together O(n)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-45",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 45,
+      "chunk_in_page": 0,
+      "page": 46,
+      "slide": null,
+      "text": "Give a big-O estimate for the runtime of “Function”: Putting it all together O(m) O(n) O(n)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-46",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 46,
+      "chunk_in_page": 0,
+      "page": 47,
+      "slide": null,
+      "text": "Give a big-O estimate for the runtime of “Function”: Putting it all together O(m) O(n) O(n) Answer: O(m)O(m)O(n)+O(n)O(m) = O(m2n)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-47",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 47,
+      "chunk_in_page": 0,
+      "page": 48,
+      "slide": null,
+      "text": "Different kinds of operations Treat each primitive operation (assignment, comparison, math operations, etc.) as O(1) time. O(1)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-48",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 48,
+      "chunk_in_page": 0,
+      "page": 49,
+      "slide": null,
+      "text": "Different kinds of operations Treat each primitive operation (assignment, comparison, math operations, etc.) as O(1) time. Can use previous rules to combine into one simple expression. O(1)"
+    },
+    {
+      "chunk_id": "week2_pseudocode-49",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 49,
+      "chunk_in_page": 0,
+      "page": 50,
+      "slide": null,
+      "text": "Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations"
+    },
+    {
+      "chunk_id": "week2_pseudocode-50",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 50,
+      "chunk_in_page": 0,
+      "page": 51,
+      "slide": null,
+      "text": "Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Answer: O(n)[O(1)+O(n)O(1)+O(1)]"
+    },
+    {
+      "chunk_id": "week2_pseudocode-51",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 51,
+      "chunk_in_page": 0,
+      "page": 52,
+      "slide": null,
+      "text": "Different kinds of operations while loop: worst case O(n) iterations for loop: n - 1 = O(n) iterations Answer: O(n)[O(1)+O(n)O(1)+O(1)] = O(n2) worst case runtime"
+    },
+    {
+      "chunk_id": "week2_pseudocode-52",
+      "course": "CSC510",
+      "source_file": "week2_pseudocode.pdf",
+      "chunk_index": 52,
+      "chunk_in_page": 0,
+      "page": 53,
+      "slide": null,
+      "text": "Different kinds of operations Don’t forget to include the cost of any function calls, if any."
     }
   ]
 }

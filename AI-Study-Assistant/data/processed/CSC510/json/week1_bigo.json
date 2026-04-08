@@ -1,5 +1,243 @@
 {
   "course": "CSC510",
   "source_file": "week1_bigo.pdf",
-  "text": "Big-O Notation Prof. Timothy Sun Big-O Notation \u201cInsertion sort runs in O(n2) time.\u201d Why use Big-O notation? \u25cf Language/machine/unit-independent \u25cf Isolating the \u201cbottleneck\u201d \u25cf Captures long-term behavior \u25cf Easier to analyze Why use Big-O notation? \u25cf Language/machine/unit-independent \u25cf Isolating the \u201cbottleneck\u201d \u25cf Captures long-term behavior \u25cf Easier to analyze Big-O notation is about scalability, not speed! Asymptotes Big-O notation O(f(n)): class of functions whose \u201corder is at most f(n).\u201d O(f(n)): class of functions whose \u201corder is at most f(n).\u201d Big-O notation Big-O notation O(f(n)): class of functions whose \u201corder is at most f(n).\u201d More often you\u2019ll see it (technically, incorrectly) written as: De\ufb01nition: f(x) = O(g(x)), i.e., \u201cf(x) is order at most g(x)\u201d, if: There exist numbers C, K > 0 so that f(x) \u2264 C\u00b7g(x), for every x \u2265 K. Big-O notation De\ufb01nition: f(x) = O(g(x)), i.e., \u201cf(x) is order at most g(x)\u201d, if: There exist numbers C, K > 0 so that f(x) \u2264 C\u00b7g(x), for every x \u2265 K. Big-O notation C: use it to hide the coe\ufb03cient K: only care about \u201cbig enough\u201d x Some examples: \u25cf 3x + 4 = O(x) \u25cf 4x2 + 10x - 21 = O(x2) \u25cf 81x = O(x3) \u25cf x2 \u2260 O(x) \u25cf log2 x = O(ln x) [base doesn\u2019t matter] \u25cf x100 = O(2x) \u25cf 2n = O(n!) Big-O notation One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) A linear example One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 A linear example One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 \u2264 4x \u2192 x \u2265 4, so K can be 4. A linear example One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 \u2264 4x \u2192 x \u2265 4, so K can be 4. In general, many pairs of C and K can work. A linear example 4x2 +10x - 21 = O(x2) A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 \u2264 5x2 \u2192 0 \u2264 x2 - 10x + 21 = (x - 3)(x - 7) A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 \u2264 5x2 \u2192 0 \u2264 x2 - 10x + 21 = (x - 3)(x - 7) K = 7 works, but not K = 3 (why?) A quadratic example Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Logarithms Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) Logarithms Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) (unless it appears as an exponent) Logarithms For polynomials, look at the highest power, drop the coe\ufb03cient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 = O(x5) General themes Simple approach for polynomials 3x5 + 6x4 - 10x3 + x2 - 15x + 11 Simple approach for polynomials 1. Remove negative terms 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 true for x \u2265 0 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 true for x \u2265 0 true for x \u2265 1 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 = 21x5 true for x \u2265 0 true for x \u2265 1 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 = 21x5 C true for x \u2265 0 true for x \u2265 1 K = 1 Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Can use calculus to help evaluate things like x100 = O(ex). Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Can use calculus to help evaluate things like x100 = O(ex). For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 nd = O(cn) for any d > 0, c > 1. General themes na = O(nb), if a \u2264 b Useful properties na = O(nb), if a \u2264 b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) Useful properties na = O(nb), if a \u2264 b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) n = O(n log n), n log n = O(n2), O(n2) = O(n3), etc. Useful properties \u201cO(f(n))+O(g(n)) = O(f(n)+g(n))\u201d Useful properties \u201cO(f(n))+O(g(n)) = O(f(n)+g(n))\u201d \u25cf If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n) + b(n) = O(f(n) + g(n)) Useful properties \u201cO(f(n))O(g(n)) = O(f(n)g(n))\u201d \u25cf If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n)b(n) = O(f(n)g(n)) Useful when considering the complexity of two distinct steps in an algorithm. Useful properties \u25cf O(f(n)) + O(g(n)) = O(f(n) + g(n)) \u25cf O(f(n))O(g(n)) = O(f(n)g(n)) \u25cf O(a\u00b7f(n)) = O(f(n)), for constant a > 0. \u25cf f(n) = O(g(n)), g(n) = O(h(n)) \u2192 f(n) = O(h(n)). \u25cf O(f(n)+g(n)) = O(max(f(n), g(n))) Useful properties Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) Simplifying expressions Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) = O(n2 log n)O(n) + O(log n)O(n2)O(log n) = O(n3 log n) + O(n2(log n)2) = O(n3 log n) Simplifying expressions f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. It\u2019s all Greek to me f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. x3 - 3x + 10 = \u03a9(x2) It\u2019s all Greek to me f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. x3 - 3x + 10 = \u03a9(x2) (could also think of as g = O(f)) It\u2019s all Greek to me f(x) = \u03f4(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) \u2264 f(x) \u2264 C2g(x), whenever x \u2265 K. It\u2019s all Greek to me f(x) = \u03f4(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) \u2264 f(x) \u2264 C2g(x), whenever x \u2265 K. (can also think of as f = O(g) and f = \u03a9(g)) It\u2019s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 It\u2019s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 \u25cf f(x) = O(x2), g(x) = O(x2), h(x) \u2260 O(x2) \u25cf f(x) \u2260 \u03a9(x2), g(x) = \u03a9(x2), h(x) = \u03a9(x2) It\u2019s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 \u25cf f(x) = O(x2), g(x) = O(x2), h(x) \u2260 O(x2) \u25cf f(x) \u2260 \u03a9(x2), g(x) = \u03a9(x2), h(x) = \u03a9(x2) Putting these together, we get: \u25cf f(x) \u2260 \u03f4(x2), g(x) = \u03f4(x2), h(x) \u2260 \u03f4(x2) Only g(x) has quadratic growth. It\u2019s all Greek to me O: \u201c\u2264\u201d \u03a9: \u201c\u2265\u201d \u03f4: \u201c=\u201d It\u2019s all Greek to me O: \u201c\u2264\u201d \u03a9: \u201c\u2265\u201d \u03f4: \u201c=\u201d o: \u201c<\u201d \u03c9: \u201c>\u201d It\u2019s all Greek to me Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 ...but it doesn\u2019t always tell the whole story because of the hidden constant. \u25cf e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 ...but it doesn\u2019t always tell the whole story because of the hidden constant. \u25cf e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Not a substitute for benchmarking! Concluding Remarks \u201cUnfortunately, for any instance [graph] that one could \ufb01t into the known universe, one would easily prefer n70 to even constant time, if that constant had to be one of Robertson and Seymour\u2019s.\u201d -David Johnson, The NP-Completeness Column: An Ongoing Guide (1987)."
+  "text": "Big-O Notation Prof. Timothy Sun Big-O Notation \u201cInsertion sort runs in O(n2) time.\u201d Why use Big-O notation? \u25cf Language/machine/unit-independent \u25cf Isolating the \u201cbottleneck\u201d \u25cf Captures long-term behavior \u25cf Easier to analyze Why use Big-O notation? \u25cf Language/machine/unit-independent \u25cf Isolating the \u201cbottleneck\u201d \u25cf Captures long-term behavior \u25cf Easier to analyze Big-O notation is about scalability, not speed! Asymptotes Big-O notation O(f(n)): class of functions whose \u201corder is at most f(n).\u201d O(f(n)): class of functions whose \u201corder is at most f(n).\u201d Big-O notation Big-O notation O(f(n)): class of functions whose \u201corder is at most f(n).\u201d More often you\u2019ll see it (technically, incorrectly) written as: De\ufb01nition: f(x) = O(g(x)), i.e., \u201cf(x) is order at most g(x)\u201d, if: There exist numbers C, K > 0 so that f(x) \u2264 C\u00b7g(x), for every x \u2265 K. Big-O notation De\ufb01nition: f(x) = O(g(x)), i.e., \u201cf(x) is order at most g(x)\u201d, if: There exist numbers C, K > 0 so that f(x) \u2264 C\u00b7g(x), for every x \u2265 K. Big-O notation C: use it to hide the coe\ufb03cient K: only care about \u201cbig enough\u201d x Some examples: \u25cf 3x + 4 = O(x) \u25cf 4x2 + 10x - 21 = O(x2) \u25cf 81x = O(x3) \u25cf x2 \u2260 O(x) \u25cf log2 x = O(ln x) [base doesn\u2019t matter] \u25cf x100 = O(2x) \u25cf 2n = O(n!) Big-O notation One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) A linear example One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 A linear example One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 \u2264 4x \u2192 x \u2265 4, so K can be 4. A linear example One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 \u2264 4x \u2192 x \u2265 4, so K can be 4. In general, many pairs of C and K can work. A linear example 4x2 +10x - 21 = O(x2) A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 \u2264 5x2 \u2192 0 \u2264 x2 - 10x + 21 = (x - 3)(x - 7) A quadratic example 4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 \u2264 5x2 \u2192 0 \u2264 x2 - 10x + 21 = (x - 3)(x - 7) K = 7 works, but not K = 3 (why?) A quadratic example Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Logarithms Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) Logarithms Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) (unless it appears as an exponent) Logarithms For polynomials, look at the highest power, drop the coe\ufb03cient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 = O(x5) General themes Simple approach for polynomials 3x5 + 6x4 - 10x3 + x2 - 15x + 11 Simple approach for polynomials 1. Remove negative terms 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 true for x \u2265 0 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 true for x \u2265 0 true for x \u2265 1 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 = 21x5 true for x \u2265 0 true for x \u2265 1 Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 = 21x5 C true for x \u2265 0 true for x \u2265 1 K = 1 Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Can use calculus to help evaluate things like x100 = O(ex). Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Can use calculus to help evaluate things like x100 = O(ex). For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 General themes For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 nd = O(cn) for any d > 0, c > 1. General themes na = O(nb), if a \u2264 b Useful properties na = O(nb), if a \u2264 b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) Useful properties na = O(nb), if a \u2264 b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) n = O(n log n), n log n = O(n2), O(n2) = O(n3), etc. Useful properties \u201cO(f(n))+O(g(n)) = O(f(n)+g(n))\u201d Useful properties \u201cO(f(n))+O(g(n)) = O(f(n)+g(n))\u201d \u25cf If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n) + b(n) = O(f(n) + g(n)) Useful properties \u201cO(f(n))O(g(n)) = O(f(n)g(n))\u201d \u25cf If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n)b(n) = O(f(n)g(n)) Useful when considering the complexity of two distinct steps in an algorithm. Useful properties \u25cf O(f(n)) + O(g(n)) = O(f(n) + g(n)) \u25cf O(f(n))O(g(n)) = O(f(n)g(n)) \u25cf O(a\u00b7f(n)) = O(f(n)), for constant a > 0. \u25cf f(n) = O(g(n)), g(n) = O(h(n)) \u2192 f(n) = O(h(n)). \u25cf O(f(n)+g(n)) = O(max(f(n), g(n))) Useful properties Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) Simplifying expressions Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) = O(n2 log n)O(n) + O(log n)O(n2)O(log n) = O(n3 log n) + O(n2(log n)2) = O(n3 log n) Simplifying expressions f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. It\u2019s all Greek to me f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. x3 - 3x + 10 = \u03a9(x2) It\u2019s all Greek to me f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. x3 - 3x + 10 = \u03a9(x2) (could also think of as g = O(f)) It\u2019s all Greek to me f(x) = \u03f4(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) \u2264 f(x) \u2264 C2g(x), whenever x \u2265 K. It\u2019s all Greek to me f(x) = \u03f4(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) \u2264 f(x) \u2264 C2g(x), whenever x \u2265 K. (can also think of as f = O(g) and f = \u03a9(g)) It\u2019s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 It\u2019s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 \u25cf f(x) = O(x2), g(x) = O(x2), h(x) \u2260 O(x2) \u25cf f(x) \u2260 \u03a9(x2), g(x) = \u03a9(x2), h(x) = \u03a9(x2) It\u2019s all Greek to me Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 \u25cf f(x) = O(x2), g(x) = O(x2), h(x) \u2260 O(x2) \u25cf f(x) \u2260 \u03a9(x2), g(x) = \u03a9(x2), h(x) = \u03a9(x2) Putting these together, we get: \u25cf f(x) \u2260 \u03f4(x2), g(x) = \u03f4(x2), h(x) \u2260 \u03f4(x2) Only g(x) has quadratic growth. It\u2019s all Greek to me O: \u201c\u2264\u201d \u03a9: \u201c\u2265\u201d \u03f4: \u201c=\u201d It\u2019s all Greek to me O: \u201c\u2264\u201d \u03a9: \u201c\u2265\u201d \u03f4: \u201c=\u201d o: \u201c<\u201d \u03c9: \u201c>\u201d It\u2019s all Greek to me Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 ...but it doesn\u2019t always tell the whole story because of the hidden constant. \u25cf e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 ...but it doesn\u2019t always tell the whole story because of the hidden constant. \u25cf e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Not a substitute for benchmarking! Concluding Remarks \u201cUnfortunately, for any instance [graph] that one could \ufb01t into the known universe, one would easily prefer n70 to even constant time, if that constant had to be one of Robertson and Seymour\u2019s.\u201d -David Johnson, The NP-Completeness Column: An Ongoing Guide (1987).",
+  "pages": [
+    {
+      "page": 1,
+      "text": "Big-O Notation Prof. Timothy Sun"
+    },
+    {
+      "page": 2,
+      "text": "Big-O Notation \u201cInsertion sort runs in O(n2) time.\u201d"
+    },
+    {
+      "page": 3,
+      "text": "Why use Big-O notation? \u25cf Language/machine/unit-independent \u25cf Isolating the \u201cbottleneck\u201d \u25cf Captures long-term behavior \u25cf Easier to analyze"
+    },
+    {
+      "page": 4,
+      "text": "Why use Big-O notation? \u25cf Language/machine/unit-independent \u25cf Isolating the \u201cbottleneck\u201d \u25cf Captures long-term behavior \u25cf Easier to analyze Big-O notation is about scalability, not speed!"
+    },
+    {
+      "page": 5,
+      "text": "Asymptotes"
+    },
+    {
+      "page": 6,
+      "text": "Big-O notation O(f(n)): class of functions whose \u201corder is at most f(n).\u201d"
+    },
+    {
+      "page": 7,
+      "text": "O(f(n)): class of functions whose \u201corder is at most f(n).\u201d Big-O notation"
+    },
+    {
+      "page": 8,
+      "text": "Big-O notation O(f(n)): class of functions whose \u201corder is at most f(n).\u201d More often you\u2019ll see it (technically, incorrectly) written as:"
+    },
+    {
+      "page": 9,
+      "text": "De\ufb01nition: f(x) = O(g(x)), i.e., \u201cf(x) is order at most g(x)\u201d, if: There exist numbers C, K > 0 so that f(x) \u2264 C\u00b7g(x), for every x \u2265 K. Big-O notation"
+    },
+    {
+      "page": 10,
+      "text": "De\ufb01nition: f(x) = O(g(x)), i.e., \u201cf(x) is order at most g(x)\u201d, if: There exist numbers C, K > 0 so that f(x) \u2264 C\u00b7g(x), for every x \u2265 K. Big-O notation C: use it to hide the coe\ufb03cient K: only care about \u201cbig enough\u201d x"
+    },
+    {
+      "page": 11,
+      "text": "Some examples: \u25cf 3x + 4 = O(x) \u25cf 4x2 + 10x - 21 = O(x2) \u25cf 81x = O(x3) \u25cf x2 \u2260 O(x) \u25cf log2 x = O(ln x) [base doesn\u2019t matter] \u25cf x100 = O(2x) \u25cf 2n = O(n!) Big-O notation"
+    },
+    {
+      "page": 12,
+      "text": "One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) A linear example"
+    },
+    {
+      "page": 13,
+      "text": "One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 A linear example"
+    },
+    {
+      "page": 14,
+      "text": "One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 \u2264 4x \u2192 x \u2265 4, so K can be 4. A linear example"
+    },
+    {
+      "page": 15,
+      "text": "One approach is to \u201cguess\u201d C, then \ufb01nd K algebraically: e.g. 3x + 4 = O(x) 1. \u201cGuess\u201d a C bigger than 3: try C = 4 2. Solve for K: 3n + 4 \u2264 4x \u2192 x \u2265 4, so K can be 4. In general, many pairs of C and K can work. A linear example"
+    },
+    {
+      "page": 16,
+      "text": "4x2 +10x - 21 = O(x2) A quadratic example"
+    },
+    {
+      "page": 17,
+      "text": "4x2 +10x - 21 = O(x2) 1. Guess C = 5. A quadratic example"
+    },
+    {
+      "page": 18,
+      "text": "4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 \u2264 5x2 \u2192 0 \u2264 x2 - 10x + 21 = (x - 3)(x - 7) A quadratic example"
+    },
+    {
+      "page": 19,
+      "text": "4x2 +10x - 21 = O(x2) 1. Guess C = 5. 2. Solve for K: 4x2 + 10x - 21 \u2264 5x2 \u2192 0 \u2264 x2 - 10x + 21 = (x - 3)(x - 7) K = 7 works, but not K = 3 (why?) A quadratic example"
+    },
+    {
+      "page": 20,
+      "text": "Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Logarithms"
+    },
+    {
+      "page": 21,
+      "text": "Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) Logarithms"
+    },
+    {
+      "page": 22,
+      "text": "Logarithms under different bases are related by the change of base formula: loga x = logb x / logb x = (1 / logb a) logb x Inside of big-O notation, ignore the base: O(log x), not O(log2 x) (unless it appears as an exponent) Logarithms"
+    },
+    {
+      "page": 23,
+      "text": "For polynomials, look at the highest power, drop the coe\ufb03cient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 General themes"
+    },
+    {
+      "page": 24,
+      "text": "For polynomials, look at the highest power, drop the coe\ufb03cient. 3x5 + 6x4 - 10x3 + x2 - 15x + 11 = O(x5) General themes"
+    },
+    {
+      "page": 25,
+      "text": "Simple approach for polynomials 3x5 + 6x4 - 10x3 + x2 - 15x + 11"
+    },
+    {
+      "page": 26,
+      "text": "Simple approach for polynomials 1. Remove negative terms 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 true for x \u2265 0"
+    },
+    {
+      "page": 27,
+      "text": "Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 true for x \u2265 0 true for x \u2265 1"
+    },
+    {
+      "page": 28,
+      "text": "Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 = 21x5 true for x \u2265 0 true for x \u2265 1"
+    },
+    {
+      "page": 29,
+      "text": "Simple approach for polynomials 1. Remove negative terms 2. Raise to highest power 3x5 + 6x4 - 10x3 + x2 - 15x + 11 \u2264 3x5 + 6x4 + x2 + 11 \u2264 3x5 + 6x5 + x5 + 11x5 = 21x5 C true for x \u2265 0 true for x \u2265 1 K = 1"
+    },
+    {
+      "page": 30,
+      "text": "Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K."
+    },
+    {
+      "page": 31,
+      "text": "Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Can use calculus to help evaluate things like x100 = O(ex)."
+    },
+    {
+      "page": 32,
+      "text": "Polynomials vs. Exponentials One can interpret big-O notation as a limit f(x)/g(x) \u2264 C, for every x \u2265 K. Can use calculus to help evaluate things like x100 = O(ex)."
+    },
+    {
+      "page": 33,
+      "text": "For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) General themes"
+    },
+    {
+      "page": 34,
+      "text": "For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential General themes"
+    },
+    {
+      "page": 35,
+      "text": "For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 General themes"
+    },
+    {
+      "page": 36,
+      "text": "For polynomials, look at the highest power, drop the coe\ufb03cient. 203n5 + 92n4 - 1423n3 + n2 + 86n - 571 = O(n5) constant < logarithmic < polynomial < exponential logb n = O(nd), for any b > 1, d > 0 nd = O(cn) for any d > 0, c > 1. General themes"
+    },
+    {
+      "page": 37,
+      "text": "na = O(nb), if a \u2264 b Useful properties"
+    },
+    {
+      "page": 38,
+      "text": "na = O(nb), if a \u2264 b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) Useful properties"
+    },
+    {
+      "page": 39,
+      "text": "na = O(nb), if a \u2264 b If f(n) = O(g(n)), and h(n) > 0, then f(n)h(n) = O(g(n)h(n)) n = O(n log n), n log n = O(n2), O(n2) = O(n3), etc. Useful properties"
+    },
+    {
+      "page": 40,
+      "text": "\u201cO(f(n))+O(g(n)) = O(f(n)+g(n))\u201d Useful properties"
+    },
+    {
+      "page": 41,
+      "text": "\u201cO(f(n))+O(g(n)) = O(f(n)+g(n))\u201d \u25cf If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n) + b(n) = O(f(n) + g(n)) Useful properties"
+    },
+    {
+      "page": 42,
+      "text": "\u201cO(f(n))O(g(n)) = O(f(n)g(n))\u201d \u25cf If a(n) = O(f(n)) and b(n) = O(g(n)), then a(n)b(n) = O(f(n)g(n)) Useful when considering the complexity of two distinct steps in an algorithm. Useful properties"
+    },
+    {
+      "page": 43,
+      "text": "\u25cf O(f(n)) + O(g(n)) = O(f(n) + g(n)) \u25cf O(f(n))O(g(n)) = O(f(n)g(n)) \u25cf O(a\u00b7f(n)) = O(f(n)), for constant a > 0. \u25cf f(n) = O(g(n)), g(n) = O(h(n)) \u2192 f(n) = O(h(n)). \u25cf O(f(n)+g(n)) = O(max(f(n), g(n))) Useful properties"
+    },
+    {
+      "page": 44,
+      "text": "Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) Simplifying expressions"
+    },
+    {
+      "page": 45,
+      "text": "Give a good big-O estimate of f(n) using a simple function f(n) = 20 (n2 + n2 log4 n)(4n + 3) + (17 log3 n + 19)(n2 + 2)(ln n - 3) = O(n2 log n)O(n) + O(log n)O(n2)O(log n) = O(n3 log n) + O(n2(log n)2) = O(n3 log n) Simplifying expressions"
+    },
+    {
+      "page": 46,
+      "text": "f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. It\u2019s all Greek to me"
+    },
+    {
+      "page": 47,
+      "text": "f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. x3 - 3x + 10 = \u03a9(x2) It\u2019s all Greek to me"
+    },
+    {
+      "page": 48,
+      "text": "f(x) = \u03a9(g(x)) if there are numbers C, K > 0 so that f(x) \u2265 C\u00b7g(x), whenever x \u2265 K. x3 - 3x + 10 = \u03a9(x2) (could also think of as g = O(f)) It\u2019s all Greek to me"
+    },
+    {
+      "page": 49,
+      "text": "f(x) = \u03f4(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) \u2264 f(x) \u2264 C2g(x), whenever x \u2265 K. It\u2019s all Greek to me"
+    },
+    {
+      "page": 50,
+      "text": "f(x) = \u03f4(g(x)) if there are numbers C1, C2, K > 0 so that C1g(x) \u2264 f(x) \u2264 C2g(x), whenever x \u2265 K. (can also think of as f = O(g) and f = \u03a9(g)) It\u2019s all Greek to me"
+    },
+    {
+      "page": 51,
+      "text": "Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 It\u2019s all Greek to me"
+    },
+    {
+      "page": 52,
+      "text": "Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 \u25cf f(x) = O(x2), g(x) = O(x2), h(x) \u2260 O(x2) \u25cf f(x) \u2260 \u03a9(x2), g(x) = \u03a9(x2), h(x) = \u03a9(x2) It\u2019s all Greek to me"
+    },
+    {
+      "page": 53,
+      "text": "Let f(x) = x ln x, g(x) = x(x + 1)/2, h(x) = (x - 1)3 \u25cf f(x) = O(x2), g(x) = O(x2), h(x) \u2260 O(x2) \u25cf f(x) \u2260 \u03a9(x2), g(x) = \u03a9(x2), h(x) = \u03a9(x2) Putting these together, we get: \u25cf f(x) \u2260 \u03f4(x2), g(x) = \u03f4(x2), h(x) \u2260 \u03f4(x2) Only g(x) has quadratic growth. It\u2019s all Greek to me"
+    },
+    {
+      "page": 54,
+      "text": "O: \u201c\u2264\u201d \u03a9: \u201c\u2265\u201d \u03f4: \u201c=\u201d It\u2019s all Greek to me"
+    },
+    {
+      "page": 55,
+      "text": "O: \u201c\u2264\u201d \u03a9: \u201c\u2265\u201d \u03f4: \u201c=\u201d o: \u201c<\u201d \u03c9: \u201c>\u201d It\u2019s all Greek to me"
+    },
+    {
+      "page": 56,
+      "text": "Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026"
+    },
+    {
+      "page": 57,
+      "text": "Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 ...but it doesn\u2019t always tell the whole story because of the hidden constant. \u25cf e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values."
+    },
+    {
+      "page": 58,
+      "text": "Concluding Remarks Big-O notation is useful for measuring the scalability of algorithms, independent of any implementation\u2026 ...but it doesn\u2019t always tell the whole story because of the hidden constant. \u25cf e.g. mergesort (O(n log n)) vs. insertion sort (O(n2)) for small values. Not a substitute for benchmarking!"
+    },
+    {
+      "page": 59,
+      "text": "Concluding Remarks \u201cUnfortunately, for any instance [graph] that one could \ufb01t into the known universe, one would easily prefer n70 to even constant time, if that constant had to be one of Robertson and Seymour\u2019s.\u201d -David Johnson, The NP-Completeness Column: An Ongoing Guide (1987)."
+    }
+  ]
 }
