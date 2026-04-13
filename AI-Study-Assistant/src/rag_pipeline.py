@@ -1,4 +1,5 @@
 import json
+import logging
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -13,6 +14,13 @@ try:
    from transformers import Qwen2_5_VLForConditionalGeneration
 except ImportError:
    Qwen2_5_VLForConditionalGeneration = None
+
+try:
+   from qwen_vl_utils import process_vision_info
+except ImportError:
+   process_vision_info = None
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_RETRIEVER_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 DEFAULT_GENERATOR_MODEL = "Qwen/Qwen2.5-VL-3B-Instruct" 
@@ -186,9 +194,114 @@ def _load_generator(model_name: str):
    _GENERATOR_CACHE[model_name] = (tokenizer, model)
    return tokenizer, model
 
-# TODO: Add generate_answer_multimodal(question, chunks, image_input, ...)
-# TODO: Use the multimodal generator only when image_input is provided.
-# TODO: If multimodal generation fails, fall back to generate_answer(...) instead of raising.
+def _multimodal_stack_ready(model_name: str) -> bool:
+   if "VL" not in model_name.upper():
+      return False
+   if Qwen2_5_VLForConditionalGeneration is None:
+      return False
+   if process_vision_info is None:
+      return False
+   return True
+
+def _coerce_image_for_qwen(image_input: Any) -> Any:
+   if image_input is None:
+      return None
+   from PIL import Image
+
+   if isinstance(image_input, Image.Image):
+      return image_input.convert("RGB")
+   if isinstance(image_input, (str, Path)):
+      path = Path(image_input)
+      if path.is_file():
+         return str(path.resolve())
+      return str(image_input)
+   if isinstance(image_input, np.ndarray):
+      array = image_input
+      if array.dtype != np.uint8:
+         if array.max() <= 1.0:
+            array = (array * 255).clip(0, 255).astype(np.uint8)
+         else:
+            array = array.astype(np.uint8)
+      if array.ndim == 2:
+         return Image.fromarray(array).convert("RGB")
+      if array.ndim == 3 and array.shape[2] >= 3:
+         return Image.fromarray(array[:, :, :3]).convert("RGB")
+   return image_input
+
+def generate_answer_multimodal(
+   question: str,
+   chunks: List[Dict[str, Any]],
+   image_input: Any,
+   generator_model: str = DEFAULT_GENERATOR_MODEL,
+   max_new_tokens: int = 256,
+   temperature: float = 0.2,
+   top_p: float = 0.9,
+) -> str:
+   if not _multimodal_stack_ready(generator_model):
+      raise RuntimeError("Multimodal stack is not available for this generator model.")
+
+   coerced = _coerce_image_for_qwen(image_input)
+   if coerced is None:
+      raise ValueError("image_input is empty or could not be converted to an image.")
+
+   processor, model = _load_generator(generator_model)
+   context = build_context(chunks) if chunks else "(No matching course chunks were retrieved.)"
+
+   messages = [
+      {
+         "role": "system",
+         "content": (
+            "You are an academic study assistant. Answer using the provided context when it is relevant, "
+            "and use the attached image when it helps. If the context does not contain the answer, say so clearly. "
+            "Cite relevant sources using bracketed numbers like [1], [2]."
+         ),
+      },
+      {
+         "role": "user",
+         "content": [
+            {"type": "image", "image": coerced},
+            {
+               "type": "text",
+               "text": (
+                  f"Question: {question}\n\n"
+                  f"Context:\n{context}\n\n"
+                  "Write a concise, grounded answer with citations when you use the context."
+               ),
+            },
+         ],
+      },
+   ]
+
+   prompt_text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+   image_inputs, video_inputs = process_vision_info(messages)
+   inputs = processor(
+      text=[prompt_text],
+      images=image_inputs,
+      videos=video_inputs,
+      padding=True,
+      return_tensors="pt",
+   )
+   device = next(model.parameters()).device
+   inputs = inputs.to(device)
+
+   tokenizer = processor.tokenizer
+   do_sample = temperature > 0
+   generation_kwargs = {
+      "max_new_tokens": max_new_tokens,
+      "temperature": temperature,
+      "top_p": top_p,
+      "do_sample": do_sample,
+      "pad_token_id": tokenizer.pad_token_id,
+      "eos_token_id": tokenizer.eos_token_id,
+   }
+
+   with torch.inference_mode():
+      output_ids = model.generate(**inputs, **generation_kwargs)
+
+   input_len = inputs["input_ids"].shape[-1]
+   generated_tokens = output_ids[0][input_len:]
+   answer = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
+   return answer or "The model did not produce a usable answer."
 
 def generate_answer(
    question: str,
@@ -253,11 +366,6 @@ def generate_answer(
    answer = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
    return answer or "The model did not produce a usable answer."
 
-
-# TODO: Route to generate_answer(...) when image_input is None.
-# TODO: Route to generate_answer_multimodal(...) when image_input is provided.
-# TODO: Keep the returned mode field in sync with the path that ran.
-
 def run_rag_pipeline(
    question: str,
    processed_dir: Path = Path("data/processed"),
@@ -271,10 +379,9 @@ def run_rag_pipeline(
 ) -> Dict[str, Any]:
    """Run retrieval and answer generation, then return a stable response payload.
 
-   Current behavior:
-      This function always uses the text-only generation path.
-      image_input is accepted so the caller can record whether the request
-      was intended for a future multimodal branch.
+   Uses multimodal generation when ``image_input`` is set and the configured
+   generator supports Qwen2.5-VL; otherwise uses the text-only path. Multimodal
+   failures fall back to text generation without raising.
    """
    retrieved_chunks = retrieve_relevant_chunks(
       query=question,
@@ -283,13 +390,41 @@ def run_rag_pipeline(
       embedding_model=embedding_model,
       top_k=top_k,
    )
-   answer = generate_answer(
-      question=question,
-      chunks=retrieved_chunks,
-      generator_model=generator_model,
-      max_new_tokens=max_new_tokens,
-      temperature=temperature,
-   )
+
+   use_multimodal = image_input is not None and _multimodal_stack_ready(generator_model)
+   mode = "text"
+   answer = ""
+
+   if use_multimodal:
+      try:
+         answer = generate_answer_multimodal(
+            question=question,
+            chunks=retrieved_chunks,
+            image_input=image_input,
+            generator_model=generator_model,
+            max_new_tokens=max_new_tokens,
+            temperature=temperature,
+         )
+         mode = "multimodal"
+      except Exception as exc:
+         logger.warning("Multimodal generation failed; falling back to text: %s", exc)
+         answer = generate_answer(
+            question=question,
+            chunks=retrieved_chunks,
+            generator_model=generator_model,
+            max_new_tokens=max_new_tokens,
+            temperature=temperature,
+         )
+         mode = "text"
+   else:
+      answer = generate_answer(
+         question=question,
+         chunks=retrieved_chunks,
+         generator_model=generator_model,
+         max_new_tokens=max_new_tokens,
+         temperature=temperature,
+      )
+      mode = "text"
 
    return {
       "question": question,
@@ -299,7 +434,7 @@ def run_rag_pipeline(
       "generator_model": generator_model,
       "course": course,
       "top_k": top_k,
-      "mode": "multimodal" if image_input is not None else "text",
+      "mode": mode,
    }
 
 
@@ -321,7 +456,6 @@ def run_rag_backend(
       A dictionary with answer text, formatted citations, the selected mode,
       and an error message when something fails.
    """
-   # TODO: Connect image_input to the multimodal branch once it exists.
    try:
       result = run_rag_pipeline(
          question=question,
@@ -341,7 +475,7 @@ def run_rag_backend(
       return {
          "answer": "",
          "citations_text": "",
-         "mode": "multimodal" if image_input is not None else "text",
+         "mode": "text",
          "error": str(exc),
       }
 

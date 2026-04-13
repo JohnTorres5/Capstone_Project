@@ -15,3 +15,7 @@ python-pptx
 numpy
 scikit-learn
 tqdm
+
+# Qwen2.5-VL (multimodal) helpers
+qwen-vl-utils
+pillow
