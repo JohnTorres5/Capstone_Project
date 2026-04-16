@@ -3,7 +3,7 @@
   "model_name": "sentence-transformers/all-MiniLM-L6-v2",
   "vector_dim": 384,
   "chunk_count": 1626,
-  "created_at_utc": "2026-04-16T02:48:12.531646+00:00",
+  "created_at_utc": "2026-04-16T03:53:42.987490+00:00",
   "distance_metric": "cosine (via inner product on L2-normalized vectors)",
   "files": {
     "index": "index.faiss",
